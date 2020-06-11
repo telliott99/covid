@@ -1,0 +1,33 @@
+Estimated population from:
+
+https://www.census.gov/content/census/en/data/tables/time-series/demo/popest/2010s-counties-total.html
+
+gives 
+
+co-est2019-annres.csv
+
+Open Numbers
+then look for file and open that, it will convert
+
+It looks like the screenshot
+
+Then convert to csv
+saved under the same filename by mistake 
+
+Process with script to pop.csv
+
+Last column is 2019 population
+First column is ".county, state"
+
+There are a number of issues that are cleaned up.
+See extract_pop.py
+
+In addition, some places in the Covid-19 database
+do not have entries in the population database
+b/c they are not really official counties
+
+I put estimates for their populations in 'extra.txt'.
+
+Dona Ana is actually a Unicode issue with the tilde
+'Do\xc3\xb1a Ana;New Mexico'
+

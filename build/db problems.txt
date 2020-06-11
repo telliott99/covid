@@ -1,0 +1,11 @@
+Bear River and Box Elder, Utah
+
+in Mar and Apr, Box Elder given as 49003,Box Elder,Utah,US
+Bear River not present
+from May on into June, Bear River given with no FIPS, Box Elder not present
+
+The county name is Box Elder, so this is wrong.  However, now that they've changed, I don't see any reason to correct it any more.
+
+---------
+
+Similarly, Weber-Morgan, Utah is being reported with no FIPS

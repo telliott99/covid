@@ -1,0 +1,609 @@
+   1 New York City, New York                  17682    1628706.0  1085.6
+   2 Fairfax, Virginia                          114      24019.0   474.6
+   3 Randolph, Georgia                           19       6778.0   280.3
+   4 Terrell, Georgia                            18       8531.0   211.0
+   5 St. John the Baptist, Louisiana             66      42837.0   154.1
+   6 Rockland, New York                         481     325789.0   147.6
+   7 Early, Georgia                              15      10190.0   147.2
+   8 Essex, New Jersey                         1090     798975.0   136.4
+   9 Dougherty, Georgia                         118      87956.0   134.2
+  10 Mitchell, Georgia                           29      21863.0   132.6
+  11 Toole, Montana                               6       4736.0   126.7
+  12 Nassau, New York                          1647    1356924.0   121.4
+  13 Union, New Jersey                          627     556341.0   112.7
+  14 Bergen, New Jersey                        1002     932202.0   107.5
+  15 Hudson, New Jersey                         722     672391.0   107.4
+  16 Orleans, Louisiana                         410     390144.0   105.1
+  17 Greer, Oklahoma                              6       5712.0   105.0
+  18 Decatur, Indiana                            27      26559.0   101.7
+  19 Westchester, New York                      983     967506.0   101.6
+  20 Turner, Georgia                              8       7985.0   100.2
+  21 Bienville, Louisiana                        13      13241.0    98.2
+  22 Wayne, Michigan                           1682    1749343.0    96.2
+  23 Passaic, New Jersey                        475     501826.0    94.7
+  24 Wilcox, Georgia                              8       8635.0    92.6
+  25 St. James, Louisiana                        19      21096.0    90.1
+  26 Sumter, Georgia                             26      29524.0    88.1
+  27 Coffey, Kansas                               7       8179.0    85.6
+  28 Iberville, Louisiana                        27      32511.0    83.0
+  29 Wilkinson, Mississippi                       7       8630.0    81.1
+  30 Fairfield, Connecticut                     747     943332.0    79.2
+  31 Jefferson, Louisiana                       340     432493.0    78.6
+  32 Orange, New York                           299     384940.0    77.7
+  33 Morris, New Jersey                         377     491845.0    76.7
+  34 Suffolk, New York                         1131    1476601.0    76.6
+  35 Hampden, Massachusetts                     346     466372.0    74.2
+  36 Somerset, New Jersey                       242     328934.0    73.6
+  37 Plaquemines, Louisiana                      17      23197.0    73.3
+  38 Hartford, Connecticut                      643     891720.0    72.1
+  39 St. Charles, Louisiana                      37      53100.0    69.7
+  40 Pointe Coupee, Louisiana                    15      21730.0    69.0
+  41 Sussex, New Jersey                          97     140488.0    69.0
+  42 Warren, New Jersey                          71     105267.0    67.4
+  43 Macomb, Michigan                           572     873972.0    65.4
+  44 Upson, Georgia                              17      26320.0    64.6
+  45 Chaffee, Colorado                           13      20356.0    63.9
+  46 Lee, Georgia                                19      29992.0    63.4
+  47 Norfolk, Massachusetts                     448     706775.0    63.4
+  48 East Feliciana, Louisiana                   12      19135.0    62.7
+  49 Middlesex, New Jersey                      515     825062.0    62.4
+  50 West Baton Rouge, Louisiana                 16      26465.0    60.5
+  51 Dooly, Georgia                               8      13390.0    59.7
+  52 Red River, Louisiana                         5       8442.0    59.2
+  53 Suffolk, Massachusetts                     469     803907.0    58.3
+  54 Mercer, New Jersey                         212     367430.0    57.7
+  55 Chambers, Alabama                           19      33254.0    57.1
+  56 Ocean, New Jersey                          342     607186.0    56.3
+  57 New Haven, Connecticut                     478     854757.0    55.9
+  58 Morgan, Colorado                            16      29068.0    55.0
+  59 Leflore, Mississippi                        15      28183.0    53.2
+  60 St. Louis, Missouri                        159     300576.0    52.9
+  61 Greensville, Virginia                        6      11336.0    52.9
+  62 Adair, Kentucky                             10      19202.0    52.1
+  63 Oakland, Michigan                          654    1257584.0    52.0
+  64 Monmouth, New Jersey                       305     618795.0    49.3
+  65 Plymouth, Massachusetts                    256     521202.0    49.1
+  66 Essex, Massachusetts                       383     789034.0    48.5
+  67 Hopkins, Kentucky                           21      44686.0    47.0
+  68 Franklin, Massachusetts                     33      70180.0    47.0
+  69 Middlesex, Massachusetts                   731    1611699.0    45.4
+  70 St. Landry, Louisiana                       37      82124.0    45.1
+  71 Jackson, Kentucky                            6      13329.0    45.0
+  72 Claiborne, Louisiana                         7      15670.0    44.7
+  73 Middlesex, Connecticut                      70     162436.0    43.1
+  74 Genesee, Michigan                          174     405813.0    42.9
+  75 Tallapoosa, Alabama                         17      40367.0    42.1
+  76 Litchfield, Connecticut                     76     180333.0    42.1
+  77 Jackson, West Virginia                      12      28576.0    42.0
+  78 Caddo, Louisiana                           100     240204.0    41.6
+  79 Lee, South Carolina                          7      16828.0    41.6
+  80 Tama, Iowa                                   7      16854.0    41.5
+  81 Clarendon, South Carolina                   14      33745.0    41.5
+  82 Orange, Indiana                              8      19646.0    40.7
+  83 St. Mary, Louisiana                         20      49348.0    40.5
+  84 De Soto, Louisiana                          11      27463.0    40.1
+  85 Lafourche, Louisiana                        39      97614.0    40.0
+  86 St. Tammany, Louisiana                     104     260419.0    39.9
+  87 Nez Perce, Idaho                            16      40408.0    39.6
+  88 Worth, Georgia                               8      20247.0    39.5
+  89 Washington, Louisiana                       18      46194.0    39.0
+  90 Brooks, Georgia                              6      15457.0    38.8
+  91 Thomas, Georgia                             17      44451.0    38.2
+  92 St. Bernard, Louisiana                      18      47244.0    38.1
+  93 Johnson, Indiana                            58     158167.0    36.7
+  94 Steuben, New York                           35      95379.0    36.7
+  95 Beaver, Pennsylvania                        59     163929.0    36.0
+  96 Newton, Indiana                              5      13984.0    35.8
+  97 Madison, Indiana                            46     129569.0    35.5
+  98 Allen, Louisiana                             9      25627.0    35.1
+  99 Hillsdale, Michigan                         16      45605.0    35.1
+ 100 Chickasaw, Mississippi                       6      17103.0    35.1
+ 101 Graves, Kentucky                            13      37266.0    34.9
+ 102 Washington, Oklahoma                        18      51527.0    34.9
+ 103 Monroe, Mississippi                         12      35252.0    34.0
+ 104 Lackawanna, Pennsylvania                    71     209674.0    33.9
+ 105 Daviess, Indiana                            11      33351.0    33.0
+ 106 Philadelphia, Pennsylvania                 516    1584064.0    32.6
+ 107 Otsego, Michigan                             8      24668.0    32.4
+ 108 Wyandotte, Kansas                           53     165429.0    32.0
+ 109 Tippah, Mississippi                          7      22015.0    31.8
+ 110 Suwannee, Florida                           14      44417.0    31.5
+ 111 Franklin, Indiana                            7      22758.0    30.8
+ 112 Washington, Texas                           11      35882.0    30.7
+ 113 Panola, Texas                                7      23194.0    30.2
+ 114 Lancaster, Pennsylvania                    164     545724.0    30.1
+ 115 Montgomery, Pennsylvania                   249     830915.0    30.0
+ 116 Boone, Indiana                              20      67843.0    29.5
+ 117 Holmes, Mississippi                          5      17010.0    29.4
+ 118 Mecklenburg, Virginia                        9      30587.0    29.4
+ 119 Mahoning, Ohio                              67     228683.0    29.3
+ 120 Marion, Indiana                            282     964582.0    29.2
+ 121 San Juan, New Mexico                        36     123958.0    29.0
+ 122 Monroe, Illinois                            10      34637.0    28.9
+ 123 Henrico, Virginia                           95     330818.0    28.7
+ 124 Ascension, Louisiana                        36     126604.0    28.4
+ 125 East Baton Rouge, Louisiana                125     440059.0    28.4
+ 126 Delaware, Pennsylvania                     161     566747.0    28.4
+ 127 Cook, Illinois                            1457    5150233.0    28.3
+ 128 Monroe, Pennsylvania                        48     170271.0    28.2
+ 129 St. Martin, Louisiana                       15      53431.0    28.1
+ 130 Terrebonne, Louisiana                       31     110461.0    28.1
+ 131 Bartow, Georgia                             30     107738.0    27.8
+ 132 Sullivan, New York                          21      75432.0    27.8
+ 133 Waldo, Maine                                11      39715.0    27.7
+ 134 Winona, Minnesota                           14      50484.0    27.7
+ 135 Worcester, Massachusetts                   229     830622.0    27.6
+ 136 Bristol, Massachusetts                     155     565217.0    27.4
+ 137 Lapeer, Michigan                            24      87607.0    27.4
+ 138 Washington, Iowa                             6      21965.0    27.3
+ 139 Saginaw, Michigan                           52     190539.0    27.3
+ 140 Appling, Georgia                             5      18386.0    27.2
+ 141 Weld, Colorado                              88     324492.0    27.1
+ 142 Union, Louisiana                             6      22108.0    27.1
+ 143 Pearl River, Mississippi                    15      55535.0    27.0
+ 144 District of Columbia, District of Columbia          190     705749.0    26.9
+ 145 Bucks, Pennsylvania                        168     628270.0    26.7
+ 146 Coconino, Arizona                           38     143476.0    26.5
+ 147 Lincoln, Mississippi                         9      34153.0    26.4
+ 148 Carroll, Maryland                           44     168447.0    26.1
+ 149 Adams, Mississippi                           8      30693.0    26.1
+ 150 Iberia, Louisiana                           18      69830.0    25.8
+ 151 Franklin, North Carolina                    18      69685.0    25.8
+ 152 Montrose, Colorado                          11      42758.0    25.7
+ 153 Lauderdale, Mississippi                     19      74125.0    25.6
+ 154 Delaware, Oklahoma                          11      43009.0    25.6
+ 155 Darke, Ohio                                 13      51113.0    25.4
+ 156 Ware, Georgia                                9      35734.0    25.2
+ 157 Tuscola, Michigan                           13      52245.0    24.9
+ 158 Berkshire, Massachusetts                    31     124944.0    24.8
+ 159 Camden, New Jersey                         124     506471.0    24.5
+ 160 Caddo, Oklahoma                              7      28762.0    24.3
+ 161 Lawrence, Indiana                           11      45370.0    24.2
+ 162 Jefferson, Illinois                          9      37684.0    23.9
+ 163 Charles, Maryland                           39     163257.0    23.9
+ 164 Burlington, New Jersey                     106     445349.0    23.8
+ 165 Miami, Ohio                                 25     106987.0    23.4
+ 166 Luzerne, Pennsylvania                       74     317417.0    23.3
+ 167 Tolland, Connecticut                        35     150721.0    23.2
+ 168 Bolivar, Mississippi                         7      30628.0    22.9
+ 169 Prince George's, Maryland                  206     909327.0    22.7
+ 170 Putnam, Georgia                              5      22119.0    22.6
+ 171 Erie, New York                             207     918702.0    22.5
+ 172 Shelby, Indiana                             10      44729.0    22.4
+ 173 Orleans, New York                            9      40352.0    22.3
+ 174 Warrick, Indiana                            14      62998.0    22.2
+ 175 Columbia, New York                          13      59461.0    21.9
+ 176 Sussex, Delaware                            51     234225.0    21.8
+ 177 Kankakee, Illinois                          24     109862.0    21.8
+ 178 Blaine, Idaho                                5      23021.0    21.7
+ 179 Cape May, New Jersey                        20      92039.0    21.7
+ 180 Berks, Pennsylvania                         91     421164.0    21.6
+ 181 Portage, Ohio                               35     162466.0    21.5
+ 182 Pike, Pennsylvania                          12      55809.0    21.5
+ 183 Will, Illinois                             145     690743.0    21.0
+ 184 Montgomery, Maryland                       221    1050688.0    21.0
+ 185 McKinley, New Mexico                        15      71367.0    21.0
+ 186 Arapahoe, Colorado                         136     656590.0    20.7
+ 187 Gordon, Georgia                             12      57963.0    20.7
+ 188 Columbiana, Ohio                            21     101883.0    20.6
+ 189 Marion, Mississippi                          5      24573.0    20.3
+ 190 Carbon, Pennsylvania                        13      64182.0    20.3
+ 191 Marion, Alabama                              6      29709.0    20.2
+ 192 Denver, Colorado                           145     727211.0    19.9
+ 193 Wayne, Ohio                                 23     115710.0    19.9
+ 194 St. Louis City, Missouri                    59     300576.0    19.6
+ 195 Hall, Nebraska                              12      61353.0    19.6
+ 196 Jefferson, Arkansas                         13      66824.0    19.5
+ 197 Hunterdon, New Jersey                       24     124371.0    19.3
+ 198 Jefferson Davis, Louisiana                   6      31368.0    19.1
+ 199 Benton, Washington                          39     204390.0    19.1
+ 200 King, Washington                           429    2252782.0    19.0
+ 201 Noble, Indiana                               9      47744.0    18.9
+ 202 Chittenden, Vermont                         31     163774.0    18.9
+ 203 Greene, Indiana                              6      31922.0    18.8
+ 204 Muscatine, Iowa                              8      42664.0    18.8
+ 205 Allen, Ohio                                 19     102351.0    18.6
+ 206 Frederick, Maryland                         48     259547.0    18.5
+ 207 Milwaukee, Wisconsin                       174     945726.0    18.4
+ 208 Barnstable, Massachusetts                   39     212990.0    18.3
+ 209 Sumner, Tennessee                           35     191283.0    18.3
+ 210 Fluvanna, Virginia                           5      27270.0    18.3
+ 211 Hendricks, Indiana                          31     170311.0    18.2
+ 212 Baltimore, Maryland                        107     593490.0    18.0
+ 213 Northampton, Pennsylvania                   55     305285.0    18.0
+ 214 Yakima, Washington                          45     250873.0    17.9
+ 215 Pike, Mississippi                            7      39288.0    17.8
+ 216 Lake, Illinois                             123     696535.0    17.7
+ 217 Ripley, Indiana                              5      28324.0    17.7
+ 218 Putnam, Ohio                                 6      33861.0    17.7
+ 219 Avoyelles, Louisiana                         7      40144.0    17.4
+ 220 Lehigh, Pennsylvania                        64     369318.0    17.3
+ 221 Hamilton, Indiana                           58     338011.0    17.2
+ 222 Wagoner, Oklahoma                           14      81289.0    17.2
+ 223 Osage, Oklahoma                              8      46963.0    17.0
+ 224 Harrisonburg, Virginia                       9      53016.0    17.0
+ 225 Boone, Illinois                              9      53544.0    16.8
+ 226 Hampshire, Massachusetts                    27     160830.0    16.8
+ 227 Washington, Ohio                            10      59911.0    16.7
+ 228 Floyd, Indiana                              13      78522.0    16.6
+ 229 Navajo, Arizona                             18     110924.0    16.2
+ 230 Chester, Pennsylvania                       85     524989.0    16.2
+ 231 Lake, Indiana                               77     485493.0    15.9
+ 232 Linn, Iowa                                  36     226706.0    15.9
+ 233 James City, Virginia                        12      76523.0    15.7
+ 234 Tangipahoa, Louisiana                       21     134758.0    15.6
+ 235 Clay, Minnesota                             10      64222.0    15.6
+ 236 Habersham, Georgia                           7      45328.0    15.4
+ 237 Lucas, Ohio                                 66     428348.0    15.4
+ 238 Lee, Alabama                                25     164542.0    15.2
+ 239 Baltimore City, Maryland                    90     593490.0    15.2
+ 240 Washtenaw, Michigan                         56     367601.0    15.2
+ 241 Hennepin, Minnesota                        193    1265843.0    15.2
+ 242 Wayne, West Virginia                         6      39402.0    15.2
+ 243 DuPage, Illinois                           139     922921.0    15.1
+ 244 Kershaw, South Carolina                     10      66551.0    15.0
+ 245 Rowan, North Carolina                       21     142088.0    14.8
+ 246 Monroe, New York                           108     741770.0    14.6
+ 247 Acadia, Louisiana                            9      62045.0    14.5
+ 248 Wood, Ohio                                  19     130817.0    14.5
+ 249 Columbus, North Carolina                     8      55508.0    14.4
+ 250 Schenectady, New York                       22     155299.0    14.2
+ 251 Geauga, Ohio                                13      93649.0    13.9
+ 252 Calcasieu, Louisiana                        28     203436.0    13.8
+ 253 Kay, Oklahoma                                6      43538.0    13.8
+ 254 Lubbock, Texas                              43     310569.0    13.8
+ 255 Henderson, North Carolina                   16     117417.0    13.6
+ 256 Trumbull, Ohio                              27     197974.0    13.6
+ 257 Anne Arundel, Maryland                      78     579234.0    13.5
+ 258 Ulster, New York                            24     177573.0    13.5
+ 259 Arlington, Virginia                         32     236842.0    13.5
+ 260 Baldwin, Georgia                             6      44890.0    13.4
+ 261 Atlantic, New Jersey                        35     263670.0    13.3
+ 262 Colquitt, Georgia                            6      45600.0    13.2
+ 263 St. Clair, Michigan                         21     159128.0    13.2
+ 264 Bartholomew, Indiana                        11      83779.0    13.1
+ 265 Snohomish, Washington                      108     822083.0    13.1
+ 266 Gloucester, New Jersey                      38     291636.0    13.0
+ 267 Broomfield, Colorado                         9      70465.0    12.8
+ 268 New London, Connecticut                     34     265206.0    12.8
+ 269 Salem, New Jersey                            8      62385.0    12.8
+ 270 Eagle, Colorado                              7      55127.0    12.7
+ 271 Kent, Delaware                              23     180786.0    12.7
+ 272 Twin Falls, Idaho                           11      86878.0    12.7
+ 273 Wyoming, New York                            5      39859.0    12.5
+ 274 Alexandria, Virginia                        20     159428.0    12.5
+ 275 Tioga, New York                              6      48203.0    12.4
+ 276 Tift, Georgia                                5      40644.0    12.3
+ 277 Jackson, Illinois                            7      56750.0    12.3
+ 278 Harrison, Indiana                            5      40515.0    12.3
+ 279 Columbia, Pennsylvania                       8      64964.0    12.3
+ 280 Grant, Indiana                               8      65769.0    12.2
+ 281 Dutchess, New York                          36     294218.0    12.2
+ 282 Whatcom, Washington                         28     229247.0    12.2
+ 283 Dearborn, Indiana                            6      49458.0    12.1
+ 284 Spalding, Georgia                            8      66703.0    12.0
+ 285 Kenton, Kentucky                            20     166998.0    12.0
+ 286 Marquette, Michigan                          8      66699.0    12.0
+ 287 Pickaway, Ohio                               7      58457.0    12.0
+ 288 Miami-Dade, Florida                        324    2716940.0    11.9
+ 289 Adams, Colorado                             61     517421.0    11.8
+ 290 Albany, New York                            36     305506.0    11.8
+ 291 Jefferson, Colorado                         68     582881.0    11.7
+ 292 Shiawassee, Michigan                         8      68122.0    11.7
+ 293 Palm Beach, Florida                        173    1496770.0    11.6
+ 294 Hancock, Indiana                             9      78168.0    11.5
+ 295 Manatee, Florida                            46     403253.0    11.4
+ 296 Delaware, Indiana                           13     114135.0    11.4
+ 297 Jackson, Michigan                           18     158510.0    11.4
+ 298 New Castle, Delaware                        63     558753.0    11.3
+ 299 Clinton, Michigan                            9      79595.0    11.3
+ 300 Ashtabula, Ohio                             11      97241.0    11.3
+ 301 Floyd, Georgia                              11      98498.0    11.2
+ 302 Mobile, Alabama                             46     413210.0    11.1
+ 303 Jefferson, Kentucky                         85     766757.0    11.1
+ 304 Clark, Indiana                              13     118302.0    11.0
+ 305 Bossier, Louisiana                          14     127039.0    11.0
+ 306 Carroll, Georgia                            13     119992.0    10.8
+ 307 Cobb, Georgia                               81     760141.0    10.7
+ 308 Lincoln, Louisiana                           5      46742.0    10.7
+ 309 Forrest, Mississippi                         8      74897.0    10.7
+ 310 Nacogdoches, Texas                           7      65204.0    10.7
+ 311 Macon, Illinois                             11     104009.0    10.6
+ 312 Greene, New York                             5      47188.0    10.6
+ 313 Island, Washington                           9      85141.0    10.6
+ 314 Hancock, Mississippi                         5      47632.0    10.5
+ 315 Harrison, Texas                              7      66553.0    10.5
+ 316 Crittenden, Arkansas                         5      47955.0    10.4
+ 317 Ouachita, Louisiana                         16     153279.0    10.4
+ 318 Belmont, Ohio                                7      67006.0    10.4
+ 319 Fulton, Georgia                            108    1063937.0    10.2
+ 320 Boulder, Colorado                           33     326196.0    10.1
+ 321 Clarke, Georgia                             13     128331.0    10.1
+ 322 McHenry, Illinois                           31     307774.0    10.1
+ 323 Franklin, Vermont                            5      49402.0    10.1
+ 324 Ozaukee, Wisconsin                           9      89221.0    10.1
+ 325 Los Angeles, California                   1002   10039107.0    10.0
+ 326 Isabella, Michigan                           7      69872.0    10.0
+ 327 Broome, New York                            19     190488.0    10.0
+ 328 Niagara, New York                           21     209281.0    10.0
+ 329 Cleveland, Oklahoma                         28     284014.0     9.9
+ 330 Sumter, Florida                             13     132420.0     9.8
+ 331 Allen, Indiana                              37     379299.0     9.8
+ 332 Berrien, Michigan                           15     153401.0     9.8
+ 333 Stark, Ohio                                 36     370606.0     9.7
+ 334 Grant, Wisconsin                             5      51439.0     9.7
+ 335 El Paso, Colorado                           69     720403.0     9.6
+ 336 St. Clair, Illinois                         25     259686.0     9.6
+ 337 Campbell, Kentucky                           9      93584.0     9.6
+ 338 Livingston, Michigan                        18     191995.0     9.4
+ 339 Orange, North Carolina                      14     148476.0     9.4
+ 340 Skagit, Washington                          12     129205.0     9.3
+ 341 Broward, Florida                           179    1952778.0     9.2
+ 342 Livingston, Louisiana                       13     140789.0     9.2
+ 343 Whiteside, Illinois                          5      55175.0     9.1
+ 344 Black Hawk, Iowa                            12     131228.0     9.1
+ 345 Sarasota, Florida                           39     433742.0     9.0
+ 346 Rutherford, North Carolina                   6      67029.0     9.0
+ 347 Burke, North Carolina                        8      90485.0     8.8
+ 348 Cuyahoga, Ohio                             109    1235072.0     8.8
+ 349 Suffolk, Virginia                            8      92108.0     8.7
+ 350 Lafayette, Louisiana                        21     244390.0     8.6
+ 351 Calvert, Maryland                            8      92525.0     8.6
+ 352 Muskegon, Michigan                          15     173566.0     8.6
+ 353 Creek, Oklahoma                              6      71522.0     8.4
+ 354 Hanover, Virginia                            9     107766.0     8.4
+ 355 Granville, North Carolina                    5      60443.0     8.3
+ 356 Clayton, Georgia                            24     292256.0     8.2
+ 357 Houston, Georgia                            13     157863.0     8.2
+ 358 Calhoun, Michigan                           11     134159.0     8.2
+ 359 Clark, Nevada                              186    2266715.0     8.2
+ 360 Ontario, New York                            9     109777.0     8.2
+ 361 Cumberland, Maine                           24     295003.0     8.1
+ 362 Chatham, North Carolina                      6      74470.0     8.1
+ 363 Wayne, North Carolina                       10     123131.0     8.1
+ 364 Monroe, Michigan                            12     150500.0     8.0
+ 365 St. Charles, Missouri                       32     402022.0     8.0
+ 366 Charlotte, Florida                          15     188910.0     7.9
+ 367 Fayette, Georgia                             9     114421.0     7.9
+ 368 Livingston, New York                         5      62914.0     7.9
+ 369 Summit, Ohio                                43     541013.0     7.9
+ 370 Etowah, Alabama                              8     102268.0     7.8
+ 371 Hall, Georgia                               16     204441.0     7.8
+ 372 Medina, Ohio                                14     179746.0     7.8
+ 373 Kane, Illinois                              41     532403.0     7.7
+ 374 Rapides, Louisiana                          10     129648.0     7.7
+ 375 Franklin, Missouri                           8     103967.0     7.7
+ 376 Walworth, Wisconsin                          8     103868.0     7.7
+ 377 Jefferson, Texas                            19     251565.0     7.6
+ 378 Tulare, California                          35     466195.0     7.5
+ 379 Douglas, Georgia                            11     146343.0     7.5
+ 380 Sandoval, New Mexico                        11     146748.0     7.5
+ 381 Citrus, Florida                             11     149657.0     7.4
+ 382 Franklin, Washington                         7      95222.0     7.4
+ 383 Pima, Arizona                               76    1047279.0     7.3
+ 384 Yolo, California                            16     220500.0     7.3
+ 385 Wilson, North Carolina                       6      81801.0     7.3
+ 386 Allegheny, Pennsylvania                     87    1216045.0     7.2
+ 387 Dauphin, Pennsylvania                       20     278299.0     7.2
+ 388 Florence, South Carolina                    10     138293.0     7.2
+ 389 Allegany, Maryland                           5      70416.0     7.1
+ 390 Putnam, New York                             7      98320.0     7.1
+ 391 Hamilton, Ohio                              58     817473.0     7.1
+ 392 Apache, Arizona                              5      71887.0     7.0
+ 393 Madison, New York                            5      70941.0     7.0
+ 394 Brazos, Texas                               16     229211.0     7.0
+ 395 Galveston, Texas                            24     342139.0     7.0
+ 396 Richmond, Georgia                           14     202518.0     6.9
+ 397 Rensselaer, New York                        11     158714.0     6.9
+ 398 Madison, Illinois                           18     262966.0     6.8
+ 399 St. Lucie, Florida                          22     328297.0     6.7
+ 400 Cumberland, New Jersey                      10     149527.0     6.7
+ 401 Highlands, Florida                           7     106221.0     6.6
+ 402 Rockdale, Georgia                            6      90896.0     6.6
+ 403 Johnson, Kansas                             40     602401.0     6.6
+ 404 Madison, Mississippi                         7     106272.0     6.6
+ 405 Oneida, New York                            15     228671.0     6.6
+ 406 Cass, North Dakota                          12     181923.0     6.6
+ 407 Sumter, South Carolina                       7     106721.0     6.6
+ 408 Lorain, Ohio                                20     309833.0     6.5
+ 409 Yamhill, Oregon                              7     107100.0     6.5
+ 410 Chelan, Washington                           5      77200.0     6.5
+ 411 Clay, Florida                               14     219252.0     6.4
+ 412 San Mateo, California                       48     766573.0     6.3
+ 413 Newton, Georgia                              7     111744.0     6.3
+ 414 Rock Island, Illinois                        9     141879.0     6.3
+ 415 Polk, Iowa                                  31     490161.0     6.3
+ 416 Jefferson, Alabama                          41     658573.0     6.2
+ 417 Marshall, Alabama                            6      96774.0     6.2
+ 418 St. Mary's, Maryland                         7     113510.0     6.2
+ 419 Washoe, Nevada                              29     471519.0     6.2
+ 420 Johnston, North Carolina                    13     209339.0     6.2
+ 421 Putnam, Tennessee                            5      80245.0     6.2
+ 422 Howard, Indiana                              5      82544.0     6.1
+ 423 Richmond City, Virginia                     14     230436.0     6.1
+ 424 Racine, Wisconsin                           12     196311.0     6.1
+ 425 Douglas, Colorado                           21     351154.0     6.0
+ 426 St. Joseph, Indiana                         16     271826.0     5.9
+ 427 Moore, North Carolina                        6     100880.0     5.9
+ 428 Gwinnett, Georgia                           54     936250.0     5.8
+ 429 Cecil, Maryland                              6     102855.0     5.8
+ 430 Lawrence, Pennsylvania                       5      85512.0     5.8
+ 431 Riverside, California                      141    2470546.0     5.7
+ 432 DeKalb, Georgia                             43     759297.0     5.7
+ 433 Cass, Missouri                               6     105780.0     5.7
+ 434 Westmoreland, Pennsylvania                  20     348899.0     5.7
+ 435 Onondaga, New York                          26     460528.0     5.6
+ 436 Lebanon, Pennsylvania                        8     141793.0     5.6
+ 437 Santa Clara, California                    106    1927852.0     5.5
+ 438 Howard, Maryland                            18     325690.0     5.5
+ 439 St. Louis, Minnesota                        11     199070.0     5.5
+ 440 Eaton, Michigan                              6     110268.0     5.4
+ 441 Grand Traverse, Michigan                     5      93088.0     5.4
+ 442 Benton, Oregon                               5      93053.0     5.4
+ 443 Linn, Oregon                                 7     129749.0     5.4
+ 444 Webb, Texas                                 15     276652.0     5.4
+ 445 Chesterfield, Virginia                      19     352802.0     5.4
+ 446 Larimer, Colorado                           19     356899.0     5.3
+ 447 Pueblo, Colorado                             9     168424.0     5.3
+ 448 Durham, North Carolina                      17     321488.0     5.3
+ 449 Portsmouth, Virginia                         5      94398.0     5.3
+ 450 Pierce, Washington                          48     904980.0     5.3
+ 451 Kenosha, Wisconsin                           9     169561.0     5.3
+ 452 Lee, Florida                                40     770577.0     5.2
+ 453 Bibb, Georgia                                8     153159.0     5.2
+ 454 Kent, Michigan                              34     656955.0     5.2
+ 455 Bernalillo, New Mexico                      35     679121.0     5.2
+ 456 Beaufort, South Carolina                    10     192122.0     5.2
+ 457 Harford, Maryland                           13     255441.0     5.1
+ 458 Harnett, North Carolina                      7     135976.0     5.1
+ 459 Richland, South Carolina                    21     415759.0     5.1
+ 460 Potter, Texas                                6     117415.0     5.1
+ 461 Kennebec, Maine                              6     122302.0     4.9
+ 462 Tulsa, Oklahoma                             32     651552.0     4.9
+ 463 Marion, Oregon                              17     347818.0     4.9
+ 464 Multnomah, Oregon                           40     812855.0     4.9
+ 465 Wicomico, Maryland                           5     103609.0     4.8
+ 466 Saratoga, New York                          11     229863.0     4.8
+ 467 Henry, Georgia                              11     234561.0     4.7
+ 468 Monroe, Indiana                              7     148431.0     4.7
+ 469 Vigo, Indiana                                5     107038.0     4.7
+ 470 Franklin, Ohio                              62    1316756.0     4.7
+ 471 Warren, Ohio                                11     234602.0     4.7
+ 472 Shelby, Tennessee                           44     937166.0     4.7
+ 473 Shelby, Alabama                             10     217702.0     4.6
+ 474 Marin, California                           12     258826.0     4.6
+ 475 LaPorte, Indiana                             5     109888.0     4.6
+ 476 Cabarrus, North Carolina                    10     216453.0     4.6
+ 477 Kalamazoo, Michigan                         12     265066.0     4.5
+ 478 Imperial, California                         8     181215.0     4.4
+ 479 Cherokee, Georgia                           11     258773.0     4.3
+ 480 Guilford, North Carolina                    23     537174.0     4.3
+ 481 Prince William, Virginia                    20     470335.0     4.3
+ 482 Collier, Florida                            16     384902.0     4.2
+ 483 Paulding, Georgia                            7     168667.0     4.2
+ 484 Jackson, Mississippi                         6     143617.0     4.2
+ 485 Greenville, South Carolina                  22     523542.0     4.2
+ 486 Horry, South Carolina                       15     354081.0     4.2
+ 487 Pulaski, Arkansas                           16     391911.0     4.1
+ 488 Sangamon, Illinois                           8     194672.0     4.1
+ 489 Johnson, Iowa                                6     151140.0     4.0
+ 490 Ramsey, Minnesota                           22     550321.0     4.0
+ 491 Lexington, South Carolina                   12     298750.0     4.0
+ 492 Dane, Wisconsin                             22     546695.0     4.0
+ 493 Waukesha, Wisconsin                         16     404198.0     4.0
+ 494 San Bernardino, California                  85    2180085.0     3.9
+ 495 Kendall, Illinois                            5     128990.0     3.9
+ 496 Mecklenburg, North Carolina                 43    1110356.0     3.9
+ 497 Cumberland, Pennsylvania                    10     253370.0     3.9
+ 498 Berkeley, South Carolina                     9     227907.0     3.9
+ 499 Newport News, Virginia                       7     179225.0     3.9
+ 500 Indian River, Florida                        6     159923.0     3.8
+ 501 Santa Rosa, Florida                          7     184313.0     3.8
+ 502 Olmsted, Minnesota                           6     158293.0     3.8
+ 503 Union, North Carolina                        9     239859.0     3.8
+ 504 Comal, Texas                                 6     156209.0     3.8
+ 505 Spokane, Washington                         20     522798.0     3.8
+ 506 Forsyth, Georgia                             9     244252.0     3.7
+ 507 Clark, Washington                           18     488241.0     3.7
+ 508 Rock, Wisconsin                              6     163354.0     3.7
+ 509 Oklahoma, Oklahoma                          29     797434.0     3.6
+ 510 Davidson, Tennessee                         25     694144.0     3.6
+ 511 Dallas, Texas                               94    2635516.0     3.6
+ 512 Escambia, Florida                           11     318316.0     3.5
+ 513 Winnebago, Illinois                         10     282572.0     3.5
+ 514 Schuylkill, Pennsylvania                     5     141359.0     3.5
+ 515 Aiken, South Carolina                        6     170872.0     3.5
+ 516 Hamilton, Tennessee                         13     367804.0     3.5
+ 517 San Diego, California                      113    3338330.0     3.4
+ 518 Elkhart, Indiana                             7     206341.0     3.4
+ 519 York, Maine                                  7     207641.0     3.4
+ 520 Ingham, Michigan                            10     292406.0     3.4
+ 521 Washington, Minnesota                        9     262440.0     3.4
+ 522 Williamson, Tennessee                        8     238412.0     3.4
+ 523 Alameda, California                         55    1671329.0     3.3
+ 524 San Joaquin, California                     25     762148.0     3.3
+ 525 Volusia, Florida                            18     553284.0     3.3
+ 526 Ada, Idaho                                  16     481587.0     3.3
+ 527 Iredell, North Carolina                      6     181806.0     3.3
+ 528 Cameron, Texas                              14     423163.0     3.3
+ 529 Travis, Texas                               42    1273954.0     3.3
+ 530 Pinellas, Florida                           31     974996.0     3.2
+ 531 Rankin, Mississippi                          5     155271.0     3.2
+ 532 Butler, Pennsylvania                         6     187853.0     3.2
+ 533 Martin, Florida                              5     161000.0     3.1
+ 534 Muscogee, Georgia                            6     195769.0     3.1
+ 535 Ottawa, Michigan                             9     291830.0     3.1
+ 536 Minnehaha, South Dakota                      6     193134.0     3.1
+ 537 Maui, Hawaii                                 5     167417.0     3.0
+ 538 Hinds, Mississippi                           7     231840.0     3.0
+ 539 Davidson, North Carolina                     5     167609.0     3.0
+ 540 Lake, Ohio                                   7     230149.0     3.0
+ 541 Anderson, South Carolina                     6     202558.0     3.0
+ 542 Rutherford, Tennessee                       10     332285.0     3.0
+ 543 Champaign, Illinois                          6     209689.0     2.9
+ 544 Porter, Indiana                              5     170389.0     2.9
+ 545 Scott, Iowa                                  5     172943.0     2.9
+ 546 Harrison, Mississippi                        6     208080.0     2.9
+ 547 Loudoun, Virginia                           12     413538.0     2.9
+ 548 Polk, Florida                               20     724777.0     2.8
+ 549 Shawnee, Kansas                              5     176875.0     2.8
+ 550 Fayette, Kentucky                            9     323152.0     2.8
+ 551 Licking, Ohio                                5     176862.0     2.8
+ 552 Midland, Texas                               5     176832.0     2.8
+ 553 Maricopa, Arizona                          122    4485414.0     2.7
+ 554 Lake, Florida                               10     367118.0     2.7
+ 555 Greene, Missouri                             8     293086.0     2.7
+ 556 Ellis, Texas                                 5     184826.0     2.7
+ 557 Fort Bend, Texas                            22     811688.0     2.7
+ 558 Virginia Beach, Virginia                    12     449974.0     2.7
+ 559 Sacramento, California                      41    1552058.0     2.6
+ 560 San Francisco, California                   23     881549.0     2.6
+ 561 Canyon, Idaho                                6     229849.0     2.6
+ 562 Spartanburg, South Carolina                  8     319785.0     2.5
+ 563 Tarrant, Texas                              53    2102515.0     2.5
+ 564 Chesapeake, Virginia                         6     244835.0     2.5
+ 565 Chatham, Georgia                             7     289430.0     2.4
+ 566 Cumberland, North Carolina                   8     335509.0     2.4
+ 567 Orange, Florida                             32    1393452.0     2.3
+ 568 Denton, Texas                               20     887207.0     2.3
+ 569 Montgomery, Alabama                          5     226486.0     2.2
+ 570 Contra Costa, California                    25    1153526.0     2.2
+ 571 Anoka, Minnesota                             8     356921.0     2.2
+ 572 Bexar, Texas                                44    2003554.0     2.2
+ 573 Duval, Florida                              20     957755.0     2.1
+ 574 Dakota, Minnesota                            9     429021.0     2.1
+ 575 Harris, Texas                               98    4713325.0     2.1
+ 576 Salt Lake, Utah                             24    1160437.0     2.1
+ 577 Placer, California                           8     398329.0     2.0
+ 578 Ventura, California                         17     846006.0     2.0
+ 579 York, Pennsylvania                           9     449058.0     2.0
+ 580 Montgomery, Texas                           12     607391.0     2.0
+ 581 Pinal, Arizona                               9     462789.0     1.9
+ 582 Osceola, Florida                             7     375751.0     1.9
+ 583 Douglas, Nebraska                           10     571327.0     1.8
+ 584 Washington, Oregon                          11     601592.0     1.8
+ 585 Seminole, Florida                            8     471826.0     1.7
+ 586 Jackson, Missouri                           12     703011.0     1.7
+ 587 Clackamas, Oregon                            7     418187.0     1.7
+ 588 Charleston, South Carolina                   7     411406.0     1.7
+ 589 Santa Barbara, California                    7     446499.0     1.6
+ 590 Collin, Texas                               17    1034730.0     1.6
+ 591 Hillsborough, Florida                       22    1471968.0     1.5
+ 592 Montgomery, Ohio                             8     531687.0     1.5
+ 593 Wake, North Carolina                        16    1111761.0     1.4
+ 594 El Paso, Texas                              12     839238.0     1.4
+ 595 Orange, California                          42    3175692.0     1.3
+ 596 Stanislaus, California                       7     550660.0     1.3
+ 597 Brevard, Florida                             8     601942.0     1.3
+ 598 Forsyth, North Carolina                      5     382295.0     1.3
+ 599 Butler, Ohio                                 5     383134.0     1.3
+ 600 Brazoria, Texas                              5     374264.0     1.3
+ 601 Sedgwick, Kansas                             6     516042.0     1.2
+ 602 Pasco, Florida                               6     553947.0     1.1
+ 603 Honolulu, Hawaii                            11     974563.0     1.1
+ 604 Knox, Tennessee                              5     470313.0     1.1
+ 605 Utah, Utah                                   7     636235.0     1.1
+ 606 Williamson, Texas                            6     590551.0     1.0
+ 607 Fresno, California                           7     999101.0     0.7
+ 608 Kern, California                             5     900202.0     0.6
+ 609 Hidalgo, Texas                               5     868707.0     0.6

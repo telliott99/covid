@@ -1,0 +1,5 @@
+.DSStore
+.DS_Store
+old*/*
+csv.source*/*
+*.pyc

@@ -1,0 +1,92 @@
+Washington
+date                 4/27  4/28  4/29  4/30  5/01  5/02  5/03
+Adams                  46    46    46    46    47    47    47
+Asotin                 17    17    17    17    17    18    18
+Benton                399   405   409   415   422   430   461
+Chelan                 90    91    93    96    98   108   113
+Clallam                15    15    15    17    18    18    18
+Clark                 296   297   308   313   317   321   327
+Columbia                1     1     1     1     1     1     1
+Cowlitz                39    39    39    39    41    45    47
+Douglas                70    72    75    75    77    78    79
+Ferry                   1     1     1     1     1     1     1
+Franklin              250   251   256   265   276   279   309
+Garfield                0     0     0     0     0     0     0
+Garfield County         0     0     0     0     0     0     0
+Grant                 150   150   152   155   155   159   163
+Grays Harbor           12    12    12    12    12    12    12
+Island                161   160   164   168   168   168   169
+Jefferson              28    28    28    28    28    28    28
+King                 5739  5863  5945  6001  6103  6207  6274
+Kitsap                144   144   147   148   148   149   150
+Kittitas               14    14    14    15    14    14    15
+Klickitat              16    16    16    16    16    17    17
+Lewis                  29    29    29    29    29    29    29
+Lincoln                 2     2     2     2     2     2     2
+Mason                  22    22    23    23    23    23    25
+Okanogan               17    19    20    21    21    22    21
+Pacific                 4     4     4     4     4     4     4
+Pend Oreille            2     2     2     2     2     2     2
+Pierce               1235  1244  1263  1293  1306  1322  1339
+San Juan               14    14    14    14    14    14    14
+Skagit                287   299   305   308   322   329   337
+Skamania                3     3     3     3     3     3     3
+Snohomish            2297  2311  2332  2365  2389  2433  2453
+Spokane               345   347   347   350   353   357   367
+Stevens                10     9     9     9     9     9     9
+Thurston              101   100   100   100   104   105   106
+Unassigned            137   123   103    79    76    60    77
+Wahkiakum               2     2     2     2     2     2     2
+Walla Walla            50    52    55    57    62    67    76
+Walla Walla County      0     0     0     0     0     0     0
+Whatcom               284   288   287   293   294   302   305
+Whitman                14    14    14    14    14    14    14
+Yakima                976  1015  1034  1046  1082  1128  1203
+totals              13319 13521 13686 13842 14070 14327 14637
+
+Washington
+date                 4/27  4/28  4/29  4/30  5/01  5/02  5/03
+Adams                   0     0     0     0     0     0     0
+Asotin                  1     1     1     2     2     2     2
+Benton                 37    37    38    39    40    41    41
+Chelan                  5     5     5     5     5     5     5
+Clallam                 0     0     0     0     0     0     0
+Clark                  18    18    18    18    19    19    19
+Columbia                0     0     0     0     0     0     0
+Cowlitz                 0     0     0     0     0     0     0
+Douglas                 1     1     1     1     1     1     1
+Ferry                   0     0     0     0     0     0     0
+Franklin                5     5     5     7     8     9    11
+Garfield                0     0     0     0     0     0     0
+Garfield County         0     0     0     0     0     0     0
+Grant                   2     2     2     3     3     3     3
+Grays Harbor            0     0     0     0     0     0     0
+Island                  9     9     9     9     9     9     9
+Jefferson               0     0     0     0     0     0     0
+King                  400   408   416   429   438   447   452
+Kitsap                  2     2     2     2     2     2     2
+Kittitas                0     0     0     0     0     0     0
+Klickitat               3     3     3     3     3     3     3
+Lewis                   3     3     3     3     3     3     3
+Lincoln                 0     0     0     0     0     0     0
+Mason                   0     1     1     1     1     1     1
+Okanogan                1     1     1     1     1     1     1
+Pacific                 0     0     0     0     0     0     0
+Pend Oreille            0     0     0     0     0     0     0
+Pierce                 46    46    47    48    49    49    50
+San Juan                0     0     0     0     0     0     0
+Skagit                 10    11    11    12    12    13    13
+Skamania                0     0     0     0     0     0     0
+Snohomish             102   104   106   108   108   108   109
+Spokane                19    19    20    20    20    21    22
+Stevens                 1     1     1     1     1     1     1
+Thurston                1     1     1     1     1     1     1
+Unassigned              0     0     0     0     0     0     0
+Wahkiakum               0     0     0     0     0     0     0
+Walla Walla             0     0     0     0     0     0     0
+Walla Walla County      0     0     0     0     0     0     0
+Whatcom                27    27    28    28    28    28    28
+Whitman                 0     0     0     0     0     0     0
+Yakima                 44    44    45    45    47    47    47
+totals                737   749   764   786   801   814   824
+
