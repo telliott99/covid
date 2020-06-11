@@ -4,35 +4,36 @@ import subprocess
 #import util as ut
 #from util_path import util.str as uts
 sys.path.insert(0,'/Users/telliott/Dropbox/covid')
-import util.strings as uts
-import util.db as utdb
-import util.dates as dates
-import util.keys as utk
+
+import myutil.ustrings as ustrings
+import myutil.udb as udb
+import myutil.udates as udates
+import myutil.ukeys as ukeys
 
 
 overwrite = len(sys.argv) > 1
 if overwrite:
     print 'overwrite db'
 
-sep = uts.sep      # ;
-sep2 = uts.sep2    # #
+sep = ustrings.sep      # ;
+sep2 = ustrings.sep2    # #
 
-src = utdb.src
+src = udb.src
 
-all_dates = dates.all_dates
+all_dates = udates.all_dates
 first = all_dates[0]
 last = all_dates[-1]
 
-db = utdb.db  # db.txt
+db = udb.db  # db.txt
 
 # we check that csv.source
 # is up-to-date and no files are missing
 
-dL = utdb.list_directory(src)
+dL = udb.list_directory(src)
 fL = [d.split('.')[0] for d in dL]
 #print dL
 
-for date in dates.all_dates:
+for date in all_dates:
     if not date in fL:
         print 'missing data file in ' + src
         subprocess.call(['python', "refresh.py"])
@@ -45,14 +46,14 @@ for date in dates.all_dates:
 def init_db():
     path = 'csv.source' + '/' + first + '.csv'
     print 'init db with file:  ', first
-    D = utdb.read_csv_data_file(path)        
+    D = udb.read_csv_data_file(path)        
     
     with open(db, 'w') as fh:
         fh.write(first + '\n')
         fh.write(first + '\n')
         fh.write('\n')
         
-        for k in sorted(D.keys(), cmp=utk.custom_sort):
+        for k in sorted(D.keys(), cmp=ukeys.custom_sort):
             fh.write(k + '\n')
             fh.write(D[k]['cases'] + '\n')
             fh.write(D[k]['deaths'] + '\n')
@@ -63,7 +64,7 @@ if not os.path.exists(db) or overwrite:
 
 #----------------------------
 
-date_info, D = utdb.load_db()
+date_info, D = udb.load_db()
 
 # find the date of the latest data in the db
 last_update = date_info.split('\n')[1]
@@ -73,11 +74,11 @@ last_update = date_info.split('\n')[1]
 # add new values
 
 i = all_dates.index(last_update)
-all_dates = all_dates[i+1:]
+all_dates = udates.all_dates[i+1:]
 
 for date in all_dates:
     fn = src + '/' + date + '.csv'
-    sD = utdb.read_csv_data_file(fn)
+    sD = udb.read_csv_data_file(fn)
     
     for k in sD:
         cases = sD[k]['cases']
@@ -103,5 +104,8 @@ for date in all_dates:
 
 #----------------------------
 
-utdb.save_db(D)
+udb.save_db(D)
 
+subprocess.call(['python', 'fixit.py'])
+
+subprocess.call(['cp', 'db.txt', '../db.txt'])

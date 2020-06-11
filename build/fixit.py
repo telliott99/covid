@@ -3,11 +3,11 @@ import sys
 
 #from util_path import util as ut
 sys.path.insert(0,'/Users/telliott/Dropbox/covid')
-import util.db as utdb
-import util.strings as uts
+import myutil.udb as udb
+import myutil.ustrings as ustrings
 
-sep = uts.sep   # ;
-date_info, D = utdb.load_db()
+sep = ustrings.sep   # ;
+date_info, D = udb.load_db()
 
 #----------------------------
 
@@ -64,8 +64,8 @@ def fix_it(old,new):
     if not new in D:
         D[new] = D[old]
         
-    cL = utdb.merge(D[old]['cases'],D[new]['cases'])
-    dL = utdb.merge(D[old]['deaths'],D[new]['deaths'])
+    cL = udb.merge(D[old]['cases'],D[new]['cases'])
+    dL = udb.merge(D[old]['deaths'],D[new]['deaths'])
     mD = {'cases':cL, 'deaths':dL }
     D[new] = mD
     
@@ -184,4 +184,4 @@ except:
     pass
 popif(D,k1)
 
-utdb.save_db(D)
+udb.save_db(D)

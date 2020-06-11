@@ -72,7 +72,7 @@ def save_db(D):
     last = all_dates[-1]
 
     pL = [first + '\n' + last]
-    for k in sorted(D.keys(), cmp = utk.custom_sort):
+    for k in sorted(D.keys(), cmp = ukeys.custom_sort):
         cases = [str(n) for n in D[k]['cases']]
         deaths = [str(n) for n in D[k]['deaths']]
     
