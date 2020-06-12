@@ -17,6 +17,29 @@ Autauga;Alabama;01001;US
 ...
 ``` 
 
+Options for scripts are:
 
-I got an urge to make some analysis normalizing to population.  It took some effort to find the data and fix differences with the entries in the Covid-19 database.
+- the US broken down by states:  ``all_states.py``
+- the US broken down by counties:  ``us_by_counties.py``
+- a given state broken down by counties:  ``one_state.py``
 
+
+Features that are currently supported are given by the ``--help`` flag:
+
+```
+> python all_states.py -h           
+
+flags
+-h --help    help
+-n    int    display the last n values, default: 7
+-N    int    display N rows of data: default: 50
+-d --deaths  display deaths rather than cases (default)
+-r --rate    compute statistics
+-s --sort    (only if stats are asked for)
+-c --delta   change or delta, display day over day rise
+
+example:
+python all_states.py  -n 10 -sdr
+
+>
+```

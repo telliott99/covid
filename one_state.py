@@ -11,6 +11,11 @@ import myutil.ustrings as ustrings
 
 conf = uinit.clargs()
 mode = conf['mode']
+
+if not conf['arg']:
+    print 'please supply the name of a state'
+    sys.exit()
+    
 state = conf['arg']
 
 date_info, D = udb.load_db()
