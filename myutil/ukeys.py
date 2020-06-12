@@ -9,6 +9,10 @@ def fips_for_key(k):
     county,state,fips,country = k.split(ustrings.sep)
     return fips
 
+def county_for_key(k):
+    county,state,fips,country = k.split(ustrings.sep)
+    return county
+
 # custom sort, by country (US first), then state, county fips
 def custom_sort(a,b):
     kL1 = a.split(';')

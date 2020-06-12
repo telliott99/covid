@@ -1,5 +1,4 @@
 import sys
-from operator import itemgetter
 
 import myutil.udates as udates
 import myutil.udb as udb
@@ -12,13 +11,19 @@ import myutil.ustrings as ustrings
 
 conf = uinit.clargs()
 mode = conf['mode']
-date_info, D = udb.load_db()
 
-#--------------
+date_info, D = udb.load_db()
+conf['first'], conf['last'] = date_info.split('\n')
+
+#-------------------------
 
 kL = [k for k in D if k[-3:] == ';US']
 kL = sorted(kL, cmp=ukeys.custom_sort)
+
 kL = [k for k in kL if not 'Princess' in k and not 'Recovered' in k]
+
+# group keys by state in one pass
+# kL is already sorted first by state and then by county
 
 kD = {}
 i = 0
@@ -35,6 +40,19 @@ while i < len(kL):
     i = j
 
 #--------------
+
+def test():
+    for state in sorted(kD.keys()):
+        print state
+        i,j = kD[state]
+        print i, kL[i]
+        print j, kL[j]
+        print 
+
+# test()
+
+#=========================
+
 states = sorted(kD.keys())
 
 filterL = ['Northern Mariana Islands',
@@ -44,30 +62,14 @@ filterL = ['Northern Mariana Islands',
            
 states = [name for name in states if not name in filterL]
 
-rL = []
-n = conf['n']
-
 rL = list()
 for state in states:
-    i,j = kD[state]  # location of index for each county
-    tmp = [D[k][mode][-n:] for k in kL[i:j+1]]
+    # location of first/last index for each county
+    i,j = kD[state]
+    tmp = [D[k][mode] for k in kL[i:j+1]]
     rL.append(umath.totals(tmp))
 
-stats = [umath.stat(sL) for sL in rL]
+#--------------
 
-pL = ufmt.fmt_new(rL,states,conf)
-
-tL = zip(pL,stats)
-tL.sort(key=itemgetter(1), reverse=True)
-
-for s,st in tL[:conf['N']]:
-    print s, "  %s" % str(round(st,3))
-    
-'''
-for state in sorted(kD.keys()):
-    print state
-    i,j = kD[state]
-    print i, kL[i]
-    print j, kL[j]
-    print 
-'''
+labels = states
+print ufmt.fmt_screen(rL,labels,conf)

@@ -29,3 +29,14 @@ def date_from_fn(fn):
     
 def slash_dates(dL):
     return [e.split('-',1)[1].replace('-','/')[1:] for e in dL]
+
+
+
+def date_slice(date_info,conf):
+    last = date_info.split()[1]
+    i = all_dates.index(last)
+    n = conf['n']
+    
+    dates = all_dates[i-n+1:i+1]
+    dates = [e[-5:].replace('-','/') for e in dates]
+    return dates

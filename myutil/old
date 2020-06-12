@@ -1,0 +1,29 @@
+#-----------------------
+
+# older
+
+def fmt_screen(labels,data,num=10,dates=None):
+    a = max(len(c) for c in labels) + 1
+    b = 0
+    for vL in data:
+        MX = max([len(str(n)) for n in vL[-num:]])
+        if MX > b:
+            b = MX
+            
+    b = max(MX,5) + 1
+    rL = list()
+    
+    for c,vL in zip(labels,data):
+        tmp = [c.ljust(a)]
+        tmp.extend([str(n).rjust(b) for n in vL[-num:]])
+        rL.append(''.join(tmp))
+    result = '\n'.join(rL)
+    return a,b,result
+    
+def fmt_csv(labels,data,num=10):
+    rL = list()
+    for c,vL in zip(labels,data):
+        tmp = [c] + [str(n) for n in vL[-num:]]
+        rL.append(','.join(tmp))
+    return '\n'.join(rL)
+

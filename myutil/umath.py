@@ -34,7 +34,7 @@ def totals(L):
 
 def stat(vL, n=10):
     if vL[-1] < n:
-        return 'na'
+        return 0
 
     try:
         #return sum(vL[-3:])*1.0/sum(vL[:3])
