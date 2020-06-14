@@ -1,8 +1,8 @@
 import sys
 
+base = '/Users/telliott/Dropbox/covid'
+sys.path.insert(0,base)
 
-#from util_path import util as ut
-sys.path.insert(0,'/Users/telliott/Dropbox/covid')
 import myutil.udb as udb
 import myutil.ustrings as ustrings
 

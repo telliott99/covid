@@ -1,11 +1,13 @@
-import os, csv
+import sys, os, csv
 from ustrings import sep
 from udates import all_dates
 import ukeys
 
+base = os.environ.get('covid_base')
+sys.path.insert(0,base)
+
 src = 'csv.source'
 db = 'db.txt'
-
 
 def list_directory(d):
     dL = os.listdir(d)

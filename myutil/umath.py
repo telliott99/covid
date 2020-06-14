@@ -28,8 +28,9 @@ def totals(L):
         for n in t:
             tmp += n
         retL.append(tmp)    
-    '''   
-    retL = [sum(sL) for sL in tL]    
+    '''
+
+    retL = [sum(sL) for sL in tL]
     return retL
 
 def stat(vL, n=10):

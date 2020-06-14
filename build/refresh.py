@@ -1,9 +1,7 @@
-import sys, os
-import subprocess
+import sys, os, subprocess
 
-#import util as ut
-#from util_path import util as ut
-sys.path.insert(0,'/Users/telliott/Dropbox/covid')
+base = os.environ.get('covid_base')
+sys.path.insert(0,base)
 
 import myutil.udb as udb
 import myutil.udates as udates

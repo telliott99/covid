@@ -27,4 +27,4 @@ for k in kL:
     state = ukeys.state_for_key(k)
     labels.append(county + ', ' + state)
 
-print ufmt.fmt_screen(rL,labels,conf)
+print ufmt.fmt(rL,labels,conf)

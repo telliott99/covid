@@ -1,9 +1,7 @@
-import sys, os
-import subprocess
+import sys, os, subprocess
 
-#import util as ut
-#from util_path import util.str as uts
-sys.path.insert(0,'/Users/telliott/Dropbox/covid')
+base = os.environ.get('covid_base')
+sys.path.insert(0,base)
 
 import myutil.ustrings as ustrings
 import myutil.udb as udb
@@ -95,6 +93,9 @@ for date in all_dates:
             D[k] = {}
             D[k]['cases'] =  pad[:] + [cases]
             D[k]['deaths'] = pad[:] + [deaths]
+
+        if k == 'Cook;Minnesota;27031;US':
+            print D[k]
     
     # now look for keys with no updates
     for k in D:

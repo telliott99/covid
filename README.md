@@ -43,3 +43,9 @@ python all_states.py  -n 10 -sdr
 
 >
 ```
+
+The statistic is the slope of a linear regression, divided by the mean of the values.  
+
+So, for example, if a 10-day series goes smoothly from 100 to 110, then the slope is about 10/10 = 1 and the statistic is a bit less than 0.01.  If the series goes from 1000 to 1100, then the slope is about 100/10 = 10, but the statistic is still approximately 0.01.
+
+

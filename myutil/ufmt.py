@@ -13,7 +13,7 @@ def fmt_dates(conf):
 
 # for now, make the last day the latest in the db
 
-def fmt_screen(data, labels, conf):    
+def fmt(data, labels, conf, csv=False):    
         
     # rL is data, a list of lists of ints
     # trim the data
@@ -22,6 +22,7 @@ def fmt_screen(data, labels, conf):
         n += 1
     
     rL = [e[-n:] for e in data]
+    #for vL in rL:  print vL
     
     # option: delta
     if conf['delta']:
@@ -47,8 +48,8 @@ def fmt_screen(data, labels, conf):
         if MX > vpad:
             vpad = MX
             
-    # min vpad is 7
-    vpad = max(MX,5) + 2
+    # min vpad
+    vpad = max(MX,5) + 1
     
     #-------------------
         
@@ -57,32 +58,36 @@ def fmt_screen(data, labels, conf):
     # if stats are used
     pad = max(len(c) for c in labels) + 2
     
-    # stats    
+    
+    pL = []
+    dL = fmt_dates(conf)
+    dates = ''.join([d.rjust(vpad) for d in dL])
+    dateline = ''.rjust(pad) + dates
+    
+    if not conf['stats']:
+    
+        for label,vL in zip(labels,rL):
+            # return early if not using stats
+            # so build that version using pad
+            values = ''.join([str(n).rjust(vpad) for n in vL])
+            tmp = ''.join([label.ljust(pad), values])
+            pL.append(tmp)
+        
+        return dateline + '\n' + '\n'.join(pL)
+    
+    #-------------------
+    # stats
     stats = [round(umath.stat(vL),3) for vL in rL]
 
     # build rows, leave stats separate to allow sort
-    pL = []
+
     for label,vL,st in zip(labels,rL,stats):
         # return early if not using stats
         # so build that version using pad
         values = ''.join([str(n).rjust(vpad) for n in vL])
-        
-        if conf['stats']:
-            tmp = [label,values,st]
-        else:
-            tmp = ''.join([label.ljust(pad), values])
+        tmp = [label,values,st]
         pL.append(tmp)
-    
-    #-------------------
-    
-    dL = fmt_dates(conf)
-    
-    dates = ''.join([d.rjust(vpad) for d in dL])
-    dateline = ''.rjust(pad) + dates
-
-    if not conf['stats']:
-        return dateline + '\n' + '\n'.join(pL)
-    
+        
     if conf['sort']:
         totals_line = pL.pop()
         pL.sort(key=itemgetter(2), reverse=True)

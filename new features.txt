@@ -1,4 +1,0 @@
-new features:
-
-- international data again
-- support a date range not including the last data point

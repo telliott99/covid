@@ -33,4 +33,4 @@ labels = []
 for k in kL:
     labels.append(ukeys.county_for_key(k))
 
-print ufmt.fmt_screen(rL,labels,conf)
+print ufmt.fmt(rL,labels,conf)

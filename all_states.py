@@ -72,4 +72,4 @@ for state in states:
 #--------------
 
 labels = states
-print ufmt.fmt_screen(rL,labels,conf)
+print ufmt.fmt(rL,labels,conf)
