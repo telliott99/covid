@@ -1,0 +1,137 @@
+Estimated population from:
+
+https://www.census.gov/content/census/en/data/tables/time-series/demo/popest/2010s-counties-total.html
+
+gives 
+
+co-est2019-annres.csv
+
+Open Numbers
+then look for file and open that, it will convert
+
+It looks like the screenshot
+
+Then convert to csv
+saved under the same filename by mistake 
+
+Process with script to pop.csv
+
+Last column is 2019 population
+First column is ".county, state"
+
+There are a number of issues that are cleaned up.
+See extract_pop.py
+
+#-----
+
+Some counties in the Covid-19 database
+do not have entries in the population database
+b/c they are not really official counties
+
+I put estimates for their populations in 'extra.txt'.
+
+Soldotna;Alaska,4689
+Sterling;Alaska,5617
+Desoto;Florida,38001
+Dukes and Nantucket;Massachusetts,16535
+Carson City;Nevada,55274
+Dona Ana;New Mexico,218195
+Central Utah;Utah,613
+Charles City;Virginia,133
+
+Dona Ana is actually a Unicode issue with the tilde
+'Do\xc3\xb1a Ana;New Mexico'
+
+#-----
+
+Six weeks later 2020-06-16, there are more
+
+Baltimore City, MD
+St. Louis City, MO
+New York City, NY
+Bear River, UT
+Southwest Utah, UT
+Weber-Morgan, UT
+Fairfax City, VA
+Franklin City, VA
+Richmond City, VA
+Roanoke City, VA
+
+
+db.txt has:
+
+Baltimore;MD;24005;US
+Baltimore City;MD;24510;US
+
+St. Louis;MO;29189;US
+St. Louis City;MO;29510;US
+
+Fairfax;VA;51059;US
+Fairfax City;VA;51600;US
+
+Franklin;VA;51067;US
+Franklin City;VA;51620;US
+
+Richmond;VA;51159;US
+Richmond City;VA;51760;US
+
+Roanoke;VA;51161;US
+Roanoke City;VA;51770;US
+
+All these places have a county and a city of the same name reporting separately.
+
+We have the three famous Utah "places"
+
+Bear River;UT;;US
+Central Utah;UT;;US
+Southwest Utah;UT;90049;US
+Weber-Morgan;UT;;US
+all present in db
+
+and then we have NYC, which is five counties
+New York City;NY;36061;US
+
+Soldotna, AK gone
+Sterling, AK gone
+
+DeSoto;FL;12027;US is present
+
+Dukes and Nantucket;MA;;US
+Dukes;MA;25007;US
+Nantucket;MA;25019;US
+all present
+as of yesterday, Dukes and Nantucket is split into two with fips
+
+Carson City;NV;32510;US
+Dona Ana;NM;35013;US
+are both present
+
+Charles City, VA is gone
+
+#---------
+
+So I guess the problem is the population data might combine Baltimore County and Baltimore City.  Let's check wikipedia:
+
+County:  827,370
+City:    593,490
+
+My data lists the county and the city (I missed the city at first b/c lowercase).
+
+
+Just add to extra:
+
+Baltimore City;Maryland,593490
+St. Louis City;Missouri,
+New York City;New York,
+Bear River;Utah,
+Southwest Utah;Utah,
+Weber-Morgan;Utah,
+Fairfax City;Virginia,
+Franklin City;Virginia,
+Richmond City;Virginia,
+Roanoke City;Virginia,
+
+
+
+
+

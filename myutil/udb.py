@@ -1,13 +1,14 @@
 import sys, os, csv
-from ustrings import sep
+from ustrings import sep, us_states
 from udates import all_dates
 import ukeys
+from ustrings import us_states
 
 base = os.environ.get('covid_base')
 sys.path.insert(0,base)
 
-src = 'csv.source'
-db = 'db.txt'
+src = base + '/build/csv.source'
+db = base + '/db.txt'
 
 def list_directory(d):
     dL = os.listdir(d)
@@ -29,6 +30,12 @@ def read_csv_data_file(fn):
         fips,county,state,country = e[:4]
         if len(fips) == 4 and country == 'US':
             fips = '0' + fips
+        
+        if country == 'US':
+            try:
+                state = us_states[state]
+            except KeyError:
+                pass
             
         k = sep.join([county,state,fips,country])
         
@@ -86,4 +93,29 @@ def save_db(D):
     with open(db,'w') as fh:
         fh.write('\n\n'.join(pL))
 
+#---------------
     
+def refmt(key):
+    sL = key.split(sep)  # works w/ or w/o fips, US
+    county = sL[0]
+    state = sL[1]
+    state = us_states[state]
+    cs = county + ', ' + state
+    return cs
+
+#---------------
+
+def get_popD():
+    # load population data
+    
+    fn = base + '/population/pop.csv'
+    
+    with open(fn) as fh:
+        pop_data = fh.read().strip().split('\n')
+        
+    pD = {}
+    for e in pop_data:
+        loc,population = e.split(',')
+        k = refmt(loc)
+        pD[k] = population
+    return pD

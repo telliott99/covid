@@ -1,9 +1,0 @@
-Soldotna;Alaska,4689
-Sterling;Alaska,5617
-Desoto;Florida,38001
-Dukes and Nantucket;Massachusetts,16535
-Carson City;Nevada,55274
-Dona Ana;New Mexico,218195
-Central Utah;Utah,613
-Charles City;Virginia,133
-

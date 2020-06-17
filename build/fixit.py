@@ -4,6 +4,7 @@ base = '/Users/telliott/Dropbox/covid'
 sys.path.insert(0,base)
 
 import myutil.udb as udb
+import myutil.umath as umath
 import myutil.ustrings as ustrings
 
 sep = ustrings.sep   # ;
@@ -20,18 +21,18 @@ def popif(D,k):
 # 1
 # Remove individual problematic entries:
 
-popif(D,'Brockton;Massachusetts;;US')
-popif(D,'LeSeur;Minnesota;;US')
-popif(D,'Manchester;New Hampshire;;US')
-popif(D,'Nashua;New Hampshire;;US')
+popif(D,'Brockton;MA;;US')
+popif(D,'LeSeur;MN;;US')
+popif(D,'Manchester;NH;;US')
+popif(D,'Nashua;NH;;US')
 
 # all 4 counties are also present
-popif(D,'Kansas City;Missouri;;US')
+popif(D,'Kansas City;MO;;US')
 
-popif(D,'Southeast Utah;Utah;;US')
-popif(D,'Southwest;Utah;90049;US')
-popif(D,'Southwest Utah;Utah;;US')
-popif(D,'TriCounty;Utah;;US')
+popif(D,'Southeast Utah;UT;;US')
+#popif(D,'Southwest;UT;90049;US')
+popif(D,'Southwest UT;Utah;;US')
+popif(D,'TriCounty;UT;;US')
 
 #----------------------------
 
@@ -63,9 +64,9 @@ def fix_it(old,new):
         return
     if not new in D:
         D[new] = D[old]
-        
-    cL = udb.merge(D[old]['cases'],D[new]['cases'])
-    dL = udb.merge(D[old]['deaths'],D[new]['deaths'])
+                
+    cL = umath.merge(D[old]['cases'],D[new]['cases'])
+    dL = umath.merge(D[old]['deaths'],D[new]['deaths'])
     mD = {'cases':cL, 'deaths':dL }
     D[new] = mD
     
@@ -111,8 +112,12 @@ rL = check()
 custom = [';Virgin Islands;;US',
           ';Puerto Rico;;US',
           ';Northern Mariana Islands;;US']
-
+            
 for fips, no_fips in rL:
+    if no_fips == 'Southwest Utah;UT;;US':
+        D[no_fips]['cases'].insert(0,0)
+        D[no_fips]['deaths'].insert(0,0)
+
     # special for France, transfer fips to no_fips
     if no_fips == ';;;France':
         fix_it(fips, no_fips)
@@ -123,7 +128,13 @@ for fips, no_fips in rL:
         
     else:
         # transfer no_fips to fips
-        fix_it(no_fips, fips)
+        try:
+            fix_it(no_fips, fips)
+        except AssertionError:
+            print no_fips, fips
+            print D[no_fips]['cases']
+            print D[fips]['cases']
+            print 
         popif(D,no_fips)
         
 #----------------------------
