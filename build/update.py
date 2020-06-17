@@ -11,7 +11,7 @@ import myutil.ukeys as ukeys
 
 overwrite = len(sys.argv) > 1
 if overwrite:
-    print 'overwrite db'
+    print('overwrite db')
 
 sep = ustrings.sep      # ;
 sep2 = ustrings.sep2    # #
@@ -33,7 +33,7 @@ fL = [d.split('.')[0] for d in dL]
 
 for date in all_dates:
     if not date in fL:
-        print 'missing data file in ' + src
+        print('missing data file in ' + src)
         subprocess.call(['python', "refresh.py"])
         
 #-----------------
@@ -43,7 +43,7 @@ for date in all_dates:
     
 def init_db():
     path = 'csv.source' + '/' + first + '.csv'
-    print 'init db with file:  ', first
+    print('init db with file:  ', first)
     D = udb.read_csv_data_file(path)        
     
     with open(db, 'w') as fh:
@@ -51,7 +51,7 @@ def init_db():
         fh.write(first + '\n')
         fh.write('\n')
         
-        for k in sorted(D.keys(), cmp=ukeys.custom_sort):
+        for k in sorted(D.keys(), key=ukeys.custom_key):
             fh.write(k + '\n')
             fh.write(D[k]['cases'] + '\n')
             fh.write(D[k]['deaths'] + '\n')
@@ -95,7 +95,7 @@ for date in all_dates:
             D[k]['deaths'] = pad[:] + [deaths]
 
         if k == 'Cook;Minnesota;27031;US':
-            print D[k]
+            print(D[k])
     
     # now look for keys with no updates
     for k in D:
@@ -109,4 +109,4 @@ udb.save_db(D)
 
 subprocess.call(['python', 'fixit.py'])
 
-subprocess.call(['cp', 'db.txt', '../db.txt'])
+#subprocess.call(['cp', 'db.txt', '../db.txt'])

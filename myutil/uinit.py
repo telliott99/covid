@@ -35,7 +35,7 @@ def clargs():
     one_letters = ''.join(sL)
     
     if "h" in one_letters or '--help' in L:
-        print help
+        print(help)
         sys.exit()
         
     D = { 'mode':'cases', 'n':7, 'N': 100, 'upto': 0,
@@ -49,7 +49,7 @@ def clargs():
         try:
             D['n'] = int(L[i+1])
         except:
-            print '-n flag must be followed by an integer value'
+            print('-n flag must be followed by an integer value')
             sys.exit()
         L.pop(i+1)
         L.pop(i)
@@ -59,7 +59,7 @@ def clargs():
         try:
             D['N'] = int(L[i+1])
         except:
-            print '-n flag must be followed by an integer value'
+            print('-n flag must be followed by an integer value')
             sys.exit()
         L.pop(i+1)
         L.pop(i)
@@ -69,8 +69,8 @@ def clargs():
         try:
             D['last'] = int(L[i+1])
         except:
-            print '-u flag must be followed by an integer value'
-            print '(days before yesterday)'
+            print('-u flag must be followed by an integer value')
+            print('(days before yesterday)')
             sys.exit()
         L.pop(i+1)
         L.pop(i)

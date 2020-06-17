@@ -45,16 +45,16 @@ def fmt(e):
 
 
 dL = udates.slash_dates(udates.all_dates[-n:])
-print 'county                   statistic'.ljust(31),
-print ' '.join(dL)
+s = 'county                   statistic'.ljust(31)
+print(s + ' '.join(dL))
 
 L.sort(key=itemgetter(3),reverse = True)
 
 states = []
 for e in L[:N]:
     states.append(e[1])
-    print fmt(e)
-print
+    print(fmt(e))
+print()
 
 pL = list()
 for state in list(set(states)):
@@ -63,4 +63,4 @@ for state in list(set(states)):
 
 if not specific_state:   
     for state, count in pL:
-        print state.ljust(15), count
+        print(state.ljust(15), count)

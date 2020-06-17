@@ -13,7 +13,10 @@ def county_for_key(k):
     county,state,fips,country = k.split(ustrings.sep)
     return county
 
+'''
 # custom sort, by country (US first), then state, county fips
+# doesn't work in Python 3
+
 def custom_sort(a,b):
     kL1 = a.split(';')
     kL2 = b.split(';')
@@ -28,11 +31,16 @@ def custom_sort(a,b):
         r = cmp(kL1[i],kL2[i])
         if r: return r
     return cmp(kL1[1],kL2[1])
+'''
+
+def custom_key(s):
+    L = s.split(ustrings.sep)
+    return L[3], L[1], L[0], L[2]
 
 # key stuff
 
 def key_list(D):
-    return sorted(D.keys(),cmp=custom_sort)
+    return sorted(D.keys(),key=custom_key)
 
 def key_list_for_search_term(s,mode="country"):
     rL = list()

@@ -8,7 +8,6 @@ import myutil.ukeys as ukeys
 import myutil.umath as umath
 import myutil.ustrings as ustrings
 
-
 conf = uinit.clargs()
 mode = conf['mode']
 
@@ -18,7 +17,7 @@ conf['first'], conf['last'] = date_info.split('\n')
 #-------------------------
 
 kL = [k for k in D if k[-3:] == ';US']
-kL = sorted(kL, cmp=ukeys.custom_sort)
+kL = sorted(kL, key=ukeys.custom_key)
 
 kL = [k for k in kL if not 'Princess' in k and not 'Recovered' in k]
 
@@ -43,11 +42,11 @@ while i < len(kL):
 
 def test():
     for state in sorted(kD.keys()):
-        print state
+        print(state)
         i,j = kD[state]
-        print i, kL[i]
-        print j, kL[j]
-        print 
+        print(i, kL[i])
+        print(j, kL[j])
+        print()
 
 # test()
 
@@ -72,4 +71,6 @@ for state in states:
 #--------------
 
 labels = states
-print ufmt.fmt(rL,labels,conf)
+
+if __name__ == "__main__":
+    print(ufmt.fmt(rL,labels,conf))

@@ -13,7 +13,7 @@ conf = uinit.clargs()
 mode = conf['mode']
 
 if not conf['arg']:
-    print 'please supply the name of a state'
+    print('please supply the name of a state')
     sys.exit()
     
 state = conf['arg']
@@ -23,7 +23,7 @@ date_info, D = udb.load_db()
 # -----------
         
 kL = ukeys.key_list_for_search_term(state, mode="state")
-kL = sorted(kL, cmp=ukeys.custom_sort)
+kL = sorted(kL, key=ukeys.custom_key)
 
 rL = [D[k][conf['mode']] for k in kL]
 
@@ -33,4 +33,4 @@ labels = []
 for k in kL:
     labels.append(ukeys.county_for_key(k))
 
-print ufmt.fmt(rL,labels,conf)
+print(ufmt.fmt(rL,labels,conf))

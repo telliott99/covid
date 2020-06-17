@@ -1,11 +1,13 @@
 import sys, os, csv
+base = os.environ.get('covid_base')
+sys.path.insert(0,base)
+sys.path.insert(1,base + '/myutil')
+
+
 from ustrings import sep, us_states
 from udates import all_dates
 import ukeys
 from ustrings import us_states
-
-base = os.environ.get('covid_base')
-sys.path.insert(0,base)
 
 src = base + '/build/csv.source'
 db = base + '/db.txt'
@@ -19,7 +21,7 @@ def list_directory(d):
 # file stuff
 
 def read_csv_data_file(fn):
-    print 'reading:  ', fn
+    print('reading:  ', fn)
     D = {}
     with open(fn) as fh:
         data = fh.read()
@@ -31,12 +33,14 @@ def read_csv_data_file(fn):
         if len(fips) == 4 and country == 'US':
             fips = '0' + fips
         
+        '''
         if country == 'US':
             try:
                 state = us_states[state]
             except KeyError:
                 pass
-            
+        '''
+        
         k = sep.join([county,state,fips,country])
         
         # it's too much trouble to keep cols I don't use
@@ -81,7 +85,7 @@ def save_db(D):
     last = all_dates[-1]
 
     pL = [first + '\n' + last]
-    for k in sorted(D.keys(), cmp = ukeys.custom_sort):
+    for k in sorted(D.keys(), key = ukeys.custom_key):
         cases = [str(n) for n in D[k]['cases']]
         deaths = [str(n) for n in D[k]['deaths']]
     
