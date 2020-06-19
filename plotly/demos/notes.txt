@@ -1,0 +1,136 @@
+Exploring plotly's Choropleth maps.
+
+https://plotly.com/python/choropleth-maps/#base-map-configuration
+
+#------
+
+The GeoJSON data comes from their github repo:
+
+    from urllib.request import urlopen
+
+    url = '...'
+    with urlopen(url) as response:
+        counties = json.load(response)
+
+The url is
+
+'https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json'
+
+Rather than hit their server every time we test I downloaded the data as a file:
+
+    fn = 'counties.json'
+    with url(fn) as fh:
+        counties = json.load(fh)
+
+#--------------------------------
+
+The first example uses a Pandas data frame.  The url for that is:
+
+'https://raw.githubusercontent.com/plotly/datasets/master/fips-unemp-16.csv'
+ 
+The data frame is constructed from csv and has a header:  fips, unemp.
+
+    import pandas as pd
+
+    fn = 'unemp.csv'
+    df = pd.read_csv(fn, dtype={'fips': str}
+  
+    # show
+    df.head()
+
+You could use the url instead of fn.
+
+#--------------------------------
+
+Their first example is a plotly.express function.  
+This is a "high-level" interface to the plotting library.
+
+  import plotly.express as px
+
+We draw the counties using the vertices in GeoJSON objects, and then color the polygon based on the data in df:  fips -> unemp
+
+To set up the plot call:
+
+    px.choropleth(
+        df,
+        geojson=counties, 
+        locations='fips', 
+        color='unemp',
+        color_continuous_scale="Viridis",
+        range_color=(0, 12),
+        scope="usa",
+        labels={'unemp':'unemployment rate'}
+        )
+
+The other arguments are:
+
+  - locations:  tells the data frame key that matches a JSON object
+  - color: based on the value for unemp
+
+The scope limits the area to show.
+
+Finally:
+
+    fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+    fig.show()
+
+It makes the html and launches the file in the browser.
+
+You can also explore some aspects of a figure by doing print(fig).
+
+#--------------------------------
+
+``python3 ex1.py`` produces output that appears identical to what they show (ex1.png).  It can be zoomed and panned in the browser.
+
+There are 3 white spots.  One seems to be the Great Salt Lake, one is the swamp in Florida, and the third is a county between fips 46047 and 46007 that's missing unemployment data.  These two counties are Fall River and Bennett, SD.  The missing county is:  Todd County, which is part of the Rosebud Indian Reservation.
+
+
+#--------------------------------
+
+The second example is to plot states.  For this, the state GeoJSON data is already part of Plotly Express, so doing the plot is as simple as
+
+import plotly.express as px
+
+fig = px.choropleth(
+    locations = states,
+    locationmode="USA-states", 
+    color=values, 
+    scope="usa")
+    
+fig.show()
+
+In ex2.py, I used the output from stat as is, the default continuous color scale (looks like it's Plasma) was automatically normalized as [min,max] -> [0,1].
+
+States are specified as two-letter abbreviations.
+
+#--------------------------------
+
+A third example is to change ex2.py to use a discrete color scale.  
+
+Numerical data must be expressed as a string for a discrete scale.
+
+So I convert a statistic > 0.3 to '2', > 0.2 becomes '1', and less than that is '0'.
+
+We supply a color list:
+
+cL = ['yellow','red',"rgb(195, 195, 195)"]
+
+The last is a light gray.  The order corresponds to the order of values in the 'values' variable.  In this case, the first value is '1' (Alabama) has 0.02 < st < 0.03.  The next different one is '2'.
+
+Available named colors are here:
+https://community.plotly.com/t/plotly-colours-list/11730/2
+
+including CSS colors, other defaults are:
+
+    '#1f77b4',  # muted blue
+    '#ff7f0e',  # safety orange
+    '#2ca02c',  # cooked asparagus green
+    '#d62728',  # brick red
+    '#9467bd',  # muted purple
+    '#8c564b',  # chestnut brown
+    '#e377c2',  # raspberry yogurt pink
+    '#7f7f7f',  # middle gray
+    '#bcbd22',  # curry yellow-green
+    '#17becf'   # blue-teal
+
+

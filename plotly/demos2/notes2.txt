@@ -1,0 +1,65 @@
+Continuing with the plotly examples.  
+
+Previously we used 'fips' as given in the data frame and matched to a county's GeoJSON using the default, which looks at the 'id'.
+
+    df, 
+    geojson=counties, 
+    locations='fips'
+
+If you wanted to use a different property, use the featureidkey parameter and then set the locations parameter appropriately:
+
+    import plotly.express as px
+    
+    df = px.data.election()
+    geojson = px.data.election_geojson()
+
+The election data looks like this:
+
+                district  Coderre  Bergeron  ...    winner     result district_id
+0     101-Bois-de-Liesse     2481      1829  ...      Joly  plurality         101
+1  102-Cap-Saint-Jacques     2525      1163  ...      Joly  plurality         102
+2   11-Sault-au-Récollet     3348      2770  ...   Coderre  plurality          11
+3           111-Mile-End     1734      4782  ...  Bergeron   majority         111
+4         112-DeLorimier     1770      5933  ...  Bergeron   majority         112
+...
+
+The GeoJSON like this:
+
+'features': [{'type': 'Feature', 
+'geometry': {'type': 'MultiPolygon', 
+             'coordinates': [[[[-73.6363215300962, 45.5759177646435]...]]]}, 
+             'properties': {'district': '11-Sault-au-Récollet'}, 'id': '11'}, 
+
+To plot the figure
+    
+    fig = px.choropleth(
+        df, 
+        geojson=geojson, 
+        color="Bergeron",
+        locations="district", 
+        featureidkey="properties.district",
+        projection="mercator")
+    
+    fig.update_geos(fitbounds="locations", visible=False)
+    fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+    fig.show()
+
+So we're coloring by the number of votes for Bergeron in each district, by the name of the district, rather than by district_id.
+
+#--------------------------------
+
+The built-ins include USA States, and countries of the world.  There is an example of the latter in the plotly stuff.
+
+The first states example is:
+
+    import plotly.express as px
+
+    fig = px.choropleth(
+        locations=["CA", "TX", "NY"],
+        locationmode="USA-states", 
+        color=[1,2,3], 
+        scope="usa")
+    fig.show()
+
+
+The second is my ex5.py.
