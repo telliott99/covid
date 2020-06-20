@@ -13,9 +13,8 @@ fig = px.choropleth(
 fig.update_layout(
     {
      'geo':{'center': {'lon': -115, 'lat': 37}},
-     'xaxis':{'fixedrange':False, 'range':[50,60]},
-     'yaxis':{'fixedrange':False, 'range':[50,60]},
     })
 
-print(type(fig))
+print(fig)
+
 fig.show()

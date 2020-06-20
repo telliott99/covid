@@ -35,12 +35,19 @@ df = pd.DataFrame(data={'state':abbrev, 'value':st})
 
 import plotly.express as px
 
+cL = ['rgb(0,100,0)',
+      'rgb(0,255,0)',
+      'rgb(111,255,0)',
+      'rgb(255,255,0)',
+      'rgb(255,111,0)',
+      'rgb(255,0,0)']
+
 fig = px.choropleth(
     df,
     locations=abbrev,
     locationmode='USA-states',
     color=st,
-    color_continuous_scale="Plasma",
+    color_continuous_scale=cL,
     scope="usa",
     labels={'color':'growth'})
 
