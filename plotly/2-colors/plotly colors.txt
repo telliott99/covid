@@ -26,8 +26,6 @@ including CSS colors, other defaults are:
     '#bcbd22',  # curry yellow-green
     '#17becf'   # blue-teal
 
-
-
 For continuous, numeric data points are converted to values in the range [0,1] using range_color for the bounds, and then colors are interpolated.
 
 "Most Plotly Express functions accept a color argument which automatically assigns data values to continuous color if the data is numeric. If the data contains strings, the color will automatically be considered discrete (also known as categorical or qualitative)."

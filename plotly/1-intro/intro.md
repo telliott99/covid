@@ -1,10 +1,10 @@
 #### Introduction to plotly for Geo data
 
-The plotly plotting library is open source.  You can obtain it with ``pip`` as in
+The plotly plotting library is open source.  You can obtain it with ``pip`` by:
 
      pip3 install plotly
      
-(there are versions for R and javascript as well).
+There are versions for R and javascript as well.
 
 Then do ``python3`` and 
 
@@ -12,9 +12,13 @@ Then do ``python3`` and
 	 >>> plotly.__version__
 	 '4.8.1'
 
-There is also a high-level interface to plotly called ``plotly.express``.
+There is also a high-level interface to plotly called ``plotly.express.``
 
-``plotly.express`` comes with the GeoJSON data for world countries as well as U.S. states.  These must be keyed by their two-letter abbreviations for states, or by ISO- abbreviations for countries.  The latter are [here](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes).
+``plotly.express`` comes with the GeoJSON data for world countries as well as U.S. states.  
+
+These are keyed by their two-letter abbreviations for states, or by ISO-3166 3-letter abbreviations for countries.  
+
+The latter are [here](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes).
 
 	 > python3       
 	 ...
@@ -23,36 +27,44 @@ There is also a high-level interface to plotly called ``plotly.express``.
 	 >>> fig = px.choropleth(locations=L,color=[1,2,3])
      >>> fig.show()
 
-The result is:
+The result:
 
 ![](figs/intro0.png)
 
 The figure is html that is opened automatically in the browser.  It has buttons for zoom and pan, and to save as png.
 
-#### colors
+#### Name
 
-The ``color`` argument isn't necessary, in that case the specified countries are colored the same default color, a medium blue.
+Origin of the name [choropleth](https://en.wikipedia.org/wiki/Choropleth_map).
 
-In the example above, we obtained the colors as a ``color_continuous_scale``.  The default one [appears](https://plotly.com/python/builtin-colorscales/) to be Inferno.
 
-How this works is that if the colors are given as numerical data, then the values are converted to the range [0,1].  Then the colors of the color scale are mapped to the same range, and the appropriate colors interpolated from the values.
+#### Brief introduction to colors
 
-Here we provided ``[1,2,3]`` and these values were mapped to ``[0,0.5,1]``.  The first, middle and last colors were obtained from the color scale Plasma.
+The ``color`` argument isn't strictly necessary, in that case the specified countries are colored the same default color, a medium blue.
+
+In the example above, we obtain the colors as a ``color_continuous_scale``.  The default [appears](https://plotly.com/python/builtin-colorscales/) to be Inferno.
+
+**Important**
+
+if the colors are given as numerical data, then the values are mapped to the range [0,1].  The color scale is mapped to the same range, and the intermediate colors interpolated from the values.
+
+Here we provided the argument ``[1,2,3]`` and these values were mapped to ``[0,0.5,1]``.  The first, middle and last colors were obtained from the color scale Plasma.
 
     >>> print(px.colors.sequential.Plasma)
     ['#0d0887', '#46039f', '#7201a8', '#9c179e', '#bd3786', '#d8576b', '#ed7953', '#fb9f3a', '#fdca26', '#f0f921']
 
 So the middle value would be interpolated between ``'#bd3786'`` and ``'#d8576b'``.
 
-Another way to do this is to give categorical data for the colors.  For example we could do:
+We could, instead, use categorical data for the colors.  For example we could do:
 
+    >>> L = ['BRA','JPN','RUS']
 	 >>> fig = px.choropleth(locations=L,color=L)
 
-We'd get these colors:
+This gives:
 
 ![](figs/colors.png)
 
-It's nicer to specify the colors you want. 
+But it's usually nicer to specify the colors you want. 
 
 Available named colors are [here](https://community.plotly.com/t/plotly-colours-list/11730/2).
 
@@ -69,11 +81,16 @@ Including CSS colors, other defaults are:
     '#bcbd22',  # curry yellow-green
     '#17becf'   # blue-tea
 
-So
+We can give rgb tuples as HTML values (above), as tuples in the range 0..255 or as named standard colors.
 
 	>>> cL = ['yellow','red',"rgb(195, 195, 195)"]
-	>>> fig = px.choropleth(locations=L,color=L,color_discrete_sequence=cL)
+	>>> fig = px.choropleth(
+	        locations=L,
+	        color=L,
+	        color_discrete_sequence=cL)
 	>>> fig.show()
+	
+So the colors for ``['BRA','JPN','RUS']`` are based on the list ``['yellow','red',"rgb(195, 195, 195)"]``.
 
 ![](figs/intro1b.png)
 
@@ -81,7 +98,7 @@ So
 
 #### focus on a region
 
-The second example is a [script](intro1.py).  The script uses two new arguments to the choropleth constructor:
+The second example is implemented in [intro1.py](intro1.py).  The script uses two new arguments to the choropleth constructor:
 
 - ``locationmode="USA-states"``
 - ``scope='usa'``
@@ -92,11 +109,9 @@ The scope argument limits the display to the USA.  Other possible values include
 
 ![](figs/intro1.png)
 
-#### Using other GeoJSON data
+#### Using explicit GeoJSON data
 
-The third example is anothe [script](intro2.py).  
-
-The script imports the GeoJSON data for US counties.  I got it from the plotly github repo and saved it to disk to reuse.
+The third example is [intro2.py](intro2.py).  This script imports the GeoJSON data for US counties.  I obtained it from the plotly github repo using a url given in their write-up, and saved it to disk for reuse.
 
 It's in JSON format.
 
@@ -124,14 +139,13 @@ We pass in the data frame, the GeoJSON data (all of it) and then
     locations='fips',
 	 color='value'
 	 
-What this does is to tell px to match a county from the GeoJSON data (by the default, it is ``'id'``) against the value in column one of the data frame, a ``'fips'``.
+What this does is to tell px to match a county from the GeoJSON data (by the default, it uses ``'id'``), against the value in column one of the data frame, labeled ``'fips'``.
 
-That county is then plotted and colored according to the corresponding value in the second column.
+That county is then plotted and colored according to the corresponding value in the second column, labeled ``'value'``.
 
 Since the values are categorical, they are matched against the colors from the ``color_discrete_sequence``:
 
     cL = ['green','magenta']
-
 
 ![](figs/intro2.png)
 

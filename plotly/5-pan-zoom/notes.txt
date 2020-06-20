@@ -1,0 +1,6 @@
+See zoom.py.
+
+Panning is easy.
+
+The solution given for zooming doesn't work.
+Have not solved this yet.

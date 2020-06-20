@@ -15,7 +15,7 @@ with open(fn,'r') as fh:
 import pandas as pd
 
 # note:  dtype required for map to display correctly
-df = pd.read_csv('data2.csv', dtype={'fips': str})
+df = pd.read_csv('example.csv', dtype={'fips': str})
 print (df.head())
 
 '''

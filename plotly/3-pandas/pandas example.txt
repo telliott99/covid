@@ -1,0 +1,50 @@
+pandas is obtained by using pip
+
+A data frame is a table with named rows and columns 
+whose individual columns may have data of different types.
+
+  fips   value
+ 01001       1
+
+A simple way to construct such a table is to provide a
+dictionary to the DataFrame constructor:
+
+>>> import pandas as pd
+>>> data = {'fips':['01001'], 'value':[1] }
+>>> df = pd.DataFrame(data)
+>>> df.head()
+    fips  value
+0  01001      1
+>>>
+
+Frequently, the data comes from a csv file:
+
+>>> import pandas as pd
+>>> df = pd.read_csv('data.csv')
+>>> df.head()
+   fips  value
+0  1001      1
+>>>
+
+Notice that this is not quite right.
+The leading zero on fips has been stripped.
+
+The reason is that the datatype has been inferred to be integer.
+
+>>> df.dtypes
+fips     int64
+value    int64
+dtype: object
+>>>
+
+To fix this, specify;
+
+>>> df = pd.read_csv('data.csv', dtype={'fips': str})
+>>> df.head()
+    fips  value
+0  01001      1
+>>> df.dtypes
+fips     object
+value     int64
+dtype: object
+>>>

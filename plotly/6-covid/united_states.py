@@ -36,6 +36,7 @@ df = pd.DataFrame(data={'state':abbrev, 'value':st})
 import plotly.express as px
 
 fig = px.choropleth(
+    df,
     locations=abbrev,
     locationmode='USA-states',
     color=st,
