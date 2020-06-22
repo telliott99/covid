@@ -186,13 +186,13 @@ for k in [m,m69000]:
 # 5
 # District of Columbia
 
-k1 = 'District of Columbia;District of Columbia;11001;US'
-k2 = 'District of Columbia;DC;11001;US'
+#k1 = 'District of Columbia;District of Columbia;11001;US'
+#k2 = 'District of Columbia;DC;11001;US'
 
-try:
-    fix_it(k1,k2)
-except:
-    pass
-popif(D,k1)
+#try:
+    #fix_it(k1,k2)
+#except:
+    #pass
+#popif(D,k1)
 
 udb.save_db(D)

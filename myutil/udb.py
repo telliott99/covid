@@ -4,10 +4,11 @@ sys.path.insert(0,base)
 sys.path.insert(1,base + '/myutil')
 
 
-from ustrings import sep, us_states
+from ustrings import sep
+
 from udates import all_dates
 import ukeys
-from ustrings import us_states
+#from ustrings import us_states
 
 src = base + '/build/csv.source'
 db = base + '/db.txt'
@@ -32,15 +33,7 @@ def read_csv_data_file(fn):
         fips,county,state,country = e[:4]
         if len(fips) == 4 and country == 'US':
             fips = '0' + fips
-        
-        '''
-        if country == 'US':
-            try:
-                state = us_states[state]
-            except KeyError:
-                pass
-        '''
-        
+                
         k = sep.join([county,state,fips,country])
         
         # it's too much trouble to keep cols I don't use
@@ -103,7 +96,7 @@ def refmt(key):
     sL = key.split(sep)  # works w/ or w/o fips, US
     county = sL[0]
     state = sL[1]
-    state = us_states[state]
+    #state = us_states[state]
     cs = county + ', ' + state
     return cs
 

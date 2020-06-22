@@ -37,6 +37,9 @@ for k in kL:
 
 def fmt(e):
     c,s,rL,stat = e
+    if c == 'Dukes and Nantucket':
+        s = 'MA'
+    
     v = c + ', ' + s
     pL = [v.ljust(28)]
     pL.append(format(stat,'.2f').rjust(5))
@@ -46,7 +49,7 @@ def fmt(e):
 
 dL = udates.slash_dates(udates.all_dates[-n:])
 s = 'county                   statistic'.ljust(31)
-print(s + ' '.join(dL))
+print(s + ' ' + ' '.join(dL))
 
 L.sort(key=itemgetter(3),reverse = True)
 

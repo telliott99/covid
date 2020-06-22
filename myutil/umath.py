@@ -1,4 +1,5 @@
 from scipy import stats as st
+from operator import itemgetter
 
 def try_int(n):
     try:
@@ -47,3 +48,10 @@ def stat(vL, n=10):
         
     except:
         return None
+
+def quintiles(n):
+    if n > 0.08:  return 0.08
+    if n > 0.06:  return 0.06
+    if n > 0.04:  return 0.04
+    if n > 0.02:  return 0.02
+    return 0.01

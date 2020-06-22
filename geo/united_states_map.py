@@ -16,13 +16,14 @@ import myutil.umath as umath
 
 # as Alabama, but contains 'DC'
 from all_states import states, rL
-i = states.index('DC')
-states[i] = 'District of Columbia'
+
+#i = states.index('DC')
+#states[i] = 'District of Columbia'
 
 # dict from 'Alabama' to 'AL'
-from ustrings import us_states
+from ustrings import state_to_abbrev as stD
+abbrev = [stD[state] for state in sorted(stD.keys())]
 
-abbrev = [us_states[state] for state in states]
 st = [umath.stat(vL[-7:]) for vL in rL]
 
 #--------------------
@@ -47,7 +48,8 @@ fig = px.choropleth(
     locations=abbrev,
     locationmode='USA-states',
     color=st,
-    color_continuous_scale=cL,
+    #color_continuous_scale=cL,
+    color_continuous_scale='Plasma',
     scope="usa",
     labels={'color':'growth'})
 

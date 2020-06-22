@@ -94,8 +94,8 @@ for date in all_dates:
             D[k]['cases'] =  pad[:] + [cases]
             D[k]['deaths'] = pad[:] + [deaths]
 
-        if k == 'Cook;Minnesota;27031;US':
-            print(D[k])
+        #if k == 'Cook;Minnesota;27031;US':
+            #print(D[k])
     
     # now look for keys with no updates
     for k in D:

@@ -1,4 +1,5 @@
 import sys
+from ustrings import abbrev_to_state
 
 if sys.argv[0] == "one_state.py":
     extra = '[state]'
@@ -89,8 +90,15 @@ def clargs():
         
     L = [arg for arg in L if not arg.startswith('-')]
     if len(L) > 0:
-        D['arg'] = L[0]
+        arg = L[0]
+        try:
+            arg = abbrev_to_state[arg]
+        except KeyError:
+            pass
+        D['arg'] = arg
     else:
         D['arg'] = None
         
+    # we use full names of states internally, b/c that's what db has
+                
     return D

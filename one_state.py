@@ -20,15 +20,6 @@ state = conf['arg']
 
 date_info, D = udb.load_db()
 
-from ustrings import us_states
-rD = {}
-for k in us_states:
-    rD[us_states[k]] = k
-
-if not state in us_states:  # spelled out
-    if state in rD:
-        state = rD[state]
-
 # -----------
         
 kL = ukeys.key_list_for_search_term(state, mode="state")

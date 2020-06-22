@@ -1,0 +1,6 @@
+I got GeoJSON counties from plotly
+'https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json'
+
+However I also came across a reference for all the data you could want:
+https://eric.clst.org/tech/usgeojson/
+
