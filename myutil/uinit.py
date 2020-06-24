@@ -9,17 +9,17 @@ else:
 help = '''
 flags
 -h  --help    help
--n     int    display the last n values, default: 7
--N     int    display N rows of data: default: 50
--u     int    data slice ends this many days before yesterday 
-(not yet)
+-n   <int>    display the last n values, default: 7
+-N   <int>    display N rows of data: default: 50
 
 -c  --delta   change or delta, display day over day rise
 -d  --deaths  display deaths rather than cases (default)
--p  --pop     normalize to population
 -r  --rate    compute statistics
 -s  --sort    (only if stats are asked for)
 
+to do:
+-u   <int>    data slice ends this many days before yesterday 
+-p  --pop     normalize to population
 
 example:
 python %s %s -n 10 -sdr

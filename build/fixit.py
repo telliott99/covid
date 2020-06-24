@@ -1,6 +1,6 @@
-import sys
+import sys, os
 
-base = '/Users/telliott/Dropbox/covid'
+base = os.environ.get('covid_base')
 sys.path.insert(0,base)
 
 import myutil.udb as udb
