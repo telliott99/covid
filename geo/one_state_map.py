@@ -28,7 +28,7 @@ for arg in sys.argv[1:]:
         
 print(states)
 
-date_info, D = udb.load_db()
+date_info, D = udb.load_db(db='db.txt')
 
 #--------------------
 

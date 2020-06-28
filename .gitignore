@@ -3,3 +3,5 @@
 old*/*
 csv.source*/*
 *.pyc
+db.txt
+db.max.txt

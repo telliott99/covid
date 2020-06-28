@@ -14,6 +14,7 @@ import myutil.umath as umath
 # we need to construct a pandas data frame with
 # fips stats
 
+sys.path.insert(1,base + '/scripts')
 # as Alabama, but contains 'DC'
 from all_states import states, rL
 
