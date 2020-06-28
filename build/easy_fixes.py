@@ -1,6 +1,6 @@
 # these fixes only apply to early days
-
 import sys, os
+MX = '--max' in sys.argv
 
 base = os.environ.get('covid_base')
 sys.path.insert(0,base)
@@ -13,7 +13,12 @@ import myutil.ukeys as ukeys
 
 sep = ustrings.sep      # ;
 
-date_info, D = udb.load_db(db=base + '/db.max.txt')
+if MX:
+    path_to_db = 'db.max.txt'
+else:
+    path_to_db = 'db.txt'
+
+date_info, D = udb.load_db(db = base + '/' + path_to_db)
 first,last = date_info.split('\n')
 
 #------------------------------------
@@ -112,5 +117,5 @@ for k in kL:
 
 #------------------------------------
 
-udb.save_db(D, base + '/db.max.txt', first, last)
+udb.save_db(D, base + '/' + path_to_db, first, last)
 

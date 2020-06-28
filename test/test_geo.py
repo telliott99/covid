@@ -1,4 +1,4 @@
-import sys, os
+import sys, os, time
 import subprocess
 
 base = os.environ.get('covid_base')
@@ -24,3 +24,6 @@ for script, args in zip(script_list, arg_list):
 
 for e in errors:
     print('error code returned for: %s' % e)
+
+time.sleep(2)
+subprocess.run(['osascript', '-e' 'quit app "Safari"'])

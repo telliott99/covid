@@ -1,7 +1,7 @@
 import sys, os, subprocess
 
 # build the mega db
-MX = '-max' in sys.argv[1:]
+MX = '--max' in sys.argv
 
 overwrite = '-o' in sys.argv[1:]
 if overwrite:
@@ -22,9 +22,9 @@ sep2 = ustrings.sep2    # #
 src = base + '/build/csv.source'
 
 if MX:
-    db = 'db.max.txt'
+    path_to_db = base + '/db.max.txt'
 else:
-    db = 'db.txt'
+    path_to_db = base + '/db.txt'
         
 #-----------------
   
@@ -85,13 +85,13 @@ if not MX:
 # for constructing the database file
 # there is no need to convert to ints
     
-def init_db():
+def init_db(path_to_db):
     path = fL[0]
     print('init w/:  ', path)
     
     D = udb.read_csv_data_file(path)        
     
-    with open(db, 'w') as fh:
+    with open(path_to_db, 'w') as fh:
         # write date_info
         fh.write(first + '\n')
         fh.write(first + '\n')
@@ -103,20 +103,19 @@ def init_db():
             fh.write(D[k]['deaths'] + '\n')
             fh.write('\n')
     
-if not os.path.exists(db) or overwrite:
-    init_db()
+#if not os.path.exists(db) or overwrite:
+init_db(path_to_db)
 
 #----------------------------
 
-date_info, D = udb.load_db(db)
+date_info, D = udb.load_db(path_to_db)
 
 '''
 pad for missing data is confusing 
 when we're just updating
 
-for now,
-just build always
-(ignore overwrite
+for now, build always
+(ignore overwrite flag)
 '''
 
 # latest update
@@ -160,9 +159,12 @@ for fn in fL[1:]:
            
 #----------------------------
 
-if MX:
-    udb.save_db(D, base + '/db.max.txt', first, last)
-else:
-    udb.save_db(D, base + '/db.txt', first, last)
+print('write: %s' % path_to_db)
+udb.save_db(D, path_to_db, first, last)
 
-subprocess.call(['python', 'easy_fixes.py'])
+
+if MX:
+    subprocess.call(['python', 'easy_fixes.py', '--max'])
+else:
+    subprocess.call(['python', 'easy_fixes.py'])
+
