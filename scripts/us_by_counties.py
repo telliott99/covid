@@ -15,7 +15,9 @@ import myutil.ustrings as ustrings
 conf = uinit.clargs()
 mode = conf['mode']
 
-date_info, D = udb.load_db(db='db.txt')
+path_to_db = base + '/db.txt'
+
+date_info, D = udb.load_db(path_to_db)
 conf['first'], conf['last'] = date_info.split('\n')
 
 #-------------------------

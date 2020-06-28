@@ -19,7 +19,9 @@ N = conf['N']  # num of items
 
 specific_state =conf['arg']
 
-date_info, D = udb.load_db(db='db.txt')
+path_to_db = base + '/db.txt'
+
+date_info, D = udb.load_db(path_to_db)
 first,last = date_info.split('\n')
 conf['first'] = first
 conf['last'] = last

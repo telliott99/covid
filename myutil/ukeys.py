@@ -1,6 +1,12 @@
+import sys, os
+
 import udb
 import ustrings
 import umath
+
+base = os.environ.get('covid_base')
+sys.path.insert(0,base)
+
 
 def state_for_key(k):
     county,state,fips,country = k.split(ustrings.sep)
@@ -24,7 +30,7 @@ def key_list(D):
 
 def key_list_for_search_term(s,mode="country"):
     rL = list()
-    date_info, D = udb.load_db(db='db.txt')
+    date_info, D = udb.load_db(base + '/db.txt')
     for k in key_list(D):
         county,state,fips,country = k.split(ustrings.sep)
         if mode == "country" and s == country:
@@ -55,7 +61,7 @@ def all_states():
     
 def key_list_for_us_counties():
     rL = list()
-    date_info, D = udb.load_db(db='db.txt')
+    date_info, D = udb.load_db(base + '/db.txt')
     for k in key_list(D):
         county,state,fips,country = k.strip().split(ustrings.sep)
         if not country == 'US':

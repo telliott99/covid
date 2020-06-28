@@ -15,6 +15,8 @@ import myutil.umath as umath
 if not len(sys.argv) > 1:
     print('please supply the name of a state')
     sys.exit()
+    
+path_to_db = base + '/db.txt'
 
 # use long form internally
 from ustrings import abbrev_to_state as stD
@@ -28,7 +30,7 @@ for arg in sys.argv[1:]:
         
 print(states)
 
-date_info, D = udb.load_db(db='db.txt')
+date_info, D = udb.load_db(path_to_db)
 
 #--------------------
 

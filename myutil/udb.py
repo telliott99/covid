@@ -57,8 +57,8 @@ def dict_from_data(data):
         D[k] = { 'cases': cases, 'deaths': deaths}
     return D
 
-def load_db(db):
-    with open(db) as fh:
+def load_db(path_to_db):
+    with open(path_to_db) as fh:
         data = fh.read().strip().split('\n\n')
         
     date_info = data[0]
@@ -66,7 +66,7 @@ def load_db(db):
     D = dict_from_data(data)
     return date_info, D
     
-def save_db(D, db, first, last):
+def save_db(D, path_to_db, first, last):
     #all_dates = generate_dates()
     #first = all_dates[0]
     #last = all_dates[-1]
@@ -81,7 +81,7 @@ def save_db(D, db, first, last):
         tmp += ','.join(deaths) + '\n'
         pL.append(tmp)
     
-    with open(db,'w') as fh:
+    with open(path_to_db,'w') as fh:
         fh.write('\n\n'.join(pL))
 
 #---------------
