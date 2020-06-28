@@ -1,5 +1,6 @@
 import udb
 import ustrings
+import umath
 
 def state_for_key(k):
     county,state,fips,country = k.split(ustrings.sep)
@@ -23,7 +24,7 @@ def key_list(D):
 
 def key_list_for_search_term(s,mode="country"):
     rL = list()
-    date_info, D = udb.load_db()
+    date_info, D = udb.load_db(db='db.txt')
     for k in key_list(D):
         county,state,fips,country = k.split(ustrings.sep)
         if mode == "country" and s == country:
@@ -54,7 +55,7 @@ def all_states():
     
 def key_list_for_us_counties():
     rL = list()
-    date_info, D = udb.load_db()
+    date_info, D = udb.load_db(db='db.txt')
     for k in key_list(D):
         county,state,fips,country = k.strip().split(ustrings.sep)
         if not country == 'US':
@@ -73,3 +74,32 @@ def key_list_for_us_counties():
 def switch(D, old_key, new_key):
     D[new_key] = D[old_key]
     D.pop(old_key)
+
+#------------------------------------
+
+def merge_keys(D, old, new):
+    if not old in D:
+        return
+    if not new in D:
+        D[new] = D[old]
+    
+    modes = ['cases', 'deaths']
+    mD = {}
+            
+    for m in modes:
+        cL1, cL2 = D[old][m],D[new][m]
+        try:
+            cL = umath.merge(cL1,cL2)
+        except AssertionError:
+            print('error in merge_keys')
+            print(old, len(cL1))
+            print(new, len(cL2))
+        
+        mD[m] = cL
+    D[new] = mD
+
+def popif(D,k):
+    try:
+        D.pop(k)
+    except:
+        pass

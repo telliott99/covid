@@ -1,25 +1,38 @@
-import sys, os, subprocess
-#import udb
-
+import sys, os
 from datetime import date, datetime, timedelta
 
 base = os.environ.get('covid_base')
 sys.path.insert(0,base)
 
-def list_directory(d):
-    dL = os.listdir(d)
-    dL = [e for e in dL if not e.startswith('.')]   
-    dL.sort()
-    return dL
+from myutil.ufile import list_directory
 
-# specify the first date for the db
-# based on which files are in csv.source
+'''
+dates are a bit tricky
+there is the format issue
+2020-03-22 v. 03-22 v. 03/22
 
-def generate_dates():
-    dL = list_directory(base + '/build/csv.source')
-    first = dL[0].split('.')[0]
+there is also the question of the first date
 
+originally it was 2020-03-22
+now it is usually the first dated file in 'csv.source'
+
+If we're building the database
+the first date should be a variable
+
+Otherwise, get the first date from the db
+
+All this module does is provide generate_dates
+
+'''
+
+# format = 2020-03-25
+def generate_dates(first=None):
+    if not first:
+        first = '2020-03-22'
+        
     today = str(date.today())
+    #print('udates:  first', first)
+    
     L = list()
     start = datetime.strptime(first, '%Y-%m-%d')
     end   = datetime.strptime(today, '%Y-%m-%d')
@@ -28,16 +41,18 @@ def generate_dates():
     while start < end:   
         # can't get today's data until tomorrow, hence <
         L.append(str(start.date()))
-        start += step
+        start += step 
     return L
-
-all_dates = generate_dates()
-last = all_dates[-1]
-
+    
 #-------------------------------------
   
-def date_from_fn(fn):
-    return fn.split('-',1)[1].split('.')[0]
+def date_from_path(p, short=False):
+    if '/' in p:
+        p = p.strip().split('/')[-1]
+    p = p.split('.')[0]
+    if short:
+        return p.split('-',1)[1]  
+    return p
     
 def slash_dates(dL):
     return [e.split('-',1)[1].replace('-','/')[1:] for e in dL]

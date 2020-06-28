@@ -1,11 +1,15 @@
-# python fetch_data.py 04-01
+# python fetch.py 06-24
 
 import urllib2, sys, os
-date = sys.argv[1]
 
-fn = '2020-' + date + '.csv'
+src = sys.argv[1]
+date = sys.argv[2]
+
+fn = date + '.csv'
 path = 'csv.source/' + fn
-print 'fn:  ' + fn
+print 'fn:   ' + fn
+print 'path: ' + path
+
 
 if os.path.exists(path):
     print 'file exists'
@@ -14,10 +18,17 @@ if os.path.exists(path):
     else:
         print 'quiting'
         sys.exit()
+        
 
-print 'file requested'
+print 'requesting file'
 
-url = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/%s-2020.csv' % date
+yr,mo,day = date.split('-')
+
+url = 'https://raw.githubusercontent.com/'
+url += 'CSSEGISandData/COVID-19/master/csse_covid_19_data/'
+url += 'csse_covid_19_daily_reports/%s-%s-%s.csv' % (mo,day,yr)
+
+# print('url ', url)
 
 def download(url):
     fh = urllib2.urlopen(url)

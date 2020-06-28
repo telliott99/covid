@@ -3,29 +3,21 @@ base = os.environ.get('covid_base')
 sys.path.insert(0,base)
 sys.path.insert(1,base + '/myutil')
 
+import udates
+import ustrings
 
-from ustrings import sep
-
-from udates import all_dates
+sep = ustrings.sep
+from udates import generate_dates
 import ukeys
+
 #from ustrings import us_states
 
-src = base + '/build/csv.source'
-db = base + '/db.txt'
-
-def list_directory(d):
-    dL = os.listdir(d)
-    dL = [e for e in dL if not e.startswith('.')]   
-    dL.sort()
-    return dL
-        
-# file stuff
-
 def read_csv_data_file(fn):
-    print('reading:  ', fn)
+    print('reading:  %s' % udates.date_from_path(fn))
     D = {}
     with open(fn) as fh:
         data = fh.read()
+    
     data = data.strip().split('\n')[1:]
     
     reader = csv.reader(data)
@@ -65,17 +57,19 @@ def dict_from_data(data):
         D[k] = { 'cases': cases, 'deaths': deaths}
     return D
 
-def load_db(fn = db):
-    with open(fn) as fh:
+def load_db(db):
+    with open(db) as fh:
         data = fh.read().strip().split('\n\n')
+        
     date_info = data[0]
     data = data[1:]    
     D = dict_from_data(data)
     return date_info, D
     
-def save_db(D):
-    first = all_dates[0]
-    last = all_dates[-1]
+def save_db(D, db, first, last):
+    #all_dates = generate_dates()
+    #first = all_dates[0]
+    #last = all_dates[-1]
 
     pL = [first + '\n' + last]
     for k in sorted(D.keys(), key = ukeys.custom_key):
@@ -104,9 +98,7 @@ def refmt(key):
 
 def get_popD():
     # load population data
-    
     fn = base + '/population/pop.csv'
-    
     with open(fn) as fh:
         pop_data = fh.read().strip().split('\n')
         

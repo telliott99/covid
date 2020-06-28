@@ -1,4 +1,7 @@
-import sys
+import sys, os
+
+base = os.environ.get('covid_base')
+sys.path.insert(0,base)
 
 import myutil.udates as udates
 import myutil.udb as udb
@@ -11,8 +14,10 @@ import myutil.ustrings as ustrings
 conf = uinit.clargs()
 mode = conf['mode']
 
-date_info, D = udb.load_db()
-conf['first'], conf['last'] = date_info.split('\n')
+date_info, D = udb.load_db(db='db.txt')
+first,last = date_info.split('\n')
+conf['first'] = first
+conf['last'] = last
 
 #-------------------------
 

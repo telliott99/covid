@@ -1,3 +1,4 @@
+import sys
 from operator import itemgetter
 
 import udates
@@ -5,8 +6,12 @@ import umath
 
 def fmt_dates(conf):
     n = conf['n']
-    dates = udates.all_dates[-n:]
+    first = conf['first']
+    
+    dates = udates.generate_dates(first)
+    dates = dates[-n:]
     dL = ['/'.join(d.split('-')[1:]) for d in dates]
+    #print('dL', dL)
     return dL
 
 #-----------------------

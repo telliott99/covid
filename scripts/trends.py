@@ -1,5 +1,8 @@
-import sys
+import sys, os
 from operator import itemgetter
+
+base = os.environ.get('covid_base')
+sys.path.insert(0,base)
 
 import myutil.udates as udates
 import myutil.udb as udb
@@ -16,7 +19,15 @@ N = conf['N']  # num of items
 
 specific_state =conf['arg']
 
-key_info, D = udb.load_db()
+date_info, D = udb.load_db(db='db.txt')
+first,last = date_info.split('\n')
+conf['first'] = first
+conf['last'] = last
+
+all_dates = udates.generate_dates(first)
+
+
+#key_info, D = udb.load_db(db='db.txt')
 L = []
 
 kL = ukeys.key_list_for_us_counties()
@@ -47,7 +58,7 @@ def fmt(e):
     return ' '.join(pL)
 
 
-dL = udates.slash_dates(udates.all_dates[-n:])
+dL = udates.slash_dates(all_dates[-n:])
 s = 'county                   statistic'.ljust(31)
 print(s + ' ' + ' '.join(dL))
 

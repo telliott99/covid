@@ -1,5 +1,8 @@
 import sys, os
 
+base = os.environ.get('covid_base')
+sys.path.insert(0,base)
+
 import myutil.udates as udates
 import myutil.udb as udb
 import myutil.ufmt as ufmt
@@ -7,7 +10,6 @@ import myutil.uinit as uinit
 import myutil.ukeys as ukeys
 import myutil.umath as umath
 import myutil.ustrings as ustrings
-
 
 conf = uinit.clargs()
 mode = conf['mode']
@@ -18,7 +20,10 @@ if not conf['arg']:
     
 state = conf['arg']
 
-date_info, D = udb.load_db()
+date_info, D = udb.load_db(db='db.txt')
+first,last = date_info.split('\n')
+conf['first'] = first
+conf['last'] = last
 
 # -----------
         

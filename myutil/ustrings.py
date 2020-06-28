@@ -1,3 +1,7 @@
+import sys, os
+base = os.environ.get('covid_base')
+sys.path.insert(0,base)
+
 sep = ';'
 sep2 = '#'
 

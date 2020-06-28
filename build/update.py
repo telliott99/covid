@@ -1,52 +1,98 @@
 import sys, os, subprocess
 
+# build the mega db
+MX = '-max' in sys.argv[1:]
+
+overwrite = '-o' in sys.argv[1:]
+if overwrite:
+    print('overwrite db')
+
 base = os.environ.get('covid_base')
 sys.path.insert(0,base)
 
 import myutil.ustrings as ustrings
 import myutil.udb as udb
 import myutil.udates as udates
+import myutil.ufile as ufile
 import myutil.ukeys as ukeys
-
-
-overwrite = len(sys.argv) > 1
-if overwrite:
-    print('overwrite db')
 
 sep = ustrings.sep      # ;
 sep2 = ustrings.sep2    # #
 
-src = udb.src
+src = base + '/build/csv.source'
 
-all_dates = udates.all_dates
-first = all_dates[0]
-last = all_dates[-1]
-
-db = udb.db  # db.txt
-
-# we check that csv.source
-# is up-to-date and no files are missing
-
-dL = udb.list_directory(src)
-fL = [d.split('.')[0] for d in dL]
-#print dL
-
-for date in all_dates:
-    if not date in fL:
-        print('missing data file in ' + src)
-        subprocess.call(['python', "refresh.py"])
+if MX:
+    db = 'db.max.txt'
+else:
+    db = 'db.txt'
         
 #-----------------
+  
+if MX:  
+    fL = []
+    todo = []
+    
+    def process_dir(d):
+        dL = os.listdir(d)
+        for fn in dL:
+            if fn.startswith('.'):
+                continue
+            p = d + '/' + fn
+            if os.path.isdir(p):
+                todo.append(p)
+            else:
+                fL.append(p)
+            
+    process_dir(src)
+    while todo:
+        next = todo.pop()
+        process_dir(next)
+
+else:
+    # filter out directories
+    fL = ufile.list_directory(src)
+    fL = [src + '/' + fn for fn in fL]
+
+# fL has full paths
+fL.sort(key = udates.date_from_path)
+
+#-----------------
+
+if MX:
+    first = '2020-03-22'
+else:
+    first = udates.date_from_path(fL[0])
+    
+all_dates = udates.generate_dates(first=first)
+last = all_dates[-1]
+
+#-----------------
+
+# for standard build, check that csv.source
+# is up-to-date and no files are missing
+
+if not MX:
+    # files present as dates
+    dL = [udates.date_from_path(p) for p in fL]
+    
+    for date in all_dates:
+        if not date in dL:
+            print('missing data', date)
+            subprocess.call(['python', "fetch.py", src, date])
+
+#=================
 
 # for constructing the database file
 # there is no need to convert to ints
     
 def init_db():
-    path = 'csv.source' + '/' + first + '.csv'
-    print('init db with file:  ', first)
+    path = fL[0]
+    print('init w/:  ', path)
+    
     D = udb.read_csv_data_file(path)        
     
     with open(db, 'w') as fh:
+        # write date_info
         fh.write(first + '\n')
         fh.write(first + '\n')
         fh.write('\n')
@@ -62,21 +108,28 @@ if not os.path.exists(db) or overwrite:
 
 #----------------------------
 
-date_info, D = udb.load_db()
+date_info, D = udb.load_db(db)
 
-# find the date of the latest data in the db
-last_update = date_info.split('\n')[1]
+'''
+pad for missing data is confusing 
+when we're just updating
 
-#----------------------------
+for now,
+just build always
+(ignore overwrite
+'''
+
+# latest update
+#t = date_info.split('\n')
+#assert first == t[0]
+#latest_update = t[1]
+
+delta = 0
     
-# add new values
-
-i = all_dates.index(last_update)
-all_dates = udates.all_dates[i+1:]
-
-for date in all_dates:
-    fn = src + '/' + date + '.csv'
+for fn in fL[1:]:
+    delta += 1
     sD = udb.read_csv_data_file(fn)
+    date = udates.date_from_path(fn)
     
     for k in sD:
         cases = sD[k]['cases']
@@ -88,25 +141,28 @@ for date in all_dates:
                             
         else:
             # pad for missing data
-            j = all_dates.index(date)
-            pad = [0] * j
+            # j = all_dates.index(date)
+            print('%s, add key: %s' % (date,k))            
+            pad = [0] * delta
             D[k] = {}
             D[k]['cases'] =  pad[:] + [cases]
             D[k]['deaths'] = pad[:] + [deaths]
-
-        #if k == 'Cook;Minnesota;27031;US':
-            #print(D[k])
-    
+            
     # now look for keys with no updates
     for k in D:
         if not k in sD:
-            D[k]['cases'].append(0)
-            D[k]['deaths'].append(0)
-
+            #D[k]['cases'].append(0)
+            #D[k]['deaths'].append(0)
+            x = D[k]['cases'][-1]
+            D[k]['cases'].append(x)
+            x = D[k]['deaths'][-1]
+            D[k]['deaths'].append(x)
+           
 #----------------------------
 
-udb.save_db(D)
+if MX:
+    udb.save_db(D, base + '/db.max.txt', first, last)
+else:
+    udb.save_db(D, base + '/db.txt', first, last)
 
-subprocess.call(['python', 'fixit.py'])
-
-#subprocess.call(['cp', 'db.txt', '../db.txt'])
+subprocess.call(['python', 'easy_fixes.py'])
