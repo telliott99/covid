@@ -36,7 +36,7 @@ date_info, D = udb.load_db(path_to_db)
 
 # GeoJSON data for US counties
 
-fn = base + '/data_geo/counties.json'
+fn = base + '/geo/data_geo/counties.json'
 with open(fn,'r') as fh:
     counties = json.load(fh)
     
