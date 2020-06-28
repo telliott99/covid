@@ -65,6 +65,9 @@ plt = go.Scatter(
     line={'color':'blue', 'width':3})
 
 fig = go.Figure(plt)
+
+fig.update_layout(yaxis=dict(range=[0,50000]))
+
 fig.show()
 
 
