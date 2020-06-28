@@ -1,0 +1,37 @@
+> python3 scripts/country.py China -c
+                        06/21 06/22 06/23 06/24 06/25 06/26 06/27
+Anhui, China                0     0     0     0     0     0     0
+Beijing, China              9    13     7    13    11    17    14
+Chongqing, China            0     0     0     0     0     0     0
+Fujian, China               0     0     0     0     0     0     0
+Gansu, China                0     7     0     3     0     1     1
+Guangdong, China            0     0     0     1     0     2     0
+Guangxi, China              0     0     0     0     0     0     0
+Guizhou, China              0     0     0     0     0     0     0
+Hainan, China               0     0     0     0     0     0     0
+Hebei, China                2     0     2     1     0     0     0
+Heilongjiang, China         0     0     0     0     0     0     0
+Henan, China                0     0     0     0     0     0     0
+Hong Kong, China            3    30    16     2    14     3     1
+Hubei, China                0     0     0     0     0     0     0
+Hunan, China                0     0     0     0     0     0     0
+Inner Mongolia, China       0     0     0     0     0     0     0
+Jiangsu, China              0     1     0     0     0     0     0
+Jiangxi, China              0     0     0     0     0     0     0
+Jilin, China                0     0     0     0     0     0     0
+Liaoning, China             1     0     0     0     0     0     0
+Macau, China                0     0     0     0     1     0     0
+Ningxia, China              0     0     0     0     0     0     0
+Qinghai, China              0     0     0     0     0     0     0
+Shaanxi, China              1     0     2     0     0     0     1
+Shandong, China             0     0     0     0     0     0     0
+Shanghai, China             3     0     2     0     2     1     1
+Shanxi, China               0     0     0     0     0     0     0
+Sichuan, China              0     0     0     0     0     0     0
+Tianjin, China              0     1     0     0     0     0     0
+Tibet, China                0     0     0     0     0     0     0
+Xinjiang, China             0     0     0     0     0     0     0
+Yunnan, China               0     0     0     0     0     0     0
+Zhejiang, China             0     0     0     0     0     0     0
+total                      19    52    29    20    28    24    18
+>

@@ -4,19 +4,19 @@ import subprocess
 base = os.environ.get('covid_base')
 sys.path.insert(0,base)
 
-#subprocess.call(['python', 'scripts/all_states.py'])
-
-pre = 'scripts/'
+pre = 'analysis/'
 prog = ['python3']
 
 script_list = ['all_states.py',
                'one_state.py',
                'us_by_counties.py',
-               'trends.py' ]
+               'trends.py',
+               'country.py' ]
 arg_list = [[],
             ['SC', '-rs'],
             ['-d'],
-            []]
+            [],
+            ['Germany']]
 
 errors = []
 
