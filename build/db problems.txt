@@ -8,4 +8,35 @@ The county name is Box Elder, so this is wrong.  However, now that they've chang
 
 ---------
 
-Similarly, Weber-Morgan, Utah is being reported with no FIPS
+popif(D,'Brockton;MA;;US')
+popif(D,'LeSeur;MN;;US')
+popif(D,'Manchester;NH;;US')
+popif(D,'Nashua;NH;;US')
+
+# all 4 counties are also present
+popif(D,'Kansas City;MO;;US')
+
+popif(D,'Southeast Utah;UT;;US')
+#popif(D,'Southwest;UT;90049;US')
+popif(D,'Southwest UT;Utah;;US')
+popif(D,'TriCounty;UT;;US')
+
+#----------------------------
+# 3:  Utah is bad!
+# see: db problems.txt
+
+'''
+
+fix_it('Bear River;Utah;;US','Box Elder;Utah;49003;US')
+popif(D,'Bear River;Utah;;US')
+
+fix_it('Weber-Morgan;Utah;;US','Weber;Utah;49057;US')
+popif(D,'Weber-Morgan;Utah;;US')
+
+k1 = 'Dukes and Nantucket;Massachusetts;;US'
+k2 = 'Dukes;Massachusetts;25007;US'
+fix_it(k1,k2)
+popif(D,k1)
+
+'''
+

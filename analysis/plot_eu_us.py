@@ -1,5 +1,7 @@
 import sys, os, subprocess
 
+import scipy.signal as signal
+
 base = os.environ.get('covid_base')
 sys.path.insert(0,base)
 
@@ -16,13 +18,7 @@ import myutil.umath as umath
 
 conf = uinit.clargs()
 mode = conf['mode']
-
-if not conf['arg']:
-    print('please supply the name of a country')
-    sys.exit()
     
-country = conf['arg']
-
 sep = ustrings.sep      # ;
 path_to_db = base + '/db.max.txt'
 
@@ -34,7 +30,7 @@ conf['last'] = last
 
 #---------------------------------------
 
-kL = ukeys.key_list_for_search_term(country, mode="country")
+kL = ukeys.key_list_for_search_term(D,'US', mode="country")
 
 rL = []
 for k in kL:
@@ -48,23 +44,50 @@ pL = []
 
 for x,y in zip(vL[:-1],vL[1:]):
     pL.append(y - x)
-#print(pL)
 
-'''
-sL = []
-n = 10
-for i in range(n,len(pL)-n):
-    sL.append(sum(pL[i-n:i+n+1])/(1.0*(n+1)))
-'''
+
+# smooth
+f = signal.savgol_filter
+#pL = f(pL,51,3)
+    
+#---------------------------------------
 
 import plotly.graph_objects as go
 
-plt = go.Scatter(
+plt_us = go.Scatter(
     x=list(range(len(pL))),
     y=pL,
     line={'color':'blue', 'width':3})
+    
+fig = go.Figure(plt_us)
 
-fig = go.Figure(plt)
+from eu import do_eu
+rL,ignore = do_eu()
+
+vL = umath.totals(rL)
+pL = []
+
+for x,y in zip(vL[:-1],vL[1:]):
+    pL.append(y - x)
+
+# problem
+
+print(pL)
+print(pL[38])  # 17861
+pL[38] = (pL[37] + pL[39])/2.0
+
+print(pL[52])  # 628451
+pL[52] = (pL[51] + pL[53])/2.0
+
+# smooth
+#pL = f(pL,51,3)
+
+plt_eu = go.Scatter(
+    x=list(range(len(pL))),
+    y=pL,
+    line={'color':'red', 'width':3})
+
+fig.add_trace(plt_eu)
 
 fig.update_layout(yaxis=dict(range=[0,50000]))
 

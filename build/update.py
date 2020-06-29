@@ -1,7 +1,13 @@
 import sys, os, subprocess
 
+base = os.environ.get('covid_base')
+sys.path.insert(0,base)
+
+from do_imports import *
+
+conf = uinit.clargs()
 # build the mega db
-MX = '--max' in sys.argv
+MX = conf['max']
 
 overwrite = '-o' in sys.argv[1:]
 if overwrite:

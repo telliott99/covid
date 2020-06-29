@@ -1,18 +1,13 @@
-import sys, os
-
+import sys, os, subprocess
 base = os.environ.get('covid_base')
 sys.path.insert(0,base)
 
-import myutil.udates as udates
-import myutil.udb as udb
-import myutil.ufmt as ufmt
-import myutil.uinit as uinit
-import myutil.ukeys as ukeys
-import myutil.umath as umath
-import myutil.ustrings as ustrings
+from do_imports import *
 
 conf = uinit.clargs()
 mode = conf['mode']
+
+#---------------------------------------
 
 if not conf['arg']:
     print('please supply the name of a state')
@@ -20,15 +15,15 @@ if not conf['arg']:
     
 state = conf['arg']
 
-path_to_db = base + '/db.txt'
-
-
+if conf['max']:
+    path_to_db = base + '/db.max.txt'
+else:
+    path_to_db = base + '/db.txt'
 date_info, D = udb.load_db(path_to_db)
 
 first,last = date_info.split('\n')
 conf['first'] = first
 conf['last'] = last
-
 
 # -----------
         

@@ -14,6 +14,7 @@ flags
 
 -c  --delta   change or delta, display day over day rise
 -d  --deaths  display deaths rather than cases (default)
+-m  --max     load the complete db since 2020-03-22
 -r  --rate    compute statistics
 -s  --sort    (only if stats are asked for)
 
@@ -41,6 +42,9 @@ def clargs():
         
     D = { 'mode':'cases', 'n':7, 'N': 100, 'upto': 0,
           'sort': False, 'stats': False, 'delta': False }
+          
+    if len(sys.argv) > 1:
+        D['args'] = ' '.join(sys.argv[1:])
     
     if 'd' in one_letters or '--deaths' in L:
         D['mode'] = 'deaths'
@@ -79,14 +83,10 @@ def clargs():
     
     D['totals'] = True
         
-    if 's' in one_letters or '--sort' in L:
-        D['sort'] = True
-    
-    if 'r' in one_letters or '--rate' in L:
-        D['stats'] = True
-
-    if 'c' in one_letters or '--delta' in L:
-        D['delta'] = True
+    D['sort']  = 's' in one_letters or '--sort' in L
+    D['stats'] = 'r' in one_letters or '--rate' in L
+    D['delta'] = 'c' in one_letters or '--delta' in L
+    D['max']   = 'm' in one_letters or '--max' in L
         
     L = [arg for arg in L if not arg.startswith('-')]
     if len(L) > 0:

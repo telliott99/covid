@@ -1,32 +1,13 @@
-This is all Python2 code.
-At some point, if we just convert print 'x' to print('x') Python3 should work.
+At some point, for some countries, reports have changed from reporting by the whole country, instead breaking it down by district.  
 
-python update.py
+For example with the db.max.txt up to 06-28, there are 99 entries for ;;;Brazil.  The last 41 are identical.  That suggests that around May 20, reporting changed.  
 
-will construct the db (if necessary) or update it
+2020-05-19 is the last day that the csv file lists cases for ,,,Brazil, with 271885.  It has stayed the same since.  That key disappears from the csv file, but when that happens we keep the total from the previous day, ad infinitum).  In the database, Brazil stays constant at 271885.
 
-Don't forget to call
+On 2020-05-20, all the districts for Brazil first appear.
 
-python fixit.py
+The total for Brazil should be the total for all keys ;____;;Brazil, including ;;;Brazil.
 
-Then db to the parent directory.
+A similar thing happened for Germany, except it was 46 entries previous.
+For Italy, except it was 47 entries previous.
 
------------------------------
-
-2020-05-01
-
-Today I decided to split out the db code into a separate directory.  Since I do not want to duplicate or split the util.py module, I added this to those files in this directory that need util functions:
-
-from util_path import util as ut
-
-util_path.py
-import imp
-util = imp.load_source('util', '/Users/telliott/Github/covid/util.py')
-
-This fix is Python2 specific.
-
-https://stackoverflow.com/questions/67631/how-to-import-a-module-given-the-full-path
-
------------------------------
-
-The second change is to use ints for the database values.  The original data files have '-' when data is missing.  I've been working with data as strings and only converting to ints for calculations.  It's a pain.  So from now on we will treat '-' as 0, and use strings only when formatting for output.
