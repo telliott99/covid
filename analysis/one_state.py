@@ -27,7 +27,7 @@ conf['last'] = last
 
 # -----------
         
-kL = ukeys.key_list_for_search_term(state, mode="state")
+kL = ukeys.key_list_for_search_term(D, state, mode="state")
 kL = sorted(kL, key=ukeys.custom_key)
 
 rL = [D[k][conf['mode']] for k in kL]

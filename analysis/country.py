@@ -17,6 +17,12 @@ first,last = date_info.split('\n')
 conf['first'] = first
 conf['last'] = last
 
+if not conf['arg']:
+    print('please supply the name of a state')
+    sys.exit()
+    
+country = conf['arg']
+
 #---------------------------------------
 
 def entries_for_country(country):
@@ -30,7 +36,6 @@ def entries_for_country(country):
     return rL, labels
 
 if __name__ == "__main__":
-
-    rL,labels = entries_for_country('Germany')
+    rL,labels = entries_for_country(country)
     # totals put on in fmt
     print(ufmt.fmt(rL,labels,conf))

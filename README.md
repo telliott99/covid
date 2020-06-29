@@ -70,34 +70,7 @@ Options for scripts are:
 - a given state broken down by counties:  ``one_state.py``
 
 
-Features that are currently supported are given by the ``--help`` flag:
-
-```
-> python scripts/one_state.py --help
-
-flags
--h  --help    help
--n   <int>    display the last n values, default: 7
--N   <int>    display N rows of data: default: 50
-
--c  --delta   change or delta, display day over day rise
--d  --deaths  display deaths rather than cases (default)
--r  --rate    compute statistics
--s  --sort    (only if stats are asked for)
-
-to do:
--u   <int>    data slice ends this many days before yesterday 
--p  --pop     normalize to population
-
-example:
-python scripts/one_state.py  -n 10 -sdr
-
-> 
-```
-
-The statistic is the slope of a linear regression, divided by the mean of the values.  
-
-So, for example, if a 10-day series goes smoothly from 100 to 110, then the slope is about 10/10 = 1 and the statistic is a bit less than 0.01.  If the series goes from 1000 to 1100, then the slope is about 100/10 = 10, but the statistic is still approximately 0.01.
+Features that are currently supported are given by the ``--help`` flag.
 
 More recently, I have started making what are called choropleth plots, geographic plots where the fill color is based on the statistic for case growth (or whatever else you want).  These can be found in ``geo``, and examples are in ``results``.
 

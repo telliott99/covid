@@ -32,7 +32,7 @@ all_dates = udates.generate_dates(first)
 #key_info, D = udb.load_db(db='db.txt')
 L = []
 
-kL = ukeys.key_list_for_us_counties()
+kL = ukeys.key_list_for_us_counties(D)
 
 for k in kL:
     c,s,fips,y = k.strip().split(ustrings.sep)

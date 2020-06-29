@@ -18,7 +18,13 @@ def fmt_dates(conf):
 
 # for now, make the last day the latest in the db
 
-def fmt(data, labels, conf, csv=False):    
+def fmt(data, labels, conf, csv=False):
+
+    #print conf
+    N = conf['N']
+    if N:
+        data = data[:N]
+        labels = labels[:N]
         
     # rL is data, a list of lists of ints
     # trim the data
@@ -61,8 +67,7 @@ def fmt(data, labels, conf, csv=False):
     # find the longest label 
     # used only if not trimming, which only happens
     # if stats are used
-    pad = max(len(c) for c in labels) + 2
-    
+    pad = max([len(c) for c in labels]) + 2
     
     pL = []
     dL = fmt_dates(conf)
@@ -92,20 +97,15 @@ def fmt(data, labels, conf, csv=False):
         values = ''.join([str(n).rjust(vpad) for n in vL])
         tmp = [label,values,st]
         pL.append(tmp)
-        
+            
     if conf['sort']:
         totals_line = pL.pop()
         pL.sort(key=itemgetter(2), reverse=True)
         pL.append(totals_line)
  
-    # must come after sort, lose totals in the process    
-    N = conf['N']
-    if N < 51:
-        pL = pL[:N]
-    
     # so now we pad labels based on what remains
     labels = [t[0] for t in pL]
-    pad = max(len(c) for c in labels) + 2
+    pad = max([len(c) for c in labels]) + 2
     dateline = ''.rjust(pad) + dates
     
     tL = []

@@ -52,7 +52,7 @@ with open(fn,'r') as fh:
 kL = []
 for state in states:
     skL = ukeys.key_list_for_search_term(
-        state, mode='state')
+        D,state, mode='state')
     kL.extend(skL)
 
 rL = [D[k]['cases'][-10:] for k in kL]

@@ -2,7 +2,9 @@ import sys
 from ustrings import abbrev_to_state
 
 if sys.argv[0] == "one_state.py":
-    extra = '[state]'
+    extra = '<state>'
+elif sys.argv[0] == "country.py":
+    extra = '<country>'
 else:
     extra = ''
 
@@ -40,7 +42,7 @@ def clargs():
         print(help)
         sys.exit()
         
-    D = { 'mode':'cases', 'n':7, 'N': 100, 'upto': 0,
+    D = { 'mode':'cases', 'n':7, 'N': False, 'upto': 0,
           'sort': False, 'stats': False, 'delta': False }
           
     if len(sys.argv) > 1:
@@ -64,7 +66,7 @@ def clargs():
         try:
             D['N'] = int(L[i+1])
         except:
-            print('-n flag must be followed by an integer value')
+            print('-N flag must be followed by an integer value')
             sys.exit()
         L.pop(i+1)
         L.pop(i)

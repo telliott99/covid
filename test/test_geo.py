@@ -9,7 +9,7 @@ prog = ['python3']
 
 script_list = ['one_state_map.py',
                'united_states_map.py' ]
-arg_list = [['SC', 'TX'],
+arg_list = [['CA', 'MN', 'SC', 'TX'],
             [] ]
 
 errors = []
