@@ -14,11 +14,11 @@ import myutil.ukeys as ukeys
 sep = ustrings.sep      # ;
 
 if MX:
-    path_to_db = 'db.max.txt'
+    path_to_db = base + '/' + 'db.max.txt'
 else:
-    path_to_db = 'db.txt'
+    path_to_db = base + '/' + 'db.txt'
 
-date_info, D = udb.load_db(db = base + '/' + path_to_db)
+date_info, D = udb.load_db(path_to_db)
 first,last = date_info.split('\n')
 
 #------------------------------------
@@ -117,5 +117,5 @@ for k in kL:
 
 #------------------------------------
 
-udb.save_db(D, base + '/' + path_to_db, first, last)
+udb.save_db(D, path_to_db, first, last)
 
