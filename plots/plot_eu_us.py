@@ -4,6 +4,7 @@ import scipy.signal as signal
 
 base = os.environ.get('covid_base')
 sys.path.insert(0,base)
+sys.path.insert(1,base + '/analysis')
 
 import myutil.ustrings as ustrings
 import myutil.udb as udb

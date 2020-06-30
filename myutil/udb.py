@@ -95,7 +95,7 @@ def refmt(key):
     return cs
 
 #---------------
-
+'''
 def get_popD():
     # load population data
     fn = base + '/population/pop.csv'
@@ -108,3 +108,4 @@ def get_popD():
         k = refmt(loc)
         pD[k] = population
     return pD
+'''

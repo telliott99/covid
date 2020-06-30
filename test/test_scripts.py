@@ -22,7 +22,8 @@ errors = []
 
 for script, args in zip(script_list, arg_list):
     cmds = prog + [pre + script] + args
-    print('running: ' + ' '.join(cmds))
+    print('running: ')
+    print(' '.join(cmds))
     r = subprocess.run(cmds)
     if (r.returncode != 0):
         errors.append(script)
@@ -30,3 +31,6 @@ for script, args in zip(script_list, arg_list):
 
 for e in errors:
     print('error code returned for: %s' % e)
+
+if not errors:
+    print('no errors')

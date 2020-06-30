@@ -19,6 +19,12 @@ def fmt_dates(conf):
 # for now, make the last day the latest in the db
 
 def fmt(data, labels, conf, csv=False):
+    if len(data) == 0:
+        c = conf['arg']
+        print('no data for: %s' % c)
+        if "Korea" in c:
+            print('try: "Korea, South"')
+        sys.exit()
 
     #print conf
     N = conf['N']
@@ -44,6 +50,8 @@ def fmt(data, labels, conf, csv=False):
                 tmp2.append(sL[i] - sL[i-1])
             tmp.append(tmp2)
         rL = tmp
+    
+    
     
     # options:  totals, stats, sorted
     # defaults: T T F

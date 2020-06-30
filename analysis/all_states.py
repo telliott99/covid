@@ -17,6 +17,11 @@ first,last = date_info.split('\n')
 conf['first'] = first
 conf['last'] = last
 
+if conf['pop']:
+    print('population normalization not yet implemented for this script')
+    sys.exit()
+
+
 #-------------------------
 
 kL = [k for k in D if k[-3:] == ';US']

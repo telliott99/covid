@@ -1,5 +1,5 @@
 import sys
-from ustrings import abbrev_to_state
+from ustates import abbrev_to_state
 
 if sys.argv[0] == "one_state.py":
     extra = '<state>'
@@ -17,12 +17,12 @@ flags
 -c  --delta   change or delta, display day over day rise
 -d  --deaths  display deaths rather than cases (default)
 -m  --max     load the complete db since 2020-03-22
+-p  --pop     normalize to population (states, countries not yet implemented)
 -r  --rate    compute statistics
 -s  --sort    (only if stats are asked for)
 
 to do:
 -u   <int>    data slice ends this many days before yesterday 
--p  --pop     normalize to population
 
 example:
 python %s %s -n 10 -sdr
@@ -89,6 +89,7 @@ def clargs():
     D['stats'] = 'r' in one_letters or '--rate' in L
     D['delta'] = 'c' in one_letters or '--delta' in L
     D['max']   = 'm' in one_letters or '--max' in L
+    D['pop']   = 'p' in one_letters or '--norm' in L
         
     L = [arg for arg in L if not arg.startswith('-')]
     if len(L) > 0:

@@ -3151,10 +3151,15 @@ Charles City;Virginia,133
 Baltimore City;Maryland,593490
 St. Louis City;Missouri,300576
 New York City;New York,8336817
-Bear River;Utah,887
-Southwest Utah;Utah,232395
-Weber-Morgan;Utah,260213
 Fairfax City;Virginia,24019
 Franklin City;Virginia,7967
 Richmond City;Virginia,230436
 Roanoke City;Virginia,99143
+Kansas City;Missouri,491918
+Bear River;Utah,186818
+Central;69676,
+Southwest Utah;Utah,239105
+Southeast Utah;Utah,40229
+TriCounty;Utah,56622
+Utah;Utah,661440
+Weber-Morgan;Utah,272337

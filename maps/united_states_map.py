@@ -22,8 +22,10 @@ from all_states import states, rL
 #states[i] = 'District of Columbia'
 
 # dict from 'Alabama' to 'AL'
-from ustrings import state_to_abbrev as stD
-abbrev = [stD[state] for state in sorted(stD.keys())]
+from ustates import states
+from ustates import state_to_abbrev as stD
+
+abbrev = [stD[state] for state in states]
 
 st = [umath.stat(vL[-7:]) for vL in rL]
 

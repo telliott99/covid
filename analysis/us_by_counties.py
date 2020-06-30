@@ -26,7 +26,7 @@ labels = []
 for k in kL:
     county = ukeys.county_for_key(k)
     state = ukeys.state_for_key(k)
-    abbrev = ustrings.state_to_abbrev[state]
+    abbrev = ustates.state_to_abbrev[state]
     labels.append(county + ', ' + abbrev)
 
 print(ufmt.fmt(rL,labels,conf))

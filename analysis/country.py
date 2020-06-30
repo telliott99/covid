@@ -11,6 +11,7 @@ if conf['max']:
     path_to_db = base + '/db.max.txt'
 else:
     path_to_db = base + '/db.txt'
+    
 date_info, D = udb.load_db(path_to_db)
 
 first,last = date_info.split('\n')
@@ -18,7 +19,11 @@ conf['first'] = first
 conf['last'] = last
 
 if not conf['arg']:
-    print('please supply the name of a state')
+    print('please supply the name of a country')
+    sys.exit()
+    
+if conf['pop']:
+    print('population normalization not yet implemented for this script')
     sys.exit()
     
 country = conf['arg']

@@ -1,8 +1,8 @@
-# python extract_pop.py > pop.csv
+# python extract_pop.py > pop.txt
 
 import sys, csv
 
-with open('co-est2019-annres.csv') as fh:
+with open('data/co-est2019-annres.csv') as fh:
     data = fh.read().strip().split('\n')
 
 # remove United States summary
@@ -30,7 +30,7 @@ for e in reader:
     pL = [loc,pop]
     print ','.join(pL)
 
-with open('extra.txt') as fh:
+with open('data/extra.txt') as fh:
     data = fh.read().strip().split('\n')
 
 for e in data:

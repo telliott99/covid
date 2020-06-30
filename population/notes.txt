@@ -131,7 +131,41 @@ Franklin City;Virginia,
 Richmond City;Virginia,
 Roanoke City;Virginia,
 
+Three more:
 
+Kansas City;Missouri
+
+
+Utah is hard:  29 counties some are joined
+
+populations:
+
+Davis
+Salt Lake
+Summit
+Toele
+Wasatch
+San Juan
+
+Bear River:  Box Elder, Cache, Rich
+             56046 + 128289 + 2483 = 186818
+
+Weber-Morgan 260213 + 12124 = 272337
+
+Utah:    Juab, Millard, Utah
+         12017 + 13188 + 636235 = 661440
+
+SW:      Beaver, Iron, Washington
+         6710 + 54839 + 177556 = 239105
+
+Central: Garfield, Kane, Piute, Sanpete,Sevier,Wayne
+         5051 + 7886 + 1479 + 30929 + 21620 + 2711 = 69676
+
+SE:      Carbon,Emery,Grand  
+         20463 + 10012 + 9754 = 40229
+
+Tri:     Daggett, Duchesne, Uintah
+         950 + 19938 + 35734 = 56622
 
 
 

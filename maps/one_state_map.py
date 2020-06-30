@@ -19,7 +19,7 @@ if not len(sys.argv) > 1:
 path_to_db = base + '/db.txt'
 
 # use long form internally
-from ustrings import abbrev_to_state as stD
+from ustates import abbrev_to_state as stD
 
 states = []
 for arg in sys.argv[1:]:
@@ -36,7 +36,7 @@ date_info, D = udb.load_db(path_to_db)
 
 # GeoJSON data for US counties
 
-fn = base + '/geo/data_geo/counties.json'
+fn = base + '/maps/map_data/counties.json'
 with open(fn,'r') as fh:
     counties = json.load(fh)
     
