@@ -43,7 +43,8 @@ def clargs():
         sys.exit()
         
     D = { 'mode':'cases', 'n':7, 'N': False, 'upto': 0,
-          'sort': False, 'stats': False, 'delta': False }
+          'sort': False, 'stats': False, 'delta': False,
+          'totals': True }
           
     if len(sys.argv) > 1:
         D['args'] = ' '.join(sys.argv[1:])
@@ -82,9 +83,6 @@ def clargs():
         L.pop(i+1)
         L.pop(i)
     
-    
-    D['totals'] = True
-        
     D['sort']  = 's' in one_letters or '--sort' in L
     D['stats'] = 'r' in one_letters or '--rate' in L
     D['delta'] = 'c' in one_letters or '--delta' in L

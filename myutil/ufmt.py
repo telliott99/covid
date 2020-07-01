@@ -4,7 +4,12 @@ from operator import itemgetter
 import udates
 import umath
 
-def fmt_dates(conf):
+def pprint(conf):
+    for k in sorted(conf.keys()):
+        print(k.ljust(10),conf[k])
+    print('\n')
+
+def get_dates(conf):
     n = conf['n']
     first = conf['first']
     
@@ -14,32 +19,23 @@ def fmt_dates(conf):
     #print('dL', dL)
     return dL
 
-#-----------------------
+def do_no_data(conf):
+    c = conf['arg']
+    print('no data for: %s' % c)
+    if "Korea" in c:
+        print('try: "Korea, South"')
+    sys.exit()
 
-# for now, make the last day the latest in the db
-
-def fmt(data, labels, conf, csv=False):
-    if len(data) == 0:
-        c = conf['arg']
-        print('no data for: %s' % c)
-        if "Korea" in c:
-            print('try: "Korea, South"')
-        sys.exit()
-
-    #print conf
-    N = conf['N']
-    if N:
-        data = data[:N]
-        labels = labels[:N]
+def trim_columns(rL, conf):
+    if len(rL) == 0:
+        do_no_data()
         
     # rL is data, a list of lists of ints
     # trim the data
     n = conf['n']
     if conf['delta']:
-        n += 1
-    
-    rL = [e[-n:] for e in data]
-    #for vL in rL:  print vL
+        n += 1    
+    rL = [e[-n:] for e in rL]
     
     # option: delta
     if conf['delta']:
@@ -50,78 +46,104 @@ def fmt(data, labels, conf, csv=False):
                 tmp2.append(sL[i] - sL[i-1])
             tmp.append(tmp2)
         rL = tmp
+    return rL
     
-    
-    
-    # options:  totals, stats, sorted
-    # defaults: T T F
+def final_assembly(labels,rL,conf):
+    # print('do_no_stats')
+    #pprint(conf)
+
+    if conf['N']:
+        N = conf['N']
+        rL = rL[:N] + ['']
+        labels = labels[:N] + ['...']
+        
+    vpad = conf['vpad']
+    pad = conf['pad']
+
+    dL = get_dates(conf)
+    dates = ''.join([d.rjust(vpad) for d in dL])
+    pL = [''.rjust(pad) + dates]
     
     if conf['totals']:
-        labels = labels + ['total']
-        rL.append(umath.totals(rL))
+        labels.append('total')
+        tL = conf['totals']
+        if conf['stats']:
+            tL.append(str(round(umath.stat(tL),3)))
+        rL.append(tL)
+    
+    for label,vL in zip(labels,rL):
+        values = ''.join([str(n).rjust(vpad) for n in vL])
+        pL.append(label.ljust(pad) + values)
+        
+    return '\n'.join(pL)
 
-    # find the largest data value, use for vpad for data
+#-----------------------
+
+# for now, make the last day the latest in the db
+
+def fmt(data, labels, conf, csv=False):
+    #pprint(conf)
+    rL = trim_columns(data,conf)
+
+    # options:  totals, stats, sorted
+    # defaults: T       F      F
+    
+    if conf['totals']:
+        conf['totals'] = umath.totals(rL)
+
+    #-------------------
+
+    # longest data value determines vpad for data
+    
     vpad = 0
     for vL in rL:
         MX = max([len(str(n)) for n in vL])
         if MX > vpad:
             vpad = MX
             
+    if conf['totals']:
+        vL = conf['totals']
+        MX = max([len(str(n)) for n in vL])
+        if MX > vpad:
+            vpad = MX
+            
     # min vpad
-    vpad = max(MX,5) + 1
+    vpad = max(MX,5) + 2
+    conf['vpad'] = vpad
     
     #-------------------
-        
-    # find the longest label 
-    # used only if not trimming, which only happens
-    # if stats are used
+    
+    # determine pad for labels column
     pad = max([len(c) for c in labels]) + 2
+    pad = max(pad, len('totals') + 2)
+    conf['pad'] = pad
     
-    pL = []
-    dL = fmt_dates(conf)
-    dates = ''.join([d.rjust(vpad) for d in dL])
-    dateline = ''.rjust(pad) + dates
-    
-    if not conf['stats']:
-    
-        for label,vL in zip(labels,rL):
-            # return early if not using stats
-            # so build that version using pad
-            values = ''.join([str(n).rjust(vpad) for n in vL])
-            tmp = ''.join([label.ljust(pad), values])
-            pL.append(tmp)
+    #pprint(conf)
         
-        return dateline + '\n' + '\n'.join(pL)
+    #-------------------
+
+    # handle the case if stats are *not* used first
+    # return early if not using stats
+
+    if not conf['stats']:
+        return final_assembly(labels,rL,conf)
     
     #-------------------
-    # stats
+    
+    # keep stats as floats until sorted
     stats = [round(umath.stat(vL),3) for vL in rL]
 
-    # build rows, leave stats separate to allow sort
-
+    pL = []
     for label,vL,st in zip(labels,rL,stats):
-        # return early if not using stats
-        # so build that version using pad
-        values = ''.join([str(n).rjust(vpad) for n in vL])
-        tmp = [label,values,st]
-        pL.append(tmp)
-            
-    if conf['sort']:
-        totals_line = pL.pop()
-        pL.sort(key=itemgetter(2), reverse=True)
-        pL.append(totals_line)
- 
-    # so now we pad labels based on what remains
-    labels = [t[0] for t in pL]
-    pad = max([len(c) for c in labels]) + 2
-    dateline = ''.rjust(pad) + dates
-    
-    tL = []
-    for label,values,st in pL:
-        s = label.ljust(pad)
-        s += values
-        s += "  %s" % str(round(st,3))
-        tL.append(s)
+        pL.append([label,vL,st])
         
-    return dateline + '  stats\n' + '\n'.join(tL)
-
+    if conf['sort']:
+        pL.sort(key=itemgetter(2), reverse=True)
+    
+    labels = []
+    rL = []
+    for label,vL,st in pL:
+        labels.append(label)
+        rL.append(vL + [str(st).ljust(5)])
+    
+    return final_assembly(labels,rL,conf)

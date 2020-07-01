@@ -198,6 +198,7 @@ def get_state_to_pop():
 state_to_pop = get_state_to_pop()
 
 if __name__ == "__main__":
+
     for state in states:
         abbrev = state_to_abbrev[state]
         fips = abbrev_to_fips[abbrev]

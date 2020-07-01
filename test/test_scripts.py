@@ -1,6 +1,10 @@
 import sys, os
 import subprocess
 
+if sys.version_info[0] < 3:
+    print('use python3 for this script')
+    sys.exit()
+
 base = os.environ.get('covid_base')
 sys.path.insert(0,base)
 
