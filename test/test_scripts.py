@@ -15,12 +15,14 @@ script_list = ['all_states.py',
                'one_state.py',
                'us_by_counties.py',
                'trends.py',
-               'country.py' ]
-arg_list = [[],
+               'country.py',
+               'eu.py' ]
+arg_list = [['-c'],
             ['SC', '-rs'],
-            ['-d'],
+            ['-N', '10', '-rs'],
             [],
-            ['Germany']]
+            ['Mexico', '-c'],
+            ['-N', '5']]
 
 errors = []
 
@@ -28,6 +30,7 @@ for script, args in zip(script_list, arg_list):
     cmds = prog + [pre + script] + args
     print('running: ')
     print(' '.join(cmds))
+    
     r = subprocess.run(cmds)
     if (r.returncode != 0):
         errors.append(script)

@@ -30,15 +30,16 @@ def do_eu():
           'Latvia','Lithuania','Netherlands',
           'Spain',
           'Poland','Portugal']
+          
     pL = []
     for c in eu:
         rL, ignore = entries_for_country(c)
         pL.append(umath.totals(rL))
+        
     return pL, eu
 
 if __name__ == "__main__":
 
     pL,labels = do_eu()
-    # totals put on in fmt
+    conf['regions'] = 'eu'
     print(ufmt.fmt(pL,labels,conf))
-    print(len(umath.totals(pL)))

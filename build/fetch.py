@@ -7,20 +7,20 @@ date = sys.argv[2]
 
 fn = date + '.csv'
 path = 'csv.source/' + fn
-print 'fn:   ' + fn
-print 'path: ' + path
+print('fn:   ' + fn)
+print('path: ' + path)
 
 
 if os.path.exists(path):
-    print 'file exists'
+    print('file exists')
     if len(sys.argv) > 2:
-        print 'override'
+        print('override')
     else:
-        print 'quiting'
+        print('quiting')
         sys.exit()
         
 
-print 'requesting file'
+print('requesting file')
 
 yr,mo,day = date.split('-')
 

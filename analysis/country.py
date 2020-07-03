@@ -18,29 +18,27 @@ first,last = date_info.split('\n')
 conf['first'] = first
 conf['last'] = last
 
-if not conf['arg']:
-    print('please supply the name of a country')
-    sys.exit()
-    
-if conf['pop']:
-    print('population normalization not yet implemented for this script')
-    sys.exit()
-    
-country = conf['arg']
-
 #---------------------------------------
 
 def entries_for_country(country):
-    kL = ukeys.key_list_for_search_term(D,country, mode="country")
+    kL = ukeys.key_list_for_search_term(
+        D,country, mode="country")
     kL = sorted(kL, key=ukeys.custom_key) 
     rL = [D[k][conf['mode']] for k in kL]
-    
-    labels = []
-    for k in kL:
-        labels.append(k.split(udb.sep)[1] + ', ' + country)
-    return rL, labels
+    return rL, kL
 
 if __name__ == "__main__":
-    rL,labels = entries_for_country(country)
-    # totals put on in fmt
-    print(ufmt.fmt(rL,labels,conf))
+    if not conf['arg']:
+        print('please supply the name of a country')
+        sys.exit()
+        
+    if conf['pop']:
+        print('population normalization not yet implemented for this script')
+        sys.exit()
+        
+    country = conf['arg']
+    conf['regions'] = 'countries'
+
+    rL,kL = entries_for_country(country)
+    conf['regions'] = 'one_country'
+    print(ufmt.fmt(rL,kL,conf))

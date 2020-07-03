@@ -68,6 +68,21 @@ ukeys.merge_keys(D, m69000, m69)
 for k in [m,m69000]:
     ukeys.popif(D,k)
 
+g66 =      ';Guam;66;US'
+g66000 =   ';Guam;66000;US'
+g00066 =   ';Guam;00066;US'
+
+ukeys.merge_keys(D, g66000, g66)
+ukeys.merge_keys(D, g00066, g66)
+for k in [g66000,g00066]:
+    ukeys.popif(D,k)
+
+a60 =      ';American Samoa;60;US'
+a60000 =   ';American Samoa;60000;US'
+
+ukeys.merge_keys(D, a60000, a60)
+ukeys.popif(D,a60000)
+
 #------------------------------------
 
 '''
@@ -116,6 +131,32 @@ for k in kL:
         print(k)
 
 #------------------------------------
+
+def filter(k):
+    if k.startswith('Unassigned'):
+        return False
+    if k.startswith('unassigned'):
+        return False
+    if k.startswith('Out of'):
+        return False
+    if 'Unknown' in k or 'Recovered' in k:
+        return False
+    if 'Princess' in k or 'Out-of' in k:
+        return False
+    if 'MDOC' in k or 'FCI' in k:
+        return False
+    if 'Walla Walla County' in k:
+        return False
+    if 'LeSeur;Minnesota' in k:
+        return False
+    return True
+
+todo = []
+for k in D:
+    if not filter(k):
+        todo.append(k)
+for k in todo:        
+    ukeys.popif(D, k)
 
 udb.save_db(D, path_to_db, first, last)
 

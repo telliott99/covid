@@ -22,7 +22,6 @@ conf['last'] = last
 #-------------------------
 
 n = conf['n']  # num of days of data
-N = conf['N']  # num of items
 
 specific_state =conf['arg']
 
@@ -48,29 +47,44 @@ for k in kL:
 
 #-----------------
 
-def fmt(e):
+def fmt(e, pad):
     c,s,rL,stat = e
     if c == 'Dukes and Nantucket':
         s = 'MA'
+    abbrev = ustates.state_to_abbrev[s]
     
-    v = c + ', ' + s
-    pL = [v.ljust(28)]
-    pL.append(format(stat,'.2f').rjust(5))
+    v = c + ', ' + abbrev
+    pL = [v.ljust(pad)]
     pL.append(' '.join([str(n).rjust(4) for n in rL]))
+    pL.append(format(stat,'.2f').rjust(5))
     return ' '.join(pL)
 
-
-dL = udates.slash_dates(all_dates[-n:])
-s = 'county                   statistic'.ljust(31)
-print(s + ' ' + ' '.join(dL))
 
 L.sort(key=itemgetter(3),reverse = True)
 
 states = []
-for e in L[:N]:
+if conf['N']:     # num of rows
+    L = L[:conf['N']]
+
+pad = 0
+for t in L:
+    m = len(t[0])
+    if pad < m:
+        pad = m
+pad += 4
+
+dL = udates.slash_dates(all_dates[-n:])
+s = 'county'.ljust(pad)
+print(s + ' ' + ' '.join(dL) + '  statistic')
+    
+for e in L:
     states.append(e[1])
-    print(fmt(e))
-print()
+    print(fmt(e, pad))
+    
+print('')
+
+#-------------------------
+# summary of states with hot counties
 
 pL = list()
 for state in list(set(states)):

@@ -22,11 +22,6 @@ conf['last'] = last
 kL = ukeys.key_list_for_us_counties(D)
 rL = [D[k][mode] for k in kL]
 
-labels = []
-for k in kL:
-    county = ukeys.county_for_key(k)
-    state = ukeys.state_for_key(k)
-    abbrev = ustates.state_to_abbrev[state]
-    labels.append(county + ', ' + abbrev)
-
-print(ufmt.fmt(rL,labels,conf))
+conf['regions'] = 'counties'
+conf['show_state'] = True
+print(ufmt.fmt(rL,kL,conf))

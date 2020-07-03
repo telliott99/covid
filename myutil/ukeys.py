@@ -2,6 +2,8 @@ import sys, os
 
 import ustrings
 import umath
+import ustates
+import udb
 
 def state_for_key(k):
     county,state,fips,country = k.split(ustrings.sep)
@@ -18,6 +20,15 @@ def county_for_key(k):
 def custom_key(s):
     L = s.split(ustrings.sep)
     return L[3], L[1], L[0], L[2]
+    
+def build_key_for_state(state):
+    try:
+        abbrev = ustates.state_to_abbrev[state]
+    except KeyError:
+        assert state in ustates.terr
+        abbrev = ustates.terr_to_abbrev[state]
+    fips = ustates.abbrev_to_fips[abbrev]
+    return udb.sep.join(['',state,fips,'US'])
 
 #----------------------------------
 

@@ -17,11 +17,6 @@ first,last = date_info.split('\n')
 conf['first'] = first
 conf['last'] = last
 
-if conf['pop']:
-    print('population normalization not yet implemented for this script')
-    sys.exit()
-
-
 #-------------------------
 
 kL = [k for k in D if k[-3:] == ';US']
@@ -78,7 +73,10 @@ for state in states:
 
 #--------------
 
-labels = states
+conf['regions'] = 'states'
+
+from ukeys import build_key_for_state
+kL = [build_key_for_state(state) for state in states]
 
 if __name__ == "__main__":
-    print(ufmt.fmt(rL,labels,conf))
+    print(ufmt.fmt(rL,kL,conf))

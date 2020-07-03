@@ -34,8 +34,5 @@ rL = [D[k][conf['mode']] for k in kL]
 
 # -----------
 
-labels = []
-for k in kL:
-    labels.append(ukeys.county_for_key(k))
-    
-print(ufmt.fmt(rL,labels,conf))
+conf['regions'] = 'counties'
+print(ufmt.fmt(rL,kL,conf))

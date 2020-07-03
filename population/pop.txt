@@ -3140,26 +3140,28 @@ Teton;Wyoming,23464
 Uinta;Wyoming,20226
 Washakie;Wyoming,7805
 Weston;Wyoming,6927
-Soldotna;Alaska,4689
-Sterling;Alaska,5617
-Desoto;Florida,38001
+Soldotna;Alaska;;US#4689
+Sterling;Alaska;;US#5617
+DeSoto;Florida;12027;US#38001
 Dukes and Nantucket;Massachusetts,16535
-Carson City;Nevada,55274
-Dona Ana;New Mexico,218195
-Central Utah;Utah,613
-Charles City;Virginia,133
-Baltimore City;Maryland,593490
-St. Louis City;Missouri,300576
-New York City;New York,8336817
-Fairfax City;Virginia,24019
-Franklin City;Virginia,7967
-Richmond City;Virginia,230436
-Roanoke City;Virginia,99143
-Kansas City;Missouri,491918
-Bear River;Utah,186818
-Central;69676,
-Southwest Utah;Utah,239105
-Southeast Utah;Utah,40229
-TriCounty;Utah,56622
-Utah;Utah,661440
-Weber-Morgan;Utah,272337
+Dukes;Massachusetts;25007;US
+Nantucket;Massachusetts;25019;US
+Carson City;Nevada;32510;US#55274
+Dona Ana;New Mexico;35013;US#218195
+Central Utah;Utah;;US#613
+Charles City;Virginia;51036;US#133
+Baltimore City;Maryland;24510;US#593490
+St. Louis City;Missouri;29510;US#300576
+New York City;New York;36061;US#8336817
+Fairfax City;Virginia;51600;US#24019
+Franklin City;Virginia;51620;US#7967
+Richmond City;Virginia;51760;US#230436
+Roanoke City;Virginia;51770;US#99143
+Kansas City;Missouri;;US#491918
+Bear River;Utah;;US#186818
+Central Utah;Utah;;US#69676
+Southwest;Utah;90049;US#239105
+Southeast Utah;Utah;;US#40229
+TriCounty;Utah;;US#56622
+Utah;Utah;49049;US#661440
+Weber-Morgan;Utah;;US#272337

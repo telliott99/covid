@@ -2,6 +2,7 @@ import sys, os
 
 base = os.environ.get('covid_base')
 sys.path.insert(0,base)
+sys.path.insert(0,base + '/population')
 
 import myutil.udb as udb
 import myutil.ukeys as ukeys

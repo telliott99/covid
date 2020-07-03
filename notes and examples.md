@@ -1,12 +1,12 @@
 #### Parallel organization
 
-The project is structured so that very few (currently one) script is at the level of the main directory.  Most scripts that do interesting things are in ``analysis``, ``build`` and ``geo``.  
+The project is structured so that most scripts (except one) are in sub-directories, like ``analysis``, ``build`` and ``maps``.  
 
-In progress stuff like ``population`` and ``simulate`` will eventually be similar.
+In progress stuff like ``population`` and ``simulate`` contain things that will eventually be similar.
 
-The rest is the utilities, in ``myutil``, and ``test``, which naturally holds the tests.
+The rest is utilities, in ``myutil``, and ``test``, which naturally holds the tests.
 
-The database is at main level in two sizes.
+The database is at main level, it comes in in two sizes.
 
 The average script starts like this:
 
@@ -14,11 +14,9 @@ The average script starts like this:
     base = os.environ.get('covid_base')
     sys.path.insert(0,base)
     
-So you must set ``covid_base`` correctly.
+Thus, you must set ``covid_base`` correctly.  Everything is specified as a path from ``covid_base``.
 
-Now, everything is specified as a path from ``base``.
-
-I found myself repeatedly doing the same imports, so I just put them in ``do_imports.py`` and then
+I found myself repeatedly doing the same imports, so I just put them all in ``do_imports.py`` and then do:
 
     import myutil.udb as udb
     import myutil.udates as udates
@@ -71,9 +69,9 @@ So, for example, if a 10-day series goes smoothly from 100 to 110, then the slop
 
 The idea for most scripts is to use the main part of the script to assemble the correct keys in order.  This list is then passed to ``ufmt.fmt`` along with the ``conf`` dictionary.
 
-All the formatting happens in ``ufmt.fmt``.
+All the formatting happens in ``ufmt``.
 
-The code about keys does not know which database we're using, I found that too complicated to maintain since I added the option of building a ``max`` database.  So now the database is passed to the ``ukeys`` routines as an argument.
+The code about keys does not know which database we're using.  I found that too complicated to maintain since I added the option of building a ``max`` database.  So now the database is passed to the ``ukeys`` routines as an argument.
 
 #### Examples (as of 2020-06-29)
 
@@ -82,13 +80,13 @@ This version of the database is 2020-06-01 to 2020-06-28, updated this morning.
 From the ``analysis`` directory:
 
     > python one_state.py SC -rs -n 3 -N 5
-            06/26 06/27 06/28  stats
-    >Bamberg        83    84    91  0.047
-    >Anderson      525   552   563  0.035
-    >Aiken         325   335   345  0.03
-    >Abbeville     100   103   103  0.015
-    >Allendale      47    48    48  0.01
-    >total        1080  1122  1150  0.031
+                06/26 06/27 06/28  stats
+    Bamberg        83    84    91  0.047
+    Anderson      525   552   563  0.035
+    Aiken         325   335   345  0.03
+    Abbeville     100   103   103  0.015
+    Allendale      47    48    48  0.01
+    total        1080  1122  1150  0.031
     >
     
 and

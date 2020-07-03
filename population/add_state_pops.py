@@ -20,8 +20,9 @@ def get_county_pop_dict(D):
     
     pD = {}
     for line in data.strip().split('\n'):
-        loc,pop = line.strip().split(',')
-        pD[loc] = pop
+        print(line)
+        k,pop = line.strip().split('#')
+        pD[k] = pop
          
     s = '''
     ;Diamond Princess
@@ -73,17 +74,24 @@ def modify_county_pop_dict(county_pop_dict):
         full = sep.join(['',k,fips,'US'])
         county_pop_dict[full] = pop
         
-    return county_pop_dict
-        
-def get_pop_dict():
-    date_info, D = udb.load_db(path_to_db)
-    county_pop_dict = get_county_pop_dict(D)
-    pop_dict = modify_county_pop_dict(county_pop_dict)
-    return pop_dict
+def get_pop_dict(D):
+    
+    cD = get_county_pop_dict(D)
+    modify_county_pop_dict(cD)
+    return cD
 
 if __name__ == "__main__":
-
-    pop_dict = get_pop_dict()
-    for k in pop_dict:
+    date_info, D = udb.load_db(path_to_db)
+    
+    cD = get_pop_dict(D)
+    for k in cD:
+        if len(k.split(sep)) < 4:
+            print(k)
+    
+    '''
+    #print(cD.keys())
+    
+    for k in sorted(cD, key = ukeys.custom_key):
         if k.startswith(sep):
             print(k, pop_dict[k])
+'''

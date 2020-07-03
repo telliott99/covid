@@ -14,13 +14,11 @@ It looks like the screenshot
 Then convert to csv
 saved under the same filename by mistake 
 
-Process with script to pop.csv
-
 Last column is 2019 population
 First column is ".county, state"
 
-There are a number of issues that are cleaned up.
-See extract_pop.py
+Initial processing with extract_pop.py to pop.txt
+There are some issues that are cleaned up.
 
 #-----
 
@@ -167,5 +165,12 @@ SE:      Carbon,Emery,Grand
 Tri:     Daggett, Duchesne, Uintah
          950 + 19938 + 35734 = 56622
 
+#---------
 
+2020-07-02
+I'm switching to full keys.
+So all of these places will need fips 
+if db.txt has it.
+
+Let's see.
 

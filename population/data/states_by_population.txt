@@ -3,7 +3,7 @@
 California,39512223
 Texas,28995881
 Florida,21477737
-NewYork,19453561
+New York,19453561
 Pennsylvania,12801989
 Illinois,12671821
 Ohio,11689100
@@ -24,7 +24,7 @@ Wisconsin,5822434
 
 Colorado,5758736
 Minnesota,5639632
-SouthCarolina,5148714
+South Carolina,5148714
 Alabama,4903185
 Louisiana,4648794
 Kentucky,4467673

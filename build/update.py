@@ -104,6 +104,7 @@ def init_db(path_to_db):
         fh.write('\n')
         
         for k in sorted(D.keys(), key=ukeys.custom_key):
+        
             fh.write(k + '\n')
             fh.write(D[k]['cases'] + '\n')
             fh.write(D[k]['deaths'] + '\n')
@@ -137,6 +138,7 @@ for fn in fL[1:]:
     date = udates.date_from_path(fn)
     
     for k in sD:
+    
         cases = sD[k]['cases']
         deaths = sD[k]['deaths']
         
