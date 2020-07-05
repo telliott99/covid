@@ -49,6 +49,13 @@ def stat(vL, n=10):
     except:
         return None
 
+# return list of diffs for adjacent values
+def do_delta(sL,j):
+    ret = []
+    for i in range (j,len(sL)):
+        ret.append(sL[i] - sL[i-j])
+    return ret
+
 def quintiles(n):
     if n > 0.08:  return 0.08
     if n > 0.06:  return 0.06

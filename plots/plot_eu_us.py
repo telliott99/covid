@@ -46,7 +46,6 @@ pL = []
 for x,y in zip(vL[:-1],vL[1:]):
     pL.append(y - x)
 
-
 # smooth
 f = signal.savgol_filter
 #pL = f(pL,51,3)
@@ -71,9 +70,9 @@ pL = []
 for x,y in zip(vL[:-1],vL[1:]):
     pL.append(y - x)
 
-# problem
+# problem data
 
-print(pL)
+print(len(pL))
 print(pL[38])  # 17861
 pL[38] = (pL[37] + pL[39])/2.0
 

@@ -19,6 +19,7 @@ if conf['max']:
     path_to_db = base + '/db.max.txt'
 else:
     path_to_db = base + '/db.txt'
+    
 date_info, D = udb.load_db(path_to_db)
 
 first,last = date_info.split('\n')

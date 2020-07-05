@@ -49,13 +49,11 @@ for k in kL:
 
 def fmt(e, pad):
     c,s,rL,stat = e
-    if c == 'Dukes and Nantucket':
-        s = 'MA'
     abbrev = ustates.state_to_abbrev[s]
     
     v = c + ', ' + abbrev
     pL = [v.ljust(pad)]
-    pL.append(' '.join([str(n).rjust(4) for n in rL]))
+    pL.append(' '.join([str(n).rjust(6) for n in rL]))
     pL.append(format(stat,'.2f').rjust(5))
     return ' '.join(pL)
 

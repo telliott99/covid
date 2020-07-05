@@ -5,6 +5,8 @@ sys.path.insert(0,base)
 from do_imports import *
 
 conf = uinit.clargs()
+v = conf['verbose']
+
 mode = conf['mode']
 
 if conf['max']:

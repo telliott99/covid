@@ -11,22 +11,21 @@ sys.path.insert(0,base)
 pre = 'analysis/'
 prog = ['python3']
 
-script_list = ['all_states.py',
-               'one_state.py',
-               'us_by_counties.py',
-               'trends.py',
-               'country.py',
-               'eu.py' ]
-arg_list = [['-c'],
-            ['SC', '-rs'],
-            ['-N', '10', '-rs'],
-            [],
-            ['Mexico', '-c'],
-            ['-N', '5']]
-
+D = {
+      'all_states.py':     ['-c'],
+      'all_states.py':     ['-rs', '-N', '5'],
+      'one_state.py':      ['HI', '-rs'],
+      'one_state.py':      ['SC', '-N', '10'],
+      'us_by_counties.py': ['-rs', '-N', '5'],
+      
+      'trends.py':         ['-n','4', '-N', '10'],
+      'country.py':        ['Mexico', '-c', '-N', '7'],
+      'eu.py':             ['-N', '3'] }
+      
 errors = []
 
-for script, args in zip(script_list, arg_list):
+for script in D:
+    args = D[script]
     cmds = prog + [pre + script] + args
     print('running: ')
     print(' '.join(cmds))
