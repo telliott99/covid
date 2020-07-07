@@ -23,14 +23,8 @@ conf['last'] = last
 #-------------------------
 
 kL = [k for k in D if k[-3:] == ';US']
-
-# new since I've added keys for states and US
-#print(D[';Alabama;01;US']['cases'][-7:])
-#print(D[';;;US']['cases'][-7:])
-kL = [k for k in D if not ukeys.state_for_key(k) == '']
-kL = [k for k in D if not ukeys.county_for_key(k) == '']
-
 kL = sorted(kL, key=ukeys.custom_key)
+
 kL = [k for k in kL if not 'Princess' in k and not 'Recovered' in k]
 
 # group keys by state in one pass

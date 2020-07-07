@@ -8,7 +8,7 @@ pre = 'maps/'
 prog = ['python3']
 
 script_list = ['one_state_map.py',
-               'united_states_map.py' ]
+               'all_states_map.py' ]
                
 arg_list = [['CA', 'MN', 'SC', 'TX'],
             [] ]

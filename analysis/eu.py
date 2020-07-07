@@ -30,8 +30,16 @@ def do_eu():
     eu = ucountries.eu_majors
     pL = []
     for c in eu:
-        rL, ignore = entries_for_country(c)
-        pL.append(umath.totals(rL))   
+        kL = ukeys.key_list_for_search_term(
+                 D, c, mode="country")
+                 
+        # countries with states now have a total
+        # that entry comes first  
+        k = kL[0]
+        assert k[:3] == ';;;'
+        vL = D[k][conf['mode']]
+        pL.append(vL)
+    
     return eu,pL
 
 if __name__ == "__main__":

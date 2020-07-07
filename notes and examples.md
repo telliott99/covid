@@ -1,12 +1,12 @@
 #### Parallel organization
 
-The project is structured so that most scripts (except one) are in sub-directories, like ``analysis``, ``build`` and ``maps``.  
+The project is structured so that most scripts (except one) are in sub-directories, including ``analysis``, ``build`` and ``maps``.  
 
-In progress stuff like ``population`` and ``simulate`` contain things that will eventually be similar.
+There is some in progress stuff like ``simulate``.
 
-The rest is utilities, in ``myutil``, and ``test``, which naturally holds the tests.
+The rest is utilities, in ``myutil``, and ``test``.
 
-The database is at main level, it comes in in two sizes.
+The database is at main level, and it comes in in two sizes, one for as many days back as there are files at main level in the source, and the other with previous files stashed by month.
 
 The average script starts like this:
 
@@ -15,20 +15,6 @@ The average script starts like this:
     sys.path.insert(0,base)
     
 Thus, you must set ``covid_base`` correctly.  Everything is specified as a path from ``covid_base``.
-
-I found myself repeatedly doing the same imports, so I just put them all in ``do_imports.py`` and then do:
-
-    import myutil.udb as udb
-    import myutil.udates as udates
-    import myutil.ufile as ufile
-    import myutil.ufmt as ufmt
-    import myutil.uinit as uinit
-    import myutil.ukeys as ukeys
-    import myutil.umath as umath
-    import myutil.ustrings as ustrings
-
-    conf = uinit.clargs()
-    mode = conf['mode']
 
 #### Command line arguments
 
@@ -39,27 +25,33 @@ Features that are currently supported are given by the ``--help`` flag:
 ```
 > python scripts/one_state.py --help
 
-flags
--h  --help    help
--n   <int>    display the last n values, default: 7
--N   <int>    display N rows of data: default: 50
 
--c  --delta   change or delta, display day over day rise
--d  --deaths  display deaths rather than cases (default)
--r  --rate    compute statistics
--s  --sort    (only if stats are asked for)
+flags
+-h  --help     help
+-n    <int>    display the last -n values, default: 7
+-N    <int>    display -N rows of data, default: no limit
+-c    <int>    --delta, change from x days ago, default: 1
+
+-a  --all      use the complete db, starting 2020-03-22
+-d  --deaths   display deaths rather than the default, cases
+-g  --graph    plot a graph of the data
+-m  --map      make a choropleth map
+-p  --pop      normalize to population
+-r  --rate     compute statistics (currently, over last 7 days)
+-s  --sort     
+-t  --totals   (only)
+-v  --verbose  debugging mode
+-w, --write    text (if -g,-m present, output is normally silent)
 
 to do:
 -u   <int>    data slice ends this many days before yesterday 
--p  --pop     normalize to population
 
 example:
-python scripts/one_state.py  -n 10 -sdr
-
+> python one_state.py <state> -n 10 -sdr
 > 
 ```
 
-I did not use the built-in Python module for cli, but rolled my own, see ``uinit.py``
+I did not use the built-in Python module for parsing the command line arguments, but rolled my own, see ``uinit.py``
 
 The statistic is the slope of a linear regression, divided by the mean of the values.  
 
@@ -67,11 +59,15 @@ So, for example, if a 10-day series goes smoothly from 100 to 110, then the slop
 
 #### Approach
 
-The idea for most scripts is to use the main part of the script to assemble the correct keys in order.  This list is then passed to ``ufmt.fmt`` along with the ``conf`` dictionary.
+The idea for most scripts is to use the main part of the script to assemble the correct keys in order.  This list is passed to ``ucalc`` and then to ``ufmt`` along with the ``conf`` dictionary.
+
+All the trimming, sorting and stats happens in ``ucalc``.
 
 All the formatting happens in ``ufmt``.
 
-The code about keys does not know which database we're using.  I found that too complicated to maintain since I added the option of building a ``max`` database.  So now the database is passed to the ``ukeys`` routines as an argument.
+The code about keys does not know which database we're using.  I found that too complicated to maintain since I added the option of building a ``max`` database.  
+
+So now the database is passed to ``ukeys`` functions as an argument.
 
 #### Examples (as of 2020-06-29)
 

@@ -8,6 +8,15 @@ if not base in sys.path:
     sys.path.insert(1,base + '/myutil')
 
 import ustrings, umath, ustates, udb
+sep = ustrings.sep
+
+def country_for_key(k):
+    county,state,fips,country = k.split(ustrings.sep)
+    return country
+
+def state_country_for_key(k):
+    county,state,fips,country = k.split(ustrings.sep)
+    return state + ', ' + country
 
 def state_for_key(k):
     county,state,fips,country = k.split(ustrings.sep)
@@ -62,6 +71,7 @@ def key_list_for_names(D, conf):
             
     return ret
 
+# all_states uses a more efficient search for multiple states
 def key_list_for_search_term(D, s, mode="country"):
     kL = list()
     for k in key_list(D):

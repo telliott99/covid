@@ -3,8 +3,7 @@ base = os.environ.get('covid_base')
 sys.path.insert(0,base)
 sys.path.insert(1,base + '/myutil')
 
-import uinit, udb, ukeys
-import umath, ucalc, ufmt, upop
+import uinit, udb, ukeys, umath, ucalc, ufmt, upop
 
 conf = uinit.clargs()
 mode = conf['mode']
@@ -26,13 +25,7 @@ def entries_for_country(country):
 
     kL = ukeys.key_list_for_search_term(
         D,country, mode="country")
-        
-    kL = sorted(kL, key=ukeys.custom_key)
-    
-    if len(kL) > 1:
-        assert kL[0][:3] == ';;;'
-        kL.pop(0)  
-    
+    kL = sorted(kL, key=ukeys.custom_key) 
     rL = [D[k][conf['mode']] for k in kL]
     return rL, kL
 
@@ -47,8 +40,5 @@ if __name__ == "__main__":
     for country in conf['names']:
         rL,kL = entries_for_country(country)
         kL, rL = ucalc.calc(kL,rL,conf)
-        
-        if len(rL) == 1:
-            conf['totals'] = False
         text = ufmt.assemble(kL, rL, conf)
         print(text)

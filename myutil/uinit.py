@@ -21,25 +21,26 @@ def clargs():
     default_dict = { 
       'sys.argv': None,
       'names' : [],
-      'deaths': False,       # -d, --deaths
+      'deaths': False,   # -d, --deaths
       'mode':'cases', 
+      #'L': 0,            # 2 = counties, 1 = states
       'n':7, 
-      'N': False, 
+      'N': False,
       'upto': 0,
       'regions': None,
       'show_state': False,
       'totals': True,
       
-      'all': False,          # -a, --all
-      'delta': False,        # -c, --delta
-      'graph': False,        # -g, --graph
-      'map': False,          # -m, --map
-      'pop': False,          # -p, --pop
-      'rate': False,         # -r, --rate
-      'sort': False,         # -s, --sort
-      'total': False,        # -t, --total (only)
-      'write': False,        # -w, --write text (when --graph)
-      'verbose': False }     # -v, --verbose
+      'all': False,      # -a, --all
+      'delta': False,    # -c, --delta
+      'graph': False,    # -g, --graph
+      'map': False,      # -m, --map
+      'pop': False,      # -p, --pop
+      'rate': False,     # -r, --rate
+      'sort': False,     # -s, --sort
+      'total': False,    # -t, --total (only)
+      'write': False,    # -w, --write text (when --graph)
+      'verbose': False } # -v, --verbose
 
 #-------------------------------------------
     # no args
@@ -80,7 +81,7 @@ def clargs():
         if arg.startswith('--'):
             s = arg[2:]
             if not s in wL:
-                print('invalid --arg %s' % s)
+                print('--%s is not a valid argument' % s)
                 bail()
                 
                 
@@ -120,7 +121,18 @@ def clargs():
             bail()
         L.pop(i+1)
         L.pop(i)
-    
+    '''
+    if '-L' in L:
+        i = L.index('-L')
+        try:
+            D['L'] = int(L[i+1])
+        except:
+            print('-L flag must be followed by an integer value')
+            print('(depth level for keys)')
+            bail()
+        L.pop(i+1)
+        L.pop(i)
+    '''
 #-------------------------------------------
     # -c can take an int argument 
     # but is different because the int is optional

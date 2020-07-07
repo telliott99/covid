@@ -63,8 +63,8 @@ def trim_columns(rL, conf):
     n = conf['n']
     if conf['delta']:
         n += conf['delta']
+        
     rL = [e[-n:] for e in rL]
-    
     if conf['delta']:
         j = conf['delta']
         tmp = []

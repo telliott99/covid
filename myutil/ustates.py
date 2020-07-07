@@ -117,6 +117,17 @@ def get_fips_to_abbrev():
     
 fips_to_abbrev = get_fips_to_abbrev()
 
+def get_state_to_fips():
+    D = {}
+    for state in states:
+        abbrev = state_to_abbrev[state]
+        fips = abbrev_to_fips[abbrev]
+        D[state] = fips
+    return D
+    
+state_to_fips = get_state_to_fips()
+        
+
 data2='''
 California,39512223
 Texas,28995881

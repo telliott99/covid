@@ -1,4 +1,0 @@
-in country
-totals are not right
-
-but umath.totals seems OK

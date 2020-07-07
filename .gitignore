@@ -5,3 +5,4 @@ csv.source*/*
 *.pyc
 db.txt
 db.max.txt
+__pycache__/*

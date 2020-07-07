@@ -2,25 +2,14 @@ import sys, os, subprocess
 
 base = os.environ.get('covid_base')
 sys.path.insert(0,base)
+sys.path.insert(1,base + '/myutil')
 
-from do_imports import *
+import uinit, ustrings, udates
+import udb, ufile, ukeys
 
 conf = uinit.clargs()
 # build the mega db
 MX = conf['all']
-
-overwrite = '-o' in sys.argv[1:]
-if overwrite:
-    print('overwrite db')
-
-base = os.environ.get('covid_base')
-sys.path.insert(0,base)
-
-import myutil.ustrings as ustrings
-import myutil.udb as udb
-import myutil.udates as udates
-import myutil.ufile as ufile
-import myutil.ukeys as ukeys
 
 sep = ustrings.sep      # ;
 sep2 = ustrings.sep2    # #
@@ -173,6 +162,8 @@ udb.save_db(D, path_to_db, first, last)
 
 if MX:
     subprocess.call(['python', 'easy_fixes.py', '--max'])
+    subprocess.call(['python', 'totals.py', '--max'])
 else:
-    subprocess.call(['python', 'easy_fixes.py'])
+    subprocess.call(['python', 'easy_fixes.py' ])
+    subprocess.call(['python', 'totals.py' ])
 
