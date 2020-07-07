@@ -119,18 +119,6 @@ def clargs():
         L.pop(i+1)
         L.pop(i)
         
-    '''
-    if '-L' in L:
-        i = L.index('-L')
-        try:
-            D['L'] = int(L[i+1])
-        except:
-            print('-L flag must be followed by an integer value')
-            print('(depth level for keys)')
-            bail()
-        L.pop(i+1)
-        L.pop(i)
-    '''
 #-------------------------------------------
     # -c can take an int argument 
     # but is different because the int is optional
@@ -159,8 +147,10 @@ def clargs():
         aL.append(arg)
     D['names'] = aL
     
-    dash_list = [arg for arg in L if arg.startswith('-')]
-    dash_list = [arg for arg in L if not arg.startswith('--')]
+    dash_list = []
+    for arg in L:
+        if arg.startswith('-') and not arg[2] == '-':
+            dash_list.append(arg)
 
     wL = 'dacgmprstvw'
               
