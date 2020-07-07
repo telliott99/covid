@@ -9,6 +9,7 @@ import udb, ufile, ukeys
 
 conf = uinit.clargs()
 # build the mega db
+
 MX = conf['all']
 
 sep = ustrings.sep      # ;
@@ -39,6 +40,7 @@ if MX:
                 fL.append(p)
             
     process_dir(src)
+
     while todo:
         next = todo.pop()
         process_dir(next)

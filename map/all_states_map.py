@@ -6,12 +6,11 @@ if sys.version_info[0] < 3:
     sys.exit()
 
 base = os.environ.get('covid_base')
-sys.path.insert(0,base)
+if not base in sys.path:
+    sys.path.insert(0,base)
+    sys.path.insert(1,base + '/myutil')
 
-import myutil.ustrings as ustrings
-import myutil.udb as udb
-import myutil.ukeys as ukeys
-import myutil.umath as umath
+import ustrings, udb, ukeys, umath, ucolors
    
 #--------------------
 
@@ -43,20 +42,14 @@ df = pd.DataFrame(data={'state':abbrev, 'value':st})
 
 import plotly.express as px
 
-cL = ['rgb(0,100,0)',
-      'rgb(0,255,0)',
-      'rgb(111,255,0)',
-      'rgb(255,255,0)',
-      'rgb(255,111,0)',
-      'rgb(255,0,0)']
+from ucolors import cL
 
 fig = px.choropleth(
     df,
     locations=abbrev,
     locationmode='USA-states',
     color=st,
-    #color_continuous_scale=cL,
-    color_continuous_scale='Plasma',
+    color_continuous_scale=cL,
     scope="usa",
     labels={'color':'growth'})
 

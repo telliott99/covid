@@ -75,18 +75,15 @@ def clargs():
     
 #-------------------------------------------
 
-    # check -- args for validity
-
+    # check -- args for validity but don't set yet
+    
     for arg in L:
         if arg.startswith('--'):
             s = arg[2:]
             if not s in wL:
                 print('--%s is not a valid argument' % s)
                 bail()
-                
-                
-    L = [arg for arg in L if not arg.startswith('--')]
-                            
+                                            
 #-------------------------------------------
 
     # do all args with int modifier
@@ -121,6 +118,7 @@ def clargs():
             bail()
         L.pop(i+1)
         L.pop(i)
+        
     '''
     if '-L' in L:
         i = L.index('-L')
@@ -162,6 +160,8 @@ def clargs():
     D['names'] = aL
     
     dash_list = [arg for arg in L if arg.startswith('-')]
+    dash_list = [arg for arg in L if not arg.startswith('--')]
+
     wL = 'dacgmprstvw'
               
     # args may have multiple single-letter values
@@ -185,8 +185,8 @@ def clargs():
     # we allow c to be part of a multi-letter group arg as well
     if not D['delta']:
         if 'c' in one_letters or '--delta' in L:
-            D['delta'] = 1
-    
+            D['delta'] = 1            
+        
     D['all']     = 'a' in one_letters or '--all' in L
     D['map']     = 'm' in one_letters or '--map' in L
     D['graph']   = 'g' in one_letters or '--graph' in L
@@ -196,7 +196,7 @@ def clargs():
     D['total']   = 't' in one_letters or '--total' in L
     D['verbose'] = 'v' in one_letters or '--verbose' in L
     D['write']   = 'w' in one_letters or '--write' in L
-    
+  
     # when -g or -m is selected
     # note: -w, --write is used to control behavior
     # in those two cases, default is silent, no text

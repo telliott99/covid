@@ -4,7 +4,9 @@ import subprocess
 base = os.environ.get('covid_base')
 sys.path.insert(0,base)
 
-pre = 'maps/'
+print(os.getcwd())
+
+pre = 'map/'
 prog = ['python3']
 
 script_list = ['one_state_map.py',

@@ -6,14 +6,12 @@ if sys.version_info[0] < 3:
     sys.exit()
 
 base = os.environ.get('covid_base')
-sys.path.insert(0,base)
+if not base in sys.path:
+    sys.path.insert(0,base)
+    sys.path.insert(1,base + '/myutil')
 
-import myutil.ustrings as ustrings
-import myutil.udb as udb
-import myutil.udates as udates
-import myutil.uinit as uinit
-import myutil.ukeys as ukeys
-import myutil.umath as umath
+import ustrings, udb, udates
+import uinit, ukeys, umath, ucolors
 
 
 if not len(sys.argv) > 1:
@@ -40,7 +38,7 @@ date_info, D = udb.load_db(path_to_db)
 
 # GeoJSON data for US counties
 
-fn = base + '/maps/map_data/counties.json'
+fn = base + '/map/map_data/counties.json'
 with open(fn,'r') as fh:
     counties = json.load(fh)
     
@@ -83,7 +81,7 @@ df = pd.DataFrame(
 #--------------------
 
 import plotly.express as px
-from colors import cL
+from ucolors import cL
 
 fig = px.choropleth(
     df,
