@@ -1,3 +1,6 @@
+import udb
+sep = udb.sep
+
 states = [
 'Alabama','Alaska','Arizona','Arkansas',
 'California', 'Colorado', 'Connecticut',
@@ -204,11 +207,20 @@ def get_state_to_pop():
     
 state_to_pop = get_state_to_pop()
 
+#-----------------------------------
+
+def key_for_state(state):
+    fips = state_to_fips[state]
+    return sep.join(['',state,fips,'US'])
+
+def key_list_for_states():
+    kL = [key_for_state(s) for s in states]
+    return kL
+        
 if __name__ == "__main__":
 
     for state in states:
-        abbrev = state_to_abbrev[state]
-        fips = abbrev_to_fips[abbrev]
+        fips = state_to_fips[state]
         pop = state_to_pop[state]
         print(','.join([state, abbrev, fips, pop]))
         assert fips_to_abbrev[fips] == abbrev

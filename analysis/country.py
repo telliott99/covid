@@ -4,7 +4,7 @@ sys.path.insert(0,base)
 sys.path.insert(1,base + '/myutil')
 
 import uinit, udb, ukeys
-import umath, ucalc, ufmt, upop
+import umath, ucalc, ufmt, upop, ustates
 
 conf = uinit.clargs()
 mode = conf['mode']
@@ -23,15 +23,17 @@ conf['last'] = last
 #---------------------------------------
 
 def entries_for_country(country):
-
-    kL = ukeys.key_list_for_search_term(
-        D,country, mode="country")
+    if country == 'US':
+        kL = ustates.key_list_for_states()
+    else:
+        kL = ukeys.key_list_for_search_term(
+            D,country, mode="country")
         
     kL = sorted(kL, key=ukeys.custom_key)
     
     if len(kL) > 1:
-        assert kL[0][:3] == ';;;'
-        kL.pop(0)  
+        if kL[0][:3] == ';;;':
+            kL.pop(0)  
     
     rL = [D[k][conf['mode']] for k in kL]
     return rL, kL
