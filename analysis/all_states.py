@@ -1,15 +1,16 @@
-import sys, os, subprocess
+import sys, os
 base = os.environ.get('covid_base')
 sys.path.insert(0,base)
+sys.path.insert(1,base + '/myutil')
 
-from do_imports import *
+import uinit, udb, ukeys, umath, ucalc, ufmt
 
 conf = uinit.clargs()
 v = conf['verbose']
 
 mode = conf['mode']
 
-if conf['max']:
+if conf['all']:
     path_to_db = base + '/db.max.txt'
 else:
     path_to_db = base + '/db.txt'
@@ -81,4 +82,7 @@ from ukeys import build_key_for_state
 kL = [build_key_for_state(state) for state in states]
 
 if __name__ == "__main__":
-    print(ufmt.fmt(rL,kL,conf))
+
+    kL, rL = ucalc.calc(kL, rL, conf)
+    text = ufmt.assemble(kL, rL, conf) 
+    print(text)

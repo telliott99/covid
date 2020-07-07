@@ -3,8 +3,9 @@ from datetime import date, datetime, timedelta
 
 base = os.environ.get('covid_base')
 sys.path.insert(0,base)
+sys.path.insert(1,base + '/myutil')
 
-from myutil.ufile import list_directory
+from ufile import list_directory
 
 '''
 dates are a bit tricky

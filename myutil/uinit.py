@@ -8,27 +8,8 @@ elif sys.argv[0] == "country.py":
 else:
     extra = ''
 
-help = '''
-flags
--h  --help     help
--n   <int>     display the last -n values, default: 7
--N   <int>     display -N rows of data, default: 50
--u   <int>     window up to -u days ago
-
--c   <int>     change or delta, default: 1
--d  --deaths   display deaths rather than cases (default)
--m  --max      load the complete db since 2020-03-22
--p  --pop      normalize to population (this disables totals)
--r  --rate     compute statistics (over last 7 days)
--s  --sort     (only if stats are asked for)
--v  --verbose  debugging mode
-
-to do:
--u   <int>    data slice ends this many days before yesterday 
-
-example:
-python %s %s -n 10 -sdr
-''' % (sys.argv[0], extra)
+from uhelp import help
+help = help % (sys.argv[0], extra)
 
 def bail():
      print(help)
@@ -38,21 +19,27 @@ def clargs():
     L = sys.argv[1:]
     
     default_dict = { 
-      'arg': None,
-      'deaths': False,
+      'sys.argv': None,
+      'names' : [],
+      'deaths': False,       # -d, --deaths
       'mode':'cases', 
       'n':7, 
       'N': False, 
       'upto': 0,
-      
-      'max': False,
-      'pop': False,
-      'sort': False, 
-      'stats': False, 
-      'delta': False,
-      'show_state': False, 
+      'regions': None,
+      'show_state': False,
       'totals': True,
-      'verbose': False }
+      
+      'all': False,          # -a, --all
+      'delta': False,        # -c, --delta
+      'graph': False,        # -g, --graph
+      'map': False,          # -m, --map
+      'pop': False,          # -p, --pop
+      'rate': False,         # -r, --rate
+      'sort': False,         # -s, --sort
+      'total': False,        # -t, --total (only)
+      'write': False,        # -w, --write text (when --graph)
+      'verbose': False }     # -v, --verbose
 
 #-------------------------------------------
     # no args
@@ -68,19 +55,26 @@ def clargs():
     if "-h" in L or '--help' in L:
         bail()
                   
-    D['args'] = ' '.join(sys.argv[1:])
+    D['sys.argv'] = ' '.join(sys.argv)
     
     # do all args with '--' first
     
-    wL = ['deaths','max',
-          'sort','stats','delta',
-          'show_state','totals']
+    wL = ['deaths',
+          'all',
+          'delta',
+          'graph',
+          'map',
+          'pop'
+          'rate',
+          'sort',
+          'total',
+          'write']
           
     tmp = []
     
 #-------------------------------------------
 
-# check -- args for validity
+    # check -- args for validity
 
     for arg in L:
         if arg.startswith('--'):
@@ -94,7 +88,7 @@ def clargs():
                             
 #-------------------------------------------
 
-    # now do all args with int modifier
+    # do all args with int modifier
             
     if '-n' in L:
         i = L.index('-n')
@@ -128,8 +122,9 @@ def clargs():
         L.pop(i)
     
 #-------------------------------------------
-    # -c is different because we allow an optional int
-    # argument to follow
+    # -c can take an int argument 
+    # but is different because the int is optional
+    # the default value is 1
 
     if '-c' in L:
         i = L.index('-c')
@@ -143,33 +138,27 @@ def clargs():
 
 #-------------------------------------------
 
-    fL = list()
-    
     no_dash = [arg for arg in L if not arg.startswith('-')]
     
-    if len(no_dash) > 1:
-        print('more than one named arg not yet implemented')
-        bail()
-        
-    if len(no_dash) == 1:
-        arg = no_dash[0]
-        
-        # we use full names of states internally
-        # to match what db has                            
+    aL = []
+    for arg in no_dash:
         try:
             arg = abbrev_to_state[arg]
         except KeyError:
-            pass
-        D['arg'] = arg
+            pass            
+        aL.append(arg)
+    D['names'] = aL
     
-    L = [arg for arg in L if arg.startswith('-')]
+    dash_list = [arg for arg in L if arg.startswith('-')]
+    wL = 'dacgmprstvw'
               
     # args may have multiple single-letter values
-    for arg in L:
+    fL = []
+    for arg in dash_list:
         tmp = arg[1:]
         for f in tmp:
-            if not f in 'cdmprsv':
-                print('xinvalid argument %s' % f)
+            if not f in wL:
+                print('invalid argument: %s' % f)
                 bail()
             fL.append(f)
             
@@ -183,12 +172,21 @@ def clargs():
 
     # we allow c to be part of a multi-letter group arg as well
     if not D['delta']:
-        D['delta']   = 'c' in one_letters or '--delta' in L
+        if 'c' in one_letters or '--delta' in L:
+            D['delta'] = 1
     
-    D['max']     = 'm' in one_letters or '--max' in L
+    D['all']     = 'a' in one_letters or '--all' in L
+    D['map']     = 'm' in one_letters or '--map' in L
+    D['graph']   = 'g' in one_letters or '--graph' in L
     D['pop']     = 'p' in one_letters or '--pop' in L
-    D['stats']   = 'r' in one_letters or '--stats' in L
+    D['rate']    = 'r' in one_letters or '--rate' in L
     D['sort']    = 's' in one_letters or '--sort' in L
+    D['total']   = 't' in one_letters or '--total' in L
     D['verbose'] = 'v' in one_letters or '--verbose' in L
+    D['write']   = 'w' in one_letters or '--write' in L
+    
+    # when -g or -m is selected
+    # note: -w, --write is used to control behavior
+    # in those two cases, default is silent, no text
                 
     return D

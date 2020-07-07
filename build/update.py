@@ -7,7 +7,7 @@ from do_imports import *
 
 conf = uinit.clargs()
 # build the mega db
-MX = conf['max']
+MX = conf['all']
 
 overwrite = '-o' in sys.argv[1:]
 if overwrite:

@@ -2858,6 +2858,7 @@ San Juan;Utah;49037;US#15308
 Sanpete;Utah;49039;US#30939
 Sevier;Utah;49041;US#21620
 Southeast Utah;Utah;;US#40229
+Southwest Utah;Utah;;US#239105
 Southwest;Utah;90049;US#239105
 Southwest Utah;Utah;90049;US#239105
 Summit;Utah;49043;US#42145

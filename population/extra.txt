@@ -22,6 +22,7 @@ Kansas City;Missouri;;US#491918
 Bear River;Utah;;US#186818
 Central Utah;Utah;;US#69676
 Southwest;Utah;90049;US#239105
+Southwest Utah;Utah;;US#239105
 Southeast Utah;Utah;;US#40229
 TriCounty;Utah;;US#56622
 Utah;Utah;49049;US#661440

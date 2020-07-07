@@ -1,9 +1,13 @@
 import sys, os
 
-import ustrings
-import umath
-import ustates
-import udb
+import sys, os
+base = os.environ.get('covid_base')
+
+if not base in sys.path:
+    sys.path.insert(0,base)
+    sys.path.insert(1,base + '/myutil')
+
+import ustrings, umath, ustates, udb
 
 def state_for_key(k):
     county,state,fips,country = k.split(ustrings.sep)
@@ -34,25 +38,48 @@ def build_key_for_state(state):
 
 def key_list(D):
     return sorted(D.keys(),key=custom_key)
+    
+def key_list_for_names(D, conf):
+    L = conf['names']
+    ret = []
+    big_list = key_list(D)
+    
+    for s in L:
+        kL = [k for k in big_list if k.endswith(';' + s)]
+        if kL:
+            ret.append((kL, 'country'))
+        else:
+            mode = 'state'
+            kL = key_list_for_search_term(D, 
+                s, mode = mode)
+            if kL:
+                ret.append((kL, mode))
+            else:
+                mode = 'county'
+                kL = key_list_for_search_term(D, 
+                s, mode = mode)
+                ret.append((kL, mode))
+            
+    return ret
 
-def key_list_for_search_term(D,s,mode="country"):
-    rL = list()
+def key_list_for_search_term(D, s, mode="country"):
+    kL = list()
     for k in key_list(D):
         county,state,fips,country = k.split(ustrings.sep)
         if mode == "country" and s == country:
-            rL.append(k)
+            kL.append(k)
         elif mode == "state" and s == state:
-            rL.append(k)
+            kL.append(k)
         elif mode == "county" and s == county:
-            rL.append(k)
-    return rL
+            kL.append(k)
+    return kL
 
 def all_states(D):
     # exclude:
     # ;Diamond Princess;88888;US
     # ;Puerto Rico;00072;US
 
-    kL = key_list_for_search_term(D, 'US',mode="country")
+    kL = key_list_for_search_term(D, 'US', mode="country")
     rL = list()
     for k in kL:
         c,s,fips,y = k.split(uts.sep)
@@ -73,9 +100,12 @@ def key_list_for_us_counties(D):
             continue
         if county == '':  # US territory
             continue
-        weird = ['unassigned','Unassigned', 'Unknown',
+        weird = ['unassigned',
+                 'Unassigned', 
+                 'Unknown',
                  'Federal Correctional Institution (FCI)',
                  'Michigan Department of Corrections (MDOC)']
+                 
         if county in weird or county.startswith('Out'):
             continue
         rL.append(k)

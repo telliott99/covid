@@ -1,7 +1,3 @@
-import sys, os
-base = os.environ.get('covid_base')
-sys.path.insert(0,base)
-
 states = [
 'Alabama','Alaska','Arizona','Arkansas',
 'California', 'Colorado', 'Connecticut',

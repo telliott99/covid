@@ -1,15 +1,17 @@
-import sys, os, subprocess
-from operator import itemgetter
-
+import sys, os
 base = os.environ.get('covid_base')
 sys.path.insert(0,base)
+sys.path.insert(1,base + '/myutil')
 
-from do_imports import *
+import uinit, udb, udates, ustates, ukeys
+import ustrings, umath
+
+from operator import itemgetter
 
 conf = uinit.clargs()
 mode = conf['mode']
 
-if conf['max']:
+if conf['all']:
     path_to_db = base + '/db.max.txt'
 else:
     path_to_db = base + '/db.txt'
@@ -19,11 +21,19 @@ first,last = date_info.split('\n')
 conf['first'] = first
 conf['last'] = last
 
+if conf['pop']:
+    print('normalization not yet implemented')
+    uinit.bail()
+    
 #-------------------------
 
-n = conf['n']  # num of days of data
+n = conf['n']  # num of days of dataå
 
-specific_state =conf['arg']
+aL = conf['names']
+
+specific_state = None
+if aL:
+    specific_state = aL[0]
 
 all_dates = udates.generate_dates(first)
 
@@ -72,8 +82,9 @@ for t in L:
 pad += 4
 
 dL = udates.slash_dates(all_dates[-n:])
-s = 'county'.ljust(pad)
-print(s + ' ' + ' '.join(dL) + '  statistic')
+s = 'county'.ljust(pad + 3)
+
+print(s + (' '*3).join(dL) + '  statistic')
     
 for e in L:
     states.append(e[1])
