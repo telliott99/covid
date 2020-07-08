@@ -91,4 +91,6 @@ if __name__ == "__main__":
 
     kL, rL = ucalc.calc(kL, rL, conf)
     text = ufmt.assemble(kL, rL, conf) 
-    print(text)
+    if not conf['quiet']:
+        print(text)
+        print('')

@@ -9,6 +9,8 @@ base = os.environ.get('covid_base')
 if not base in sys.path:
     sys.path.insert(0,base)
     sys.path.insert(1,base + '/myutil')
+    
+import uinit
 
 from operator import itemgetter
 
@@ -16,12 +18,7 @@ import umath
 from ustates import state_to_abbrev as abbD
 from ustrings import sep as sep
 from upop import popD
-
-def pprint(conf_dict, msg=None):
-    if msg:  print(msg)
-    for k in sorted(conf_dict.keys()):
-        print(k.ljust(10),conf_dict[k])
-    print('\n')
+from ufmt import pprint
     
 def do_no_data(conf):
     c = conf['arg']
@@ -40,12 +37,16 @@ def normalize(pop, vL):
 def do_pop_normalization(kL, rL):   
     #print('do_pop_normalization')
     ret = []
-    try:
-        popL = [popD[k] for k in kL]
-    except:
-        print(k)
-        print('pop normalization not yet implemented for this script')
-        uinit.bail()
+    popL = []
+    for k in kL:
+        try:
+            v = popD[k]
+            popL.append(v)
+        except KeyError:
+            print('KeyError for key not in pop_dict:')
+            print(k)
+            sys.exit()
+            
     for pop,vL in zip(popL,rL):
         ret.append(normalize(pop,vL))   
           

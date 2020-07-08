@@ -11,20 +11,30 @@ sys.path.insert(0,base)
 pre = 'analysis/'
 prog = ['python3']
 
-D = {
-      'all_states.py':     ['-c'],
-      'all_states.py':     ['-rs', '-N', '5'],
-      'one_state.py':      ['HI', '-rs'],
-      'one_state.py':      ['SC', '-N', '10'],
-      'us_by_counties.py': ['-rs', '-N', '5'],
-      
-      'trends.py':         ['-n','4', '-N', '10'],
-      'country.py':        ['Mexico', '-c', '-N', '7'],
-      'country.py':        ['Switzerland'],
-      'eu.py':             ['-N', '3'] }
-      
 errors = []
 
+cmds = prog + [pre + 'all_states.py', '-q']
+for arg in 'acprstw':
+    print('running: ' + ' '.join(cmds + ['-' + arg]))
+    r = subprocess.run(cmds + ['-' + arg])
+    if (r.returncode != 0):
+        errors.append(script)
+    
+D = {
+      'all_states.py':     ['-c'],
+      'all_states.py':     ['-rs', '-N', '3'],
+      'one_state.py':      ['HI', '-rs'],
+      'one_state.py':      ['SC', '-N', '3'],
+      'us_by_counties.py': ['-rs', '-N', '3'],
+      
+      'trends.py':         ['-n','4', '-N', '3'],
+      'country.py':        ['Mexico', '-c', '-N', '3'],
+      'country.py':        ['Switzerland'],
+      'eu.py':             ['-N', '3'],
+      'country.py':        ['Russia', '-p', '-q']
+    
+    }
+      
 for script in D:
     args = D[script]
     cmds = prog + [pre + script] + args

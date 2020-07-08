@@ -7,7 +7,15 @@ if not base in sys.path:
 
 import udb, udates, umath
 sep = udb.sep
+
 from ustates import state_to_abbrev as abbD
+
+def pprint(conf_dict, msg=None):
+    if msg:  print(msg)
+    for k in sorted(conf_dict.keys()):
+        if conf_dict[k]:
+            print(k.ljust(10),conf_dict[k])
+    print('\n')
 
 def get_dates(conf):
     n = conf['n']
@@ -48,54 +56,47 @@ def do_vpad(rL,conf):
     # altered conf holds the value
     return vpad
 
+# kL is *usually* a real key list
 def process_labels(kL, conf):
-    # switched to passing in a real kL for most cases
-    # so, must generate labels here:
-
-    if conf['regions'] == 'eu':  
-    # kL is not really just a list of countries
-        labels = kL
-    
-    else:
-        labels = []    
-        for k in kL:
-            county,state,fips,country = k.strip().split(sep)
-            r = conf['regions']
-            
-            if r == 'states':
-                labels.append(state)
-                
-            elif r == 'one_country':
-                if state == '':
-                    labels.append(country)
-                else:
-                    labels.append(state)
-                    
-            elif r == 'group of countries':
-                labels.append('not done')
-                
-            elif r == 'counties':
-                if conf['show_state']:
-                    abbrev = abbD[state]
-                    labels.append(county + ', ' + abbrev)
-                else:
-                    labels.append(county)
-    return labels
-
-def assemble(kL, rL, conf, do_labels=True):
     #pprint(conf)
     
-    if do_labels:
+    labels = []    
+    for k in kL:
+        county,state,fips,country = k.strip().split(sep)
+        r = conf['regions']
+        
+        if r == 'states':
+            labels.append(state)
+            
+        elif r == 'one_country':
+            if state == '':
+                labels.append(country)
+            else:
+                labels.append(state)
+                
+        elif r == 'group of countries':
+            labels.append('not done')
+            
+        elif r == 'counties':
+            if conf['show_state']:
+                abbrev = abbD[state]
+                labels.append(county + ', ' + abbrev)
+            else:
+                labels.append(county)
+                
+    return labels
+
+def assemble(kL, rL, conf, is_key_list=True):
+
+    if is_key_list:
         labels = process_labels(kL, conf)
     else:
-        labels = kL  # not a real key list
+        labels = kL
             
     vpad = do_vpad(rL, conf)
-    # vpad = conf['vpad']
     
     # pad may have shortened with fewer labels
     pad = do_labels_pad(labels,conf)
-    #pad = conf['pad']
 
     dL = get_dates(conf)
     

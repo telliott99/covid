@@ -5,10 +5,13 @@ sys.path.insert(0,base)
 sys.path.insert(1,base + '/myutil')
 
 import uinit, ustrings, udates
-import udb, ufile, ukeys
+import udb, ufile, ukeys, ufmt
+from ufmt import pprint
 
 conf = uinit.clargs()
 # build the mega db
+
+# pprint(conf);  sys.exit()
 
 MX = conf['all']
 

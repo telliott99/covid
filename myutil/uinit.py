@@ -1,5 +1,6 @@
 import sys
 from ustates import abbrev_to_state
+from ufmt import pprint
 
 if sys.argv[0] == "one_state.py":
     extra = '<state>'
@@ -36,12 +37,13 @@ def clargs():
       'graph': False,    # -g, --graph
       'map': False,      # -m, --map
       'pop': False,      # -p, --pop
+      'quiet': False,     # -q, --quiet (for tests)
       'rate': False,     # -r, --rate
       'sort': False,     # -s, --sort
       'total': False,    # -t, --total (only)
-      'write': False,    # -w, --write text (when --graph)
+      #'write': False,    # -w, --write text (when --graph)
       'verbose': False } # -v, --verbose
-
+      
 #-------------------------------------------
     # no args
 
@@ -58,6 +60,8 @@ def clargs():
                   
     D['sys.argv'] = ' '.join(sys.argv)
     
+#-------------------------------------------
+
     # do all args with '--' first
     
     wL = ['deaths',
@@ -65,16 +69,15 @@ def clargs():
           'delta',
           'graph',
           'map',
-          'pop'
+          'pop',
+          'quiet',
           'rate',
           'sort',
-          'total',
-          'write']
+          'total']
+          #'write']
           
     tmp = []
     
-#-------------------------------------------
-
     # check -- args for validity but don't set yet
     
     for arg in L:
@@ -149,10 +152,10 @@ def clargs():
     
     dash_list = []
     for arg in L:
-        if arg.startswith('-') and not arg[2] == '-':
+        if arg.startswith('-') and not arg[1] == '-':
             dash_list.append(arg)
 
-    wL = 'dacgmprstvw'
+    wL = 'dacgmpqrstvw'
               
     # args may have multiple single-letter values
     fL = []
@@ -181,14 +184,17 @@ def clargs():
     D['map']     = 'm' in one_letters or '--map' in L
     D['graph']   = 'g' in one_letters or '--graph' in L
     D['pop']     = 'p' in one_letters or '--pop' in L
+    D['quiet']   = 'q' in one_letters or '--quiet' in L
     D['rate']    = 'r' in one_letters or '--rate' in L
     D['sort']    = 's' in one_letters or '--sort' in L
     D['total']   = 't' in one_letters or '--total' in L
     D['verbose'] = 'v' in one_letters or '--verbose' in L
-    D['write']   = 'w' in one_letters or '--write' in L
+    #D['write']   = 'w' in one_letters or '--write' in L
   
     # when -g or -m is selected
-    # note: -w, --write is used to control behavior
+    # note: -q, --quiet is used to control behavior
     # in those two cases, default is silent, no text
+    
+    #pprint(D);  sys.exit()
                 
     return D

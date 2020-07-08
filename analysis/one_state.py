@@ -46,9 +46,11 @@ for state in L:
     fips = ustates.state_to_fips[state]
     sk = ';'.join(['', state, fips, 'US'])
     
-    if not conf['rate']:
-        assert conf['totals_values'] == D[sk][mode][-n:]
+    if not conf['rate'] and not conf['pop']:
+        if not conf['delta']:
+            assert conf['totals_values'] == D[sk][mode][-n:]
     
-    print(text)
-    print('')
+    if not conf['quiet']:
+        print(text)
+        print('')
     

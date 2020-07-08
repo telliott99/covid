@@ -53,4 +53,5 @@ if __name__ == "__main__":
         if len(rL) == 1:
             conf['totals'] = False
         text = ufmt.assemble(kL, rL, conf)
-        print(text)
+        if not conf['quiet']:
+            print(text)
