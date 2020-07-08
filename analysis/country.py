@@ -31,9 +31,11 @@ def entries_for_country(country):
         
     kL = sorted(kL, key=ukeys.custom_key)
     
-    if len(kL) > 1:
-        if kL[0][:3] == ';;;':
-            kL.pop(0)  
+    if conf['total_only']:
+        kL = kL[:1]
+        assert kL[0] == ';;;' + country
+    else:
+        kL = kL[1:]
     
     rL = [D[k][conf['mode']] for k in kL]
     return rL, kL
@@ -47,11 +49,13 @@ if __name__ == "__main__":
     conf['regions'] = 'one_country'
 
     for country in conf['names']:
+    
         rL,kL = entries_for_country(country)
         kL, rL = ucalc.calc(kL,rL,conf)
         
         if len(rL) == 1:
-            conf['totals'] = False
+            conf['add_totals'] = False
+            
         text = ufmt.assemble(kL, rL, conf)
         if not conf['quiet']:
             print(text)

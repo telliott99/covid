@@ -87,7 +87,7 @@ def calc(kL, rL, conf):
     # here is where we trim according to -n
     rL = trim_columns(rL,conf)
     
-    conf['totals_values'] = umath.totals(rL)
+    conf['totals_line'] = umath.totals(rL)
     
     # if normalizing
     # also adjust totals to total population
@@ -95,8 +95,8 @@ def calc(kL, rL, conf):
     if conf['pop']:
         rL, total_pop = do_pop_normalization(kL,rL)
         
-        tL = conf['totals_values']
-        conf['totals_values'] = normalize(total_pop, tL)
+        tL = conf['totals_line']
+        conf['totals_line'] = normalize(total_pop, tL)
 
     
     pL = []

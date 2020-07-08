@@ -43,8 +43,8 @@ def do_vpad(rL,conf):
         if MX > vpad:
             vpad = MX
             
-    if conf['totals']:
-        vL = conf['totals_values']
+    if conf['add_totals']:
+        vL = conf['totals_line']
         MX = max([len(str(n)) for n in vL])
         if MX > vpad:
             vpad = MX
@@ -104,9 +104,9 @@ def assemble(kL, rL, conf, is_key_list=True):
     pL = [''.rjust(pad) + dates]
     
     # conf['totals'] contains the actual values
-    if conf['totals']:
+    if conf['add_totals']:
         labels.append('total')
-        tL = conf['totals_values']
+        tL = conf['totals_line']
         if conf['rate']:
             tL.append('   ' + str(round(umath.stat(tL), 3)))
         rL.append(tL)

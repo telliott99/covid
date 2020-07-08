@@ -19,25 +19,38 @@ n = conf['n']
 
 #---------------------------------------
 
-if not conf['names']:
-    print('please supply the name of a state')
+def go():
+    print('please supply the name of a US state')
     sys.exit()
-    
+
+if not conf['names']:
+    go()
+
 L = conf['names']
 
+for name in L:
+    if not name in ustates.states:
+        go()
+    
 # -----------
-gL = []
 
 for state in L:
     kL = ukeys.key_list_for_search_term(D, state, mode="state")
     
-    # new
-    kL = [k for k in kL if not ukeys.county_for_key(k) == '']
+    if conf['total_only']:
+        kL = kL[:1]
+        assert kL[0].startswith(';')
+
+    else:
+        kL = kL[1:]
+        kL = sorted(kL, key=ukeys.custom_key)
     
-    kL = sorted(kL, key=ukeys.custom_key)
     rL = [D[k][conf['mode']] for k in kL]
     
-    conf['regions'] = 'counties'
+    if conf['total_only']:
+        conf['regions'] = 'states'
+    else:
+        conf['regions'] = 'counties'
 
     kL, rL = ucalc.calc(kL, rL, conf)
     text = ufmt.assemble(kL, rL, conf)
@@ -46,9 +59,9 @@ for state in L:
     fips = ustates.state_to_fips[state]
     sk = ';'.join(['', state, fips, 'US'])
     
-    if not conf['rate'] and not conf['pop']:
+    if not conf['rate'] and not conf['pop'] and not conf['total_only']:
         if not conf['delta']:
-            assert conf['totals_values'] == D[sk][mode][-n:]
+            assert conf['totals_line'] == D[sk][mode][-n:]
     
     if not conf['quiet']:
         print(text)

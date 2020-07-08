@@ -24,25 +24,34 @@ def clargs():
       'names' : [],
       'deaths': False,   # -d, --deaths
       'mode':'cases', 
-      #'L': 0,            # 2 = counties, 1 = states
       'n':7, 
       'N': False,
       'upto': 0,
       'regions': None,
       'show_state': False,
-      'totals': True,
+      'add_totals': True,
       
       'all': False,      # -a, --all
       'delta': False,    # -c, --delta
       'graph': False,    # -g, --graph
       'map': False,      # -m, --map
       'pop': False,      # -p, --pop
-      'quiet': False,     # -q, --quiet (for tests)
+      'quiet': False,    # -q, --quiet (for tests)
       'rate': False,     # -r, --rate
       'sort': False,     # -s, --sort
-      'total': False,    # -t, --total (only)
-      #'write': False,    # -w, --write text (when --graph)
-      'verbose': False } # -v, --verbose
+      'verbose': False,  # -v, --verbose
+      
+      'total_only': False } # -t, --total (only do total)
+
+      
+    '''
+    Note on levels:
+    rather than try to distinguish descent from country to county-level
+    and since we have one_state.py (which takes multiple arguments)
+    as well as us_by_counties.py
+    use one single flag that tells whether to descend or not
+    
+    '''
       
 #-------------------------------------------
     # no args
@@ -74,7 +83,6 @@ def clargs():
           'rate',
           'sort',
           'total']
-          #'write']
           
     tmp = []
     
@@ -110,22 +118,12 @@ def clargs():
             bail()
         L.pop(i+1)
         L.pop(i)
-        
-    if '-u' in L:
-        i = L.index('-u')
-        try:
-            D['last'] = int(L[i+1])
-        except:
-            print('-u flag must be followed by an integer value')
-            print('(days before yesterday)')
-            bail()
-        L.pop(i+1)
-        L.pop(i)
-        
+    
 #-------------------------------------------
+
     # -c can take an int argument 
-    # but is different because the int is optional
-    # the default value is 1
+    # but it's different because the int is optional
+    # default value is 1
 
     if '-c' in L:
         i = L.index('-c')
@@ -187,9 +185,11 @@ def clargs():
     D['quiet']   = 'q' in one_letters or '--quiet' in L
     D['rate']    = 'r' in one_letters or '--rate' in L
     D['sort']    = 's' in one_letters or '--sort' in L
-    D['total']   = 't' in one_letters or '--total' in L
     D['verbose'] = 'v' in one_letters or '--verbose' in L
-    #D['write']   = 'w' in one_letters or '--write' in L
+    
+    D['total_only']  = 't' in one_letters or '--total' in L
+    if D['total_only']:
+        D['add_totals'] = False
   
     # when -g or -m is selected
     # note: -q, --quiet is used to control behavior
