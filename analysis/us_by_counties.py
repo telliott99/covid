@@ -21,12 +21,14 @@ conf['last'] = last
 #-------------------------
 
 kL = ukeys.key_list_for_us_counties(D)
+
 rL = [D[k][mode] for k in kL]
 
-conf['regions'] = 'counties'
-conf['show_state'] = True
+conf['key_list_type'] = 'county'
+conf['show_state_label'] = True
 
 kL, rL = ucalc.calc(kL, rL, conf)
 text = ufmt.assemble(kL, rL, conf) 
+
 print(text)
 print('')
