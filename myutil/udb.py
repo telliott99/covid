@@ -1,13 +1,15 @@
 import sys, os, csv
+
 base = os.environ.get('covid_base')
 sys.path.insert(0,base)
 sys.path.insert(1,base + '/myutil')
 
-import udates, ustrings, ukeys
+sep = ';'
+sep2 = '#'
 
-sep = ustrings.sep
+import udates, ukeys
+
 from udates import generate_dates
-
 
 def read_csv_data_file(fn):
     print('reading:  %s' % udates.date_from_path(fn))

@@ -10,7 +10,7 @@ if not base in sys.path:
     sys.path.insert(0,base)
     sys.path.insert(1,base + '/myutil')
 
-import ustrings, udb, ukeys, umath, ucolors
+import udb, ukeys, umath, ucolors
    
 #--------------------
 

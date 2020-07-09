@@ -8,36 +8,34 @@ if sys.version_info[0] < 3:
 base = os.environ.get('covid_base')
 sys.path.insert(0,base)
 
-pre = 'analysis/'
 prog = ['python3']
 
 errors = []
 
-cmds = prog + [pre + 'all_states.py', '-q']
-for arg in 'acprstw':
+script = 'analyze.py'
+path = base + '/' + script
+cmds = prog + [path, 'SC', '-q']
+
+for arg in 'acoprsw':
     print('running: ' + ' '.join(cmds + ['-' + arg]))
     r = subprocess.run(cmds + ['-' + arg])
     if (r.returncode != 0):
         errors.append(script)
-    
-D = {
-      'all_states.py':     ['-c'],
-      'all_states.py':     ['-rs', '-N', '3'],
-      'one_state.py':      ['HI', '-rs'],
-      'one_state.py':      ['SC', '-N', '3'],
-      'us_by_counties.py': ['-rs', '-N', '3'],
+
+options = [   
+['US', '-c'],
+['US', '-rs', '-N', '3'],
+['HI', '-rs'],
+['SC', '-N', '3'],
+#'us_by_counties.py': ['-rs', '-N', '3'],
+#'trends.py':     ['SC', '-n','4', '-N', '3'],
+['Mexico', '-c', '-N', '3'],
+['Switzerland'],
+['Germany', '-N', '3', '-o'],
+['Russia', '-p', '-q'] ]
       
-      'trends.py':         ['-n','4', '-N', '3'],
-      'country.py':        ['Mexico', '-c', '-N', '3'],
-      'country.py':        ['Switzerland'],
-      'eu.py':             ['-N', '3'],
-      'country.py':        ['Russia', '-p', '-q']
-    
-    }
-      
-for script in D:
-    args = D[script]
-    cmds = prog + [pre + script] + args
+for args in options:
+    cmds = prog + [path] + args
     print('running: ')
     print(' '.join(cmds))
     

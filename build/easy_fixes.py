@@ -4,14 +4,11 @@ MX = '--max' in sys.argv
 
 base = os.environ.get('covid_base')
 sys.path.insert(0,base)
+sys.path.insert(1, base + '/myutil')
 
-import myutil.ustrings as ustrings
-import myutil.udb as udb
-import myutil.udates as udates
-import myutil.ufile as ufile
-import myutil.ukeys as ukeys
+import udb, udates, ufile, ukeys
 
-sep = ustrings.sep      # ;
+from udb import sep
 
 if MX:
     path_to_db = base + '/' + 'db.max.txt'

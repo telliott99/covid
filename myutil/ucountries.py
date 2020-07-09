@@ -28,3 +28,22 @@ eu_majors = [
     'Spain', 
     'Sweden']
 
+countries_with_states = [
+'Australia', 
+'Brazil', 
+'Canada',
+'Chile', 
+'China',
+'Colombia',
+'France',
+'Germany', 
+'India', 
+'Italy', 
+'Mexico', 
+'Japan', 
+'Pakistan',
+'Peru', 
+'Russia',
+'Sweden',
+'Spain',
+'United Kingdom' ]

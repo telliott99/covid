@@ -7,33 +7,41 @@ if not base in sys.path:
     sys.path.insert(0,base)
     sys.path.insert(1,base + '/myutil')
 
-import ustrings, umath, ustates, udb
-sep = ustrings.sep
+import umath, ustates, udb
+from udb import sep
+
+def custom_key(s):
+    L = s.split(sep)
+    return L[3], L[1], L[0], L[2]
+
+def key_list(D):
+    return sorted(D.keys(),key=custom_key)
+
+
+'''
 
 def country_for_key(k):
-    county,state,fips,country = k.split(ustrings.sep)
+    county,state,fips,country = k.split(sep)
     return country
 
 def state_country_for_key(k):
-    county,state,fips,country = k.split(ustrings.sep)
+    county,state,fips,country = k.split(sep)
     return state + ', ' + country
 
+'''
+
 def state_for_key(k):
-    county,state,fips,country = k.split(ustrings.sep)
+    county,state,fips,country = k.split(sep)
     return state
     
 def fips_for_key(k):
-    county,state,fips,country = k.split(ustrings.sep)
+    county,state,fips,country = k.split(sep)
     return fips
 
 def county_for_key(k):
-    county,state,fips,country = k.split(ustrings.sep)
+    county,state,fips,country = k.split(sep)
     return county
-
-def custom_key(s):
-    L = s.split(ustrings.sep)
-    return L[3], L[1], L[0], L[2]
-    
+        
 def build_key_for_state(state):
     try:
         abbrev = ustates.state_to_abbrev[state]
@@ -41,12 +49,10 @@ def build_key_for_state(state):
         assert state in ustates.terr
         abbrev = ustates.terr_to_abbrev[state]
     fips = ustates.abbrev_to_fips[abbrev]
-    return udb.sep.join(['',state,fips,'US'])
+    return sep.join(['',state,fips,'US'])
 
+'''
 #----------------------------------
-
-def key_list(D):
-    return sorted(D.keys(),key=custom_key)
     
 def key_list_for_names(D, conf):
     L = conf['names']
@@ -71,11 +77,13 @@ def key_list_for_names(D, conf):
             
     return ret
 
+'''
+
 # all_states uses a more efficient search for multiple states
 def key_list_for_search_term(D, s, mode="country"):
     kL = list()
     for k in key_list(D):
-        county,state,fips,country = k.split(ustrings.sep)
+        county,state,fips,country = k.split(sep)
         if mode == "country" and s == country:
             kL.append(k)
         elif mode == "state" and s == state:
@@ -83,6 +91,8 @@ def key_list_for_search_term(D, s, mode="country"):
         elif mode == "county" and s == county:
             kL.append(k)
     return kL
+
+'''
 
 def all_states(D):
     # exclude:
@@ -101,11 +111,12 @@ def all_states(D):
     rL.sort()
     return rL
 
+'''
     
 def key_list_for_us_counties(D):
     rL = list()
     for k in key_list(D):
-        county,state,fips,country = k.strip().split(ustrings.sep)
+        county,state,fips,country = k.strip().split(sep)
         if not country == 'US':
             continue
         if county == '':  # US territory

@@ -1,0 +1,3793 @@
+Alabama
+;Alabama;01;US
+Autauga;Alabama;01001;US
+Baldwin;Alabama;01003;US
+Barbour;Alabama;01005;US
+Bibb;Alabama;01007;US
+Blount;Alabama;01009;US
+Bullock;Alabama;01011;US
+Butler;Alabama;01013;US
+Calhoun;Alabama;01015;US
+Chambers;Alabama;01017;US
+Cherokee;Alabama;01019;US
+Chilton;Alabama;01021;US
+Choctaw;Alabama;01023;US
+Clarke;Alabama;01025;US
+Clay;Alabama;01027;US
+Cleburne;Alabama;01029;US
+Coffee;Alabama;01031;US
+Colbert;Alabama;01033;US
+Conecuh;Alabama;01035;US
+Coosa;Alabama;01037;US
+Covington;Alabama;01039;US
+Crenshaw;Alabama;01041;US
+Cullman;Alabama;01043;US
+Dale;Alabama;01045;US
+Dallas;Alabama;01047;US
+DeKalb;Alabama;01049;US
+Elmore;Alabama;01051;US
+Escambia;Alabama;01053;US
+Etowah;Alabama;01055;US
+Fayette;Alabama;01057;US
+Franklin;Alabama;01059;US
+Geneva;Alabama;01061;US
+Greene;Alabama;01063;US
+Hale;Alabama;01065;US
+Henry;Alabama;01067;US
+Houston;Alabama;01069;US
+Jackson;Alabama;01071;US
+Jefferson;Alabama;01073;US
+Lamar;Alabama;01075;US
+Lauderdale;Alabama;01077;US
+Lawrence;Alabama;01079;US
+Lee;Alabama;01081;US
+Limestone;Alabama;01083;US
+Lowndes;Alabama;01085;US
+Macon;Alabama;01087;US
+Madison;Alabama;01089;US
+Marengo;Alabama;01091;US
+Marion;Alabama;01093;US
+Marshall;Alabama;01095;US
+Mobile;Alabama;01097;US
+Monroe;Alabama;01099;US
+Montgomery;Alabama;01101;US
+Morgan;Alabama;01103;US
+Perry;Alabama;01105;US
+Pickens;Alabama;01107;US
+Pike;Alabama;01109;US
+Randolph;Alabama;01111;US
+Russell;Alabama;01113;US
+Shelby;Alabama;01117;US
+St. Clair;Alabama;01115;US
+Sumter;Alabama;01119;US
+Talladega;Alabama;01121;US
+Tallapoosa;Alabama;01123;US
+Tuscaloosa;Alabama;01125;US
+Walker;Alabama;01127;US
+Washington;Alabama;01129;US
+Wilcox;Alabama;01131;US
+Winston;Alabama;01133;US
+
+Alaska
+;Alaska;02;US
+Aleutians West;Alaska;02016;US
+Anchorage;Alaska;02020;US
+Bethel;Alaska;02050;US
+Fairbanks North Star;Alaska;02090;US
+Haines;Alaska;02100;US
+Juneau;Alaska;02110;US
+Kenai Peninsula;Alaska;02122;US
+Ketchikan Gateway;Alaska;02130;US
+Kodiak Island;Alaska;02150;US
+Kusilvak;Alaska;02158;US
+Matanuska-Susitna;Alaska;02170;US
+Nome;Alaska;02180;US
+North Slope;Alaska;02185;US
+Northwest Arctic;Alaska;02188;US
+Petersburg;Alaska;02195;US
+Prince of Wales-Hyder;Alaska;02198;US
+Sitka;Alaska;02220;US
+Southeast Fairbanks;Alaska;02240;US
+Valdez-Cordova;Alaska;02261;US
+Wrangell;Alaska;02275;US
+Yukon-Koyukuk;Alaska;02290;US
+
+Arizona
+;Arizona;04;US
+Apache;Arizona;04001;US
+Cochise;Arizona;04003;US
+Coconino;Arizona;04005;US
+Gila;Arizona;04007;US
+Graham;Arizona;04009;US
+Greenlee;Arizona;04011;US
+La Paz;Arizona;04012;US
+Maricopa;Arizona;04013;US
+Mohave;Arizona;04015;US
+Navajo;Arizona;04017;US
+Pima;Arizona;04019;US
+Pinal;Arizona;04021;US
+Santa Cruz;Arizona;04023;US
+Yavapai;Arizona;04025;US
+Yuma;Arizona;04027;US
+
+Arkansas
+;Arkansas;05;US
+Arkansas;Arkansas;05001;US
+Ashley;Arkansas;05003;US
+Baxter;Arkansas;05005;US
+Benton;Arkansas;05007;US
+Boone;Arkansas;05009;US
+Bradley;Arkansas;05011;US
+Calhoun;Arkansas;05013;US
+Carroll;Arkansas;05015;US
+Chicot;Arkansas;05017;US
+Clark;Arkansas;05019;US
+Clay;Arkansas;05021;US
+Cleburne;Arkansas;05023;US
+Cleveland;Arkansas;05025;US
+Columbia;Arkansas;05027;US
+Conway;Arkansas;05029;US
+Craighead;Arkansas;05031;US
+Crawford;Arkansas;05033;US
+Crittenden;Arkansas;05035;US
+Cross;Arkansas;05037;US
+Dallas;Arkansas;05039;US
+Desha;Arkansas;05041;US
+Drew;Arkansas;05043;US
+Faulkner;Arkansas;05045;US
+Franklin;Arkansas;05047;US
+Fulton;Arkansas;05049;US
+Garland;Arkansas;05051;US
+Grant;Arkansas;05053;US
+Greene;Arkansas;05055;US
+Hempstead;Arkansas;05057;US
+Hot Spring;Arkansas;05059;US
+Howard;Arkansas;05061;US
+Independence;Arkansas;05063;US
+Izard;Arkansas;05065;US
+Jackson;Arkansas;05067;US
+Jefferson;Arkansas;05069;US
+Johnson;Arkansas;05071;US
+Lafayette;Arkansas;05073;US
+Lawrence;Arkansas;05075;US
+Lee;Arkansas;05077;US
+Lincoln;Arkansas;05079;US
+Little River;Arkansas;05081;US
+Logan;Arkansas;05083;US
+Lonoke;Arkansas;05085;US
+Madison;Arkansas;05087;US
+Marion;Arkansas;05089;US
+Miller;Arkansas;05091;US
+Mississippi;Arkansas;05093;US
+Monroe;Arkansas;05095;US
+Montgomery;Arkansas;05097;US
+Nevada;Arkansas;05099;US
+Newton;Arkansas;05101;US
+Ouachita;Arkansas;05103;US
+Perry;Arkansas;05105;US
+Phillips;Arkansas;05107;US
+Pike;Arkansas;05109;US
+Poinsett;Arkansas;05111;US
+Polk;Arkansas;05113;US
+Pope;Arkansas;05115;US
+Prairie;Arkansas;05117;US
+Pulaski;Arkansas;05119;US
+Randolph;Arkansas;05121;US
+Saline;Arkansas;05125;US
+Scott;Arkansas;05127;US
+Searcy;Arkansas;05129;US
+Sebastian;Arkansas;05131;US
+Sevier;Arkansas;05133;US
+Sharp;Arkansas;05135;US
+St. Francis;Arkansas;05123;US
+Stone;Arkansas;05137;US
+Union;Arkansas;05139;US
+Van Buren;Arkansas;05141;US
+Washington;Arkansas;05143;US
+White;Arkansas;05145;US
+Woodruff;Arkansas;05147;US
+Yell;Arkansas;05149;US
+
+California
+;California;06;US
+Alameda;California;06001;US
+Alpine;California;06003;US
+Amador;California;06005;US
+Butte;California;06007;US
+Calaveras;California;06009;US
+Colusa;California;06011;US
+Contra Costa;California;06013;US
+Del Norte;California;06015;US
+El Dorado;California;06017;US
+Fresno;California;06019;US
+Glenn;California;06021;US
+Humboldt;California;06023;US
+Imperial;California;06025;US
+Inyo;California;06027;US
+Kern;California;06029;US
+Kings;California;06031;US
+Lake;California;06033;US
+Lassen;California;06035;US
+Los Angeles;California;06037;US
+Madera;California;06039;US
+Marin;California;06041;US
+Mariposa;California;06043;US
+Mendocino;California;06045;US
+Merced;California;06047;US
+Mono;California;06051;US
+Monterey;California;06053;US
+Napa;California;06055;US
+Nevada;California;06057;US
+Orange;California;06059;US
+Placer;California;06061;US
+Plumas;California;06063;US
+Riverside;California;06065;US
+Sacramento;California;06067;US
+San Benito;California;06069;US
+San Bernardino;California;06071;US
+San Diego;California;06073;US
+San Francisco;California;06075;US
+San Joaquin;California;06077;US
+San Luis Obispo;California;06079;US
+San Mateo;California;06081;US
+Santa Barbara;California;06083;US
+Santa Clara;California;06085;US
+Santa Cruz;California;06087;US
+Shasta;California;06089;US
+Sierra;California;06091;US
+Siskiyou;California;06093;US
+Solano;California;06095;US
+Sonoma;California;06097;US
+Stanislaus;California;06099;US
+Sutter;California;06101;US
+Tehama;California;06103;US
+Trinity;California;06105;US
+Tulare;California;06107;US
+Tuolumne;California;06109;US
+Ventura;California;06111;US
+Yolo;California;06113;US
+Yuba;California;06115;US
+
+Colorado
+;Colorado;08;US
+Adams;Colorado;08001;US
+Alamosa;Colorado;08003;US
+Arapahoe;Colorado;08005;US
+Archuleta;Colorado;08007;US
+Baca;Colorado;08009;US
+Bent;Colorado;08011;US
+Boulder;Colorado;08013;US
+Broomfield;Colorado;08014;US
+Chaffee;Colorado;08015;US
+Cheyenne;Colorado;08017;US
+Clear Creek;Colorado;08019;US
+Conejos;Colorado;08021;US
+Costilla;Colorado;08023;US
+Crowley;Colorado;08025;US
+Custer;Colorado;08027;US
+Delta;Colorado;08029;US
+Denver;Colorado;08031;US
+Douglas;Colorado;08035;US
+Eagle;Colorado;08037;US
+El Paso;Colorado;08041;US
+Elbert;Colorado;08039;US
+Fremont;Colorado;08043;US
+Garfield;Colorado;08045;US
+Gilpin;Colorado;08047;US
+Grand;Colorado;08049;US
+Gunnison;Colorado;08051;US
+Hinsdale;Colorado;08053;US
+Huerfano;Colorado;08055;US
+Jackson;Colorado;08057;US
+Jefferson;Colorado;08059;US
+Kit Carson;Colorado;08063;US
+La Plata;Colorado;08067;US
+Lake;Colorado;08065;US
+Larimer;Colorado;08069;US
+Las Animas;Colorado;08071;US
+Lincoln;Colorado;08073;US
+Logan;Colorado;08075;US
+Mesa;Colorado;08077;US
+Mineral;Colorado;08079;US
+Moffat;Colorado;08081;US
+Montezuma;Colorado;08083;US
+Montrose;Colorado;08085;US
+Morgan;Colorado;08087;US
+Otero;Colorado;08089;US
+Ouray;Colorado;08091;US
+Park;Colorado;08093;US
+Phillips;Colorado;08095;US
+Pitkin;Colorado;08097;US
+Prowers;Colorado;08099;US
+Pueblo;Colorado;08101;US
+Rio Blanco;Colorado;08103;US
+Rio Grande;Colorado;08105;US
+Routt;Colorado;08107;US
+Saguache;Colorado;08109;US
+San Juan;Colorado;08111;US
+San Miguel;Colorado;08113;US
+Summit;Colorado;08117;US
+Teller;Colorado;08119;US
+Washington;Colorado;08121;US
+Weld;Colorado;08123;US
+Yuma;Colorado;08125;US
+
+Connecticut
+;Connecticut;09;US
+Fairfield;Connecticut;09001;US
+Hartford;Connecticut;09003;US
+Litchfield;Connecticut;09005;US
+Middlesex;Connecticut;09007;US
+New Haven;Connecticut;09009;US
+New London;Connecticut;09011;US
+Tolland;Connecticut;09013;US
+Windham;Connecticut;09015;US
+
+Delaware
+;Delaware;10;US
+Kent;Delaware;10001;US
+New Castle;Delaware;10003;US
+Sussex;Delaware;10005;US
+
+District of Columbia
+;District of Columbia;11;US
+District of Columbia;District of Columbia;11001;US
+
+Florida
+;Florida;12;US
+Alachua;Florida;12001;US
+Baker;Florida;12003;US
+Bay;Florida;12005;US
+Bradford;Florida;12007;US
+Brevard;Florida;12009;US
+Broward;Florida;12011;US
+Calhoun;Florida;12013;US
+Charlotte;Florida;12015;US
+Citrus;Florida;12017;US
+Clay;Florida;12019;US
+Collier;Florida;12021;US
+Columbia;Florida;12023;US
+DeSoto;Florida;12027;US
+Dixie;Florida;12029;US
+Duval;Florida;12031;US
+Escambia;Florida;12033;US
+Flagler;Florida;12035;US
+Franklin;Florida;12037;US
+Gadsden;Florida;12039;US
+Gilchrist;Florida;12041;US
+Glades;Florida;12043;US
+Gulf;Florida;12045;US
+Hamilton;Florida;12047;US
+Hardee;Florida;12049;US
+Hendry;Florida;12051;US
+Hernando;Florida;12053;US
+Highlands;Florida;12055;US
+Hillsborough;Florida;12057;US
+Holmes;Florida;12059;US
+Indian River;Florida;12061;US
+Jackson;Florida;12063;US
+Jefferson;Florida;12065;US
+Lafayette;Florida;12067;US
+Lake;Florida;12069;US
+Lee;Florida;12071;US
+Leon;Florida;12073;US
+Levy;Florida;12075;US
+Liberty;Florida;12077;US
+Madison;Florida;12079;US
+Manatee;Florida;12081;US
+Marion;Florida;12083;US
+Martin;Florida;12085;US
+Miami-Dade;Florida;12086;US
+Monroe;Florida;12087;US
+Nassau;Florida;12089;US
+Okaloosa;Florida;12091;US
+Okeechobee;Florida;12093;US
+Orange;Florida;12095;US
+Osceola;Florida;12097;US
+Palm Beach;Florida;12099;US
+Pasco;Florida;12101;US
+Pinellas;Florida;12103;US
+Polk;Florida;12105;US
+Putnam;Florida;12107;US
+Santa Rosa;Florida;12113;US
+Sarasota;Florida;12115;US
+Seminole;Florida;12117;US
+St. Johns;Florida;12109;US
+St. Lucie;Florida;12111;US
+Sumter;Florida;12119;US
+Suwannee;Florida;12121;US
+Taylor;Florida;12123;US
+Union;Florida;12125;US
+Volusia;Florida;12127;US
+Wakulla;Florida;12129;US
+Walton;Florida;12131;US
+Washington;Florida;12133;US
+
+Georgia
+;Georgia;13;US
+Appling;Georgia;13001;US
+Atkinson;Georgia;13003;US
+Bacon;Georgia;13005;US
+Baker;Georgia;13007;US
+Baldwin;Georgia;13009;US
+Banks;Georgia;13011;US
+Barrow;Georgia;13013;US
+Bartow;Georgia;13015;US
+Ben Hill;Georgia;13017;US
+Berrien;Georgia;13019;US
+Bibb;Georgia;13021;US
+Bleckley;Georgia;13023;US
+Brantley;Georgia;13025;US
+Brooks;Georgia;13027;US
+Bryan;Georgia;13029;US
+Bulloch;Georgia;13031;US
+Burke;Georgia;13033;US
+Butts;Georgia;13035;US
+Calhoun;Georgia;13037;US
+Camden;Georgia;13039;US
+Candler;Georgia;13043;US
+Carroll;Georgia;13045;US
+Catoosa;Georgia;13047;US
+Charlton;Georgia;13049;US
+Chatham;Georgia;13051;US
+Chattahoochee;Georgia;13053;US
+Chattooga;Georgia;13055;US
+Cherokee;Georgia;13057;US
+Clarke;Georgia;13059;US
+Clay;Georgia;13061;US
+Clayton;Georgia;13063;US
+Clinch;Georgia;13065;US
+Cobb;Georgia;13067;US
+Coffee;Georgia;13069;US
+Colquitt;Georgia;13071;US
+Columbia;Georgia;13073;US
+Cook;Georgia;13075;US
+Coweta;Georgia;13077;US
+Crawford;Georgia;13079;US
+Crisp;Georgia;13081;US
+Dade;Georgia;13083;US
+Dawson;Georgia;13085;US
+DeKalb;Georgia;13089;US
+Decatur;Georgia;13087;US
+Dodge;Georgia;13091;US
+Dooly;Georgia;13093;US
+Dougherty;Georgia;13095;US
+Douglas;Georgia;13097;US
+Early;Georgia;13099;US
+Echols;Georgia;13101;US
+Effingham;Georgia;13103;US
+Elbert;Georgia;13105;US
+Emanuel;Georgia;13107;US
+Evans;Georgia;13109;US
+Fannin;Georgia;13111;US
+Fayette;Georgia;13113;US
+Floyd;Georgia;13115;US
+Forsyth;Georgia;13117;US
+Franklin;Georgia;13119;US
+Fulton;Georgia;13121;US
+Gilmer;Georgia;13123;US
+Glascock;Georgia;13125;US
+Glynn;Georgia;13127;US
+Gordon;Georgia;13129;US
+Grady;Georgia;13131;US
+Greene;Georgia;13133;US
+Gwinnett;Georgia;13135;US
+Habersham;Georgia;13137;US
+Hall;Georgia;13139;US
+Hancock;Georgia;13141;US
+Haralson;Georgia;13143;US
+Harris;Georgia;13145;US
+Hart;Georgia;13147;US
+Heard;Georgia;13149;US
+Henry;Georgia;13151;US
+Houston;Georgia;13153;US
+Irwin;Georgia;13155;US
+Jackson;Georgia;13157;US
+Jasper;Georgia;13159;US
+Jeff Davis;Georgia;13161;US
+Jefferson;Georgia;13163;US
+Jenkins;Georgia;13165;US
+Johnson;Georgia;13167;US
+Jones;Georgia;13169;US
+Lamar;Georgia;13171;US
+Lanier;Georgia;13173;US
+Laurens;Georgia;13175;US
+Lee;Georgia;13177;US
+Liberty;Georgia;13179;US
+Lincoln;Georgia;13181;US
+Long;Georgia;13183;US
+Lowndes;Georgia;13185;US
+Lumpkin;Georgia;13187;US
+Macon;Georgia;13193;US
+Madison;Georgia;13195;US
+Marion;Georgia;13197;US
+McDuffie;Georgia;13189;US
+McIntosh;Georgia;13191;US
+Meriwether;Georgia;13199;US
+Miller;Georgia;13201;US
+Mitchell;Georgia;13205;US
+Monroe;Georgia;13207;US
+Montgomery;Georgia;13209;US
+Morgan;Georgia;13211;US
+Murray;Georgia;13213;US
+Muscogee;Georgia;13215;US
+Newton;Georgia;13217;US
+Oconee;Georgia;13219;US
+Oglethorpe;Georgia;13221;US
+Paulding;Georgia;13223;US
+Peach;Georgia;13225;US
+Pickens;Georgia;13227;US
+Pierce;Georgia;13229;US
+Pike;Georgia;13231;US
+Polk;Georgia;13233;US
+Pulaski;Georgia;13235;US
+Putnam;Georgia;13237;US
+Quitman;Georgia;13239;US
+Rabun;Georgia;13241;US
+Randolph;Georgia;13243;US
+Richmond;Georgia;13245;US
+Rockdale;Georgia;13247;US
+Schley;Georgia;13249;US
+Screven;Georgia;13251;US
+Seminole;Georgia;13253;US
+Spalding;Georgia;13255;US
+Stephens;Georgia;13257;US
+Stewart;Georgia;13259;US
+Sumter;Georgia;13261;US
+Talbot;Georgia;13263;US
+Taliaferro;Georgia;13265;US
+Tattnall;Georgia;13267;US
+Taylor;Georgia;13269;US
+Telfair;Georgia;13271;US
+Terrell;Georgia;13273;US
+Thomas;Georgia;13275;US
+Tift;Georgia;13277;US
+Toombs;Georgia;13279;US
+Towns;Georgia;13281;US
+Treutlen;Georgia;13283;US
+Troup;Georgia;13285;US
+Turner;Georgia;13287;US
+Twiggs;Georgia;13289;US
+Union;Georgia;13291;US
+Upson;Georgia;13293;US
+Walker;Georgia;13295;US
+Walton;Georgia;13297;US
+Ware;Georgia;13299;US
+Warren;Georgia;13301;US
+Washington;Georgia;13303;US
+Wayne;Georgia;13305;US
+Webster;Georgia;13307;US
+Wheeler;Georgia;13309;US
+White;Georgia;13311;US
+Whitfield;Georgia;13313;US
+Wilcox;Georgia;13315;US
+Wilkes;Georgia;13317;US
+Wilkinson;Georgia;13319;US
+Worth;Georgia;13321;US
+
+Hawaii
+;Hawaii;15;US
+Hawaii;Hawaii;15001;US
+Honolulu;Hawaii;15003;US
+Kauai;Hawaii;15007;US
+Maui;Hawaii;15009;US
+
+Idaho
+;Idaho;16;US
+Ada;Idaho;16001;US
+Adams;Idaho;16003;US
+Bannock;Idaho;16005;US
+Bear Lake;Idaho;16007;US
+Benewah;Idaho;16009;US
+Bingham;Idaho;16011;US
+Blaine;Idaho;16013;US
+Boise;Idaho;16015;US
+Bonner;Idaho;16017;US
+Bonneville;Idaho;16019;US
+Boundary;Idaho;16021;US
+Camas;Idaho;16025;US
+Canyon;Idaho;16027;US
+Caribou;Idaho;16029;US
+Cassia;Idaho;16031;US
+Clearwater;Idaho;16035;US
+Custer;Idaho;16037;US
+Elmore;Idaho;16039;US
+Franklin;Idaho;16041;US
+Fremont;Idaho;16043;US
+Gem;Idaho;16045;US
+Gooding;Idaho;16047;US
+Idaho;Idaho;16049;US
+Jefferson;Idaho;16051;US
+Jerome;Idaho;16053;US
+Kootenai;Idaho;16055;US
+Latah;Idaho;16057;US
+Lemhi;Idaho;16059;US
+Lewis;Idaho;16061;US
+Lincoln;Idaho;16063;US
+Madison;Idaho;16065;US
+Minidoka;Idaho;16067;US
+Nez Perce;Idaho;16069;US
+Oneida;Idaho;16071;US
+Owyhee;Idaho;16073;US
+Payette;Idaho;16075;US
+Power;Idaho;16077;US
+Shoshone;Idaho;16079;US
+Teton;Idaho;16081;US
+Twin Falls;Idaho;16083;US
+Valley;Idaho;16085;US
+Washington;Idaho;16087;US
+
+Illinois
+;Illinois;17;US
+Adams;Illinois;17001;US
+Alexander;Illinois;17003;US
+Bond;Illinois;17005;US
+Boone;Illinois;17007;US
+Brown;Illinois;17009;US
+Bureau;Illinois;17011;US
+Calhoun;Illinois;17013;US
+Carroll;Illinois;17015;US
+Cass;Illinois;17017;US
+Champaign;Illinois;17019;US
+Christian;Illinois;17021;US
+Clark;Illinois;17023;US
+Clay;Illinois;17025;US
+Clinton;Illinois;17027;US
+Coles;Illinois;17029;US
+Cook;Illinois;17031;US
+Crawford;Illinois;17033;US
+Cumberland;Illinois;17035;US
+De Witt;Illinois;17039;US
+DeKalb;Illinois;17037;US
+Douglas;Illinois;17041;US
+DuPage;Illinois;17043;US
+Edgar;Illinois;17045;US
+Edwards;Illinois;17047;US
+Effingham;Illinois;17049;US
+Fayette;Illinois;17051;US
+Ford;Illinois;17053;US
+Franklin;Illinois;17055;US
+Fulton;Illinois;17057;US
+Gallatin;Illinois;17059;US
+Greene;Illinois;17061;US
+Grundy;Illinois;17063;US
+Hamilton;Illinois;17065;US
+Hancock;Illinois;17067;US
+Hardin;Illinois;17069;US
+Henderson;Illinois;17071;US
+Henry;Illinois;17073;US
+Iroquois;Illinois;17075;US
+Jackson;Illinois;17077;US
+Jasper;Illinois;17079;US
+Jefferson;Illinois;17081;US
+Jersey;Illinois;17083;US
+Jo Daviess;Illinois;17085;US
+Johnson;Illinois;17087;US
+Kane;Illinois;17089;US
+Kankakee;Illinois;17091;US
+Kendall;Illinois;17093;US
+Knox;Illinois;17095;US
+LaSalle;Illinois;17099;US
+Lake;Illinois;17097;US
+Lawrence;Illinois;17101;US
+Lee;Illinois;17103;US
+Livingston;Illinois;17105;US
+Logan;Illinois;17107;US
+Macon;Illinois;17115;US
+Macoupin;Illinois;17117;US
+Madison;Illinois;17119;US
+Marion;Illinois;17121;US
+Marshall;Illinois;17123;US
+Mason;Illinois;17125;US
+Massac;Illinois;17127;US
+McDonough;Illinois;17109;US
+McHenry;Illinois;17111;US
+McLean;Illinois;17113;US
+Menard;Illinois;17129;US
+Mercer;Illinois;17131;US
+Monroe;Illinois;17133;US
+Montgomery;Illinois;17135;US
+Morgan;Illinois;17137;US
+Moultrie;Illinois;17139;US
+Ogle;Illinois;17141;US
+Peoria;Illinois;17143;US
+Perry;Illinois;17145;US
+Piatt;Illinois;17147;US
+Pike;Illinois;17149;US
+Pope;Illinois;17151;US
+Pulaski;Illinois;17153;US
+Putnam;Illinois;17155;US
+Randolph;Illinois;17157;US
+Richland;Illinois;17159;US
+Rock Island;Illinois;17161;US
+Saline;Illinois;17165;US
+Sangamon;Illinois;17167;US
+Schuyler;Illinois;17169;US
+Scott;Illinois;17171;US
+Shelby;Illinois;17173;US
+St. Clair;Illinois;17163;US
+Stark;Illinois;17175;US
+Stephenson;Illinois;17177;US
+Tazewell;Illinois;17179;US
+Union;Illinois;17181;US
+Vermilion;Illinois;17183;US
+Wabash;Illinois;17185;US
+Warren;Illinois;17187;US
+Washington;Illinois;17189;US
+Wayne;Illinois;17191;US
+White;Illinois;17193;US
+Whiteside;Illinois;17195;US
+Will;Illinois;17197;US
+Williamson;Illinois;17199;US
+Winnebago;Illinois;17201;US
+Woodford;Illinois;17203;US
+
+Indiana
+;Indiana;18;US
+Adams;Indiana;18001;US
+Allen;Indiana;18003;US
+Bartholomew;Indiana;18005;US
+Benton;Indiana;18007;US
+Blackford;Indiana;18009;US
+Boone;Indiana;18011;US
+Brown;Indiana;18013;US
+Carroll;Indiana;18015;US
+Cass;Indiana;18017;US
+Clark;Indiana;18019;US
+Clay;Indiana;18021;US
+Clinton;Indiana;18023;US
+Crawford;Indiana;18025;US
+Daviess;Indiana;18027;US
+DeKalb;Indiana;18033;US
+Dearborn;Indiana;18029;US
+Decatur;Indiana;18031;US
+Delaware;Indiana;18035;US
+Dubois;Indiana;18037;US
+Elkhart;Indiana;18039;US
+Fayette;Indiana;18041;US
+Floyd;Indiana;18043;US
+Fountain;Indiana;18045;US
+Franklin;Indiana;18047;US
+Fulton;Indiana;18049;US
+Gibson;Indiana;18051;US
+Grant;Indiana;18053;US
+Greene;Indiana;18055;US
+Hamilton;Indiana;18057;US
+Hancock;Indiana;18059;US
+Harrison;Indiana;18061;US
+Hendricks;Indiana;18063;US
+Henry;Indiana;18065;US
+Howard;Indiana;18067;US
+Huntington;Indiana;18069;US
+Jackson;Indiana;18071;US
+Jasper;Indiana;18073;US
+Jay;Indiana;18075;US
+Jefferson;Indiana;18077;US
+Jennings;Indiana;18079;US
+Johnson;Indiana;18081;US
+Knox;Indiana;18083;US
+Kosciusko;Indiana;18085;US
+LaGrange;Indiana;18087;US
+LaPorte;Indiana;18091;US
+Lake;Indiana;18089;US
+Lawrence;Indiana;18093;US
+Madison;Indiana;18095;US
+Marion;Indiana;18097;US
+Marshall;Indiana;18099;US
+Martin;Indiana;18101;US
+Miami;Indiana;18103;US
+Monroe;Indiana;18105;US
+Montgomery;Indiana;18107;US
+Morgan;Indiana;18109;US
+Newton;Indiana;18111;US
+Noble;Indiana;18113;US
+Ohio;Indiana;18115;US
+Orange;Indiana;18117;US
+Owen;Indiana;18119;US
+Parke;Indiana;18121;US
+Perry;Indiana;18123;US
+Pike;Indiana;18125;US
+Porter;Indiana;18127;US
+Posey;Indiana;18129;US
+Pulaski;Indiana;18131;US
+Putnam;Indiana;18133;US
+Randolph;Indiana;18135;US
+Ripley;Indiana;18137;US
+Rush;Indiana;18139;US
+Scott;Indiana;18143;US
+Shelby;Indiana;18145;US
+Spencer;Indiana;18147;US
+St. Joseph;Indiana;18141;US
+Starke;Indiana;18149;US
+Steuben;Indiana;18151;US
+Sullivan;Indiana;18153;US
+Switzerland;Indiana;18155;US
+Tippecanoe;Indiana;18157;US
+Tipton;Indiana;18159;US
+Union;Indiana;18161;US
+Vanderburgh;Indiana;18163;US
+Vermillion;Indiana;18165;US
+Vigo;Indiana;18167;US
+Wabash;Indiana;18169;US
+Warren;Indiana;18171;US
+Warrick;Indiana;18173;US
+Washington;Indiana;18175;US
+Wayne;Indiana;18177;US
+Wells;Indiana;18179;US
+White;Indiana;18181;US
+Whitley;Indiana;18183;US
+
+Iowa
+;Iowa;19;US
+Adair;Iowa;19001;US
+Adams;Iowa;19003;US
+Allamakee;Iowa;19005;US
+Appanoose;Iowa;19007;US
+Audubon;Iowa;19009;US
+Benton;Iowa;19011;US
+Black Hawk;Iowa;19013;US
+Boone;Iowa;19015;US
+Bremer;Iowa;19017;US
+Buchanan;Iowa;19019;US
+Buena Vista;Iowa;19021;US
+Butler;Iowa;19023;US
+Calhoun;Iowa;19025;US
+Carroll;Iowa;19027;US
+Cass;Iowa;19029;US
+Cedar;Iowa;19031;US
+Cerro Gordo;Iowa;19033;US
+Cherokee;Iowa;19035;US
+Chickasaw;Iowa;19037;US
+Clarke;Iowa;19039;US
+Clay;Iowa;19041;US
+Clayton;Iowa;19043;US
+Clinton;Iowa;19045;US
+Crawford;Iowa;19047;US
+Dallas;Iowa;19049;US
+Davis;Iowa;19051;US
+Decatur;Iowa;19053;US
+Delaware;Iowa;19055;US
+Des Moines;Iowa;19057;US
+Dickinson;Iowa;19059;US
+Dubuque;Iowa;19061;US
+Emmet;Iowa;19063;US
+Fayette;Iowa;19065;US
+Floyd;Iowa;19067;US
+Franklin;Iowa;19069;US
+Fremont;Iowa;19071;US
+Greene;Iowa;19073;US
+Grundy;Iowa;19075;US
+Guthrie;Iowa;19077;US
+Hamilton;Iowa;19079;US
+Hancock;Iowa;19081;US
+Hardin;Iowa;19083;US
+Harrison;Iowa;19085;US
+Henry;Iowa;19087;US
+Howard;Iowa;19089;US
+Humboldt;Iowa;19091;US
+Ida;Iowa;19093;US
+Iowa;Iowa;19095;US
+Jackson;Iowa;19097;US
+Jasper;Iowa;19099;US
+Jefferson;Iowa;19101;US
+Johnson;Iowa;19103;US
+Jones;Iowa;19105;US
+Keokuk;Iowa;19107;US
+Kossuth;Iowa;19109;US
+Lee;Iowa;19111;US
+Linn;Iowa;19113;US
+Louisa;Iowa;19115;US
+Lucas;Iowa;19117;US
+Lyon;Iowa;19119;US
+Madison;Iowa;19121;US
+Mahaska;Iowa;19123;US
+Marion;Iowa;19125;US
+Marshall;Iowa;19127;US
+Mills;Iowa;19129;US
+Mitchell;Iowa;19131;US
+Monona;Iowa;19133;US
+Monroe;Iowa;19135;US
+Montgomery;Iowa;19137;US
+Muscatine;Iowa;19139;US
+O'Brien;Iowa;19141;US
+Osceola;Iowa;19143;US
+Page;Iowa;19145;US
+Palo Alto;Iowa;19147;US
+Plymouth;Iowa;19149;US
+Pocahontas;Iowa;19151;US
+Polk;Iowa;19153;US
+Pottawattamie;Iowa;19155;US
+Poweshiek;Iowa;19157;US
+Ringgold;Iowa;19159;US
+Sac;Iowa;19161;US
+Scott;Iowa;19163;US
+Shelby;Iowa;19165;US
+Sioux;Iowa;19167;US
+Story;Iowa;19169;US
+Tama;Iowa;19171;US
+Taylor;Iowa;19173;US
+Union;Iowa;19175;US
+Van Buren;Iowa;19177;US
+Wapello;Iowa;19179;US
+Warren;Iowa;19181;US
+Washington;Iowa;19183;US
+Wayne;Iowa;19185;US
+Webster;Iowa;19187;US
+Winnebago;Iowa;19189;US
+Winneshiek;Iowa;19191;US
+Woodbury;Iowa;19193;US
+Worth;Iowa;19195;US
+Wright;Iowa;19197;US
+
+Kansas
+;Kansas;20;US
+Allen;Kansas;20001;US
+Anderson;Kansas;20003;US
+Atchison;Kansas;20005;US
+Barber;Kansas;20007;US
+Barton;Kansas;20009;US
+Bourbon;Kansas;20011;US
+Brown;Kansas;20013;US
+Butler;Kansas;20015;US
+Chase;Kansas;20017;US
+Chautauqua;Kansas;20019;US
+Cherokee;Kansas;20021;US
+Cheyenne;Kansas;20023;US
+Clark;Kansas;20025;US
+Clay;Kansas;20027;US
+Cloud;Kansas;20029;US
+Coffey;Kansas;20031;US
+Comanche;Kansas;20033;US
+Cowley;Kansas;20035;US
+Crawford;Kansas;20037;US
+Dickinson;Kansas;20041;US
+Doniphan;Kansas;20043;US
+Douglas;Kansas;20045;US
+Edwards;Kansas;20047;US
+Elk;Kansas;20049;US
+Ellis;Kansas;20051;US
+Ellsworth;Kansas;20053;US
+Finney;Kansas;20055;US
+Ford;Kansas;20057;US
+Franklin;Kansas;20059;US
+Geary;Kansas;20061;US
+Gove;Kansas;20063;US
+Graham;Kansas;20065;US
+Grant;Kansas;20067;US
+Gray;Kansas;20069;US
+Greenwood;Kansas;20073;US
+Hamilton;Kansas;20075;US
+Harper;Kansas;20077;US
+Harvey;Kansas;20079;US
+Haskell;Kansas;20081;US
+Hodgeman;Kansas;20083;US
+Jackson;Kansas;20085;US
+Jefferson;Kansas;20087;US
+Jewell;Kansas;20089;US
+Johnson;Kansas;20091;US
+Kearny;Kansas;20093;US
+Kingman;Kansas;20095;US
+Kiowa;Kansas;20097;US
+Labette;Kansas;20099;US
+Lane;Kansas;20101;US
+Leavenworth;Kansas;20103;US
+Lincoln;Kansas;20105;US
+Linn;Kansas;20107;US
+Logan;Kansas;20109;US
+Lyon;Kansas;20111;US
+Marion;Kansas;20115;US
+Marshall;Kansas;20117;US
+McPherson;Kansas;20113;US
+Meade;Kansas;20119;US
+Miami;Kansas;20121;US
+Mitchell;Kansas;20123;US
+Montgomery;Kansas;20125;US
+Morris;Kansas;20127;US
+Morton;Kansas;20129;US
+Nemaha;Kansas;20131;US
+Neosho;Kansas;20133;US
+Ness;Kansas;20135;US
+Norton;Kansas;20137;US
+Osage;Kansas;20139;US
+Osborne;Kansas;20141;US
+Ottawa;Kansas;20143;US
+Pawnee;Kansas;20145;US
+Phillips;Kansas;20147;US
+Pottawatomie;Kansas;20149;US
+Pratt;Kansas;20151;US
+Reno;Kansas;20155;US
+Republic;Kansas;20157;US
+Rice;Kansas;20159;US
+Riley;Kansas;20161;US
+Rooks;Kansas;20163;US
+Rush;Kansas;20165;US
+Russell;Kansas;20167;US
+Saline;Kansas;20169;US
+Scott;Kansas;20171;US
+Sedgwick;Kansas;20173;US
+Seward;Kansas;20175;US
+Shawnee;Kansas;20177;US
+Sheridan;Kansas;20179;US
+Sherman;Kansas;20181;US
+Smith;Kansas;20183;US
+Stafford;Kansas;20185;US
+Stanton;Kansas;20187;US
+Stevens;Kansas;20189;US
+Sumner;Kansas;20191;US
+Thomas;Kansas;20193;US
+Trego;Kansas;20195;US
+Wabaunsee;Kansas;20197;US
+Washington;Kansas;20201;US
+Wilson;Kansas;20205;US
+Woodson;Kansas;20207;US
+Wyandotte;Kansas;20209;US
+
+Kentucky
+;Kentucky;21;US
+Adair;Kentucky;21001;US
+Allen;Kentucky;21003;US
+Anderson;Kentucky;21005;US
+Ballard;Kentucky;21007;US
+Barren;Kentucky;21009;US
+Bath;Kentucky;21011;US
+Bell;Kentucky;21013;US
+Boone;Kentucky;21015;US
+Bourbon;Kentucky;21017;US
+Boyd;Kentucky;21019;US
+Boyle;Kentucky;21021;US
+Bracken;Kentucky;21023;US
+Breathitt;Kentucky;21025;US
+Breckinridge;Kentucky;21027;US
+Bullitt;Kentucky;21029;US
+Butler;Kentucky;21031;US
+Caldwell;Kentucky;21033;US
+Calloway;Kentucky;21035;US
+Campbell;Kentucky;21037;US
+Carlisle;Kentucky;21039;US
+Carroll;Kentucky;21041;US
+Carter;Kentucky;21043;US
+Casey;Kentucky;21045;US
+Christian;Kentucky;21047;US
+Clark;Kentucky;21049;US
+Clay;Kentucky;21051;US
+Clinton;Kentucky;21053;US
+Crittenden;Kentucky;21055;US
+Cumberland;Kentucky;21057;US
+Daviess;Kentucky;21059;US
+Edmonson;Kentucky;21061;US
+Elliott;Kentucky;21063;US
+Estill;Kentucky;21065;US
+Fayette;Kentucky;21067;US
+Fleming;Kentucky;21069;US
+Floyd;Kentucky;21071;US
+Franklin;Kentucky;21073;US
+Fulton;Kentucky;21075;US
+Gallatin;Kentucky;21077;US
+Garrard;Kentucky;21079;US
+Grant;Kentucky;21081;US
+Graves;Kentucky;21083;US
+Grayson;Kentucky;21085;US
+Green;Kentucky;21087;US
+Greenup;Kentucky;21089;US
+Hancock;Kentucky;21091;US
+Hardin;Kentucky;21093;US
+Harlan;Kentucky;21095;US
+Harrison;Kentucky;21097;US
+Hart;Kentucky;21099;US
+Henderson;Kentucky;21101;US
+Henry;Kentucky;21103;US
+Hickman;Kentucky;21105;US
+Hopkins;Kentucky;21107;US
+Jackson;Kentucky;21109;US
+Jefferson;Kentucky;21111;US
+Jessamine;Kentucky;21113;US
+Johnson;Kentucky;21115;US
+Kenton;Kentucky;21117;US
+Knott;Kentucky;21119;US
+Knox;Kentucky;21121;US
+Larue;Kentucky;21123;US
+Laurel;Kentucky;21125;US
+Lawrence;Kentucky;21127;US
+Lee;Kentucky;21129;US
+Leslie;Kentucky;21131;US
+Letcher;Kentucky;21133;US
+Lewis;Kentucky;21135;US
+Lincoln;Kentucky;21137;US
+Livingston;Kentucky;21139;US
+Logan;Kentucky;21141;US
+Lyon;Kentucky;21143;US
+Madison;Kentucky;21151;US
+Magoffin;Kentucky;21153;US
+Marion;Kentucky;21155;US
+Marshall;Kentucky;21157;US
+Martin;Kentucky;21159;US
+Mason;Kentucky;21161;US
+McCracken;Kentucky;21145;US
+McCreary;Kentucky;21147;US
+McLean;Kentucky;21149;US
+Meade;Kentucky;21163;US
+Menifee;Kentucky;21165;US
+Mercer;Kentucky;21167;US
+Metcalfe;Kentucky;21169;US
+Monroe;Kentucky;21171;US
+Montgomery;Kentucky;21173;US
+Morgan;Kentucky;21175;US
+Muhlenberg;Kentucky;21177;US
+Nelson;Kentucky;21179;US
+Nicholas;Kentucky;21181;US
+Ohio;Kentucky;21183;US
+Oldham;Kentucky;21185;US
+Owen;Kentucky;21187;US
+Owsley;Kentucky;21189;US
+Pendleton;Kentucky;21191;US
+Perry;Kentucky;21193;US
+Pike;Kentucky;21195;US
+Powell;Kentucky;21197;US
+Pulaski;Kentucky;21199;US
+Robertson;Kentucky;21201;US
+Rockcastle;Kentucky;21203;US
+Rowan;Kentucky;21205;US
+Russell;Kentucky;21207;US
+Scott;Kentucky;21209;US
+Shelby;Kentucky;21211;US
+Simpson;Kentucky;21213;US
+Spencer;Kentucky;21215;US
+Taylor;Kentucky;21217;US
+Todd;Kentucky;21219;US
+Trigg;Kentucky;21221;US
+Trimble;Kentucky;21223;US
+Union;Kentucky;21225;US
+Warren;Kentucky;21227;US
+Washington;Kentucky;21229;US
+Wayne;Kentucky;21231;US
+Webster;Kentucky;21233;US
+Whitley;Kentucky;21235;US
+Wolfe;Kentucky;21237;US
+Woodford;Kentucky;21239;US
+
+Louisiana
+;Louisiana;22;US
+Acadia;Louisiana;22001;US
+Allen;Louisiana;22003;US
+Ascension;Louisiana;22005;US
+Assumption;Louisiana;22007;US
+Avoyelles;Louisiana;22009;US
+Beauregard;Louisiana;22011;US
+Bienville;Louisiana;22013;US
+Bossier;Louisiana;22015;US
+Caddo;Louisiana;22017;US
+Calcasieu;Louisiana;22019;US
+Caldwell;Louisiana;22021;US
+Cameron;Louisiana;22023;US
+Catahoula;Louisiana;22025;US
+Claiborne;Louisiana;22027;US
+Concordia;Louisiana;22029;US
+De Soto;Louisiana;22031;US
+East Baton Rouge;Louisiana;22033;US
+East Carroll;Louisiana;22035;US
+East Feliciana;Louisiana;22037;US
+Evangeline;Louisiana;22039;US
+Franklin;Louisiana;22041;US
+Grant;Louisiana;22043;US
+Iberia;Louisiana;22045;US
+Iberville;Louisiana;22047;US
+Jackson;Louisiana;22049;US
+Jefferson;Louisiana;22051;US
+Jefferson Davis;Louisiana;22053;US
+LaSalle;Louisiana;22059;US
+Lafayette;Louisiana;22055;US
+Lafourche;Louisiana;22057;US
+Lincoln;Louisiana;22061;US
+Livingston;Louisiana;22063;US
+Madison;Louisiana;22065;US
+Morehouse;Louisiana;22067;US
+Natchitoches;Louisiana;22069;US
+Orleans;Louisiana;22071;US
+Ouachita;Louisiana;22073;US
+Plaquemines;Louisiana;22075;US
+Pointe Coupee;Louisiana;22077;US
+Rapides;Louisiana;22079;US
+Red River;Louisiana;22081;US
+Richland;Louisiana;22083;US
+Sabine;Louisiana;22085;US
+St. Bernard;Louisiana;22087;US
+St. Charles;Louisiana;22089;US
+St. Helena;Louisiana;22091;US
+St. James;Louisiana;22093;US
+St. John the Baptist;Louisiana;22095;US
+St. Landry;Louisiana;22097;US
+St. Martin;Louisiana;22099;US
+St. Mary;Louisiana;22101;US
+St. Tammany;Louisiana;22103;US
+Tangipahoa;Louisiana;22105;US
+Tensas;Louisiana;22107;US
+Terrebonne;Louisiana;22109;US
+Union;Louisiana;22111;US
+Vermilion;Louisiana;22113;US
+Vernon;Louisiana;22115;US
+Washington;Louisiana;22117;US
+Webster;Louisiana;22119;US
+West Baton Rouge;Louisiana;22121;US
+West Carroll;Louisiana;22123;US
+West Feliciana;Louisiana;22125;US
+Winn;Louisiana;22127;US
+
+Maine
+;Maine;23;US
+Androscoggin;Maine;23001;US
+Aroostook;Maine;23003;US
+Cumberland;Maine;23005;US
+Franklin;Maine;23007;US
+Hancock;Maine;23009;US
+Kennebec;Maine;23011;US
+Knox;Maine;23013;US
+Lincoln;Maine;23015;US
+Oxford;Maine;23017;US
+Penobscot;Maine;23019;US
+Piscataquis;Maine;23021;US
+Sagadahoc;Maine;23023;US
+Somerset;Maine;23025;US
+Waldo;Maine;23027;US
+Washington;Maine;23029;US
+York;Maine;23031;US
+
+Maryland
+;Maryland;24;US
+Allegany;Maryland;24001;US
+Anne Arundel;Maryland;24003;US
+Baltimore;Maryland;24005;US
+Baltimore City;Maryland;24510;US
+Calvert;Maryland;24009;US
+Caroline;Maryland;24011;US
+Carroll;Maryland;24013;US
+Cecil;Maryland;24015;US
+Charles;Maryland;24017;US
+Dorchester;Maryland;24019;US
+Frederick;Maryland;24021;US
+Garrett;Maryland;24023;US
+Harford;Maryland;24025;US
+Howard;Maryland;24027;US
+Kent;Maryland;24029;US
+Montgomery;Maryland;24031;US
+Prince George's;Maryland;24033;US
+Queen Anne's;Maryland;24035;US
+Somerset;Maryland;24039;US
+St. Mary's;Maryland;24037;US
+Talbot;Maryland;24041;US
+Washington;Maryland;24043;US
+Wicomico;Maryland;24045;US
+Worcester;Maryland;24047;US
+
+Massachusetts
+;Massachusetts;25;US
+Barnstable;Massachusetts;25001;US
+Berkshire;Massachusetts;25003;US
+Bristol;Massachusetts;25005;US
+Dukes and Nantucket;Massachusetts;;US
+Essex;Massachusetts;25009;US
+Franklin;Massachusetts;25011;US
+Hampden;Massachusetts;25013;US
+Hampshire;Massachusetts;25015;US
+Middlesex;Massachusetts;25017;US
+Norfolk;Massachusetts;25021;US
+Plymouth;Massachusetts;25023;US
+Suffolk;Massachusetts;25025;US
+Worcester;Massachusetts;25027;US
+
+Michigan
+;Michigan;26;US
+Alcona;Michigan;26001;US
+Alger;Michigan;26003;US
+Allegan;Michigan;26005;US
+Alpena;Michigan;26007;US
+Antrim;Michigan;26009;US
+Arenac;Michigan;26011;US
+Baraga;Michigan;26013;US
+Barry;Michigan;26015;US
+Bay;Michigan;26017;US
+Benzie;Michigan;26019;US
+Berrien;Michigan;26021;US
+Branch;Michigan;26023;US
+Calhoun;Michigan;26025;US
+Cass;Michigan;26027;US
+Charlevoix;Michigan;26029;US
+Cheboygan;Michigan;26031;US
+Chippewa;Michigan;26033;US
+Clare;Michigan;26035;US
+Clinton;Michigan;26037;US
+Crawford;Michigan;26039;US
+Delta;Michigan;26041;US
+Dickinson;Michigan;26043;US
+Eaton;Michigan;26045;US
+Emmet;Michigan;26047;US
+Genesee;Michigan;26049;US
+Gladwin;Michigan;26051;US
+Gogebic;Michigan;26053;US
+Grand Traverse;Michigan;26055;US
+Gratiot;Michigan;26057;US
+Hillsdale;Michigan;26059;US
+Houghton;Michigan;26061;US
+Huron;Michigan;26063;US
+Ingham;Michigan;26065;US
+Ionia;Michigan;26067;US
+Iosco;Michigan;26069;US
+Iron;Michigan;26071;US
+Isabella;Michigan;26073;US
+Jackson;Michigan;26075;US
+Kalamazoo;Michigan;26077;US
+Kalkaska;Michigan;26079;US
+Kent;Michigan;26081;US
+Keweenaw;Michigan;26083;US
+Lake;Michigan;26085;US
+Lapeer;Michigan;26087;US
+Leelanau;Michigan;26089;US
+Lenawee;Michigan;26091;US
+Livingston;Michigan;26093;US
+Luce;Michigan;26095;US
+Mackinac;Michigan;26097;US
+Macomb;Michigan;26099;US
+Manistee;Michigan;26101;US
+Marquette;Michigan;26103;US
+Mason;Michigan;26105;US
+Mecosta;Michigan;26107;US
+Menominee;Michigan;26109;US
+Midland;Michigan;26111;US
+Missaukee;Michigan;26113;US
+Monroe;Michigan;26115;US
+Montcalm;Michigan;26117;US
+Montmorency;Michigan;26119;US
+Muskegon;Michigan;26121;US
+Newaygo;Michigan;26123;US
+Oakland;Michigan;26125;US
+Oceana;Michigan;26127;US
+Ogemaw;Michigan;26129;US
+Ontonagon;Michigan;26131;US
+Osceola;Michigan;26133;US
+Oscoda;Michigan;26135;US
+Otsego;Michigan;26137;US
+Ottawa;Michigan;26139;US
+Presque Isle;Michigan;26141;US
+Roscommon;Michigan;26143;US
+Saginaw;Michigan;26145;US
+Sanilac;Michigan;26151;US
+Schoolcraft;Michigan;26153;US
+Shiawassee;Michigan;26155;US
+St. Clair;Michigan;26147;US
+St. Joseph;Michigan;26149;US
+Tuscola;Michigan;26157;US
+Van Buren;Michigan;26159;US
+Washtenaw;Michigan;26161;US
+Wayne;Michigan;26163;US
+Wexford;Michigan;26165;US
+
+Minnesota
+;Minnesota;27;US
+Aitkin;Minnesota;27001;US
+Anoka;Minnesota;27003;US
+Becker;Minnesota;27005;US
+Beltrami;Minnesota;27007;US
+Benton;Minnesota;27009;US
+Big Stone;Minnesota;27011;US
+Blue Earth;Minnesota;27013;US
+Brown;Minnesota;27015;US
+Carlton;Minnesota;27017;US
+Carver;Minnesota;27019;US
+Cass;Minnesota;27021;US
+Chippewa;Minnesota;27023;US
+Chisago;Minnesota;27025;US
+Clay;Minnesota;27027;US
+Clearwater;Minnesota;27029;US
+Cook;Minnesota;27031;US
+Cottonwood;Minnesota;27033;US
+Crow Wing;Minnesota;27035;US
+Dakota;Minnesota;27037;US
+Dodge;Minnesota;27039;US
+Douglas;Minnesota;27041;US
+Faribault;Minnesota;27043;US
+Fillmore;Minnesota;27045;US
+Freeborn;Minnesota;27047;US
+Goodhue;Minnesota;27049;US
+Grant;Minnesota;27051;US
+Hennepin;Minnesota;27053;US
+Houston;Minnesota;27055;US
+Hubbard;Minnesota;27057;US
+Isanti;Minnesota;27059;US
+Itasca;Minnesota;27061;US
+Jackson;Minnesota;27063;US
+Kanabec;Minnesota;27065;US
+Kandiyohi;Minnesota;27067;US
+Kittson;Minnesota;27069;US
+Koochiching;Minnesota;27071;US
+Lac qui Parle;Minnesota;27073;US
+Lake;Minnesota;27075;US
+Lake of the Woods;Minnesota;27077;US
+Le Sueur;Minnesota;27079;US
+Lincoln;Minnesota;27081;US
+Lyon;Minnesota;27083;US
+Mahnomen;Minnesota;27087;US
+Marshall;Minnesota;27089;US
+Martin;Minnesota;27091;US
+McLeod;Minnesota;27085;US
+Meeker;Minnesota;27093;US
+Mille Lacs;Minnesota;27095;US
+Morrison;Minnesota;27097;US
+Mower;Minnesota;27099;US
+Murray;Minnesota;27101;US
+Nicollet;Minnesota;27103;US
+Nobles;Minnesota;27105;US
+Norman;Minnesota;27107;US
+Olmsted;Minnesota;27109;US
+Otter Tail;Minnesota;27111;US
+Pennington;Minnesota;27113;US
+Pine;Minnesota;27115;US
+Pipestone;Minnesota;27117;US
+Polk;Minnesota;27119;US
+Pope;Minnesota;27121;US
+Ramsey;Minnesota;27123;US
+Red Lake;Minnesota;27125;US
+Redwood;Minnesota;27127;US
+Renville;Minnesota;27129;US
+Rice;Minnesota;27131;US
+Rock;Minnesota;27133;US
+Roseau;Minnesota;27135;US
+Scott;Minnesota;27139;US
+Sherburne;Minnesota;27141;US
+Sibley;Minnesota;27143;US
+St. Louis;Minnesota;27137;US
+Stearns;Minnesota;27145;US
+Steele;Minnesota;27147;US
+Stevens;Minnesota;27149;US
+Swift;Minnesota;27151;US
+Todd;Minnesota;27153;US
+Traverse;Minnesota;27155;US
+Wabasha;Minnesota;27157;US
+Wadena;Minnesota;27159;US
+Waseca;Minnesota;27161;US
+Washington;Minnesota;27163;US
+Watonwan;Minnesota;27165;US
+Wilkin;Minnesota;27167;US
+Winona;Minnesota;27169;US
+Wright;Minnesota;27171;US
+Yellow Medicine;Minnesota;27173;US
+
+Mississippi
+;Mississippi;28;US
+Adams;Mississippi;28001;US
+Alcorn;Mississippi;28003;US
+Amite;Mississippi;28005;US
+Attala;Mississippi;28007;US
+Benton;Mississippi;28009;US
+Bolivar;Mississippi;28011;US
+Calhoun;Mississippi;28013;US
+Carroll;Mississippi;28015;US
+Chickasaw;Mississippi;28017;US
+Choctaw;Mississippi;28019;US
+Claiborne;Mississippi;28021;US
+Clarke;Mississippi;28023;US
+Clay;Mississippi;28025;US
+Coahoma;Mississippi;28027;US
+Copiah;Mississippi;28029;US
+Covington;Mississippi;28031;US
+DeSoto;Mississippi;28033;US
+Forrest;Mississippi;28035;US
+Franklin;Mississippi;28037;US
+George;Mississippi;28039;US
+Greene;Mississippi;28041;US
+Grenada;Mississippi;28043;US
+Hancock;Mississippi;28045;US
+Harrison;Mississippi;28047;US
+Hinds;Mississippi;28049;US
+Holmes;Mississippi;28051;US
+Humphreys;Mississippi;28053;US
+Issaquena;Mississippi;28055;US
+Itawamba;Mississippi;28057;US
+Jackson;Mississippi;28059;US
+Jasper;Mississippi;28061;US
+Jefferson;Mississippi;28063;US
+Jefferson Davis;Mississippi;28065;US
+Jones;Mississippi;28067;US
+Kemper;Mississippi;28069;US
+Lafayette;Mississippi;28071;US
+Lamar;Mississippi;28073;US
+Lauderdale;Mississippi;28075;US
+Lawrence;Mississippi;28077;US
+Leake;Mississippi;28079;US
+Lee;Mississippi;28081;US
+Leflore;Mississippi;28083;US
+Lincoln;Mississippi;28085;US
+Lowndes;Mississippi;28087;US
+Madison;Mississippi;28089;US
+Marion;Mississippi;28091;US
+Marshall;Mississippi;28093;US
+Monroe;Mississippi;28095;US
+Montgomery;Mississippi;28097;US
+Neshoba;Mississippi;28099;US
+Newton;Mississippi;28101;US
+Noxubee;Mississippi;28103;US
+Oktibbeha;Mississippi;28105;US
+Panola;Mississippi;28107;US
+Pearl River;Mississippi;28109;US
+Perry;Mississippi;28111;US
+Pike;Mississippi;28113;US
+Pontotoc;Mississippi;28115;US
+Prentiss;Mississippi;28117;US
+Quitman;Mississippi;28119;US
+Rankin;Mississippi;28121;US
+Scott;Mississippi;28123;US
+Sharkey;Mississippi;28125;US
+Simpson;Mississippi;28127;US
+Smith;Mississippi;28129;US
+Stone;Mississippi;28131;US
+Sunflower;Mississippi;28133;US
+Tallahatchie;Mississippi;28135;US
+Tate;Mississippi;28137;US
+Tippah;Mississippi;28139;US
+Tishomingo;Mississippi;28141;US
+Tunica;Mississippi;28143;US
+Union;Mississippi;28145;US
+Walthall;Mississippi;28147;US
+Warren;Mississippi;28149;US
+Washington;Mississippi;28151;US
+Wayne;Mississippi;28153;US
+Webster;Mississippi;28155;US
+Wilkinson;Mississippi;28157;US
+Winston;Mississippi;28159;US
+Yalobusha;Mississippi;28161;US
+Yazoo;Mississippi;28163;US
+
+Missouri
+;Missouri;29;US
+Adair;Missouri;29001;US
+Andrew;Missouri;29003;US
+Atchison;Missouri;29005;US
+Audrain;Missouri;29007;US
+Barry;Missouri;29009;US
+Barton;Missouri;29011;US
+Bates;Missouri;29013;US
+Benton;Missouri;29015;US
+Bollinger;Missouri;29017;US
+Boone;Missouri;29019;US
+Buchanan;Missouri;29021;US
+Butler;Missouri;29023;US
+Caldwell;Missouri;29025;US
+Callaway;Missouri;29027;US
+Camden;Missouri;29029;US
+Cape Girardeau;Missouri;29031;US
+Carroll;Missouri;29033;US
+Carter;Missouri;29035;US
+Cass;Missouri;29037;US
+Cedar;Missouri;29039;US
+Chariton;Missouri;29041;US
+Christian;Missouri;29043;US
+Clark;Missouri;29045;US
+Clay;Missouri;29047;US
+Clinton;Missouri;29049;US
+Cole;Missouri;29051;US
+Cooper;Missouri;29053;US
+Crawford;Missouri;29055;US
+Dade;Missouri;29057;US
+Dallas;Missouri;29059;US
+Daviess;Missouri;29061;US
+DeKalb;Missouri;29063;US
+Dent;Missouri;29065;US
+Douglas;Missouri;29067;US
+Dunklin;Missouri;29069;US
+Franklin;Missouri;29071;US
+Gasconade;Missouri;29073;US
+Gentry;Missouri;29075;US
+Greene;Missouri;29077;US
+Grundy;Missouri;29079;US
+Harrison;Missouri;29081;US
+Henry;Missouri;29083;US
+Hickory;Missouri;29085;US
+Holt;Missouri;29087;US
+Howard;Missouri;29089;US
+Howell;Missouri;29091;US
+Iron;Missouri;29093;US
+Jackson;Missouri;29095;US
+Jasper;Missouri;29097;US
+Jefferson;Missouri;29099;US
+Johnson;Missouri;29101;US
+Kansas City;Missouri;;US
+Knox;Missouri;29103;US
+Laclede;Missouri;29105;US
+Lafayette;Missouri;29107;US
+Lawrence;Missouri;29109;US
+Lewis;Missouri;29111;US
+Lincoln;Missouri;29113;US
+Linn;Missouri;29115;US
+Livingston;Missouri;29117;US
+Macon;Missouri;29121;US
+Madison;Missouri;29123;US
+Maries;Missouri;29125;US
+Marion;Missouri;29127;US
+McDonald;Missouri;29119;US
+Mercer;Missouri;29129;US
+Miller;Missouri;29131;US
+Mississippi;Missouri;29133;US
+Moniteau;Missouri;29135;US
+Monroe;Missouri;29137;US
+Montgomery;Missouri;29139;US
+Morgan;Missouri;29141;US
+New Madrid;Missouri;29143;US
+Newton;Missouri;29145;US
+Nodaway;Missouri;29147;US
+Oregon;Missouri;29149;US
+Osage;Missouri;29151;US
+Ozark;Missouri;29153;US
+Pemiscot;Missouri;29155;US
+Perry;Missouri;29157;US
+Pettis;Missouri;29159;US
+Phelps;Missouri;29161;US
+Pike;Missouri;29163;US
+Platte;Missouri;29165;US
+Polk;Missouri;29167;US
+Pulaski;Missouri;29169;US
+Putnam;Missouri;29171;US
+Ralls;Missouri;29173;US
+Randolph;Missouri;29175;US
+Ray;Missouri;29177;US
+Reynolds;Missouri;29179;US
+Ripley;Missouri;29181;US
+Saline;Missouri;29195;US
+Schuyler;Missouri;29197;US
+Scotland;Missouri;29199;US
+Scott;Missouri;29201;US
+Shannon;Missouri;29203;US
+Shelby;Missouri;29205;US
+St. Charles;Missouri;29183;US
+St. Clair;Missouri;29185;US
+St. Francois;Missouri;29187;US
+St. Louis;Missouri;29189;US
+St. Louis City;Missouri;29510;US
+Ste. Genevieve;Missouri;29186;US
+Stoddard;Missouri;29207;US
+Stone;Missouri;29209;US
+Sullivan;Missouri;29211;US
+Taney;Missouri;29213;US
+Texas;Missouri;29215;US
+Vernon;Missouri;29217;US
+Warren;Missouri;29219;US
+Washington;Missouri;29221;US
+Wayne;Missouri;29223;US
+Webster;Missouri;29225;US
+Worth;Missouri;29227;US
+Wright;Missouri;29229;US
+
+Montana
+;Montana;30;US
+Beaverhead;Montana;30001;US
+Big Horn;Montana;30003;US
+Broadwater;Montana;30007;US
+Carbon;Montana;30009;US
+Cascade;Montana;30013;US
+Custer;Montana;30017;US
+Dawson;Montana;30021;US
+Deer Lodge;Montana;30023;US
+Fergus;Montana;30027;US
+Flathead;Montana;30029;US
+Gallatin;Montana;30031;US
+Glacier;Montana;30035;US
+Golden Valley;Montana;30037;US
+Granite;Montana;30039;US
+Hill;Montana;30041;US
+Jefferson;Montana;30043;US
+Lake;Montana;30047;US
+Lewis and Clark;Montana;30049;US
+Liberty;Montana;30051;US
+Lincoln;Montana;30053;US
+Madison;Montana;30057;US
+Meagher;Montana;30059;US
+Missoula;Montana;30063;US
+Musselshell;Montana;30065;US
+Park;Montana;30067;US
+Pondera;Montana;30073;US
+Ravalli;Montana;30081;US
+Richland;Montana;30083;US
+Roosevelt;Montana;30085;US
+Rosebud;Montana;30087;US
+Sheridan;Montana;30091;US
+Silver Bow;Montana;30093;US
+Stillwater;Montana;30095;US
+Teton;Montana;30099;US
+Toole;Montana;30101;US
+Treasure;Montana;30103;US
+Valley;Montana;30105;US
+Wheatland;Montana;30107;US
+Yellowstone;Montana;30111;US
+
+Nebraska
+;Nebraska;31;US
+Adams;Nebraska;31001;US
+Antelope;Nebraska;31003;US
+Arthur;Nebraska;31005;US
+Banner;Nebraska;31007;US
+Blaine;Nebraska;31009;US
+Boone;Nebraska;31011;US
+Box Butte;Nebraska;31013;US
+Boyd;Nebraska;31015;US
+Brown;Nebraska;31017;US
+Buffalo;Nebraska;31019;US
+Burt;Nebraska;31021;US
+Butler;Nebraska;31023;US
+Cass;Nebraska;31025;US
+Cedar;Nebraska;31027;US
+Chase;Nebraska;31029;US
+Cherry;Nebraska;31031;US
+Cheyenne;Nebraska;31033;US
+Clay;Nebraska;31035;US
+Colfax;Nebraska;31037;US
+Cuming;Nebraska;31039;US
+Custer;Nebraska;31041;US
+Dakota;Nebraska;31043;US
+Dawes;Nebraska;31045;US
+Dawson;Nebraska;31047;US
+Deuel;Nebraska;31049;US
+Dixon;Nebraska;31051;US
+Dodge;Nebraska;31053;US
+Douglas;Nebraska;31055;US
+Dundy;Nebraska;31057;US
+Fillmore;Nebraska;31059;US
+Franklin;Nebraska;31061;US
+Frontier;Nebraska;31063;US
+Furnas;Nebraska;31065;US
+Gage;Nebraska;31067;US
+Garden;Nebraska;31069;US
+Garfield;Nebraska;31071;US
+Gosper;Nebraska;31073;US
+Grant;Nebraska;31075;US
+Greeley;Nebraska;31077;US
+Hall;Nebraska;31079;US
+Hamilton;Nebraska;31081;US
+Harlan;Nebraska;31083;US
+Hayes;Nebraska;31085;US
+Hitchcock;Nebraska;31087;US
+Holt;Nebraska;31089;US
+Hooker;Nebraska;31091;US
+Howard;Nebraska;31093;US
+Jefferson;Nebraska;31095;US
+Johnson;Nebraska;31097;US
+Kearney;Nebraska;31099;US
+Keith;Nebraska;31101;US
+Keya Paha;Nebraska;31103;US
+Kimball;Nebraska;31105;US
+Knox;Nebraska;31107;US
+Lancaster;Nebraska;31109;US
+Lincoln;Nebraska;31111;US
+Logan;Nebraska;31113;US
+Loup;Nebraska;31115;US
+Madison;Nebraska;31119;US
+McPherson;Nebraska;31117;US
+Merrick;Nebraska;31121;US
+Morrill;Nebraska;31123;US
+Nance;Nebraska;31125;US
+Nemaha;Nebraska;31127;US
+Nuckolls;Nebraska;31129;US
+Otoe;Nebraska;31131;US
+Pawnee;Nebraska;31133;US
+Perkins;Nebraska;31135;US
+Phelps;Nebraska;31137;US
+Pierce;Nebraska;31139;US
+Platte;Nebraska;31141;US
+Polk;Nebraska;31143;US
+Red Willow;Nebraska;31145;US
+Richardson;Nebraska;31147;US
+Rock;Nebraska;31149;US
+Saline;Nebraska;31151;US
+Sarpy;Nebraska;31153;US
+Saunders;Nebraska;31155;US
+Scotts Bluff;Nebraska;31157;US
+Seward;Nebraska;31159;US
+Sheridan;Nebraska;31161;US
+Sherman;Nebraska;31163;US
+Sioux;Nebraska;31165;US
+Stanton;Nebraska;31167;US
+Thayer;Nebraska;31169;US
+Thomas;Nebraska;31171;US
+Thurston;Nebraska;31173;US
+Valley;Nebraska;31175;US
+Washington;Nebraska;31177;US
+Wayne;Nebraska;31179;US
+Webster;Nebraska;31181;US
+Wheeler;Nebraska;31183;US
+York;Nebraska;31185;US
+
+Nevada
+;Nevada;32;US
+Carson City;Nevada;32510;US
+Churchill;Nevada;32001;US
+Clark;Nevada;32003;US
+Douglas;Nevada;32005;US
+Elko;Nevada;32007;US
+Esmeralda;Nevada;32009;US
+Eureka;Nevada;32011;US
+Humboldt;Nevada;32013;US
+Lander;Nevada;32015;US
+Lincoln;Nevada;32017;US
+Lyon;Nevada;32019;US
+Mineral;Nevada;32021;US
+Nye;Nevada;32023;US
+Pershing;Nevada;32027;US
+Storey;Nevada;32029;US
+Washoe;Nevada;32031;US
+White Pine;Nevada;32033;US
+
+New Hampshire
+;New Hampshire;33;US
+Belknap;New Hampshire;33001;US
+Carroll;New Hampshire;33003;US
+Cheshire;New Hampshire;33005;US
+Coos;New Hampshire;33007;US
+Grafton;New Hampshire;33009;US
+Hillsborough;New Hampshire;33011;US
+Merrimack;New Hampshire;33013;US
+Rockingham;New Hampshire;33015;US
+Strafford;New Hampshire;33017;US
+Sullivan;New Hampshire;33019;US
+
+New Jersey
+;New Jersey;34;US
+Atlantic;New Jersey;34001;US
+Bergen;New Jersey;34003;US
+Burlington;New Jersey;34005;US
+Camden;New Jersey;34007;US
+Cape May;New Jersey;34009;US
+Cumberland;New Jersey;34011;US
+Essex;New Jersey;34013;US
+Gloucester;New Jersey;34015;US
+Hudson;New Jersey;34017;US
+Hunterdon;New Jersey;34019;US
+Mercer;New Jersey;34021;US
+Middlesex;New Jersey;34023;US
+Monmouth;New Jersey;34025;US
+Morris;New Jersey;34027;US
+Ocean;New Jersey;34029;US
+Passaic;New Jersey;34031;US
+Salem;New Jersey;34033;US
+Somerset;New Jersey;34035;US
+Sussex;New Jersey;34037;US
+Union;New Jersey;34039;US
+Warren;New Jersey;34041;US
+
+New Mexico
+;New Mexico;35;US
+Bernalillo;New Mexico;35001;US
+Catron;New Mexico;35003;US
+Chaves;New Mexico;35005;US
+Cibola;New Mexico;35006;US
+Colfax;New Mexico;35007;US
+Curry;New Mexico;35009;US
+De Baca;New Mexico;35011;US
+Dona Ana;New Mexico;35013;US
+Eddy;New Mexico;35015;US
+Grant;New Mexico;35017;US
+Guadalupe;New Mexico;35019;US
+Harding;New Mexico;35021;US
+Hidalgo;New Mexico;35023;US
+Lea;New Mexico;35025;US
+Lincoln;New Mexico;35027;US
+Los Alamos;New Mexico;35028;US
+Luna;New Mexico;35029;US
+McKinley;New Mexico;35031;US
+Otero;New Mexico;35035;US
+Quay;New Mexico;35037;US
+Rio Arriba;New Mexico;35039;US
+Roosevelt;New Mexico;35041;US
+San Juan;New Mexico;35045;US
+San Miguel;New Mexico;35047;US
+Sandoval;New Mexico;35043;US
+Santa Fe;New Mexico;35049;US
+Sierra;New Mexico;35051;US
+Socorro;New Mexico;35053;US
+Taos;New Mexico;35055;US
+Torrance;New Mexico;35057;US
+Union;New Mexico;35059;US
+Valencia;New Mexico;35061;US
+
+New York
+;New York;36;US
+Albany;New York;36001;US
+Allegany;New York;36003;US
+Broome;New York;36007;US
+Cattaraugus;New York;36009;US
+Cayuga;New York;36011;US
+Chautauqua;New York;36013;US
+Chemung;New York;36015;US
+Chenango;New York;36017;US
+Clinton;New York;36019;US
+Columbia;New York;36021;US
+Cortland;New York;36023;US
+Delaware;New York;36025;US
+Dutchess;New York;36027;US
+Erie;New York;36029;US
+Essex;New York;36031;US
+Franklin;New York;36033;US
+Fulton;New York;36035;US
+Genesee;New York;36037;US
+Greene;New York;36039;US
+Hamilton;New York;36041;US
+Herkimer;New York;36043;US
+Jefferson;New York;36045;US
+Lewis;New York;36049;US
+Livingston;New York;36051;US
+Madison;New York;36053;US
+Monroe;New York;36055;US
+Montgomery;New York;36057;US
+Nassau;New York;36059;US
+New York City;New York;36061;US
+Niagara;New York;36063;US
+Oneida;New York;36065;US
+Onondaga;New York;36067;US
+Ontario;New York;36069;US
+Orange;New York;36071;US
+Orleans;New York;36073;US
+Oswego;New York;36075;US
+Otsego;New York;36077;US
+Putnam;New York;36079;US
+Rensselaer;New York;36083;US
+Rockland;New York;36087;US
+Saratoga;New York;36091;US
+Schenectady;New York;36093;US
+Schoharie;New York;36095;US
+Schuyler;New York;36097;US
+Seneca;New York;36099;US
+St. Lawrence;New York;36089;US
+Steuben;New York;36101;US
+Suffolk;New York;36103;US
+Sullivan;New York;36105;US
+Tioga;New York;36107;US
+Tompkins;New York;36109;US
+Ulster;New York;36111;US
+Warren;New York;36113;US
+Washington;New York;36115;US
+Wayne;New York;36117;US
+Westchester;New York;36119;US
+Wyoming;New York;36121;US
+Yates;New York;36123;US
+
+North Carolina
+;North Carolina;37;US
+Alamance;North Carolina;37001;US
+Alexander;North Carolina;37003;US
+Alleghany;North Carolina;37005;US
+Anson;North Carolina;37007;US
+Ashe;North Carolina;37009;US
+Avery;North Carolina;37011;US
+Beaufort;North Carolina;37013;US
+Bertie;North Carolina;37015;US
+Bladen;North Carolina;37017;US
+Brunswick;North Carolina;37019;US
+Buncombe;North Carolina;37021;US
+Burke;North Carolina;37023;US
+Cabarrus;North Carolina;37025;US
+Caldwell;North Carolina;37027;US
+Camden;North Carolina;37029;US
+Carteret;North Carolina;37031;US
+Caswell;North Carolina;37033;US
+Catawba;North Carolina;37035;US
+Chatham;North Carolina;37037;US
+Cherokee;North Carolina;37039;US
+Chowan;North Carolina;37041;US
+Clay;North Carolina;37043;US
+Cleveland;North Carolina;37045;US
+Columbus;North Carolina;37047;US
+Craven;North Carolina;37049;US
+Cumberland;North Carolina;37051;US
+Currituck;North Carolina;37053;US
+Dare;North Carolina;37055;US
+Davidson;North Carolina;37057;US
+Davie;North Carolina;37059;US
+Duplin;North Carolina;37061;US
+Durham;North Carolina;37063;US
+Edgecombe;North Carolina;37065;US
+Forsyth;North Carolina;37067;US
+Franklin;North Carolina;37069;US
+Gaston;North Carolina;37071;US
+Gates;North Carolina;37073;US
+Graham;North Carolina;37075;US
+Granville;North Carolina;37077;US
+Greene;North Carolina;37079;US
+Guilford;North Carolina;37081;US
+Halifax;North Carolina;37083;US
+Harnett;North Carolina;37085;US
+Haywood;North Carolina;37087;US
+Henderson;North Carolina;37089;US
+Hertford;North Carolina;37091;US
+Hoke;North Carolina;37093;US
+Hyde;North Carolina;37095;US
+Iredell;North Carolina;37097;US
+Jackson;North Carolina;37099;US
+Johnston;North Carolina;37101;US
+Jones;North Carolina;37103;US
+Lee;North Carolina;37105;US
+Lenoir;North Carolina;37107;US
+Lincoln;North Carolina;37109;US
+Macon;North Carolina;37113;US
+Madison;North Carolina;37115;US
+Martin;North Carolina;37117;US
+McDowell;North Carolina;37111;US
+Mecklenburg;North Carolina;37119;US
+Mitchell;North Carolina;37121;US
+Montgomery;North Carolina;37123;US
+Moore;North Carolina;37125;US
+Nash;North Carolina;37127;US
+New Hanover;North Carolina;37129;US
+Northampton;North Carolina;37131;US
+Onslow;North Carolina;37133;US
+Orange;North Carolina;37135;US
+Pamlico;North Carolina;37137;US
+Pasquotank;North Carolina;37139;US
+Pender;North Carolina;37141;US
+Perquimans;North Carolina;37143;US
+Person;North Carolina;37145;US
+Pitt;North Carolina;37147;US
+Polk;North Carolina;37149;US
+Randolph;North Carolina;37151;US
+Richmond;North Carolina;37153;US
+Robeson;North Carolina;37155;US
+Rockingham;North Carolina;37157;US
+Rowan;North Carolina;37159;US
+Rutherford;North Carolina;37161;US
+Sampson;North Carolina;37163;US
+Scotland;North Carolina;37165;US
+Stanly;North Carolina;37167;US
+Stokes;North Carolina;37169;US
+Surry;North Carolina;37171;US
+Swain;North Carolina;37173;US
+Transylvania;North Carolina;37175;US
+Tyrrell;North Carolina;37177;US
+Union;North Carolina;37179;US
+Vance;North Carolina;37181;US
+Wake;North Carolina;37183;US
+Warren;North Carolina;37185;US
+Washington;North Carolina;37187;US
+Watauga;North Carolina;37189;US
+Wayne;North Carolina;37191;US
+Wilkes;North Carolina;37193;US
+Wilson;North Carolina;37195;US
+Yadkin;North Carolina;37197;US
+Yancey;North Carolina;37199;US
+
+North Dakota
+;North Dakota;38;US
+Barnes;North Dakota;38003;US
+Benson;North Dakota;38005;US
+Billings;North Dakota;38007;US
+Bottineau;North Dakota;38009;US
+Bowman;North Dakota;38011;US
+Burke;North Dakota;38013;US
+Burleigh;North Dakota;38015;US
+Cass;North Dakota;38017;US
+Cavalier;North Dakota;38019;US
+Dickey;North Dakota;38021;US
+Divide;North Dakota;38023;US
+Dunn;North Dakota;38025;US
+Eddy;North Dakota;38027;US
+Emmons;North Dakota;38029;US
+Foster;North Dakota;38031;US
+Grand Forks;North Dakota;38035;US
+Grant;North Dakota;38037;US
+Griggs;North Dakota;38039;US
+Hettinger;North Dakota;38041;US
+Kidder;North Dakota;38043;US
+LaMoure;North Dakota;38045;US
+Logan;North Dakota;38047;US
+McHenry;North Dakota;38049;US
+McIntosh;North Dakota;38051;US
+McKenzie;North Dakota;38053;US
+McLean;North Dakota;38055;US
+Mercer;North Dakota;38057;US
+Morton;North Dakota;38059;US
+Mountrail;North Dakota;38061;US
+Nelson;North Dakota;38063;US
+Oliver;North Dakota;38065;US
+Pembina;North Dakota;38067;US
+Pierce;North Dakota;38069;US
+Ramsey;North Dakota;38071;US
+Ransom;North Dakota;38073;US
+Renville;North Dakota;38075;US
+Richland;North Dakota;38077;US
+Rolette;North Dakota;38079;US
+Sargent;North Dakota;38081;US
+Sheridan;North Dakota;38083;US
+Sioux;North Dakota;38085;US
+Slope;North Dakota;38087;US
+Stark;North Dakota;38089;US
+Steele;North Dakota;38091;US
+Stutsman;North Dakota;38093;US
+Towner;North Dakota;38095;US
+Traill;North Dakota;38097;US
+Walsh;North Dakota;38099;US
+Ward;North Dakota;38101;US
+Wells;North Dakota;38103;US
+Williams;North Dakota;38105;US
+
+Ohio
+;Ohio;39;US
+Adams;Ohio;39001;US
+Allen;Ohio;39003;US
+Ashland;Ohio;39005;US
+Ashtabula;Ohio;39007;US
+Athens;Ohio;39009;US
+Auglaize;Ohio;39011;US
+Belmont;Ohio;39013;US
+Brown;Ohio;39015;US
+Butler;Ohio;39017;US
+Carroll;Ohio;39019;US
+Champaign;Ohio;39021;US
+Clark;Ohio;39023;US
+Clermont;Ohio;39025;US
+Clinton;Ohio;39027;US
+Columbiana;Ohio;39029;US
+Coshocton;Ohio;39031;US
+Crawford;Ohio;39033;US
+Cuyahoga;Ohio;39035;US
+Darke;Ohio;39037;US
+Defiance;Ohio;39039;US
+Delaware;Ohio;39041;US
+Erie;Ohio;39043;US
+Fairfield;Ohio;39045;US
+Fayette;Ohio;39047;US
+Franklin;Ohio;39049;US
+Fulton;Ohio;39051;US
+Gallia;Ohio;39053;US
+Geauga;Ohio;39055;US
+Greene;Ohio;39057;US
+Guernsey;Ohio;39059;US
+Hamilton;Ohio;39061;US
+Hancock;Ohio;39063;US
+Hardin;Ohio;39065;US
+Harrison;Ohio;39067;US
+Henry;Ohio;39069;US
+Highland;Ohio;39071;US
+Hocking;Ohio;39073;US
+Holmes;Ohio;39075;US
+Huron;Ohio;39077;US
+Jackson;Ohio;39079;US
+Jefferson;Ohio;39081;US
+Knox;Ohio;39083;US
+Lake;Ohio;39085;US
+Lawrence;Ohio;39087;US
+Licking;Ohio;39089;US
+Logan;Ohio;39091;US
+Lorain;Ohio;39093;US
+Lucas;Ohio;39095;US
+Madison;Ohio;39097;US
+Mahoning;Ohio;39099;US
+Marion;Ohio;39101;US
+Medina;Ohio;39103;US
+Meigs;Ohio;39105;US
+Mercer;Ohio;39107;US
+Miami;Ohio;39109;US
+Monroe;Ohio;39111;US
+Montgomery;Ohio;39113;US
+Morgan;Ohio;39115;US
+Morrow;Ohio;39117;US
+Muskingum;Ohio;39119;US
+Noble;Ohio;39121;US
+Ottawa;Ohio;39123;US
+Paulding;Ohio;39125;US
+Perry;Ohio;39127;US
+Pickaway;Ohio;39129;US
+Pike;Ohio;39131;US
+Portage;Ohio;39133;US
+Preble;Ohio;39135;US
+Putnam;Ohio;39137;US
+Richland;Ohio;39139;US
+Ross;Ohio;39141;US
+Sandusky;Ohio;39143;US
+Scioto;Ohio;39145;US
+Seneca;Ohio;39147;US
+Shelby;Ohio;39149;US
+Stark;Ohio;39151;US
+Summit;Ohio;39153;US
+Trumbull;Ohio;39155;US
+Tuscarawas;Ohio;39157;US
+Union;Ohio;39159;US
+Van Wert;Ohio;39161;US
+Vinton;Ohio;39163;US
+Warren;Ohio;39165;US
+Washington;Ohio;39167;US
+Wayne;Ohio;39169;US
+Williams;Ohio;39171;US
+Wood;Ohio;39173;US
+Wyandot;Ohio;39175;US
+
+Oklahoma
+;Oklahoma;40;US
+Adair;Oklahoma;40001;US
+Alfalfa;Oklahoma;40003;US
+Atoka;Oklahoma;40005;US
+Beaver;Oklahoma;40007;US
+Beckham;Oklahoma;40009;US
+Blaine;Oklahoma;40011;US
+Bryan;Oklahoma;40013;US
+Caddo;Oklahoma;40015;US
+Canadian;Oklahoma;40017;US
+Carter;Oklahoma;40019;US
+Cherokee;Oklahoma;40021;US
+Choctaw;Oklahoma;40023;US
+Cimarron;Oklahoma;40025;US
+Cleveland;Oklahoma;40027;US
+Coal;Oklahoma;40029;US
+Comanche;Oklahoma;40031;US
+Cotton;Oklahoma;40033;US
+Craig;Oklahoma;40035;US
+Creek;Oklahoma;40037;US
+Custer;Oklahoma;40039;US
+Delaware;Oklahoma;40041;US
+Dewey;Oklahoma;40043;US
+Ellis;Oklahoma;40045;US
+Garfield;Oklahoma;40047;US
+Garvin;Oklahoma;40049;US
+Grady;Oklahoma;40051;US
+Grant;Oklahoma;40053;US
+Greer;Oklahoma;40055;US
+Harmon;Oklahoma;40057;US
+Harper;Oklahoma;40059;US
+Haskell;Oklahoma;40061;US
+Hughes;Oklahoma;40063;US
+Jackson;Oklahoma;40065;US
+Jefferson;Oklahoma;40067;US
+Johnston;Oklahoma;40069;US
+Kay;Oklahoma;40071;US
+Kingfisher;Oklahoma;40073;US
+Kiowa;Oklahoma;40075;US
+Latimer;Oklahoma;40077;US
+Le Flore;Oklahoma;40079;US
+Lincoln;Oklahoma;40081;US
+Logan;Oklahoma;40083;US
+Love;Oklahoma;40085;US
+Major;Oklahoma;40093;US
+Marshall;Oklahoma;40095;US
+Mayes;Oklahoma;40097;US
+McClain;Oklahoma;40087;US
+McCurtain;Oklahoma;40089;US
+McIntosh;Oklahoma;40091;US
+Murray;Oklahoma;40099;US
+Muskogee;Oklahoma;40101;US
+Noble;Oklahoma;40103;US
+Nowata;Oklahoma;40105;US
+Okfuskee;Oklahoma;40107;US
+Oklahoma;Oklahoma;40109;US
+Okmulgee;Oklahoma;40111;US
+Osage;Oklahoma;40113;US
+Ottawa;Oklahoma;40115;US
+Pawnee;Oklahoma;40117;US
+Payne;Oklahoma;40119;US
+Pittsburg;Oklahoma;40121;US
+Pontotoc;Oklahoma;40123;US
+Pottawatomie;Oklahoma;40125;US
+Pushmataha;Oklahoma;40127;US
+Rogers;Oklahoma;40131;US
+Seminole;Oklahoma;40133;US
+Sequoyah;Oklahoma;40135;US
+Stephens;Oklahoma;40137;US
+Texas;Oklahoma;40139;US
+Tillman;Oklahoma;40141;US
+Tulsa;Oklahoma;40143;US
+Wagoner;Oklahoma;40145;US
+Washington;Oklahoma;40147;US
+Washita;Oklahoma;40149;US
+Woods;Oklahoma;40151;US
+Woodward;Oklahoma;40153;US
+
+Oregon
+;Oregon;41;US
+Baker;Oregon;41001;US
+Benton;Oregon;41003;US
+Clackamas;Oregon;41005;US
+Clatsop;Oregon;41007;US
+Columbia;Oregon;41009;US
+Coos;Oregon;41011;US
+Crook;Oregon;41013;US
+Curry;Oregon;41015;US
+Deschutes;Oregon;41017;US
+Douglas;Oregon;41019;US
+Gilliam;Oregon;41021;US
+Grant;Oregon;41023;US
+Harney;Oregon;41025;US
+Hood River;Oregon;41027;US
+Jackson;Oregon;41029;US
+Jefferson;Oregon;41031;US
+Josephine;Oregon;41033;US
+Klamath;Oregon;41035;US
+Lake;Oregon;41037;US
+Lane;Oregon;41039;US
+Lincoln;Oregon;41041;US
+Linn;Oregon;41043;US
+Malheur;Oregon;41045;US
+Marion;Oregon;41047;US
+Morrow;Oregon;41049;US
+Multnomah;Oregon;41051;US
+Polk;Oregon;41053;US
+Sherman;Oregon;41055;US
+Tillamook;Oregon;41057;US
+Umatilla;Oregon;41059;US
+Union;Oregon;41061;US
+Wallowa;Oregon;41063;US
+Wasco;Oregon;41065;US
+Washington;Oregon;41067;US
+Wheeler;Oregon;41069;US
+Yamhill;Oregon;41071;US
+
+Pennsylvania
+;Pennsylvania;42;US
+Adams;Pennsylvania;42001;US
+Allegheny;Pennsylvania;42003;US
+Armstrong;Pennsylvania;42005;US
+Beaver;Pennsylvania;42007;US
+Bedford;Pennsylvania;42009;US
+Berks;Pennsylvania;42011;US
+Blair;Pennsylvania;42013;US
+Bradford;Pennsylvania;42015;US
+Bucks;Pennsylvania;42017;US
+Butler;Pennsylvania;42019;US
+Cambria;Pennsylvania;42021;US
+Cameron;Pennsylvania;42023;US
+Carbon;Pennsylvania;42025;US
+Centre;Pennsylvania;42027;US
+Chester;Pennsylvania;42029;US
+Clarion;Pennsylvania;42031;US
+Clearfield;Pennsylvania;42033;US
+Clinton;Pennsylvania;42035;US
+Columbia;Pennsylvania;42037;US
+Crawford;Pennsylvania;42039;US
+Cumberland;Pennsylvania;42041;US
+Dauphin;Pennsylvania;42043;US
+Delaware;Pennsylvania;42045;US
+Elk;Pennsylvania;42047;US
+Erie;Pennsylvania;42049;US
+Fayette;Pennsylvania;42051;US
+Forest;Pennsylvania;42053;US
+Franklin;Pennsylvania;42055;US
+Fulton;Pennsylvania;42057;US
+Greene;Pennsylvania;42059;US
+Huntingdon;Pennsylvania;42061;US
+Indiana;Pennsylvania;42063;US
+Jefferson;Pennsylvania;42065;US
+Juniata;Pennsylvania;42067;US
+Lackawanna;Pennsylvania;42069;US
+Lancaster;Pennsylvania;42071;US
+Lawrence;Pennsylvania;42073;US
+Lebanon;Pennsylvania;42075;US
+Lehigh;Pennsylvania;42077;US
+Luzerne;Pennsylvania;42079;US
+Lycoming;Pennsylvania;42081;US
+McKean;Pennsylvania;42083;US
+Mercer;Pennsylvania;42085;US
+Mifflin;Pennsylvania;42087;US
+Monroe;Pennsylvania;42089;US
+Montgomery;Pennsylvania;42091;US
+Montour;Pennsylvania;42093;US
+Northampton;Pennsylvania;42095;US
+Northumberland;Pennsylvania;42097;US
+Perry;Pennsylvania;42099;US
+Philadelphia;Pennsylvania;42101;US
+Pike;Pennsylvania;42103;US
+Potter;Pennsylvania;42105;US
+Schuylkill;Pennsylvania;42107;US
+Snyder;Pennsylvania;42109;US
+Somerset;Pennsylvania;42111;US
+Sullivan;Pennsylvania;42113;US
+Susquehanna;Pennsylvania;42115;US
+Tioga;Pennsylvania;42117;US
+Union;Pennsylvania;42119;US
+Venango;Pennsylvania;42121;US
+Warren;Pennsylvania;42123;US
+Washington;Pennsylvania;42125;US
+Wayne;Pennsylvania;42127;US
+Westmoreland;Pennsylvania;42129;US
+Wyoming;Pennsylvania;42131;US
+York;Pennsylvania;42133;US
+
+Rhode Island
+;Rhode Island;44;US
+Bristol;Rhode Island;44001;US
+Kent;Rhode Island;44003;US
+Newport;Rhode Island;44005;US
+Providence;Rhode Island;44007;US
+Washington;Rhode Island;44009;US
+
+South Carolina
+;South Carolina;45;US
+Abbeville;South Carolina;45001;US
+Aiken;South Carolina;45003;US
+Allendale;South Carolina;45005;US
+Anderson;South Carolina;45007;US
+Bamberg;South Carolina;45009;US
+Barnwell;South Carolina;45011;US
+Beaufort;South Carolina;45013;US
+Berkeley;South Carolina;45015;US
+Calhoun;South Carolina;45017;US
+Charleston;South Carolina;45019;US
+Cherokee;South Carolina;45021;US
+Chester;South Carolina;45023;US
+Chesterfield;South Carolina;45025;US
+Clarendon;South Carolina;45027;US
+Colleton;South Carolina;45029;US
+Darlington;South Carolina;45031;US
+Dillon;South Carolina;45033;US
+Dorchester;South Carolina;45035;US
+Edgefield;South Carolina;45037;US
+Fairfield;South Carolina;45039;US
+Florence;South Carolina;45041;US
+Georgetown;South Carolina;45043;US
+Greenville;South Carolina;45045;US
+Greenwood;South Carolina;45047;US
+Hampton;South Carolina;45049;US
+Horry;South Carolina;45051;US
+Jasper;South Carolina;45053;US
+Kershaw;South Carolina;45055;US
+Lancaster;South Carolina;45057;US
+Laurens;South Carolina;45059;US
+Lee;South Carolina;45061;US
+Lexington;South Carolina;45063;US
+Marion;South Carolina;45067;US
+Marlboro;South Carolina;45069;US
+McCormick;South Carolina;45065;US
+Newberry;South Carolina;45071;US
+Oconee;South Carolina;45073;US
+Orangeburg;South Carolina;45075;US
+Pickens;South Carolina;45077;US
+Richland;South Carolina;45079;US
+Saluda;South Carolina;45081;US
+Spartanburg;South Carolina;45083;US
+Sumter;South Carolina;45085;US
+Union;South Carolina;45087;US
+Williamsburg;South Carolina;45089;US
+York;South Carolina;45091;US
+
+South Dakota
+;South Dakota;46;US
+Aurora;South Dakota;46003;US
+Beadle;South Dakota;46005;US
+Bennett;South Dakota;46007;US
+Bon Homme;South Dakota;46009;US
+Brookings;South Dakota;46011;US
+Brown;South Dakota;46013;US
+Brule;South Dakota;46015;US
+Buffalo;South Dakota;46017;US
+Butte;South Dakota;46019;US
+Campbell;South Dakota;46021;US
+Charles Mix;South Dakota;46023;US
+Clark;South Dakota;46025;US
+Clay;South Dakota;46027;US
+Codington;South Dakota;46029;US
+Corson;South Dakota;46031;US
+Custer;South Dakota;46033;US
+Davison;South Dakota;46035;US
+Day;South Dakota;46037;US
+Deuel;South Dakota;46039;US
+Dewey;South Dakota;46041;US
+Douglas;South Dakota;46043;US
+Edmunds;South Dakota;46045;US
+Fall River;South Dakota;46047;US
+Faulk;South Dakota;46049;US
+Grant;South Dakota;46051;US
+Gregory;South Dakota;46053;US
+Haakon;South Dakota;46055;US
+Hamlin;South Dakota;46057;US
+Hand;South Dakota;46059;US
+Hanson;South Dakota;46061;US
+Hughes;South Dakota;46065;US
+Hutchinson;South Dakota;46067;US
+Hyde;South Dakota;46069;US
+Jackson;South Dakota;46071;US
+Jerauld;South Dakota;46073;US
+Jones;South Dakota;46075;US
+Kingsbury;South Dakota;46077;US
+Lake;South Dakota;46079;US
+Lawrence;South Dakota;46081;US
+Lincoln;South Dakota;46083;US
+Lyman;South Dakota;46085;US
+Marshall;South Dakota;46091;US
+McCook;South Dakota;46087;US
+McPherson;South Dakota;46089;US
+Meade;South Dakota;46093;US
+Mellette;South Dakota;46095;US
+Miner;South Dakota;46097;US
+Minnehaha;South Dakota;46099;US
+Moody;South Dakota;46101;US
+Oglala Lakota;South Dakota;46102;US
+Pennington;South Dakota;46103;US
+Roberts;South Dakota;46109;US
+Sanborn;South Dakota;46111;US
+Spink;South Dakota;46115;US
+Stanley;South Dakota;46117;US
+Sully;South Dakota;46119;US
+Todd;South Dakota;46121;US
+Tripp;South Dakota;46123;US
+Turner;South Dakota;46125;US
+Union;South Dakota;46127;US
+Walworth;South Dakota;46129;US
+Yankton;South Dakota;46135;US
+Ziebach;South Dakota;46137;US
+
+Tennessee
+;Tennessee;47;US
+Anderson;Tennessee;47001;US
+Bedford;Tennessee;47003;US
+Benton;Tennessee;47005;US
+Bledsoe;Tennessee;47007;US
+Blount;Tennessee;47009;US
+Bradley;Tennessee;47011;US
+Campbell;Tennessee;47013;US
+Cannon;Tennessee;47015;US
+Carroll;Tennessee;47017;US
+Carter;Tennessee;47019;US
+Cheatham;Tennessee;47021;US
+Chester;Tennessee;47023;US
+Claiborne;Tennessee;47025;US
+Clay;Tennessee;47027;US
+Cocke;Tennessee;47029;US
+Coffee;Tennessee;47031;US
+Crockett;Tennessee;47033;US
+Cumberland;Tennessee;47035;US
+Davidson;Tennessee;47037;US
+DeKalb;Tennessee;47041;US
+Decatur;Tennessee;47039;US
+Dickson;Tennessee;47043;US
+Dyer;Tennessee;47045;US
+Fayette;Tennessee;47047;US
+Fentress;Tennessee;47049;US
+Franklin;Tennessee;47051;US
+Gibson;Tennessee;47053;US
+Giles;Tennessee;47055;US
+Grainger;Tennessee;47057;US
+Greene;Tennessee;47059;US
+Grundy;Tennessee;47061;US
+Hamblen;Tennessee;47063;US
+Hamilton;Tennessee;47065;US
+Hancock;Tennessee;47067;US
+Hardeman;Tennessee;47069;US
+Hardin;Tennessee;47071;US
+Hawkins;Tennessee;47073;US
+Haywood;Tennessee;47075;US
+Henderson;Tennessee;47077;US
+Henry;Tennessee;47079;US
+Hickman;Tennessee;47081;US
+Houston;Tennessee;47083;US
+Humphreys;Tennessee;47085;US
+Jackson;Tennessee;47087;US
+Jefferson;Tennessee;47089;US
+Johnson;Tennessee;47091;US
+Knox;Tennessee;47093;US
+Lake;Tennessee;47095;US
+Lauderdale;Tennessee;47097;US
+Lawrence;Tennessee;47099;US
+Lewis;Tennessee;47101;US
+Lincoln;Tennessee;47103;US
+Loudon;Tennessee;47105;US
+Macon;Tennessee;47111;US
+Madison;Tennessee;47113;US
+Marion;Tennessee;47115;US
+Marshall;Tennessee;47117;US
+Maury;Tennessee;47119;US
+McMinn;Tennessee;47107;US
+McNairy;Tennessee;47109;US
+Meigs;Tennessee;47121;US
+Monroe;Tennessee;47123;US
+Montgomery;Tennessee;47125;US
+Moore;Tennessee;47127;US
+Morgan;Tennessee;47129;US
+Obion;Tennessee;47131;US
+Overton;Tennessee;47133;US
+Perry;Tennessee;47135;US
+Pickett;Tennessee;47137;US
+Polk;Tennessee;47139;US
+Putnam;Tennessee;47141;US
+Rhea;Tennessee;47143;US
+Roane;Tennessee;47145;US
+Robertson;Tennessee;47147;US
+Rutherford;Tennessee;47149;US
+Scott;Tennessee;47151;US
+Sequatchie;Tennessee;47153;US
+Sevier;Tennessee;47155;US
+Shelby;Tennessee;47157;US
+Smith;Tennessee;47159;US
+Stewart;Tennessee;47161;US
+Sullivan;Tennessee;47163;US
+Sumner;Tennessee;47165;US
+Tipton;Tennessee;47167;US
+Trousdale;Tennessee;47169;US
+Unicoi;Tennessee;47171;US
+Union;Tennessee;47173;US
+Van Buren;Tennessee;47175;US
+Warren;Tennessee;47177;US
+Washington;Tennessee;47179;US
+Wayne;Tennessee;47181;US
+Weakley;Tennessee;47183;US
+White;Tennessee;47185;US
+Williamson;Tennessee;47187;US
+Wilson;Tennessee;47189;US
+
+Texas
+;Texas;48;US
+Anderson;Texas;48001;US
+Andrews;Texas;48003;US
+Angelina;Texas;48005;US
+Aransas;Texas;48007;US
+Archer;Texas;48009;US
+Armstrong;Texas;48011;US
+Atascosa;Texas;48013;US
+Austin;Texas;48015;US
+Bailey;Texas;48017;US
+Bandera;Texas;48019;US
+Bastrop;Texas;48021;US
+Baylor;Texas;48023;US
+Bee;Texas;48025;US
+Bell;Texas;48027;US
+Bexar;Texas;48029;US
+Blanco;Texas;48031;US
+Bosque;Texas;48035;US
+Bowie;Texas;48037;US
+Brazoria;Texas;48039;US
+Brazos;Texas;48041;US
+Brewster;Texas;48043;US
+Briscoe;Texas;48045;US
+Brooks;Texas;48047;US
+Brown;Texas;48049;US
+Burleson;Texas;48051;US
+Burnet;Texas;48053;US
+Caldwell;Texas;48055;US
+Calhoun;Texas;48057;US
+Callahan;Texas;48059;US
+Cameron;Texas;48061;US
+Camp;Texas;48063;US
+Carson;Texas;48065;US
+Cass;Texas;48067;US
+Castro;Texas;48069;US
+Chambers;Texas;48071;US
+Cherokee;Texas;48073;US
+Childress;Texas;48075;US
+Clay;Texas;48077;US
+Cochran;Texas;48079;US
+Coke;Texas;48081;US
+Coleman;Texas;48083;US
+Collin;Texas;48085;US
+Collingsworth;Texas;48087;US
+Colorado;Texas;48089;US
+Comal;Texas;48091;US
+Comanche;Texas;48093;US
+Concho;Texas;48095;US
+Cooke;Texas;48097;US
+Coryell;Texas;48099;US
+Cottle;Texas;48101;US
+Crane;Texas;48103;US
+Crockett;Texas;48105;US
+Crosby;Texas;48107;US
+Culberson;Texas;48109;US
+Dallam;Texas;48111;US
+Dallas;Texas;48113;US
+Dawson;Texas;48115;US
+DeWitt;Texas;48123;US
+Deaf Smith;Texas;48117;US
+Delta;Texas;48119;US
+Denton;Texas;48121;US
+Dickens;Texas;48125;US
+Dimmit;Texas;48127;US
+Donley;Texas;48129;US
+Duval;Texas;48131;US
+Eastland;Texas;48133;US
+Ector;Texas;48135;US
+Edwards;Texas;48137;US
+El Paso;Texas;48141;US
+Ellis;Texas;48139;US
+Erath;Texas;48143;US
+Falls;Texas;48145;US
+Fannin;Texas;48147;US
+Fayette;Texas;48149;US
+Fisher;Texas;48151;US
+Floyd;Texas;48153;US
+Fort Bend;Texas;48157;US
+Franklin;Texas;48159;US
+Freestone;Texas;48161;US
+Frio;Texas;48163;US
+Gaines;Texas;48165;US
+Galveston;Texas;48167;US
+Garza;Texas;48169;US
+Gillespie;Texas;48171;US
+Glasscock;Texas;48173;US
+Goliad;Texas;48175;US
+Gonzales;Texas;48177;US
+Gray;Texas;48179;US
+Grayson;Texas;48181;US
+Gregg;Texas;48183;US
+Grimes;Texas;48185;US
+Guadalupe;Texas;48187;US
+Hale;Texas;48189;US
+Hall;Texas;48191;US
+Hamilton;Texas;48193;US
+Hansford;Texas;48195;US
+Hardeman;Texas;48197;US
+Hardin;Texas;48199;US
+Harris;Texas;48201;US
+Harrison;Texas;48203;US
+Hartley;Texas;48205;US
+Haskell;Texas;48207;US
+Hays;Texas;48209;US
+Hemphill;Texas;48211;US
+Henderson;Texas;48213;US
+Hidalgo;Texas;48215;US
+Hill;Texas;48217;US
+Hockley;Texas;48219;US
+Hood;Texas;48221;US
+Hopkins;Texas;48223;US
+Houston;Texas;48225;US
+Howard;Texas;48227;US
+Hudspeth;Texas;48229;US
+Hunt;Texas;48231;US
+Hutchinson;Texas;48233;US
+Irion;Texas;48235;US
+Jack;Texas;48237;US
+Jackson;Texas;48239;US
+Jasper;Texas;48241;US
+Jeff Davis;Texas;48243;US
+Jefferson;Texas;48245;US
+Jim Hogg;Texas;48247;US
+Jim Wells;Texas;48249;US
+Johnson;Texas;48251;US
+Jones;Texas;48253;US
+Karnes;Texas;48255;US
+Kaufman;Texas;48257;US
+Kendall;Texas;48259;US
+Kenedy;Texas;48261;US
+Kerr;Texas;48265;US
+Kimble;Texas;48267;US
+Kinney;Texas;48271;US
+Kleberg;Texas;48273;US
+Knox;Texas;48275;US
+La Salle;Texas;48283;US
+Lamar;Texas;48277;US
+Lamb;Texas;48279;US
+Lampasas;Texas;48281;US
+Lavaca;Texas;48285;US
+Lee;Texas;48287;US
+Leon;Texas;48289;US
+Liberty;Texas;48291;US
+Limestone;Texas;48293;US
+Lipscomb;Texas;48295;US
+Live Oak;Texas;48297;US
+Llano;Texas;48299;US
+Lubbock;Texas;48303;US
+Lynn;Texas;48305;US
+Madison;Texas;48313;US
+Marion;Texas;48315;US
+Martin;Texas;48317;US
+Mason;Texas;48319;US
+Matagorda;Texas;48321;US
+Maverick;Texas;48323;US
+McCulloch;Texas;48307;US
+McLennan;Texas;48309;US
+Medina;Texas;48325;US
+Menard;Texas;48327;US
+Midland;Texas;48329;US
+Milam;Texas;48331;US
+Mills;Texas;48333;US
+Mitchell;Texas;48335;US
+Montague;Texas;48337;US
+Montgomery;Texas;48339;US
+Moore;Texas;48341;US
+Morris;Texas;48343;US
+Motley;Texas;48345;US
+Nacogdoches;Texas;48347;US
+Navarro;Texas;48349;US
+Newton;Texas;48351;US
+Nolan;Texas;48353;US
+Nueces;Texas;48355;US
+Ochiltree;Texas;48357;US
+Oldham;Texas;48359;US
+Orange;Texas;48361;US
+Palo Pinto;Texas;48363;US
+Panola;Texas;48365;US
+Parker;Texas;48367;US
+Parmer;Texas;48369;US
+Pecos;Texas;48371;US
+Polk;Texas;48373;US
+Potter;Texas;48375;US
+Presidio;Texas;48377;US
+Rains;Texas;48379;US
+Randall;Texas;48381;US
+Reagan;Texas;48383;US
+Real;Texas;48385;US
+Red River;Texas;48387;US
+Reeves;Texas;48389;US
+Refugio;Texas;48391;US
+Roberts;Texas;48393;US
+Robertson;Texas;48395;US
+Rockwall;Texas;48397;US
+Runnels;Texas;48399;US
+Rusk;Texas;48401;US
+Sabine;Texas;48403;US
+San Augustine;Texas;48405;US
+San Jacinto;Texas;48407;US
+San Patricio;Texas;48409;US
+San Saba;Texas;48411;US
+Schleicher;Texas;48413;US
+Scurry;Texas;48415;US
+Shackelford;Texas;48417;US
+Shelby;Texas;48419;US
+Sherman;Texas;48421;US
+Smith;Texas;48423;US
+Somervell;Texas;48425;US
+Starr;Texas;48427;US
+Stephens;Texas;48429;US
+Sterling;Texas;48431;US
+Sutton;Texas;48435;US
+Swisher;Texas;48437;US
+Tarrant;Texas;48439;US
+Taylor;Texas;48441;US
+Terrell;Texas;48443;US
+Terry;Texas;48445;US
+Throckmorton;Texas;48447;US
+Titus;Texas;48449;US
+Tom Green;Texas;48451;US
+Travis;Texas;48453;US
+Trinity;Texas;48455;US
+Tyler;Texas;48457;US
+Upshur;Texas;48459;US
+Upton;Texas;48461;US
+Uvalde;Texas;48463;US
+Val Verde;Texas;48465;US
+Van Zandt;Texas;48467;US
+Victoria;Texas;48469;US
+Walker;Texas;48471;US
+Waller;Texas;48473;US
+Ward;Texas;48475;US
+Washington;Texas;48477;US
+Webb;Texas;48479;US
+Wharton;Texas;48481;US
+Wheeler;Texas;48483;US
+Wichita;Texas;48485;US
+Wilbarger;Texas;48487;US
+Willacy;Texas;48489;US
+Williamson;Texas;48491;US
+Wilson;Texas;48493;US
+Winkler;Texas;48495;US
+Wise;Texas;48497;US
+Wood;Texas;48499;US
+Yoakum;Texas;48501;US
+Young;Texas;48503;US
+Zapata;Texas;48505;US
+Zavala;Texas;48507;US
+
+Utah
+;Utah;49;US
+Bear River;Utah;;US
+Central Utah;Utah;;US
+Davis;Utah;49011;US
+Salt Lake;Utah;49035;US
+San Juan;Utah;49037;US
+Southeast Utah;Utah;;US
+Southwest Utah;Utah;;US
+Summit;Utah;49043;US
+Tooele;Utah;49045;US
+TriCounty;Utah;;US
+Utah;Utah;49049;US
+Wasatch;Utah;49051;US
+Weber-Morgan;Utah;;US
+
+Vermont
+;Vermont;50;US
+Addison;Vermont;50001;US
+Bennington;Vermont;50003;US
+Caledonia;Vermont;50005;US
+Chittenden;Vermont;50007;US
+Essex;Vermont;50009;US
+Franklin;Vermont;50011;US
+Grand Isle;Vermont;50013;US
+Lamoille;Vermont;50015;US
+Orange;Vermont;50017;US
+Orleans;Vermont;50019;US
+Rutland;Vermont;50021;US
+Washington;Vermont;50023;US
+Windham;Vermont;50025;US
+Windsor;Vermont;50027;US
+
+Virginia
+;Virginia;51;US
+Accomack;Virginia;51001;US
+Albemarle;Virginia;51003;US
+Alexandria;Virginia;51510;US
+Alleghany;Virginia;51005;US
+Amelia;Virginia;51007;US
+Amherst;Virginia;51009;US
+Appomattox;Virginia;51011;US
+Arlington;Virginia;51013;US
+Augusta;Virginia;51015;US
+Bath;Virginia;51017;US
+Bedford;Virginia;51019;US
+Bland;Virginia;51021;US
+Botetourt;Virginia;51023;US
+Bristol;Virginia;51520;US
+Brunswick;Virginia;51025;US
+Buchanan;Virginia;51027;US
+Buckingham;Virginia;51029;US
+Buena Vista;Virginia;51530;US
+Campbell;Virginia;51031;US
+Caroline;Virginia;51033;US
+Carroll;Virginia;51035;US
+Charles City;Virginia;51036;US
+Charlotte;Virginia;51037;US
+Charlottesville;Virginia;51540;US
+Chesapeake;Virginia;51550;US
+Chesterfield;Virginia;51041;US
+Clarke;Virginia;51043;US
+Colonial Heights;Virginia;51570;US
+Covington;Virginia;51580;US
+Craig;Virginia;51045;US
+Culpeper;Virginia;51047;US
+Cumberland;Virginia;51049;US
+Danville;Virginia;51590;US
+Dickenson;Virginia;51051;US
+Dinwiddie;Virginia;51053;US
+Emporia;Virginia;51595;US
+Essex;Virginia;51057;US
+Fairfax;Virginia;51059;US
+Fairfax City;Virginia;51600;US
+Falls Church;Virginia;51610;US
+Fauquier;Virginia;51061;US
+Floyd;Virginia;51063;US
+Fluvanna;Virginia;51065;US
+Franklin;Virginia;51067;US
+Franklin City;Virginia;51620;US
+Frederick;Virginia;51069;US
+Fredericksburg;Virginia;51630;US
+Galax;Virginia;51640;US
+Giles;Virginia;51071;US
+Gloucester;Virginia;51073;US
+Goochland;Virginia;51075;US
+Grayson;Virginia;51077;US
+Greene;Virginia;51079;US
+Greensville;Virginia;51081;US
+Halifax;Virginia;51083;US
+Hampton;Virginia;51650;US
+Hanover;Virginia;51085;US
+Harrisonburg;Virginia;51660;US
+Henrico;Virginia;51087;US
+Henry;Virginia;51089;US
+Highland;Virginia;51091;US
+Hopewell;Virginia;51670;US
+Isle of Wight;Virginia;51093;US
+James City;Virginia;51095;US
+King George;Virginia;51099;US
+King William;Virginia;51101;US
+King and Queen;Virginia;51097;US
+Lancaster;Virginia;51103;US
+Lee;Virginia;51105;US
+Lexington;Virginia;51678;US
+Loudoun;Virginia;51107;US
+Louisa;Virginia;51109;US
+Lunenburg;Virginia;51111;US
+Lynchburg;Virginia;51680;US
+Madison;Virginia;51113;US
+Manassas;Virginia;51683;US
+Manassas Park;Virginia;51685;US
+Martinsville;Virginia;51690;US
+Mathews;Virginia;51115;US
+Mecklenburg;Virginia;51117;US
+Middlesex;Virginia;51119;US
+Montgomery;Virginia;51121;US
+Nelson;Virginia;51125;US
+New Kent;Virginia;51127;US
+Newport News;Virginia;51700;US
+Norfolk;Virginia;51710;US
+Northampton;Virginia;51131;US
+Northumberland;Virginia;51133;US
+Norton;Virginia;51720;US
+Nottoway;Virginia;51135;US
+Orange;Virginia;51137;US
+Page;Virginia;51139;US
+Patrick;Virginia;51141;US
+Petersburg;Virginia;51730;US
+Pittsylvania;Virginia;51143;US
+Poquoson;Virginia;51735;US
+Portsmouth;Virginia;51740;US
+Powhatan;Virginia;51145;US
+Prince Edward;Virginia;51147;US
+Prince George;Virginia;51149;US
+Prince William;Virginia;51153;US
+Pulaski;Virginia;51155;US
+Radford;Virginia;51750;US
+Rappahannock;Virginia;51157;US
+Richmond;Virginia;51159;US
+Richmond City;Virginia;51760;US
+Roanoke;Virginia;51161;US
+Roanoke City;Virginia;51770;US
+Rockbridge;Virginia;51163;US
+Rockingham;Virginia;51165;US
+Russell;Virginia;51167;US
+Salem;Virginia;51775;US
+Scott;Virginia;51169;US
+Shenandoah;Virginia;51171;US
+Smyth;Virginia;51173;US
+Southampton;Virginia;51175;US
+Spotsylvania;Virginia;51177;US
+Stafford;Virginia;51179;US
+Staunton;Virginia;51790;US
+Suffolk;Virginia;51800;US
+Surry;Virginia;51181;US
+Sussex;Virginia;51183;US
+Tazewell;Virginia;51185;US
+Virginia Beach;Virginia;51810;US
+Warren;Virginia;51187;US
+Washington;Virginia;51191;US
+Waynesboro;Virginia;51820;US
+Westmoreland;Virginia;51193;US
+Williamsburg;Virginia;51830;US
+Winchester;Virginia;51840;US
+Wise;Virginia;51195;US
+Wythe;Virginia;51197;US
+York;Virginia;51199;US
+
+Washington
+;Washington;53;US
+Adams;Washington;53001;US
+Asotin;Washington;53003;US
+Benton;Washington;53005;US
+Chelan;Washington;53007;US
+Clallam;Washington;53009;US
+Clark;Washington;53011;US
+Columbia;Washington;53013;US
+Cowlitz;Washington;53015;US
+Douglas;Washington;53017;US
+Ferry;Washington;53019;US
+Franklin;Washington;53021;US
+Garfield;Washington;53023;US
+Grant;Washington;53025;US
+Grays Harbor;Washington;53027;US
+Island;Washington;53029;US
+Jefferson;Washington;53031;US
+King;Washington;53033;US
+Kitsap;Washington;53035;US
+Kittitas;Washington;53037;US
+Klickitat;Washington;53039;US
+Lewis;Washington;53041;US
+Lincoln;Washington;53043;US
+Mason;Washington;53045;US
+Okanogan;Washington;53047;US
+Pacific;Washington;53049;US
+Pend Oreille;Washington;53051;US
+Pierce;Washington;53053;US
+San Juan;Washington;53055;US
+Skagit;Washington;53057;US
+Skamania;Washington;53059;US
+Snohomish;Washington;53061;US
+Spokane;Washington;53063;US
+Stevens;Washington;53065;US
+Thurston;Washington;53067;US
+Wahkiakum;Washington;53069;US
+Walla Walla;Washington;53071;US
+Whatcom;Washington;53073;US
+Whitman;Washington;53075;US
+Yakima;Washington;53077;US
+
+West Virginia
+;West Virginia;54;US
+Barbour;West Virginia;54001;US
+Berkeley;West Virginia;54003;US
+Boone;West Virginia;54005;US
+Braxton;West Virginia;54007;US
+Brooke;West Virginia;54009;US
+Cabell;West Virginia;54011;US
+Calhoun;West Virginia;54013;US
+Clay;West Virginia;54015;US
+Fayette;West Virginia;54019;US
+Gilmer;West Virginia;54021;US
+Grant;West Virginia;54023;US
+Greenbrier;West Virginia;54025;US
+Hampshire;West Virginia;54027;US
+Hancock;West Virginia;54029;US
+Hardy;West Virginia;54031;US
+Harrison;West Virginia;54033;US
+Jackson;West Virginia;54035;US
+Jefferson;West Virginia;54037;US
+Kanawha;West Virginia;54039;US
+Lewis;West Virginia;54041;US
+Lincoln;West Virginia;54043;US
+Logan;West Virginia;54045;US
+Marion;West Virginia;54049;US
+Marshall;West Virginia;54051;US
+Mason;West Virginia;54053;US
+McDowell;West Virginia;54047;US
+Mercer;West Virginia;54055;US
+Mineral;West Virginia;54057;US
+Mingo;West Virginia;54059;US
+Monongalia;West Virginia;54061;US
+Monroe;West Virginia;54063;US
+Morgan;West Virginia;54065;US
+Nicholas;West Virginia;54067;US
+Ohio;West Virginia;54069;US
+Pendleton;West Virginia;54071;US
+Pleasants;West Virginia;54073;US
+Pocahontas;West Virginia;54075;US
+Preston;West Virginia;54077;US
+Putnam;West Virginia;54079;US
+Raleigh;West Virginia;54081;US
+Randolph;West Virginia;54083;US
+Ritchie;West Virginia;54085;US
+Roane;West Virginia;54087;US
+Summers;West Virginia;54089;US
+Taylor;West Virginia;54091;US
+Tucker;West Virginia;54093;US
+Tyler;West Virginia;54095;US
+Upshur;West Virginia;54097;US
+Wayne;West Virginia;54099;US
+Webster;West Virginia;54101;US
+Wetzel;West Virginia;54103;US
+Wirt;West Virginia;54105;US
+Wood;West Virginia;54107;US
+Wyoming;West Virginia;54109;US
+
+Wisconsin
+;Wisconsin;55;US
+Adams;Wisconsin;55001;US
+Ashland;Wisconsin;55003;US
+Barron;Wisconsin;55005;US
+Bayfield;Wisconsin;55007;US
+Brown;Wisconsin;55009;US
+Buffalo;Wisconsin;55011;US
+Burnett;Wisconsin;55013;US
+Calumet;Wisconsin;55015;US
+Chippewa;Wisconsin;55017;US
+Clark;Wisconsin;55019;US
+Columbia;Wisconsin;55021;US
+Crawford;Wisconsin;55023;US
+Dane;Wisconsin;55025;US
+Dodge;Wisconsin;55027;US
+Door;Wisconsin;55029;US
+Douglas;Wisconsin;55031;US
+Dunn;Wisconsin;55033;US
+Eau Claire;Wisconsin;55035;US
+Florence;Wisconsin;55037;US
+Fond du Lac;Wisconsin;55039;US
+Forest;Wisconsin;55041;US
+Grant;Wisconsin;55043;US
+Green;Wisconsin;55045;US
+Green Lake;Wisconsin;55047;US
+Iowa;Wisconsin;55049;US
+Iron;Wisconsin;55051;US
+Jackson;Wisconsin;55053;US
+Jefferson;Wisconsin;55055;US
+Juneau;Wisconsin;55057;US
+Kenosha;Wisconsin;55059;US
+Kewaunee;Wisconsin;55061;US
+La Crosse;Wisconsin;55063;US
+Lafayette;Wisconsin;55065;US
+Langlade;Wisconsin;55067;US
+Lincoln;Wisconsin;55069;US
+Manitowoc;Wisconsin;55071;US
+Marathon;Wisconsin;55073;US
+Marinette;Wisconsin;55075;US
+Marquette;Wisconsin;55077;US
+Menominee;Wisconsin;55078;US
+Milwaukee;Wisconsin;55079;US
+Monroe;Wisconsin;55081;US
+Oconto;Wisconsin;55083;US
+Oneida;Wisconsin;55085;US
+Outagamie;Wisconsin;55087;US
+Ozaukee;Wisconsin;55089;US
+Pepin;Wisconsin;55091;US
+Pierce;Wisconsin;55093;US
+Polk;Wisconsin;55095;US
+Portage;Wisconsin;55097;US
+Price;Wisconsin;55099;US
+Racine;Wisconsin;55101;US
+Richland;Wisconsin;55103;US
+Rock;Wisconsin;55105;US
+Rusk;Wisconsin;55107;US
+Sauk;Wisconsin;55111;US
+Sawyer;Wisconsin;55113;US
+Shawano;Wisconsin;55115;US
+Sheboygan;Wisconsin;55117;US
+St. Croix;Wisconsin;55109;US
+Taylor;Wisconsin;55119;US
+Trempealeau;Wisconsin;55121;US
+Vernon;Wisconsin;55123;US
+Vilas;Wisconsin;55125;US
+Walworth;Wisconsin;55127;US
+Washburn;Wisconsin;55129;US
+Washington;Wisconsin;55131;US
+Waukesha;Wisconsin;55133;US
+Waupaca;Wisconsin;55135;US
+Waushara;Wisconsin;55137;US
+Winnebago;Wisconsin;55139;US
+Wood;Wisconsin;55141;US
+
+Wyoming
+;Wyoming;56;US
+Albany;Wyoming;56001;US
+Big Horn;Wyoming;56003;US
+Campbell;Wyoming;56005;US
+Carbon;Wyoming;56007;US
+Converse;Wyoming;56009;US
+Crook;Wyoming;56011;US
+Fremont;Wyoming;56013;US
+Goshen;Wyoming;56015;US
+Hot Springs;Wyoming;56017;US
+Johnson;Wyoming;56019;US
+Laramie;Wyoming;56021;US
+Lincoln;Wyoming;56023;US
+Natrona;Wyoming;56025;US
+Niobrara;Wyoming;56027;US
+Park;Wyoming;56029;US
+Platte;Wyoming;56031;US
+Sheridan;Wyoming;56033;US
+Sublette;Wyoming;56035;US
+Sweetwater;Wyoming;56037;US
+Teton;Wyoming;56039;US
+Uinta;Wyoming;56041;US
+Washakie;Wyoming;56043;US
+Weston;Wyoming;56045;US
+
+Australia
+;;;Australia
+;Australian Capital Territory;;Australia
+;New South Wales;;Australia
+;Northern Territory;;Australia
+;Queensland;;Australia
+;South Australia;;Australia
+;Tasmania;;Australia
+;Victoria;;Australia
+;Western Australia;;Australia
+
+Brazil
+;;;Brazil
+;Acre;;Brazil
+;Alagoas;;Brazil
+;Amapa;;Brazil
+;Amazonas;;Brazil
+;Bahia;;Brazil
+;Ceara;;Brazil
+;Distrito Federal;;Brazil
+;Espirito Santo;;Brazil
+;Goias;;Brazil
+;Maranhao;;Brazil
+;Mato Grosso;;Brazil
+;Mato Grosso do Sul;;Brazil
+;Minas Gerais;;Brazil
+;Para;;Brazil
+;Paraiba;;Brazil
+;Parana;;Brazil
+;Pernambuco;;Brazil
+;Piaui;;Brazil
+;Rio Grande do Norte;;Brazil
+;Rio Grande do Sul;;Brazil
+;Rio de Janeiro;;Brazil
+;Rondonia;;Brazil
+;Roraima;;Brazil
+;Santa Catarina;;Brazil
+;Sao Paulo;;Brazil
+;Sergipe;;Brazil
+;Tocantins;;Brazil
+
+Canada
+;;;Canada
+;Alberta;;Canada
+;British Columbia;;Canada
+;Manitoba;;Canada
+;New Brunswick;;Canada
+;Newfoundland and Labrador;;Canada
+;Northwest Territories;;Canada
+;Nova Scotia;;Canada
+;Ontario;;Canada
+;Prince Edward Island;;Canada
+;Quebec;;Canada
+;Saskatchewan;;Canada
+;Yukon;;Canada
+
+Chile
+;;;Chile
+;Antofagasta;;Chile
+;Araucania;;Chile
+;Arica y Parinacota;;Chile
+;Atacama;;Chile
+;Aysen;;Chile
+;Biobio;;Chile
+;Coquimbo;;Chile
+;Los Lagos;;Chile
+;Los Rios;;Chile
+;Magallanes;;Chile
+;Maule;;Chile
+;Metropolitana;;Chile
+;Nuble;;Chile
+;OHiggins;;Chile
+;Tarapaca;;Chile
+;Valparaiso;;Chile
+
+China
+;;;China
+;Anhui;;China
+;Beijing;;China
+;Chongqing;;China
+;Fujian;;China
+;Gansu;;China
+;Guangdong;;China
+;Guangxi;;China
+;Guizhou;;China
+;Hainan;;China
+;Hebei;;China
+;Heilongjiang;;China
+;Henan;;China
+;Hong Kong;;China
+;Hubei;;China
+;Hunan;;China
+;Inner Mongolia;;China
+;Jiangsu;;China
+;Jiangxi;;China
+;Jilin;;China
+;Liaoning;;China
+;Macau;;China
+;Ningxia;;China
+;Qinghai;;China
+;Shaanxi;;China
+;Shandong;;China
+;Shanghai;;China
+;Shanxi;;China
+;Sichuan;;China
+;Tianjin;;China
+;Tibet;;China
+;Xinjiang;;China
+;Yunnan;;China
+;Zhejiang;;China
+
+Colombia
+;;;Colombia
+;Amazonas;;Colombia
+;Antioquia;;Colombia
+;Arauca;;Colombia
+;Atlantico;;Colombia
+;Bolivar;;Colombia
+;Boyaca;;Colombia
+;Caldas;;Colombia
+;Capital District;;Colombia
+;Caqueta;;Colombia
+;Casanare;;Colombia
+;Cauca;;Colombia
+;Cesar;;Colombia
+;Choco;;Colombia
+;Cordoba;;Colombia
+;Cundinamarca;;Colombia
+;Guainia;;Colombia
+;Guaviare;;Colombia
+;Huila;;Colombia
+;La Guajira;;Colombia
+;Magdalena;;Colombia
+;Meta;;Colombia
+;Narino;;Colombia
+;Norte de Santander;;Colombia
+;Putumayo;;Colombia
+;Quindio;;Colombia
+;Risaralda;;Colombia
+;San Andres y Providencia;;Colombia
+;Santander;;Colombia
+;Sucre;;Colombia
+;Tolima;;Colombia
+;Valle del Cauca;;Colombia
+;Vaupes;;Colombia
+;Vichada;;Colombia
+
+France
+;;;France
+;French Guiana;;France
+;French Polynesia;;France
+;Guadeloupe;;France
+;Martinique;;France
+;Mayotte;;France
+;New Caledonia;;France
+;Reunion;;France
+;Saint Barthelemy;;France
+;Saint Pierre and Miquelon;;France
+;St Martin;;France
+
+Germany
+;;;Germany
+;Baden-Wurttemberg;;Germany
+;Bayern;;Germany
+;Berlin;;Germany
+;Brandenburg;;Germany
+;Bremen;;Germany
+;Hamburg;;Germany
+;Hessen;;Germany
+;Mecklenburg-Vorpommern;;Germany
+;Niedersachsen;;Germany
+;Nordrhein-Westfalen;;Germany
+;Rheinland-Pfalz;;Germany
+;Saarland;;Germany
+;Sachsen;;Germany
+;Sachsen-Anhalt;;Germany
+;Schleswig-Holstein;;Germany
+;Thuringen;;Germany
+
+India
+;;;India
+;Andaman and Nicobar Islands;;India
+;Andhra Pradesh;;India
+;Arunachal Pradesh;;India
+;Assam;;India
+;Bihar;;India
+;Chandigarh;;India
+;Chhattisgarh;;India
+;Dadra and Nagar Haveli and Daman and Diu;;India
+;Delhi;;India
+;Goa;;India
+;Gujarat;;India
+;Haryana;;India
+;Himachal Pradesh;;India
+;Jammu and Kashmir;;India
+;Jharkhand;;India
+;Karnataka;;India
+;Kerala;;India
+;Ladakh;;India
+;Madhya Pradesh;;India
+;Maharashtra;;India
+;Manipur;;India
+;Meghalaya;;India
+;Mizoram;;India
+;Nagaland;;India
+;Odisha;;India
+;Puducherry;;India
+;Punjab;;India
+;Rajasthan;;India
+;Sikkim;;India
+;Tamil Nadu;;India
+;Telangana;;India
+;Tripura;;India
+;Uttar Pradesh;;India
+;Uttarakhand;;India
+;West Bengal;;India
+
+Italy
+;;;Italy
+;Abruzzo;;Italy
+;Basilicata;;Italy
+;Calabria;;Italy
+;Campania;;Italy
+;Emilia-Romagna;;Italy
+;Friuli Venezia Giulia;;Italy
+;Lazio;;Italy
+;Liguria;;Italy
+;Lombardia;;Italy
+;Marche;;Italy
+;Molise;;Italy
+;P.A. Bolzano;;Italy
+;P.A. Trento;;Italy
+;Piemonte;;Italy
+;Puglia;;Italy
+;Sardegna;;Italy
+;Sicilia;;Italy
+;Toscana;;Italy
+;Umbria;;Italy
+;Valle d'Aosta;;Italy
+;Veneto;;Italy
+
+Mexico
+;;;Mexico
+;Aguascalientes;;Mexico
+;Baja California;;Mexico
+;Baja California Sur;;Mexico
+;Campeche;;Mexico
+;Chiapas;;Mexico
+;Chihuahua;;Mexico
+;Ciudad de Mexico;;Mexico
+;Coahuila;;Mexico
+;Colima;;Mexico
+;Durango;;Mexico
+;Guanajuato;;Mexico
+;Guerrero;;Mexico
+;Hidalgo;;Mexico
+;Jalisco;;Mexico
+;Mexico;;Mexico
+;Michoacan;;Mexico
+;Morelos;;Mexico
+;Nayarit;;Mexico
+;Nuevo Leon;;Mexico
+;Oaxaca;;Mexico
+;Puebla;;Mexico
+;Queretaro;;Mexico
+;Quintana Roo;;Mexico
+;San Luis Potosi;;Mexico
+;Sinaloa;;Mexico
+;Sonora;;Mexico
+;Tabasco;;Mexico
+;Tamaulipas;;Mexico
+;Tlaxcala;;Mexico
+;Veracruz;;Mexico
+;Yucatan;;Mexico
+;Zacatecas;;Mexico
+
+Japan
+;;;Japan
+;Aichi;;Japan
+;Akita;;Japan
+;Aomori;;Japan
+;Chiba;;Japan
+;Ehime;;Japan
+;Fukui;;Japan
+;Fukuoka;;Japan
+;Fukushima;;Japan
+;Gifu;;Japan
+;Gunma;;Japan
+;Hiroshima;;Japan
+;Hokkaido;;Japan
+;Hyogo;;Japan
+;Ibaraki;;Japan
+;Ishikawa;;Japan
+;Kagawa;;Japan
+;Kagoshima;;Japan
+;Kanagawa;;Japan
+;Kochi;;Japan
+;Kumamoto;;Japan
+;Kyoto;;Japan
+;Mie;;Japan
+;Miyagi;;Japan
+;Miyazaki;;Japan
+;Nagano;;Japan
+;Nagasaki;;Japan
+;Nara;;Japan
+;Niigata;;Japan
+;Oita;;Japan
+;Okayama;;Japan
+;Okinawa;;Japan
+;Osaka;;Japan
+;Port Quarantine;;Japan
+;Saga;;Japan
+;Saitama;;Japan
+;Shiga;;Japan
+;Shimane;;Japan
+;Shizuoka;;Japan
+;Tochigi;;Japan
+;Tokushima;;Japan
+;Tokyo;;Japan
+;Tottori;;Japan
+;Toyama;;Japan
+;Wakayama;;Japan
+;Yamagata;;Japan
+;Yamaguchi;;Japan
+;Yamanashi;;Japan
+
+Pakistan
+;;;Pakistan
+;Azad Jammu and Kashmir;;Pakistan
+;Balochistan;;Pakistan
+;Gilgit-Baltistan;;Pakistan
+;Islamabad;;Pakistan
+;Khyber Pakhtunkhwa;;Pakistan
+;Punjab;;Pakistan
+;Sindh;;Pakistan
+
+Peru
+;;;Peru
+;Amazonas;;Peru
+;Ancash;;Peru
+;Apurimac;;Peru
+;Arequipa;;Peru
+;Ayacucho;;Peru
+;Cajamarca;;Peru
+;Callao;;Peru
+;Cusco;;Peru
+;Huancavelica;;Peru
+;Huanuco;;Peru
+;Ica;;Peru
+;Junin;;Peru
+;La Libertad;;Peru
+;Lambayeque;;Peru
+;Lima;;Peru
+;Loreto;;Peru
+;Madre de Dios;;Peru
+;Moquegua;;Peru
+;Pasco;;Peru
+;Piura;;Peru
+;Puno;;Peru
+;San Martin;;Peru
+;Tacna;;Peru
+;Tumbes;;Peru
+;Ucayali;;Peru
+
+Russia
+;;;Russia
+;Adygea Republic;;Russia
+;Altai Krai;;Russia
+;Altai Republic;;Russia
+;Amur Oblast;;Russia
+;Arkhangelsk Oblast;;Russia
+;Astrakhan Oblast;;Russia
+;Bashkortostan Republic;;Russia
+;Belgorod Oblast;;Russia
+;Bryansk Oblast;;Russia
+;Buryatia Republic;;Russia
+;Chechen Republic;;Russia
+;Chelyabinsk Oblast;;Russia
+;Chukotka Autonomous Okrug;;Russia
+;Chuvashia Republic;;Russia
+;Dagestan Republic;;Russia
+;Ingushetia Republic;;Russia
+;Irkutsk Oblast;;Russia
+;Ivanovo Oblast;;Russia
+;Jewish Autonomous Okrug;;Russia
+;Kabardino-Balkarian Republic;;Russia
+;Kaliningrad Oblast;;Russia
+;Kalmykia Republic;;Russia
+;Kaluga Oblast;;Russia
+;Kamchatka Krai;;Russia
+;Karachay-Cherkess Republic;;Russia
+;Karelia Republic;;Russia
+;Kemerovo Oblast;;Russia
+;Khabarovsk Krai;;Russia
+;Khakassia Republic;;Russia
+;Khanty-Mansi Autonomous Okrug;;Russia
+;Kirov Oblast;;Russia
+;Komi Republic;;Russia
+;Kostroma Oblast;;Russia
+;Krasnodar Krai;;Russia
+;Krasnoyarsk Krai;;Russia
+;Kurgan Oblast;;Russia
+;Kursk Oblast;;Russia
+;Leningrad Oblast;;Russia
+;Lipetsk Oblast;;Russia
+;Magadan Oblast;;Russia
+;Mari El Republic;;Russia
+;Mordovia Republic;;Russia
+;Moscow;;Russia
+;Moscow Oblast;;Russia
+;Murmansk Oblast;;Russia
+;Nenets Autonomous Okrug;;Russia
+;Nizhny Novgorod Oblast;;Russia
+;North Ossetia - Alania Republic;;Russia
+;Novgorod Oblast;;Russia
+;Novosibirsk Oblast;;Russia
+;Omsk Oblast;;Russia
+;Orel Oblast;;Russia
+;Orenburg Oblast;;Russia
+;Penza Oblast;;Russia
+;Perm Krai;;Russia
+;Primorsky Krai;;Russia
+;Pskov Oblast;;Russia
+;Rostov Oblast;;Russia
+;Ryazan Oblast;;Russia
+;Saint Petersburg;;Russia
+;Sakha (Yakutiya) Republic;;Russia
+;Sakhalin Oblast;;Russia
+;Samara Oblast;;Russia
+;Saratov Oblast;;Russia
+;Smolensk Oblast;;Russia
+;Stavropol Krai;;Russia
+;Sverdlovsk Oblast;;Russia
+;Tambov Oblast;;Russia
+;Tatarstan Republic;;Russia
+;Tomsk Oblast;;Russia
+;Tula Oblast;;Russia
+;Tver Oblast;;Russia
+;Tyumen Oblast;;Russia
+;Tyva Republic;;Russia
+;Udmurt Republic;;Russia
+;Ulyanovsk Oblast;;Russia
+;Vladimir Oblast;;Russia
+;Volgograd Oblast;;Russia
+;Vologda Oblast;;Russia
+;Voronezh Oblast;;Russia
+;Yamalo-Nenets Autonomous Okrug;;Russia
+;Yaroslavl Oblast;;Russia
+;Zabaykalsky Krai;;Russia
+
+Sweden
+;;;Sweden
+;Blekinge;;Sweden
+;Dalarna;;Sweden
+;Gavleborg;;Sweden
+;Gotland;;Sweden
+;Halland;;Sweden
+;Jamtland Harjedalen;;Sweden
+;Jonkoping;;Sweden
+;Kalmar;;Sweden
+;Kronoberg;;Sweden
+;Norrbotten;;Sweden
+;Orebro;;Sweden
+;Ostergotland;;Sweden
+;Skane;;Sweden
+;Sormland;;Sweden
+;Stockholm;;Sweden
+;Uppsala;;Sweden
+;Varmland;;Sweden
+;Vasterbotten;;Sweden
+;Vasternorrland;;Sweden
+;Vastmanland;;Sweden
+;Vastra Gotaland;;Sweden
+
+Spain
+;;;Spain
+;Andalusia;;Spain
+;Aragon;;Spain
+;Asturias;;Spain
+;Baleares;;Spain
+;C. Valenciana;;Spain
+;Canarias;;Spain
+;Cantabria;;Spain
+;Castilla - La Mancha;;Spain
+;Castilla y Leon;;Spain
+;Catalonia;;Spain
+;Ceuta;;Spain
+;Extremadura;;Spain
+;Galicia;;Spain
+;La Rioja;;Spain
+;Madrid;;Spain
+;Melilla;;Spain
+;Murcia;;Spain
+;Navarra;;Spain
+;Pais Vasco;;Spain
+
+United Kingdom
+;;;United Kingdom
+;Anguilla;;United Kingdom
+;Bermuda;;United Kingdom
+;British Virgin Islands;;United Kingdom
+;Cayman Islands;;United Kingdom
+;Channel Islands;;United Kingdom
+;England;;United Kingdom
+;Falkland Islands (Malvinas);;United Kingdom
+;Gibraltar;;United Kingdom
+;Isle of Man;;United Kingdom
+;Montserrat;;United Kingdom
+;Northern Ireland;;United Kingdom
+;Scotland;;United Kingdom
+;Turks and Caicos Islands;;United Kingdom
+;Wales;;United Kingdom
+
+US
+;;;US
+;Alabama;01;US
+;Alaska;02;US
+;Arizona;04;US
+;Arkansas;05;US
+;California;06;US
+;Colorado;08;US
+;Connecticut;09;US
+;Delaware;10;US
+;District of Columbia;11;US
+;Florida;12;US
+;Georgia;13;US
+;Guam;66;US
+;Hawaii;15;US
+;Idaho;16;US
+;Illinois;17;US
+;Indiana;18;US
+;Iowa;19;US
+;Kansas;20;US
+;Kentucky;21;US
+;Louisiana;22;US
+;Maine;23;US
+;Maryland;24;US
+;Massachusetts;25;US
+;Michigan;26;US
+;Minnesota;27;US
+;Mississippi;28;US
+;Missouri;29;US
+;Montana;30;US
+;Nebraska;31;US
+;Nevada;32;US
+;New Hampshire;33;US
+;New Jersey;34;US
+;New Mexico;35;US
+;New York;36;US
+;North Carolina;37;US
+;North Dakota;38;US
+;Northern Mariana Islands;69;US
+;Ohio;39;US
+;Oklahoma;40;US
+;Oregon;41;US
+;Pennsylvania;42;US
+;Puerto Rico;72;US
+;Rhode Island;44;US
+;South Carolina;45;US
+;South Dakota;46;US
+;Tennessee;47;US
+;Texas;48;US
+;Utah;49;US
+;Vermont;50;US
+;Virgin Islands;78;US
+;Virginia;51;US
+;Washington;53;US
+;West Virginia;54;US
+;Wisconsin;55;US
+;Wyoming;56;US

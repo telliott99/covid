@@ -23,7 +23,7 @@ These can be viewed with ``-h`` or ``--help`` with any script.
 Features that are currently supported are given by the ``--help`` flag:
 
 ```
-> python scripts/one_state.py --help
+> python analyze.py --help
 
 
 flags
@@ -59,58 +59,64 @@ So, for example, if a 10-day series goes smoothly from 100 to 110, then the slop
 
 #### Approach
 
-The idea for most scripts is to use the main part of the script to assemble the correct keys in order.  This list is passed to ``ucalc`` and then to ``ufmt`` along with the ``conf`` dictionary.
+The idea is to use the main part of the script to assemble the correct keys in order.  This list is passed to ``ucalc`` and then to ``ufmt`` along with the ``conf`` dictionary.
 
 All the trimming, sorting and stats happens in ``ucalc``.
 
-All the formatting happens in ``ufmt``.
+All the output formatting happens in ``ufmt``.
 
 The code about keys does not know which database we're using.  I found that too complicated to maintain since I added the option of building a ``max`` database.  
 
 So now the database is passed to ``ukeys`` functions as an argument.
 
-#### Examples (as of 2020-06-29)
+#### Examples (as of 2020-07-09)
 
-This version of the database is 2020-06-01 to 2020-06-28, updated this morning.
-
-From the ``analysis`` directory:
-
-    > python one_state.py SC -rs -n 3 -N 5
-                06/26 06/27 06/28  stats
-    Bamberg        83    84    91  0.047
-    Anderson      525   552   563  0.035
-    Aiken         325   335   345  0.03
-    Abbeville     100   103   103  0.015
-    Allendale      47    48    48  0.01
-    total        1080  1122  1150  0.031
-    >
-    
-and
-
-    > python country.py Italy -n 3        
-                                    06/26  06/27  06/28
-    Abruzzo, Italy                   3285   3285   3286
-    Basilicata, Italy                 401    401    401
-    Calabria, Italy                  1178   1179   1180
-    Campania, Italy                  4665   4665   4665
-    Emilia-Romagna, Italy           28393  28435  28456
-    Friuli Venezia Giulia, Italy     3307   3307   3308
-    Lazio, Italy                     8064   8082   8096
-    Liguria, Italy                   9958   9963   9967
-    Lombardia, Italy                93587  93664  93761
-    Marche, Italy                    6783   6785   6785
-    Molise, Italy                     445    445    445
-    P.A. Bolzano, Italy              2634   2636   2637
-    P.A. Trento, Italy               4859   4860   4863
-    Piemonte, Italy                 31311  31322  31336
-    Puglia, Italy                    4531   4531   4531
-    Sardegna, Italy                  1362   1363   1364
-    Sicilia, Italy                   3076   3077   3077
-    Toscana, Italy                  10226  10238  10243
-    Umbria, Italy                    1440   1440   1440
-    Valle d'Aosta, Italy             1194   1194   1194
-    Veneto, Italy                   19262  19264  19275
-    total                          239961 240136 240310
+	python3 nalyze.py US -rs -N 3
+	                   07/02   07/03   07/04   07/05   07/06   07/07   07/08
+	Idaho               6592    6992    7369    7732    8051    8538    8968   0.05 
+	Florida           168934  178407  189851  199885  206217  213563  223532   0.045
+	Virgin Islands        92      98     111     111     112     116     122   0.042
+	total            2720164 2775014 2820368 2868846 2916232 2974609 3032316   0.018
+	
+	
+	running: 
+	python3 analyze.py HI -rs
+	               07/02 07/03 07/04 07/05 07/06 07/07 07/08
+	Honolulu, HI     676   701   720   744   750   788   808 0.029
+	Kauai, HI         38    38    40    40    40    42    42 0.018
+	Hawaii, HI        90    91    93    93    94    95    96 0.01 
+	Maui, HI         125   127   128   128   128   128   130 0.005
+	total            929   957   981  1005  1012  1053  1076   0.024
+	
+	
+	running: 
+	python3 nalyze.py SC -N 3
+	                07/02 07/03 07/04 07/05 07/06 07/07 07/08
+	Abbeville, SC     119   118   119   124   135   134   137
+	Aiken, SC         434   451   488   507   516   530   545
+	Allendale, SC      58    58    58    61    64    64    64
+	total           39701 41532 43386 44847 46380 47352 48909
+	
+	
+	running: 
+	python3 analyze.py Mexico -c -N 3
+	                      07/02 07/03 07/04 07/05 07/06 07/07 07/08
+	Aguascalientes           36    16    23     2    90    94   107
+	Baja California         202   216   141    74    38   251   143
+	Baja California Sur      53    49    64    40    27    86    40
+	total                  6741  6740  6914  4683  4902  6258  6995
+	
+	
+	running: 
+	python3 Analyze.py Switzerland
+	              07/02 07/03 07/04 07/05 07/06 07/07 07/08
+	Switzerland   31967 32101 32198 32268 32315 32369 32498
+	
+	
+	running: 
+	python3 analyze.py Germany -N 3 -o
+	           07/02  07/03  07/04  07/05  07/06  07/07  07/08
+	Germany   195359 195817 196190 196413 196708 197071 197485
 
 Results from ``plot_eu_us.py``
 

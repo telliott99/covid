@@ -16,7 +16,8 @@ from operator import itemgetter
 
 import umath
 from ustates import state_to_abbrev as abbD
-from ustrings import sep as sep
+from udb import sep
+
 from upop import popD
 from ufmt import pprint
     
@@ -38,12 +39,13 @@ def do_pop_normalization(kL, rL):
     #print('do_pop_normalization')
     ret = []
     popL = []
+    
     for k in kL:
         try:
             v = popD[k]
             popL.append(v)
         except KeyError:
-            print('KeyError for key not in pop_dict:')
+            print('KeyError, key not in pop_dict:')
             print(k)
             sys.exit()
             
@@ -142,7 +144,7 @@ def calc(kL, rL, conf):
             rL.append(t[1])
 
     # trim the rows at this time
-    # totals are not yet attached
+    # totals are calculated but not yet attached
     
     if conf['N']:
         N = conf['N']

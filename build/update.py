@@ -4,24 +4,21 @@ base = os.environ.get('covid_base')
 sys.path.insert(0,base)
 sys.path.insert(1,base + '/myutil')
 
-import uinit, ustrings, udates
+import uinit, udates
 import udb, ufile, ukeys, ufmt
 from ufmt import pprint
 
 conf = uinit.clargs()
-# build the mega db
-
-# pprint(conf);  sys.exit()
-
 MX = conf['all']
 
-sep = ustrings.sep      # ;
-sep2 = ustrings.sep2    # #
+sep = udb.sep      # ;
+sep2 = udb.sep2    # #
 
 src = base + '/build/csv.source'
 
 if MX:
     path_to_db = base + '/db.max.txt'
+    
 else:
     path_to_db = base + '/db.txt'
         
@@ -70,6 +67,7 @@ last = all_dates[-1]
 
 # for standard build, check that csv.source
 # is up-to-date and no files are missing
+# can't do that for MX without more logic
 
 if not MX:
     # files present as dates
@@ -166,9 +164,12 @@ udb.save_db(D, path_to_db, first, last)
 
 
 if MX:
-    subprocess.call(['python', 'easy_fixes.py', '--max'])
-    subprocess.call(['python', 'totals.py', '--max'])
+    subprocess.call(['python3', 'easy_fixes.py', '--all'])
+    subprocess.call(['python3', 'totals.py', '--all'])
+    
 else:
-    subprocess.call(['python', 'easy_fixes.py' ])
-    subprocess.call(['python', 'totals.py' ])
+    subprocess.call(['python3', 'easy_fixes.py' ])
+    subprocess.call(['python3', 'totals.py' ])
+
+subprocess.call(['python3', 'write_keylists.py', '>', 'keylists.db.txt' ])
 

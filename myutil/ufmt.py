@@ -58,40 +58,38 @@ def do_vpad(rL,conf):
 
 # kL is *usually* a real key list
 def process_labels(kL, conf):
-    #pprint(conf)
+     # 'country', 'state', 'county'
+    mode = conf['key_list_type']
+    limit = conf['only']
+    add_totals = conf['add_totals']
     
-    labels = []    
+    #for k in kL:  print(k)
+
+    labels = []
+    
+    if limit:
+        assert len(kL) == 1
+       
     for k in kL:
         county,state,fips,country = k.strip().split(sep)
-        r = conf['regions']
         
-        if r == 'states':
+        if mode == 'state':
             labels.append(state)
             
-        elif r == 'one_country':
-            if state == '':
-                labels.append(country)
-            else:
-                labels.append(state)
-                
-        elif r == 'group of countries':
-            labels.append('not done')
+        elif mode == 'country':
+            labels.append(country)
             
-        elif r == 'counties':
-            if conf['show_state']:
+        elif mode == 'county':
+            if conf['show_state_label']:
                 abbrev = abbD[state]
                 labels.append(county + ', ' + abbrev)
             else:
                 labels.append(county)
-                
+    
     return labels
 
-def assemble(kL, rL, conf, is_key_list=True):
-
-    if is_key_list:
-        labels = process_labels(kL, conf)
-    else:
-        labels = kL
+def assemble(kL, rL, conf):
+    labels = process_labels(kL, conf)
             
     vpad = do_vpad(rL, conf)
     

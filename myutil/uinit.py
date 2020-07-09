@@ -27,22 +27,20 @@ def clargs():
       'n':7, 
       'N': False,
       'upto': 0,
-      'regions': None,
-      'show_state': False,
+      'region': None,
+      'show_parent_label': False,
       'add_totals': True,
       
       'all': False,      # -a, --all
       'delta': False,    # -c, --delta
       'graph': False,    # -g, --graph
       'map': False,      # -m, --map
+      'only': False,     # -o, --only, no states or sub-regions
       'pop': False,      # -p, --pop
-      'quiet': False,    # -q, --quiet (for tests)
+      'quiet': False,    # -q, --quiet, for testing
       'rate': False,     # -r, --rate
       'sort': False,     # -s, --sort
-      'verbose': False,  # -v, --verbose
-      
-      'total_only': False } # -t, --total (only do total)
-
+      'verbose': False } # -v, --verbose
       
     '''
     Note on levels:
@@ -153,7 +151,7 @@ def clargs():
         if arg.startswith('-') and not arg[1] == '-':
             dash_list.append(arg)
 
-    wL = 'dacgmpqrstvw'
+    wL = 'dacgmopqrsvw'
               
     # args may have multiple single-letter values
     fL = []
@@ -187,9 +185,13 @@ def clargs():
     D['sort']    = 's' in one_letters or '--sort' in L
     D['verbose'] = 'v' in one_letters or '--verbose' in L
     
-    D['total_only']  = 't' in one_letters or '--total' in L
-    if D['total_only']:
+    D['only']    = 'o' in one_letters or '--only' in L
+    if D['only']:
         D['add_totals'] = False
+        
+    if 'eu' in D['names'] and D['only']:
+        print('-o option not available for eu')
+        sys.exit()
   
     # when -g or -m is selected
     # note: -q, --quiet is used to control behavior
