@@ -32,7 +32,9 @@ options = [
 ['Mexico', '-c', '-N', '3'],
 ['Switzerland'],
 ['Germany', '-N', '3', '-o'],
-['Russia', '-p', '-q'] ]
+['Russia', '-p', '-q'],
+['counties', '-s', '-c', '10', '-N', '30'] ]
+
       
 for args in options:
     cmds = prog + [path] + args

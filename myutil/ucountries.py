@@ -27,6 +27,7 @@ eu_majors = [
     'Portugal', 
     'Spain', 
     'Sweden']
+    
 
 countries_with_states = [
 'Australia', 

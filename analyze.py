@@ -2,7 +2,7 @@ import sys, os
 base = os.environ.get('covid_base')
 sys.path = [base, base + '/myutil'] + sys.path
 
-from uall import sep, calc, assemble
+from uall import sep, calc, assemble, ukeys
 from uall import pprint, kL, conf, D
 
 import ustates
@@ -20,107 +20,65 @@ for e in data:
 
 #-------------------------------
 
-s = '''
-;;;Austria
-;;;Belgium
-;;;Czechia
-;;;Denmark
-;;;Estonia
-;;;Finland
-;;;France
-;;;Germany
-;;;Greece
-;;;Hungary
-;;;Ireland
-;;;Italy
-;;;Latvia
-;;;Lithuania
-;;;Netherlands
-;;;Poland
-;;;Portugal
-;;;Spain
-;;;Sweden
-'''
+eu_keys = [';;;' + c for c in eu_majors]
 
-eu = s.strip().split('\n')
+# the idea here is if there are multiple 'names'
+# then the caller wants them combined into one table
 
-
-def get_key_list(name, conf):
-
-    if name == 'eu':
-        skL = eu[:]
-        conf['key_list_type'] = 'country'
-        conf['add_totals'] = True
-        return skL, conf
-
-    # any country w/o states is not in keylists.db.txt
-    if not name in kD:
-        #print(name, 'not in keylists.db.txt')
-        skL = [';;;' + name]
-        conf['key_list_type'] = 'country'
-        conf['only'] = True
-        conf['add_totals'] = False
-        return skL, conf
+if not conf['names']:
+    skL = ukeys.key_list(D)
+elif 'world' in conf['names']:
+    skL = ukeys.key_list(D)
+    conf['names'].remove('world')
+else:
+    skL = []
     
-    # all names in kD from this point
 
-    if name == 'US':
-        skL = kD[name]
-        if conf['only']:
-            #print(name, 'only')
-            skL = skL[:1]
-            conf['key_list_type'] = 'country'
-            conf['add_totals'] = False
-            return skL, conf
-        else:
-            #print(name, 'states')
-            skL = skL[1:]
-            conf['key_list_type'] = 'state'
-            return skL, conf
-            
-    if name in ustates.states:
-        skL = kD[name]
-        if conf['only']:
-            #print(name, 'a US state')
-            skL = skL[:1]
-            conf['key_list_type'] = 'state'
-            conf['add_totals'] = False
-            return skL, conf
-        else:
-            #print(name, 'a US state, plus counties')
-            skL = skL[1:]
-            conf['show_state_label'] = True
-            conf['key_list_type'] = 'county'
-            return skL, conf
-
-    # country with states
-    skL = kD[name]
-    if conf['only']:
-        #print(name, 'a country')
-        skL = skL[:1]
-        conf['key_list_type'] = 'country'
-        conf['add_totals'] = False
-        return skL, conf  
-    else:
-        #print(name, 'a country with states')
-        skL = skL[1:]
-        conf['show_state_label'] = True
-        conf['key_list_type'] = 'state'
-        return skL, conf
+# only countries, no states or counties
+skL = [k for k in skL if k.startswith(';;;')]
 
 
-def do_key_list(skL, conf):    
-    rL = [D[k][conf['mode']] for k in skL]   
-    skL, rL = calc(skL, rL, conf)   
-    return assemble(skL, rL, conf)
-
-#-----------------------------------
-            
 for name in conf['names']:
-    skL, conf = get_key_list(name, conf) 
-    text = do_key_list(skL, conf)
+    if name == 'eu':
+        skL.extend(eu_keys)
+        
+    elif name == 'counties':
+        skL = ukeys.key_list_for_us_counties(D)
+        
+    # any country w/o states is not in keylists.db.txt
+    elif not name in kD:
+        skL.append(';;;' + name)
+        
+    elif name == 'US':
+        tmp = kD[name]
+        if conf['only']:
+            skL.append(tmp[0])
+            
+        else:
+            skL.extend(tmp[1:])   
+                        
+    elif name in ustates.states:
+        tmp = kD[name]
+        
+        if conf['only']:
+            skL.append(tmp[0])
+        else:
+            skL.extend(tmp[1:]) 
     
-    if not conf['quiet']:
-        print(text)
-        print('')
+    else:          
+        tmp = kD[name]
+        # country with states
+        if conf['only']:
+            skL.append(tmp[0])
+        else:
+            skL.extend(tmp[1:])  
+
+rL = [D[k][conf['mode']] for k in skL]   
+skL, rL = calc(skL, rL, conf)   
+text = assemble(skL, rL, conf)
+
+if not conf['quiet']:
+    print(text)
+    print('')
+
 

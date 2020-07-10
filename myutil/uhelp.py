@@ -21,6 +21,6 @@ to do:
 -u   <int>    data slice ends this many days before yesterday 
 
 example:
-python %s %s -n 10 -sdr
+python %s -n 10 -sdr
 
 '''

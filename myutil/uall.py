@@ -15,10 +15,12 @@ pprint = ufmt.pprint
 conf = uinit.clargs()
 verbose = conf['verbose']
 
+'''
 if conf['names'] == []:
     print('please supply a search term')
     print('the name of a US state or a country or eu')
     sys.exit()
+'''
 
 mode = conf['mode']
 

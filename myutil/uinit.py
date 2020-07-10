@@ -1,16 +1,11 @@
 import sys
+import ustates
 from ustates import abbrev_to_state
 from ufmt import pprint
 
-if sys.argv[0] == "one_state.py":
-    extra = '<state>'
-elif sys.argv[0] == "country.py":
-    extra = '<country>'
-else:
-    extra = ''
 
 from uhelp import help
-help = help % (sys.argv[0], extra)
+help = help % (' '.join(sys.argv))
 
 def bail():
      print(help)
@@ -26,34 +21,22 @@ def clargs():
       'mode':'cases', 
       'n':7, 
       'N': False,
-      'upto': 0,
-      'region': None,
       'show_parent_label': False,
       'add_totals': True,
       
       'all': False,      # -a, --all
       'delta': False,    # -c, --delta
-      'graph': False,    # -g, --graph
-      'map': False,      # -m, --map
-      'only': False,     # -o, --only, no states or sub-regions
+      #'graph': False,    # -g, --graph
+      #'map': False,      # -m, --map
+      'only': False,     # -o, --only, no states
       'pop': False,      # -p, --pop
       'quiet': False,    # -q, --quiet, for testing
       'rate': False,     # -r, --rate
       'sort': False,     # -s, --sort
       'verbose': False } # -v, --verbose
-      
-    '''
-    Note on levels:
-    rather than try to distinguish descent from country to county-level
-    and since we have one_state.py (which takes multiple arguments)
-    as well as us_by_counties.py
-    use one single flag that tells whether to descend or not
-    
-    '''
-      
+            
 #-------------------------------------------
     # no args
-
     if len(L) == 0:
         return default_dict
         
@@ -142,8 +125,15 @@ def clargs():
         try:
             arg = abbrev_to_state[arg]
         except KeyError:
-            pass            
+            pass
+        if arg == 'us':
+            arg = 'US'
+        # allow states to be lower case
+        cap = arg.upper()
+        if cap in ustates.abbrev:
+            arg = abbrev_to_state[cap] 
         aL.append(arg)
+        
     D['names'] = aL
     
     dash_list = []
@@ -197,6 +187,4 @@ def clargs():
     # note: -q, --quiet is used to control behavior
     # in those two cases, default is silent, no text
     
-    #pprint(D);  sys.exit()
-                
     return D
