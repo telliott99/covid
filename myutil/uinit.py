@@ -25,16 +25,18 @@ def clargs():
       'add_totals': True,
       
       'all': False,      # -a, --all
+      'csv': False,      # -f, --csv
       'delta': False,    # -c, --delta
-      #'graph': False,    # -g, --graph
-      #'map': False,      # -m, --map
+      #'graph': False,   # -g, --graph
+      #'map': False,     # -m, --map
       'only': False,     # -o, --only, no states
       'pop': False,      # -p, --pop
       'quiet': False,    # -q, --quiet, for testing
       'rate': False,     # -r, --rate
       'sort': False,     # -s, --sort
+      'total': False,    # -t, --total
       'verbose': False } # -v, --verbose
-            
+
 #-------------------------------------------
     # no args
     if len(L) == 0:
@@ -56,14 +58,16 @@ def clargs():
     
     wL = ['deaths',
           'all',
+          'csv',
           'delta',
+          'format',
           'graph',
           'map',
           'pop',
           'quiet',
           'rate',
           'sort',
-          'total']
+          'total' ]
           
     tmp = []
     
@@ -141,7 +145,7 @@ def clargs():
         if arg.startswith('-') and not arg[1] == '-':
             dash_list.append(arg)
 
-    wL = 'dacgmopqrsvw'
+    wL = 'dacfgmopqrstvw'
               
     # args may have multiple single-letter values
     fL = []
@@ -167,13 +171,16 @@ def clargs():
             D['delta'] = 1            
         
     D['all']     = 'a' in one_letters or '--all' in L
+    D['csv']     = 'f' in one_letters or '--csv' in L
     D['map']     = 'm' in one_letters or '--map' in L
+    D['format']  = 'f' in one_letters or '--format' in L
     D['graph']   = 'g' in one_letters or '--graph' in L
     D['pop']     = 'p' in one_letters or '--pop' in L
     D['quiet']   = 'q' in one_letters or '--quiet' in L
     D['rate']    = 'r' in one_letters or '--rate' in L
     D['sort']    = 's' in one_letters or '--sort' in L
     D['verbose'] = 'v' in one_letters or '--verbose' in L
+    D['total']   = 't' in one_letters or '--total' in L
     
     D['only']    = 'o' in one_letters or '--only' in L
     if D['only']:

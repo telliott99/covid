@@ -8,14 +8,16 @@ flags
 
 -a  --all      use the complete db, starting 2020-03-22
 -d  --deaths   display deaths rather than cases (default)
--g  --graph    plot a graph of the data
--m  --map      make a choropleth map
+-f  --csv      format output as csv
+-g  --graph    plot a graph of the data (not yet)
+-m  --map      make a choropleth map (not yet)
+-o  --only     do not descend from say, US to states
 -p  --pop      normalize to population (this disables totals)
+-q  --quiet    silence output (for tests)
 -r  --rate     compute statistics (over last 7 days)
 -s  --sort     
 -t  --totals   (only)
 -v  --verbose  debugging mode
--w, --write    text (if -g,-m present, output is normally silent)
 
 to do:
 -u   <int>    data slice ends this many days before yesterday 

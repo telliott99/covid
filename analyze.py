@@ -2,7 +2,7 @@ import sys, os
 base = os.environ.get('covid_base')
 sys.path = [base, base + '/myutil'] + sys.path
 
-from uall import sep, calc, assemble, ukeys
+from uall import sep, calc, assemble, ukeys, ufmt
 from uall import pprint, kL, conf, D
 
 import ustates
@@ -75,10 +75,45 @@ for name in conf['names']:
 
 rL = [D[k][conf['mode']] for k in skL]   
 skL, rL = calc(skL, rL, conf)   
-text = assemble(skL, rL, conf)
+labels,pL = assemble(skL, rL, conf)
 
-if not conf['quiet']:
-    print(text)
-    print('')
 
+#-------------------------------
+
+# formatting as desired
+
+if conf['quiet']:
+    sys.exit()
+
+# format for screen
+if not conf['csv']:
+    extra = 1
+    m = max([len(e) for e in labels])
+    labels = [e.ljust(m + extra) for e in labels]
+    
+    n = 0
+    for vL in pL:
+        # don't count the last value if stats
+        if conf['rate']:
+            for e in vL[:-1]:
+                if len(e) > n:
+                    n = len(e)
+        else:
+            for e in vL:
+                if len(e) > n:
+                    n = len(e)
+    tmp = []
+    for vL in pL:
+        vL = [e.rjust(n + extra) for e in vL]
+        tmp.append(''.join(vL))
+    pL = tmp
+    
+    for l,v in zip(labels,pL):
+        print(l + v)
+
+# format csv
+else:
+    for l,vL in zip(labels,pL):
+        print(l + ',' + ','.join(vL))
+    
 
