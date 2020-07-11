@@ -199,8 +199,6 @@ and 2020-06-27
 
 ![](gallery/SC 2020-06-27.png)
 
-China new cases [2020-06-27](gallery/China 2020-06-27.txt).
-
     python3 geo/one_state_map.py CA MN SC TX WY KY
     
 ![](gallery/states.png)

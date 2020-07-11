@@ -20,37 +20,6 @@ def get_dates(conf):
     dL = ['/'.join(d.split('-')[1:]) for d in dates]
     return dL
 
-'''
-def do_labels_pad(labels, conf):
-    m = 2
-    pad = max([len(c) for c in labels]) + m
-    pad = max(pad, len('totals') + m)
-    conf['pad'] = pad
-    return pad
-
-def do_vpad(rL,conf):
-    # longest data value determines vpad for data
-    
-    vpad = 0
-    for vL in rL:
-        MX = max([len(str(n)) for n in vL])
-        if MX > vpad:
-            vpad = MX
-            
-    if conf['add_totals']:
-        vL = conf['totals_line']
-        MX = max([len(str(n)) for n in vL])
-        if MX > vpad:
-            vpad = MX
-            
-    # min vpad
-    m = 1
-    vpad = max(MX,5) + m
-    conf['vpad'] = vpad
-    # altered conf holds the value
-    return vpad
-'''
-
 # kL is a real key list
 # we need to deduce appropriate labels
 
@@ -59,8 +28,12 @@ def generate_labels(kL, conf):
     for k in kL:
         county,state,fips,country = k.strip().split(sep)
         if county != '':
-            st = abbD[state]
-            labels.append(county)
+            if 'counties' in conf['names']:
+                st = abbD[state]
+                labels.append(county + ' ' + st)
+            else:
+                labels.append(county)
+                
         elif state != '':
             labels.append(state)
         else:
@@ -69,6 +42,9 @@ def generate_labels(kL, conf):
 
 # in this new design, we generate csv always
 def assemble(kL, rL, conf):
+
+    #ufmt.pprint(conf)
+    #sys.exit()
 
     # labels are in the first column
     labels = generate_labels(kL, conf)

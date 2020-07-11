@@ -11,3 +11,44 @@ def pprint(conf_dict, msg=None):
         if conf_dict[k]:
             print(k.ljust(10),conf_dict[k])
     print('\n')
+
+
+
+def fmt(labels,pL,conf):
+    # format as desired
+    
+    # format for screen
+    if not conf['csv']:
+        extra = 1
+        m = max([len(e) for e in labels])
+        labels = [e.ljust(m + extra) for e in labels]
+        
+        n = 0
+        for vL in pL:
+            # don't count the last value if stats
+            if conf['rate']:
+                for e in vL[:-1]:
+                    if len(e) > n:
+                        n = len(e)
+            else:
+                for e in vL:
+                    if len(e) > n:
+                        n = len(e)
+        tmp = []
+        for vL in pL:
+            vL = [e.rjust(n + extra) for e in vL]
+            tmp.append(''.join(vL))
+        pL = tmp
+        
+        tmp = []
+        for l,v in zip(labels,pL):
+            tmp.append(l + v)
+        text = '\n'.join(tmp)
+    
+    # format csv
+    else:
+        tmp = []
+        for l,vL in zip(labels,pL):
+            tmp.append(l + ',' + ','.join(vL))
+        text = '\n'.join(tmp)
+    return text

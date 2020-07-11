@@ -3,13 +3,13 @@ base = os.environ.get('covid_base')
 sys.path = [base, base + '/myutil'] + sys.path
 
 import ucalc, udates, udb, ufmt 
-import uinit, ukeys, umath, upop, uextras
+import uinit, ukeys, umath, upop, ulabels
 import ustates
 
 from udb import sep
 
 calc = ucalc.calc
-assemble = uextras.assemble
+assemble = ulabels.assemble
 pprint = ufmt.pprint
 
 conf = uinit.clargs()

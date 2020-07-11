@@ -17,7 +17,7 @@ path = base + '/' + script
 cmds = prog + [path, 'SC', '-q']
 
 for arg in 'acoprsw':
-    print('running: ' + ' '.join(cmds + ['-' + arg]))
+    print('running: python3 ' + script + 'SC -q' + ' -' + arg)
     r = subprocess.run(cmds + ['-' + arg])
     if (r.returncode != 0):
         errors.append(script)
@@ -37,7 +37,7 @@ options = [
 
       
 for args in options:
-    cmds = prog + [path] + args
+    cmds = prog + [script] + args
     print('running: ')
     print(' '.join(cmds))
     

@@ -20,8 +20,6 @@ for e in data:
 
 #-------------------------------
 
-eu_keys = [';;;' + c for c in eu_majors]
-
 # the idea here is if there are multiple 'names'
 # then the caller wants them combined into one table
 
@@ -40,80 +38,30 @@ skL = [k for k in skL if k.startswith(';;;')]
 
 for name in conf['names']:
     if name == 'eu':
+        eu_keys = [';;;' + c for c in eu_majors]
         skL.extend(eu_keys)
         
     elif name == 'counties':
         skL = ukeys.key_list_for_us_counties(D)
         
-    # any country w/o states is not in keylists.db.txt
+    # any country w/o states will not be in keylists.db.txt
     elif not name in kD:
         skL.append(';;;' + name)
-        
-    elif name == 'US':
-        tmp = kD[name]
-        if conf['only']:
-            skL.append(tmp[0])
-            
-        else:
-            skL.extend(tmp[1:])   
-                        
-    elif name in ustates.states:
-        tmp = kD[name]
-        
-        if conf['only']:
-            skL.append(tmp[0])
-        else:
-            skL.extend(tmp[1:]) 
     
-    else:          
-        tmp = kD[name]
-        # country with states
+    # otherwise it is
+    else:
         if conf['only']:
-            skL.append(tmp[0])
+            skL.append(kD[name][0])
         else:
-            skL.extend(tmp[1:])  
-
+            skL.extend(kD[name][1:]) 
+    
 rL = [D[k][conf['mode']] for k in skL]   
 skL, rL = calc(skL, rL, conf)   
 labels,pL = assemble(skL, rL, conf)
 
-
 #-------------------------------
 
-# formatting as desired
+text = ufmt.fmt(labels, pL, conf)
 
-if conf['quiet']:
-    sys.exit()
-
-# format for screen
-if not conf['csv']:
-    extra = 1
-    m = max([len(e) for e in labels])
-    labels = [e.ljust(m + extra) for e in labels]
-    
-    n = 0
-    for vL in pL:
-        # don't count the last value if stats
-        if conf['rate']:
-            for e in vL[:-1]:
-                if len(e) > n:
-                    n = len(e)
-        else:
-            for e in vL:
-                if len(e) > n:
-                    n = len(e)
-    tmp = []
-    for vL in pL:
-        vL = [e.rjust(n + extra) for e in vL]
-        tmp.append(''.join(vL))
-    pL = tmp
-    
-    for l,v in zip(labels,pL):
-        print(l + v)
-
-# format csv
-else:
-    for l,vL in zip(labels,pL):
-        print(l + ',' + ','.join(vL))
-    
-
+if not conf['quiet']:
+    print(text)
