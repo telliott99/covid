@@ -5,16 +5,29 @@
 # pre-computed and stored as keylists.db.txt
 
 import sys, os
-base = os.environ.get('covid_base')
-sys.path = [base, base + '/myutil'] + sys.path
 
-from uall import sep, calc, assemble, pprint, kL
+base = os.environ.get('covid_base')
+if not base in sys.path:
+    sys.path = [base] + sys.path
+util = base + '/myutil'
+if not util in sys.path:
+    sys.path.insert(0, util)
+    
+import udb, ucalc, ulabels, ufmt, ukeys
+import ustates, ucountries
 
 from ustates import states
 from ukeys import build_key_for_state
 from ucountries import countries_with_states
 
+path_to_db = base + '/db/db.max.txt'
+date_info, D = udb.load_db(path_to_db)
+
+sep = udb.sep
+
 # these are sorted, so it's easy
+
+kL = ukeys.key_list(D)
 
 def keys_for_state(s):
     skL = [k for k in kL if k.split(sep)[1] == s]
@@ -46,7 +59,7 @@ for country in countries_with_states + ['US']:
         pL.append(e)
     pL.append('')
     
-with open(base + '/keylists.db.txt', 'w') as fh:
+with open(base + '/db/keylists.db.txt', 'w') as fh:
     fh.write('\n'.join(pL))
 
 

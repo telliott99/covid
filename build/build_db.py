@@ -3,8 +3,11 @@
 import sys, os, subprocess
 
 base = os.environ.get('covid_base')
-sys.path.insert(0,base)
-sys.path.insert(1,base + '/myutil')
+if not base in sys.path:
+    sys.path = [base] + sys.path
+util = base + '/myutil'
+if not util in sys.path:
+    sys.path.insert(0, util)
 
 import uinit, udates
 import udb, ufile, ukeys, ufmt

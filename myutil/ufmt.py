@@ -1,9 +1,12 @@
 import sys, os
 base = os.environ.get('covid_base')
 
+base = os.environ.get('covid_base')
 if not base in sys.path:
-    print('adding myutil', base + '/myutil')
-    sys.path.insert(0, [base, base + '/myutil'])
+    sys.path = [base] + sys.path
+util = base + '/myutil'
+if not util in sys.path:
+    sys.path.insert(0, util)
 
 def pprint(conf_dict, msg=None):
     if msg:  print(msg)
