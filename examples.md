@@ -14,7 +14,7 @@ The average script starts like this:
     base = os.environ.get('covid_base')
     sys.path.insert(0,base)
     
-Thus, you must set ``covid_base`` correctly.  Everything is specified as a path from ``covid_base``.
+Thus, you must set ``covid_base`` correctly in the environment.  Everything is specified as a path from ``covid_base``.
 
 #### Command line arguments
 
@@ -29,7 +29,6 @@ Features that are currently supported are given by the ``--help`` flag:
 	-n    <int>    display the last -n values, default: 7
 	-N    <int>    display -N rows of data, default: 50
 	-c    <int>    --delta, change from x days ago, default: 1
-	-L    <int>    depth of search for keys and subkeys, default: 0
 	
 	-a  --all      use the complete db, starting 2020-03-22
 	-d  --deaths   display deaths rather than cases (default)
@@ -53,21 +52,23 @@ Features that are currently supported are given by the ``--help`` flag:
 	
 	>
 
-I did not use the built-in Python module for parsing the command line arguments, but rolled my own, see ``uinit.py``
+Rather than use the built-in Python module for parsing the command line arguments (I find it too complicated), I rolled my own, see ``uinit.py``.
 
 The statistic is the slope of a linear regression, divided by the mean of the values.  
 
 So, for example, if a 10-day series goes smoothly from 100 to 110, then the slope is about 10/10 = 1 and the statistic is a bit less than 0.01.  If the series goes from 1000 to 1100, then the slope is about 100/10 = 10, but the statistic is still approximately 0.01.
 
-#### Approach
+#### General approach
 
-The idea is to use the main part of the script to assemble the correct keys in order.  This list is passed to ``ucalc`` and then to ``ufmt`` along with the ``conf`` dictionary.
+The idea is to use the main part of the script to assemble the correct keys in order.  This list is passed to ``ucalc`` and then to ``ulabels`` and finally to ``ufmt`` along with the ``conf`` dictionary.
 
-All the trimming, sorting and stats happens in ``ucalc``, and all the output formatting happens in ``ufmt``.
+All the trimming, sorting and stats happens in ``ucalc``, label assembly from keys in ``ulabel``, and the output formatting in ``ufmt``.
 
-The code about keys does not know which database we're using.  I found that too complicated to maintain since I added the option of building a ``max`` database.  
+The code about keys does not know which database we're using.  I found that too complicated to maintain since I added the option of building a ``max`` database.
 
 So now the database is passed to ``ukeys`` functions as an argument.
+
+(At the moment we're back to one giant database that gets trimmed during the load.  If you want the whole thing, pass ``--all``.  
 
 #### Examples (as of 2020-07-09)
 
@@ -130,7 +131,9 @@ The ``-o`` flag limits the output to just the US
 	US  2820368 2868846 2916232 2974609 3032316
 	>
 
-The ``-p`` flag normalizes to population.  Not all locations have the population entered so this may fail.
+The ``-p`` flag normalizes to population.  
+
+Not all locations have the population entered so this may fail.  All the US states are there, as well as countries of the EU.
 
 	> p3 analyze.py US -N 5 -n 5 -p
 	            07/05 07/06 07/07 07/08 07/09
@@ -181,7 +184,23 @@ And then finally, we might choose to look at deaths:
 	US    676   697   242   268   345   959   824
 	> 
 
-There's more.  You can look at counties by running ``us_by_counties.py``.  Maybe I will fold that into the main script soon.
+There's more.
+
+You can look at counties by passing the name ``counties``:
+
+    > az counties -rs -N 10 -n 5
+	             07/07 07/08 07/09 07/10 07/11  stat
+	Pepin WI         1     2     4     5    14  0.558
+	Scurry TX       71    71    84    90   321  0.407
+	Dewey SD         9    12    27    33    33  0.303
+	Mitchell KS      4     5     5    11    11  0.278
+	Brooks TX       11    18    29    35    37  0.265
+	Clark IL        15    18    21    36    40  0.262
+	La Salle TX     24    41    51    68    76  0.252
+	Cavalier ND      6     6    10    13    14  0.235
+	Crockett TX     15    16    18    29    35  0.235
+	Trimble KY       7     7     9    13    15  0.216
+	>
 
 ##### Plots and maps
 
