@@ -23,16 +23,17 @@ for arg in 'acoprsw':
         errors.append(script)
 
 options = [   
-['US', '-c'],
-['US', '-rs', '-N', '3'],
+['US', '-op'],
+['US', '-p', '-N', '5'],
+['US', '-t', '-N', '5'],
+['US', '-c', '10', '-N', '5'],
+['US', '-rs', '-N', '5'],
 ['HI', '-rs'],
 ['SC', '-N', '3'],
-#'us_by_counties.py': ['-rs', '-N', '3'],
-#'trends.py':     ['SC', '-n','4', '-N', '3'],
 ['Mexico', '-c', '-N', '3'],
 ['Switzerland'],
 ['Germany', '-N', '3', '-o'],
-['Russia', '-p', '-q'],
+['Russia', '-po', '-q'],
 ['counties', '-s', '-c', '10', '-N', '30'] ]
 
       

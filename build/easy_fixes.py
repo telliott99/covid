@@ -1,6 +1,5 @@
 # these fixes only apply to early days
 import sys, os
-MX = '--max' in sys.argv
 
 base = os.environ.get('covid_base')
 sys.path.insert(0,base)
@@ -10,10 +9,7 @@ import udb, udates, ufile, ukeys
 
 from udb import sep
 
-if MX:
-    path_to_db = base + '/' + 'db.max.txt'
-else:
-    path_to_db = base + '/' + 'db.txt'
+path_to_db = base + '/db/' + 'db.max.txt'
 
 date_info, D = udb.load_db(path_to_db)
 first,last = date_info.split('\n')
@@ -130,10 +126,11 @@ for k in kL:
 #------------------------------------
 
 def filter(k):
+    # change for now to keep these
     if k.startswith('Unassigned'):
-        return False
+        return True
     if k.startswith('unassigned'):
-        return False
+        return True
     if k.startswith('Out of'):
         return False
     if 'Unknown' in k or 'Recovered' in k:
@@ -147,7 +144,7 @@ def filter(k):
     if 'LeSeur;Minnesota' in k:
         return False
     return True
-
+    
 todo = []
 for k in D:
     if not filter(k):

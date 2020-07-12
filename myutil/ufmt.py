@@ -2,8 +2,8 @@ import sys, os
 base = os.environ.get('covid_base')
 
 if not base in sys.path:
-    sys.path.insert(0,base)
-    sys.path.insert(1,base + '/myutil')
+    print('adding myutil', base + '/myutil')
+    sys.path.insert(0, [base, base + '/myutil'])
 
 def pprint(conf_dict, msg=None):
     if msg:  print(msg)
@@ -12,11 +12,9 @@ def pprint(conf_dict, msg=None):
             print(k.ljust(10),conf_dict[k])
     print('\n')
 
-
-
 def fmt(labels,pL,conf):
     # format as desired
-    
+        
     # format for screen
     if not conf['csv']:
         extra = 1

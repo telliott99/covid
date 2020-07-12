@@ -1,14 +1,14 @@
 import sys, os, csv
 
 base = os.environ.get('covid_base')
-sys.path.insert(0,base)
-sys.path.insert(1,base + '/myutil')
+if not base in sys.path:
+    print('adding myutil', base + '/myutil')
+    sys.path.insert(0, [base, base + '/myutil'])
 
 sep = ';'
 sep2 = '#'
 
-import udates, ukeys
-
+#import udates, ukeys
 from udates import generate_dates
 
 def read_csv_data_file(fn):
@@ -43,6 +43,7 @@ def dict_from_data(data):
         k = vL[0]
         cases = vL[1]
         deaths = vL[2]
+        
         if ',' in cases:
             cases = cases.strip().split(',')
             deaths = deaths.strip().split(',')

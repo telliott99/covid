@@ -1,5 +1,5 @@
-import udb
-sep = udb.sep
+#import udb
+#sep = udb.sep
 
 states = [
 'Alabama','Alaska','Arizona','Arkansas',

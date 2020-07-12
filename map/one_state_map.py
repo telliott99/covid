@@ -18,7 +18,7 @@ if not len(sys.argv) > 1:
     print('please supply the name of a state')
     sys.exit()
     
-path_to_db = base + '/db.txt'
+path_to_db = base + '/db/db.max.txt'
 
 # use long form internally
 from ustates import abbrev_to_state as stD

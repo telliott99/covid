@@ -1,9 +1,6 @@
 # these fixes only apply to early days
 import sys, os
 
-MX = '--all' in sys.argv
-print('MX')
-
 base = os.environ.get('covid_base')
 if not base in sys.path:
     sys.path.insert(0,base)
@@ -16,10 +13,7 @@ from udb import sep
 from ukeys import state_for_key
 from ustates import state_to_abbrev, abbrev_to_fips
 
-if MX:
-    path_to_db = base + '/' + 'db.max.txt'
-else:
-    path_to_db = base + '/' + 'db.txt'
+path_to_db = base + '/db/' + 'db.max.txt'
 
 date_info, D = udb.load_db(path_to_db)
 first,last = date_info.split('\n')

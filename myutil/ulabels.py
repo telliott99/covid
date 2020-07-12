@@ -1,11 +1,11 @@
 # labels, dates and totals
 
 import sys, os
-base = os.environ.get('covid_base')
 
+base = os.environ.get('covid_base')
 if not base in sys.path:
-    sys.path.insert(0,base)
-    sys.path.insert(1,base + '/myutil')
+    print('adding myutil', base + '/myutil')
+    sys.path.insert(0, [base, base + '/myutil'])
 
 import udb, udates, umath, ufmt
 sep = udb.sep
@@ -54,11 +54,13 @@ def assemble(kL, rL, conf):
     for vL in rL:    
         pL.append([str(n) for n in vL])
         
-    # next add dates as the first row     
-    dL = get_dates(conf)
-    if conf['rate']:
-        dL.append('stat')
-    pL = [dL] + pL
+    # next add dates as the first row
+    
+    if not conf['no_dates']:
+        dL = get_dates(conf)
+        if conf['rate']:
+            dL.append('stat')
+        pL = [dL] + pL
    
     # add a space to the first col, first row
     labels = [''] + labels

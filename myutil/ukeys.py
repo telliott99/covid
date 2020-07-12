@@ -1,11 +1,9 @@
 import sys, os
 
-import sys, os
 base = os.environ.get('covid_base')
-
 if not base in sys.path:
-    sys.path.insert(0,base)
-    sys.path.insert(1,base + '/myutil')
+    print('adding myutil', base + '/myutil')
+    sys.path.insert(0, [base, base + '/myutil'])
 
 import umath, ustates, udb
 from udb import sep
@@ -45,7 +43,9 @@ def county_for_key(k):
 def build_key_for_state(state):
     try:
         abbrev = ustates.state_to_abbrev[state]
+        
     except KeyError:
+        print('KeyError', state)
         assert state in ustates.terr
         abbrev = ustates.terr_to_abbrev[state]
     fips = ustates.abbrev_to_fips[abbrev]

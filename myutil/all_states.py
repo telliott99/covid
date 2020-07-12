@@ -10,10 +10,8 @@ v = conf['verbose']
 
 mode = conf['mode']
 
-if conf['all']:
-    path_to_db = base + '/db.max.txt'
-else:
-    path_to_db = base + '/db.txt'
+path_to_db = base + '/db/db.max.txt'
+
 date_info, D = udb.load_db(path_to_db)
 
 first,last = date_info.split('\n')
@@ -27,6 +25,7 @@ kL = [k for k in D if k[-3:] == ';US']
 # new since I've added keys for states and US
 #print(D[';Alabama;01;US']['cases'][-7:])
 #print(D[';;;US']['cases'][-7:])
+
 kL = [k for k in D if not ukeys.state_for_key(k) == '']
 kL = [k for k in D if not ukeys.county_for_key(k) == '']
 
@@ -69,11 +68,13 @@ states = sorted(kD.keys())
 filterL = ['Northern Mariana Islands',
            'Puerto Rico',
            'Virgin Islands',
-           'Guam' ]
+           'Guam',
+           'Wuhan Evacuee']
            
 states = [name for name in states if not name in filterL]
 
 rL = list()
+
 for state in states:
     # location of first/last index for each county
     i,j = kD[state]
@@ -85,6 +86,7 @@ for state in states:
 conf['regions'] = 'states'
 
 from ukeys import build_key_for_state
+
 kL = [build_key_for_state(state) for state in states]
 
 if __name__ == "__main__":

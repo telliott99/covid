@@ -1,14 +1,27 @@
 import sys, os
+
 base = os.environ.get('covid_base')
-sys.path = [base, base + '/myutil'] + sys.path
+if not base in sys.path:
+    sys.path = [base] + sys.path
+util = base + '/myutil'
+if not util in sys.path:
+    sys.path.insert(0, util)
 
-from uall import sep, calc, assemble, ukeys, ufmt
-from uall import pprint, kL, conf, D
+import ustates, ucalc, ufmt, ulabels, uinit, udb, ukeys
 
-import ustates
 from ucountries import eu_majors
+conf = uinit.clargs()
 
-with open(base + '/keylists.db.txt') as fh:
+path_to_db = base + '/db/db.max.txt'
+date_info, D = udb.load_db(path_to_db)
+
+first,last = date_info.split('\n')
+conf['first'] = first
+conf['last'] = last
+
+#----------------------------------------
+
+with open(base + '/db/keylists.db.txt') as fh:
     data = fh.read().strip().split('\n\n')
 
 kD = {}
@@ -56,8 +69,8 @@ for name in conf['names']:
             skL.extend(kD[name][1:]) 
     
 rL = [D[k][conf['mode']] for k in skL]   
-skL, rL = calc(skL, rL, conf)   
-labels,pL = assemble(skL, rL, conf)
+skL, rL = ucalc.calc(skL, rL, conf)   
+labels,pL = ulabels.assemble(skL, rL, conf)
 
 #-------------------------------
 

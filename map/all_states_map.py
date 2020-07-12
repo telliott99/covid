@@ -18,11 +18,8 @@ import udb, ukeys, umath, ucolors
 # fips stats
 
 sys.path.insert(1,base + '/analysis')
-# as Alabama, but contains 'DC'
-from all_states import states, rL
 
-#i = states.index('DC')
-#states[i] = 'District of Columbia'
+from all_states import states, rL
 
 # dict from 'Alabama' to 'AL'
 from ustates import states

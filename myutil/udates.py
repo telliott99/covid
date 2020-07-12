@@ -2,8 +2,9 @@ import sys, os
 from datetime import date, datetime, timedelta
 
 base = os.environ.get('covid_base')
-sys.path.insert(0,base)
-sys.path.insert(1,base + '/myutil')
+if not base in sys.path:
+    print('adding myutil', base + '/myutil')
+    sys.path.insert(0, base + '/myutil')
 
 from ufile import list_directory
 

@@ -1,8 +1,8 @@
 import sys
+
 import ustates
 from ustates import abbrev_to_state
 from ufmt import pprint
-
 
 from uhelp import help
 help = help % (' '.join(sys.argv))
@@ -21,8 +21,10 @@ def clargs():
       'mode':'cases', 
       'n':7, 
       'N': False,
+      'average': False,
       'show_parent_label': False,
       'add_totals': True,
+      'no_dates': False,
       
       'all': False,      # -a, --all
       'csv': False,      # -f, --csv
@@ -58,11 +60,13 @@ def clargs():
     
     wL = ['deaths',
           'all',
+          'average',
           'csv',
           'delta',
           'format',
           'graph',
           'map',
+          'no_dates',
           'pop',
           'quiet',
           'rate',
@@ -119,6 +123,16 @@ def clargs():
             j = 1     
         L.pop(i)
         D['delta'] = j
+        
+    if '--average' in L:
+        i = L.index('--average')
+        try:
+            j = int(L[i+1])
+            L.pop(i+1)
+        except (ValueError, IndexError) as e:
+            j = 1     
+        L.pop(i)
+        D['average'] = j
 
 #-------------------------------------------
 
@@ -185,10 +199,8 @@ def clargs():
     D['only']    = 'o' in one_letters or '--only' in L
     if D['only']:
         D['add_totals'] = False
-        
-    if 'eu' in D['names'] and D['only']:
-        print('-o option not available for eu')
-        sys.exit()
+            
+    D['no_dates'] = '--no_dates' in L
   
     # when -g or -m is selected
     # note: -q, --quiet is used to control behavior

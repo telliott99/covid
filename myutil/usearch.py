@@ -1,7 +1,8 @@
 import sys, os
 
-base = os.environ.get('covid_base')
-sys.path = [base, base + '/myutil'] + sys.path
+if not base in sys.path:
+    print('adding myutil', base + '/myutil')
+    sys.path.insert(0, [base, base + '/myutil'])
 
 import uinit, udb, ukeys
 

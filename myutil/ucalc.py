@@ -2,25 +2,20 @@
 # the values returned are ready to format for printing
 # or to feed to a plot or map script
 
-
 import sys, os
+
 base = os.environ.get('covid_base')
-
 if not base in sys.path:
-    sys.path.insert(0,base)
-    sys.path.insert(1,base + '/myutil')
-    
-import uinit
-
-from operator import itemgetter
+    print('adding myutil', base + '/myutil')
+    sys.path.insert(0, [base, base + '/myutil'])
 
 import umath
-from ustates import state_to_abbrev as abbD
-from udb import sep
+import upop
+import udb
 
-from upop import popD
-from ufmt import pprint
-    
+popD = upop.popD
+sep = udb.sep
+ 
 def do_no_data(conf):
     c = conf['arg']
     print('no data for: %s' % c)
@@ -35,24 +30,72 @@ def normalize(pop, vL):
     vL = [int(value/pop) for value in vL]
     return vL
 
-def do_pop_normalization(kL, rL):   
+# mutating, drops keys for any not in popD:  Unassigned et al.
+def do_pop_normalization(kL, rL):
+
+    tmp1 = []
+    tmp2 = []
+    for k, vL in zip(kL,rL):
+        if not k in popD:
+        
+        # it is OK to just skip it
+        # we get labels from keys these days, later
+            if k.split(sep)[0] not in ['Unassigned', 'unassigned']:    
+                print('KeyError, key not in pop_dict:')
+                print(k)
+            continue
+        
+        tmp1.append(k)
+        tmp2.append(vL)
+    
+    kL = tmp1
+    rL = tmp2
+
+    #------
+
     #print('do_pop_normalization')
     ret = []
     popL = []
-    
+        
+    # obtain the population for each key
     for k in kL:
-        try:
-            v = popD[k]
-            popL.append(v)
-        except KeyError:
-            print('KeyError, key not in pop_dict:')
-            print(k)
-            sys.exit()
-            
+        v = popD[k]
+        popL.append(v)
+
     for pop,vL in zip(popL,rL):
-        ret.append(normalize(pop,vL))   
-          
-    return ret, sum([int(s) for s in popL])
+    
+        # save the normalized values
+        ret.append(normalize(pop,vL))
+      
+    #print(kL)  
+    #print(ret)
+    
+    total_pop = sum([int(s) for s in popL])
+    
+    return kL, ret, total_pop
+
+#-----------------------
+
+def compute_average(rL, conf):
+    def mean(sL):
+        result = int(sum(sL)*1.0/len(sL))
+        return result
+
+    n = conf['average']    
+    ret = []
+    
+    # trim early to avoid unnecessary computations
+    if conf['N']:
+        N = conf['N']
+        rL = rL[:N]
+    
+    for vL in rL:
+        tmp = []
+        for i in range(n, len(vL)):
+            val = mean(vL[i-n+1:i+1])
+            tmp.append(val)
+        ret.append(tmp)
+    return ret
 
 #-----------------------
 
@@ -66,6 +109,9 @@ def trim_columns(rL, conf):
     n = conf['n']
     if conf['delta']:
         n += conf['delta']
+        
+    if conf['average']:
+        n += conf['average'] - 1
         
     rL = [e[-n:] for e in rL]
     if conf['delta']:
@@ -95,13 +141,25 @@ def calc(kL, rL, conf):
     # also adjust totals to total population
     
     if conf['pop']:
-        rL, total_pop = do_pop_normalization(kL,rL)
+        kL, nL, total_pop = do_pop_normalization(kL,rL)
         
         tL = conf['totals_line']
         conf['totals_line'] = normalize(total_pop, tL)
+        
+        rL = nL
+        
+    if conf['average']:
+        rL = compute_average(rL, conf)
 
-    
     pL = []
+    
+    # special case b/c eu key not in keylist
+    
+    if 'eu' in conf['names']:
+        if kL[0] == ';;;Austria':
+            if conf['only']:
+                tL = [str(n) for n in conf['totals_line']]
+                return [';;;eu'], [conf['totals_line']]
 
     # compute stats based on the last 7 days
     # unless we trimmed above to fewer than 7 values

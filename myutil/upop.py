@@ -108,7 +108,7 @@ s = '''
 
 
 popD = {}
-with open(base + '/pop.db.txt') as fh:
+with open(base + '/db/pop.db.txt') as fh:
     data = fh.read().strip().split('\n')
     for line in data:
         k,pop = line.strip().split('#')
