@@ -1,20 +1,48 @@
 #### Parallel organization
 
-The project has been (again) restructured.  Now, most analysis is launched from the main directory via ``analyze.py``.  Other scripts are in the  ``build`` and ``maps`` directories.  
+After (yet another) restructuring, I believe we are approaching maturity.  
 
-There is some in progress stuff like ``simulate``.
+Analysis is launched from the main directory via ``analyze.py``.  I a few lines in my ``.zshrc``:
 
-The rest is utilities, in ``myutil``, and ``test``.
+    covid_base=$HOME'/Dropbox/Github/covid'
+    export covid_base
+	
+    alias cov='cd '$covid_base' && pwd'
+    alias az='python3 analyze.py'
 
-The database is at main level, and it comes in in two sizes, one for as many days back as there are files at main level in the source, and the other with previous files stashed by month.
+So I just open a Terminal and do
+
+    > az SC -N 5 -sc 
+                07/06 07/07 07/08 07/09 07/10 07/11 07/12
+    Charleston    328    94   264   362   262   311   283
+    Greenville    155    49   167   208   210   276   216
+    Horry         235   130   169   189   172   208   208
+    Richland       89    57    71   126   101   151   153
+    Lexington      66    60    90    65    73    84   109
+    >
+
+Charleston County, SC added 283 new cases yesterday.
+
+Other scripts are in the  ``build`` and ``maps`` directories.  The rest is utilities, in ``myutil``, and some tests, in ``test``.
+
+The database is ``db``, and it comes in just the large size, for as many days back as there are files in the source.
 
 The average script starts like this:
 
-    import sys, os, subprocess
     base = os.environ.get('covid_base')
-    sys.path.insert(0,base)
+    if not base in sys.path:
+        sys.path = [base] + sys.path
+    util = base + '/myutil'
+    if not util in sys.path:
+        sys.path.insert(0, util)
+    
+    import ucalc, ufmt, ulabels, uinit, udb ..
     
 Thus, you must set ``covid_base`` correctly in the environment.  Everything is specified as a path from ``covid_base``.
+
+This can be done as a one-off by 
+
+    covid_base=$HOME'/path/to/covid'
 
 #### Command line arguments
 
@@ -22,35 +50,38 @@ These can be viewed with ``-h`` or ``--help`` with any script.
 
 Features that are currently supported are given by the ``--help`` flag:
 
-	> p3 analyze.py -h
-	
-	flags
-	-h  --help     help
-	-n    <int>    display the last -n values, default: 7
-	-N    <int>    display -N rows of data, default: 50
-	-c    <int>    --delta, change from x days ago, default: 1
-	
-	-a  --all      use the complete db, starting 2020-03-22
-	-d  --deaths   display deaths rather than cases (default)
-	-f  --csv      format output as csv
-	-g  --graph    plot a graph of the data (not yet)
-	-m  --map      make a choropleth map (not yet)
-	-o  --only     do not descend from say, US to states
-	-p  --pop      normalize to population (this disables totals)
-	-q  --quiet    silence output (for tests)
-	-r  --rate     compute statistics (over last 7 days)
-	-s  --sort     
-	-t  --totals   (only)
-	-v  --verbose  debugging mode
-	
-	to do:
-	-u   <int>    data slice ends this many days before yesterday 
-	
-	example:
-	python analyze.py -h -n 10 -sdr
-	
-	
-	>
+    > az -h
+    
+    flags
+    -h  --help      help
+    -n    <int>     display the last -n values, default: 7
+    -N    <int>     display -N rows of data, default: 50
+    -c    <int>     --delta, change from x days ago, default: 1
+    
+    -a  --all       use the complete db, starting 2020-03-22
+    -d  --deaths    display deaths rather than cases (default)
+    -f  --csv       format output as csv
+    -o  --only      do not descend from say, US to states
+    -p  --pop       normalize to population (this disables totals)
+    -q  --quiet     silence output (for tests)
+    -r  --rate      compute statistics (over last 7 days)
+    -s  --sort      
+    -t  --totals    (only)
+    -v  --verbose   debugging mode
+    
+        --no_dates  suppress dates in row 1
+        --counties  show US by counties
+    
+    to do:
+    -g  --graph     plot a graph of the data
+    -m  --map       make a choropleth map
+    -u   <int>      data slice ends this many days before yesterday 
+    
+    example:
+    python analyze.py -h -n 10 -sdr
+    
+    
+    > 
 
 Rather than use the built-in Python module for parsing the command line arguments (I find it too complicated), I rolled my own, see ``uinit.py``.
 
