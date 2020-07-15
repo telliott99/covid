@@ -6,7 +6,6 @@ base = os.environ.get('covid_base')
 sys.path.insert(0,base)
 sys.path.insert(1,base + '/analysis')
 
-import myutil.ustrings as ustrings
 import myutil.udb as udb
 import myutil.udates as udates
 import myutil.ufile as ufile
@@ -20,8 +19,8 @@ import myutil.umath as umath
 conf = uinit.clargs()
 mode = conf['mode']
     
-sep = ustrings.sep      # ;
-path_to_db = base + '/db.max.txt'
+sep = udb.sep      # ;
+path_to_db = base + '/db/db.max.txt'
 
 date_info, D = udb.load_db(path_to_db)
 
@@ -61,6 +60,9 @@ plt_us = go.Scatter(
     
 fig = go.Figure(plt_us)
 
+
+'''
+
 from eu import do_eu
 rL,ignore = do_eu()
 
@@ -89,7 +91,9 @@ plt_eu = go.Scatter(
 
 fig.add_trace(plt_eu)
 
-fig.update_layout(yaxis=dict(range=[0,50000]))
+'''
+
+fig.update_layout(yaxis=dict(range=[0,250000]))
 
 fig.show()
 

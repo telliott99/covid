@@ -1,9 +1,8 @@
-    import sys, os, subprocess
+import sys, os, subprocess
 
 base = os.environ.get('covid_base')
 sys.path.insert(0,base)
 
-import myutil.ustrings as ustrings
 import myutil.udb as udb
 import myutil.udates as udates
 import myutil.ufile as ufile
@@ -17,14 +16,14 @@ import myutil.umath as umath
 conf = uinit.clargs()
 mode = conf['mode']
 
-if not conf['arg']:
+if not conf['names']:
     print('please supply the name of a country')
     sys.exit()
     
-country = conf['arg']
+country = conf['names'][0]
 
-sep = ustrings.sep      # ;
-path_to_db = base + '/db.max.txt'
+sep = udb.sep      # ;
+path_to_db = base + '/db/db.max.txt'
 
 date_info, D = udb.load_db(path_to_db)
 

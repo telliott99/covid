@@ -5,7 +5,7 @@ from ustates import abbrev_to_state
 from ufmt import pprint
 
 from uhelp import help
-help = help % (' '.join(sys.argv))
+# help = help % (' '.join(sys.argv))
 
 def bail():
      print(help)
@@ -21,6 +21,8 @@ def clargs():
       'mode':'cases', 
       'n':7, 
       'N': False,
+      'u': False,      
+      
       'average': False,
       'show_parent_label': False,
       'add_totals': True,
@@ -124,6 +126,16 @@ def clargs():
         L.pop(i)
         D['delta'] = j
         
+    if '-u' in L:
+        i = L.index('-u')
+        try:
+            j = int(L[i+1])
+            L.pop(i+1)
+        except (ValueError, IndexError) as e:
+            j = 1     
+        L.pop(i)
+        D['u'] = j
+
     if '--average' in L:
         i = L.index('--average')
         try:

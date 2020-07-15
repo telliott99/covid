@@ -104,6 +104,11 @@ def compute_average(rL, conf):
 def trim_columns(rL, conf):
     if len(rL) == 0:
         do_no_data(conf)
+    
+    # here is where slice up to u days ago
+    if conf['u']:
+        u = conf['u']
+        rL = [vL[:-u] for vL in rL]
         
     # rL is data, a list of lists of ints
     # trim the data

@@ -18,6 +18,11 @@ def get_dates(conf):
     n = conf['n']
     first = conf['first']
     dates = udates.generate_dates(first)
+    
+    if conf['u']:
+        u = conf['u']
+        dates = dates[:-u]
+
     dates = dates[-n:]
     dL = ['/'.join(d.split('-')[1:]) for d in dates]
     return dL
@@ -41,6 +46,8 @@ def generate_labels(kL, conf):
         else:
             labels.append(country)
     return labels
+
+
 
 # in this new design, we generate csv always
 def assemble(kL, rL, conf):

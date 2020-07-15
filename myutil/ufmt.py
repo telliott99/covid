@@ -52,4 +52,5 @@ def fmt(labels,pL,conf):
         for l,vL in zip(labels,pL):
             tmp.append(l + ',' + ','.join(vL))
         text = '\n'.join(tmp)
+        
     return text

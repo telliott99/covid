@@ -33,48 +33,54 @@ for e in data:
 
 #-------------------------------
 
-# the idea here is if there are multiple 'names'
-# then the caller wants them combined into one table
+def get_results(conf):
 
-if not conf['names']:
-    skL = ukeys.key_list(D)
-elif 'world' in conf['names']:
-    skL = ukeys.key_list(D)
-    conf['names'].remove('world')
-else:
-    skL = []
+    # the idea here is if there are multiple 'names'
+    # then the caller wants them combined into one table
     
-
-# only countries, no states or counties
-skL = [k for k in skL if k.startswith(';;;')]
-
-
-for name in conf['names']:
-    if name == 'eu':
-        eu_keys = [';;;' + c for c in eu_majors]
-        skL.extend(eu_keys)
-        
-    elif name == 'counties':
-        skL = ukeys.key_list_for_us_counties(D)
-        
-    # any country w/o states will not be in keylists.db.txt
-    elif not name in kD:
-        skL.append(';;;' + name)
-    
-    # otherwise it is
+    if not conf['names']:
+        skL = ukeys.key_list(D)
+    elif 'world' in conf['names']:
+        skL = ukeys.key_list(D)
+        conf['names'].remove('world')
     else:
-        if conf['only']:
-            skL.append(kD[name][0])
-        else:
-            skL.extend(kD[name][1:]) 
+        skL = []
+        
     
-rL = [D[k][conf['mode']] for k in skL]   
-skL, rL = ucalc.calc(skL, rL, conf)   
-labels,pL = ulabels.assemble(skL, rL, conf)
+    # only countries, no states or counties
+    skL = [k for k in skL if k.startswith(';;;')]
+    
+    
+    for name in conf['names']:
+        if name == 'eu':
+            eu_keys = [';;;' + c for c in eu_majors]
+            skL.extend(eu_keys)
+            
+        elif name == 'counties':
+            skL = ukeys.key_list_for_us_counties(D)
+            
+        # any country w/o states will not be in keylists.db.txt
+        elif not name in kD:
+            skL.append(';;;' + name)
+        
+        # otherwise it is
+        else:
+            if conf['only']:
+                skL.append(kD[name][0])
+            else:
+                skL.extend(kD[name][1:]) 
+        
+    rL = [D[k][conf['mode']] for k in skL]   
+    skL, rL = ucalc.calc(skL, rL, conf)   
+    labels,pL = ulabels.assemble(skL, rL, conf)
+    
+    #-------------------------------
+    
+    return ufmt.fmt(labels, pL, conf)
 
-#-------------------------------
+if __name__ == "__main__":
 
-text = ufmt.fmt(labels, pL, conf)
+    text = get_results(conf)
 
-if not conf['quiet']:
-    print(text)
+    if not conf['quiet']:
+        print(text)
