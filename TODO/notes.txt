@@ -1,0 +1,64 @@
+why is EU data bad?
+b/c France
+on 4/10 they dumped 124899 cases
+on 4/13 they dumped 136796 cases
+on 4/16 they dumped  28230 cases
+on 4/14 they posted  -6514 cases
+on 4/22 they posted  -2172 cases
+when they were averaging 10-20 K
+
+on 4/10 they dumped  13197 deaths
+on 4/13              14967
+
+
+when I go back to 03/22 then -c 10 doesn't work correctly
+plots 7/14 data for 7/4 or 7/5
+b/c there's no earlier data to use
+
+
+In x.py I define 
+
+s = 'ab'
+
+def f():
+   print('cd')
+
+In all.py I do 
+
+import x
+
+In z.py I do 
+
+from all import *
+
+print(x.s)
+print(x.f)
+x.f()
+
+Output:
+
+> p3 z.py
+ab
+<function f at 0x10750c950>
+cd
+>
+
+-------------
+
+In umath.py I define a function 
+
+def totals(rL):
+    ...
+
+In uall.py I do 
+
+import umath
+
+In ucalc.py I do 
+
+from uall import *
+
+print(umath.totals) 
+
+
+NameError: name 'umath' is not defined

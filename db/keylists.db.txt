@@ -3566,6 +3566,7 @@ India
 ;Karnataka;;India
 ;Kerala;;India
 ;Ladakh;;India
+;Lakshadweep;;India
 ;Madhya Pradesh;;India
 ;Maharashtra;;India
 ;Manipur;;India
@@ -3660,6 +3661,7 @@ Japan
 ;Hyogo;;Japan
 ;Ibaraki;;Japan
 ;Ishikawa;;Japan
+;Iwate;;Japan
 ;Kagawa;;Japan
 ;Kagoshima;;Japan
 ;Kanagawa;;Japan

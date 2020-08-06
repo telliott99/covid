@@ -245,6 +245,13 @@ You can look at counties by passing the name ``counties``:
     total           57662 62311 66216 60612 57898
 
 
+If you're looking for a particular county you can use grep:
+
+    > az counties -p | grep "Charleston" 
+    Charleston SC              2736  2757  2788  2818  2847  2871  2898
+    >
+
+
 ##### Plots and maps
 
 Results from ``plot_eu_us.py``
